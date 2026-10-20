@@ -1,0 +1,30 @@
+{
+  "name": "tractrac-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "import-assets": "node scripts/import-assets.mjs",
+    "upload-images": "node scripts/upload-images.mjs",
+    "upload-videos": "node scripts/upload-videos.mjs",
+    "verify-routes": "node scripts/verify-routes.mjs",
+    "screenshot": "node scripts/screenshot.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.2",
+    "puppeteer-core": "^25.14.0",
+    "typescript": "^6.0.3"
+  }
+}

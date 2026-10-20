@@ -1,0 +1,678 @@
+{
+  "endpoint": "https://api.tractrac.co/api/v1/uploads/images",
+  "settings": {
+    "folder": "images",
+    "optimize": "false",
+    "quality": "high",
+    "generate_thumbnail": "false",
+    "preserve_format": "true"
+  },
+  "assets": {
+    "uploads/Full Colour Negative 2 1.png": {
+      "local": "/media/uploads/full-colour-negative-2-1.png",
+      "remote": "https://api.tractrac.co/media/images/a7d416d2-618e-4e04-9707-aaf5b464ba85.png",
+      "filename": "full-colour-negative-2-1.png",
+      "bytes": 27403,
+      "sha256": "4177a24cb604ed366bd7ba36d0783f7c442ad78a19175ba4be4780876670beec",
+      "uploadedAt": "2026-10-20T16:41:54.217891+00:00",
+      "verified": true
+    },
+    "https://api.tractrac.co/media/blog-images/04787261-dc03-4124-8978-c801b8dc83c7.webp": {
+      "local": "/media/insights/04787261-dc03-4124-8978-c801b8dc83c7.webp",
+      "remote": "https://api.tractrac.co/media/images/82a80769-9a69-4311-8d7f-30bb0344ed67.webp",
+      "filename": "04787261-dc03-4124-8978-c801b8dc83c7.webp",
+      "bytes": 62250,
+      "sha256": "80fdcc2e6505f96ecc1be5dc64bb46686abe1bac66161608070cd62efb5646e8",
+      "uploadedAt": "2026-10-20T16:42:07.486Z",
+      "verified": true
+    },
+    "https://api.tractrac.co/media/blog-images/444d2ee4-e164-4dd5-9cfc-37a577ccebfb.webp": {
+      "local": "/media/insights/444d2ee4-e164-4dd5-9cfc-37a577ccebfb.webp",
+      "remote": "https://api.tractrac.co/media/images/f2c1dceb-d3df-497a-a382-0a60146d0afd.webp",
+      "filename": "444d2ee4-e164-4dd5-9cfc-37a577ccebfb.webp",
+      "bytes": 74280,
+      "sha256": "3bf09b6c9554bc0b8a83b452792468874fd61fc8c7cbb6c901bf6debb8c0dbfe",
+      "uploadedAt": "2026-10-20T16:42:08.376Z",
+      "verified": true
+    },
+    "https://api.tractrac.co/media/blog-images/5f897330-dd34-4df1-8807-20998484dd26.webp": {
+      "local": "/media/insights/5f897330-dd34-4df1-8807-20998484dd26.webp",
+      "remote": "https://api.tractrac.co/media/images/ae5119f4-9358-4b5b-9167-402f6b212e64.webp",
+      "filename": "5f897330-dd34-4df1-8807-20998484dd26.webp",
+      "bytes": 40358,
+      "sha256": "c1c5eec3e2bcfb39451d922230dc1f9c68e5841dec33117411ac752da3bda8b5",
+      "uploadedAt": "2026-10-20T16:42:09.066Z",
+      "verified": true
+    },
+    "https://api.tractrac.co/media/blog-images/ab4eaf45-0af6-4dc1-94ed-fe8bccafb4c0.webp": {
+      "local": "/media/insights/ab4eaf45-0af6-4dc1-94ed-fe8bccafb4c0.webp",
+      "remote": "https://api.tractrac.co/media/images/a6aca0e7-2802-48d3-9dba-1717890d1274.webp",
+      "filename": "ab4eaf45-0af6-4dc1-94ed-fe8bccafb4c0.webp",
+      "bytes": 119920,
+      "sha256": "a91eee0d522e7ed85f981bc560bea4430301fd2d3f51fabbc0a9cdd279f779ce",
+      "uploadedAt": "2026-10-20T16:42:09.850Z",
+      "verified": true
+    },
+    "https://api.tractrac.co/media/blog-images/ecc74039-bd3e-4908-9785-0bec2d530269.webp": {
+      "local": "/media/insights/ecc74039-bd3e-4908-9785-0bec2d530269.webp",
+      "remote": "https://api.tractrac.co/media/images/baab53f1-aeb4-4277-b9b8-e474e744d3be.webp",
+      "filename": "ecc74039-bd3e-4908-9785-0bec2d530269.webp",
+      "bytes": 163018,
+      "sha256": "77ce5bdc438d31f5b90f9db7c87e1037d3f16328c014b3be36ee1f707e868a47",
+      "uploadedAt": "2026-10-20T16:42:10.473Z",
+      "verified": true
+    },
+    "img/prog-1.jpg": {
+      "local": "/media/img/prog-1.jpg",
+      "remote": "https://api.tractrac.co/media/images/c7c204c5-76a7-4cf7-baf0-ea50bcdfa524.jpg",
+      "filename": "prog-1.jpg",
+      "bytes": 333177,
+      "sha256": "a957f10c2681662c4e3b1038511863e66eef7efbca42f87487a887ed1e1b6992",
+      "uploadedAt": "2026-10-20T16:42:11.140Z",
+      "verified": true
+    },
+    "img/prog-11.jpg": {
+      "local": "/media/img/prog-11.jpg",
+      "remote": "https://api.tractrac.co/media/images/952cfcec-5847-4422-af22-a1c1c2823160.jpg",
+      "filename": "prog-11.jpg",
+      "bytes": 521723,
+      "sha256": "49a0602b9608fad543b53b5184dafcd215c9198ac677fb4ee772a7ba00db8c7b",
+      "uploadedAt": "2026-10-20T16:42:11.896Z",
+      "verified": true
+    },
+    "img/prog-12.jpg": {
+      "local": "/media/img/prog-12.jpg",
+      "remote": "https://api.tractrac.co/media/images/17cad954-43ce-4876-9185-0919c8a6e267.jpg",
+      "filename": "prog-12.jpg",
+      "bytes": 329830,
+      "sha256": "dc2dce3b59d5e1cd556eb79a1e5701fabb81e8f998a6eae0c2904f69b0eea079",
+      "uploadedAt": "2026-10-20T16:42:12.713Z",
+      "verified": true
+    },
+    "img/prog-2.jpg": {
+      "local": "/media/img/prog-2.jpg",
+      "remote": "https://api.tractrac.co/media/images/7ee072b0-f9bf-41d0-ab10-11e3306c55f5.jpg",
+      "filename": "prog-2.jpg",
+      "bytes": 241027,
+      "sha256": "a926d63006b581baf7b55bf61069f8a2a94946d997068dc1be2f8838a8b79056",
+      "uploadedAt": "2026-10-20T16:42:13.471Z",
+      "verified": true
+    },
+    "img/prog-3.jpg": {
+      "local": "/media/img/prog-3.jpg",
+      "remote": "https://api.tractrac.co/media/images/6b4630dc-d8fb-48d5-b75e-0721ae2dd4d2.jpg",
+      "filename": "prog-3.jpg",
+      "bytes": 241027,
+      "sha256": "d8a7f0b67b1f531c80749981615f467731e475d6158191f516e14b32b0f0106a",
+      "uploadedAt": "2026-10-20T16:42:14.140Z",
+      "verified": true
+    },
+    "img/prog-4.jpg": {
+      "local": "/media/img/prog-4.jpg",
+      "remote": "https://api.tractrac.co/media/images/8e771d57-95a5-4e7a-a870-48991b0859ec.jpg",
+      "filename": "prog-4.jpg",
+      "bytes": 403813,
+      "sha256": "6bbc2deccfe60fd818ea69001921a88b736a3ab97a21efe48e930eb116a59139",
+      "uploadedAt": "2026-10-20T16:42:14.811Z",
+      "verified": true
+    },
+    "img/prog-5.jpg": {
+      "local": "/media/img/prog-5.jpg",
+      "remote": "https://api.tractrac.co/media/images/6821afb9-b061-44ab-9892-cd419be2829a.jpg",
+      "filename": "prog-5.jpg",
+      "bytes": 373656,
+      "sha256": "23f0edc4da6b46090e25558a79441e754e4424e337b6600a66bf05c17d0286e0",
+      "uploadedAt": "2026-10-20T16:42:16.420Z",
+      "verified": true
+    },
+    "img/prog-6.jpg": {
+      "local": "/media/img/prog-6.jpg",
+      "remote": "https://api.tractrac.co/media/images/9caf722c-becb-4c55-befc-fed524715f81.jpg",
+      "filename": "prog-6.jpg",
+      "bytes": 296302,
+      "sha256": "a3e69232e844ebc875bbd8cfda56ae7a33be8d665d44d7b528fdd79934de06f4",
+      "uploadedAt": "2026-10-20T16:42:17.961Z",
+      "verified": true
+    },
+    "img/prog-7.jpg": {
+      "local": "/media/img/prog-7.jpg",
+      "remote": "https://api.tractrac.co/media/images/51d6249b-b6e6-485b-9f54-c89ebfbe7467.jpg",
+      "filename": "prog-7.jpg",
+      "bytes": 394874,
+      "sha256": "dddaf18ad88e3bb229b9a70080f88b20c6d19c2aa406c4eca4944760d9c7327d",
+      "uploadedAt": "2026-10-20T16:42:18.999Z",
+      "verified": true
+    },
+    "img/prog-9.jpg": {
+      "local": "/media/img/prog-9.jpg",
+      "remote": "https://api.tractrac.co/media/images/d0127716-5f34-4b4a-b899-3fbcf8fd7015.jpg",
+      "filename": "prog-9.jpg",
+      "bytes": 408188,
+      "sha256": "42f50bbe0b16160af4a5fa57fe9f1d36d070863da71e904488744bf17442582e",
+      "uploadedAt": "2026-10-20T16:42:20.952Z",
+      "verified": true
+    },
+    "img/ypim-1.jpg": {
+      "local": "/media/img/ypim-1.jpg",
+      "remote": "https://api.tractrac.co/media/images/01119503-e6c4-4aa7-8ac6-07f32d4f740f.jpg",
+      "filename": "ypim-1.jpg",
+      "bytes": 355322,
+      "sha256": "8274786e41f6466e79a1cf101ec72607d2b6025864d0a69e836dceec28906074",
+      "uploadedAt": "2026-10-20T16:42:22.005Z",
+      "verified": true
+    },
+    "img/ypim-3.jpg": {
+      "local": "/media/img/ypim-3.jpg",
+      "remote": "https://api.tractrac.co/media/images/2f0b8ee8-6e30-4a45-b693-8657133cd40a.jpg",
+      "filename": "ypim-3.jpg",
+      "bytes": 376723,
+      "sha256": "08b66d3249515c9043e6ae5e8ec9b3b4165be7b50a227fb70084bcbdffb415aa",
+      "uploadedAt": "2026-10-20T16:42:23.061Z",
+      "verified": true
+    },
+    "img/ypim-4.jpg": {
+      "local": "/media/img/ypim-4.jpg",
+      "remote": "https://api.tractrac.co/media/images/cc0389a4-b25b-4531-a4f8-ca69fc1e021c.jpg",
+      "filename": "ypim-4.jpg",
+      "bytes": 429140,
+      "sha256": "ce5c690cdca1eff00ba0f9fb07280611876cc69ef9caded9c0dd17d67bb73c5b",
+      "uploadedAt": "2026-10-20T16:42:24.102Z",
+      "verified": true
+    },
+    "img/ypim-5.jpg": {
+      "local": "/media/img/ypim-5.jpg",
+      "remote": "https://api.tractrac.co/media/images/74a841d1-e60b-4ad8-a91c-283e981e6d02.jpg",
+      "filename": "ypim-5.jpg",
+      "bytes": 263978,
+      "sha256": "45086b9d6a3f6251535aa1f96e89e680414705888f21cfd178ac93b8c3adc021",
+      "uploadedAt": "2026-10-20T16:42:25.002Z",
+      "verified": true
+    },
+    "img/ypim-6.jpg": {
+      "local": "/media/img/ypim-6.jpg",
+      "remote": "https://api.tractrac.co/media/images/6e58d29a-2463-4c79-9a18-72c100ed23f1.jpg",
+      "filename": "ypim-6.jpg",
+      "bytes": 403833,
+      "sha256": "24bb8c1c3ba9da789ba2ac7dafa7eaee4fca796804453420cb808baaebe66333",
+      "uploadedAt": "2026-10-20T16:42:26.052Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC07682.jpg": {
+      "local": "/media/uploads/copy-of-dsc07682.jpg",
+      "remote": "https://api.tractrac.co/media/images/2c7cb560-5058-420d-870a-13f16fa0d3f4.jpg",
+      "filename": "copy-of-dsc07682.jpg",
+      "bytes": 1038064,
+      "sha256": "fe78fe5f8b0d770458d6c09acb421c7df66d1d7bdba95f392d8f02bf0ea2152e",
+      "uploadedAt": "2026-10-20T16:42:27.632Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC07683.jpg": {
+      "local": "/media/uploads/copy-of-dsc07683.jpg",
+      "remote": "https://api.tractrac.co/media/images/34658822-7496-42fe-9814-b2518518be99.jpg",
+      "filename": "copy-of-dsc07683.jpg",
+      "bytes": 1503667,
+      "sha256": "feff5b28de43205d832fa80cfb4a8dca0cf437ec853707fa51051b960e0c0581",
+      "uploadedAt": "2026-10-20T16:42:29.352Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC07691.jpg": {
+      "local": "/media/uploads/copy-of-dsc07691.jpg",
+      "remote": "https://api.tractrac.co/media/images/5ea836b5-3bba-42d3-9a5d-cfa585c55938.jpg",
+      "filename": "copy-of-dsc07691.jpg",
+      "bytes": 1364023,
+      "sha256": "3fa90734c8921a4e08b2b2df19af409753a3baddd5f5204bed71e74640c21e2c",
+      "uploadedAt": "2026-10-20T16:42:31.064Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC07693.jpg": {
+      "local": "/media/uploads/copy-of-dsc07693.jpg",
+      "remote": "https://api.tractrac.co/media/images/b489fadd-1aa0-4b28-b01f-10ffbbafa4b2.jpg",
+      "filename": "copy-of-dsc07693.jpg",
+      "bytes": 2306888,
+      "sha256": "c8cbcb9d723614ad86f903f4d346ccdf9823c9d3cb054c4ffa075d22d4649c8b",
+      "uploadedAt": "2026-10-20T16:42:34.074Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC08208.jpg": {
+      "local": "/media/uploads/copy-of-dsc08208.jpg",
+      "remote": "https://api.tractrac.co/media/images/e0c147a8-c430-4797-b9e9-7c437b6af111.jpg",
+      "filename": "copy-of-dsc08208.jpg",
+      "bytes": 1374225,
+      "sha256": "20f7741ce2e0f76a59487b01a746d9c42e8b7321af43bea5df88edb0dffbf902",
+      "uploadedAt": "2026-10-20T16:42:35.793Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC08691.jpg": {
+      "local": "/media/uploads/copy-of-dsc08691.jpg",
+      "remote": "https://api.tractrac.co/media/images/f3291b47-65c7-46f0-a7c6-ef31b2bced1b.jpg",
+      "filename": "copy-of-dsc08691.jpg",
+      "bytes": 2812948,
+      "sha256": "a96198ee0c0d696bfb066a1252047c9f76346254ef866cf76fb9f7424c28754a",
+      "uploadedAt": "2026-10-20T16:42:38.267Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC08699.jpg": {
+      "local": "/media/uploads/copy-of-dsc08699.jpg",
+      "remote": "https://api.tractrac.co/media/images/f6492563-9786-4f4a-9bdd-7441707a83fd.jpg",
+      "filename": "copy-of-dsc08699.jpg",
+      "bytes": 1746032,
+      "sha256": "20e47decd87b0c6b46a33dd5a3ce108cca63f97f0450ef6ab5512bc1ba5b91ec",
+      "uploadedAt": "2026-10-20T16:42:39.988Z",
+      "verified": true
+    },
+    "uploads/Copy of DSC08709.jpg": {
+      "local": "/media/uploads/copy-of-dsc08709.jpg",
+      "remote": "https://api.tractrac.co/media/images/6d0e5d65-7d7b-4ff0-a5e4-0938df7e3d73.jpg",
+      "filename": "copy-of-dsc08709.jpg",
+      "bytes": 1631089,
+      "sha256": "7b8fb277c0d85cbbf0e7ced322ba54987a298e4abd2e6d48d5bcce8275eddaf9",
+      "uploadedAt": "2026-10-20T16:42:42.123Z",
+      "verified": true
+    },
+    "uploads/Dashboard.png": {
+      "local": "/media/uploads/dashboard.png",
+      "remote": "https://api.tractrac.co/media/images/b295cfd2-dbbe-465b-a64a-29e0127b2c71.png",
+      "filename": "dashboard.png",
+      "bytes": 119916,
+      "sha256": "dfce9a2a48a2a70c3273b32189d867172f15ee2df98d38685e1a57639b886d50",
+      "uploadedAt": "2026-10-20T16:42:42.828Z",
+      "verified": true
+    },
+    "uploads/DSC02281.jpg": {
+      "local": "/media/uploads/dsc02281.jpg",
+      "remote": "https://api.tractrac.co/media/images/08a6f7d9-fd6b-46cb-8925-7163fedd909c.jpg",
+      "filename": "dsc02281.jpg",
+      "bytes": 4561388,
+      "sha256": "c3d46ee2f6ec04a9445202c70b98dc7d0ddfc1f30a18c871dd3a0a19a94fc263",
+      "uploadedAt": "2026-10-20T16:42:47.704Z",
+      "verified": true
+    },
+    "uploads/DSC02329.jpg": {
+      "local": "/media/uploads/dsc02329.jpg",
+      "remote": "https://api.tractrac.co/media/images/db6072ba-dd32-4f16-9614-152eda415159.jpg",
+      "filename": "dsc02329.jpg",
+      "bytes": 2133407,
+      "sha256": "94a92e5631e9e345d83cf7146fa61af8c424b183e59f560129d44d0645cce038",
+      "uploadedAt": "2026-10-20T16:42:49.950Z",
+      "verified": true
+    },
+    "uploads/DSC03905.jpg": {
+      "local": "/media/uploads/dsc03905.jpg",
+      "remote": "https://api.tractrac.co/media/images/281466b0-60dc-4a77-b5df-c7fda35e1040.jpg",
+      "filename": "dsc03905.jpg",
+      "bytes": 3022778,
+      "sha256": "b6d35f88fa8adf84ec5b2ce66b8a1e7513ea5542bd8918e57fb04cc772012297",
+      "uploadedAt": "2026-10-20T16:42:52.939Z",
+      "verified": true
+    },
+    "uploads/DSC04179.jpg": {
+      "local": "/media/uploads/dsc04179.jpg",
+      "remote": "https://api.tractrac.co/media/images/99a69cb3-2aba-49db-97c6-bc2880080746.jpg",
+      "filename": "dsc04179.jpg",
+      "bytes": 2621826,
+      "sha256": "b7eba0f017d0d426ce73555d91dbf6bc625a045f15ceadb72d746d68728fd6b9",
+      "uploadedAt": "2026-10-20T16:42:56.089Z",
+      "verified": true
+    },
+    "uploads/DSC07090.jpg": {
+      "local": "/media/uploads/dsc07090.jpg",
+      "remote": "https://api.tractrac.co/media/images/29fb5cc3-5110-442f-9248-7dfcb4f7470d.jpg",
+      "filename": "dsc07090.jpg",
+      "bytes": 1376369,
+      "sha256": "2ebe8e2155b86ff0fdb01f5c2892d115961b2d7486dd7d31053d88837e47f81c",
+      "uploadedAt": "2026-10-20T16:42:58.033Z",
+      "verified": true
+    },
+    "uploads/DSC07136.jpg": {
+      "local": "/media/uploads/dsc07136.jpg",
+      "remote": "https://api.tractrac.co/media/images/5dce07f9-86e0-4cfc-9248-8ef98a297b80.jpg",
+      "filename": "dsc07136.jpg",
+      "bytes": 1617530,
+      "sha256": "ed978cf680c5fd0ebe44f698a5e3193ae2ef247b0e40141b3421ae461a7b5290",
+      "uploadedAt": "2026-10-20T16:43:00.131Z",
+      "verified": true
+    },
+    "uploads/DSC07156.jpg": {
+      "local": "/media/uploads/dsc07156.jpg",
+      "remote": "https://api.tractrac.co/media/images/1641532c-b413-4697-9015-9aa5af104075.jpg",
+      "filename": "dsc07156.jpg",
+      "bytes": 1808083,
+      "sha256": "ab0767ae33595e61005cde0608a6c3e153566b39ea72a750f5845fc25480e5f3",
+      "uploadedAt": "2026-10-20T16:43:02.229Z",
+      "verified": true
+    },
+    "uploads/DSC07701.jpg": {
+      "local": "/media/uploads/dsc07701.jpg",
+      "remote": "https://api.tractrac.co/media/images/cf825f62-fa90-4f14-a697-ee64a393ce4c.jpg",
+      "filename": "dsc07701.jpg",
+      "bytes": 2085551,
+      "sha256": "84daf23183cea51f71917da18780bcfeac58df17dd744658cf30b7f3dccb19e8",
+      "uploadedAt": "2026-10-20T16:43:04.471Z",
+      "verified": true
+    },
+    "uploads/Existing MSP Interview Keana LGA.jpg": {
+      "local": "/media/uploads/existing-msp-interview-keana-lga.jpg",
+      "remote": "https://api.tractrac.co/media/images/5465ed26-6e52-4e7c-8495-e6adaae1f82e.jpg",
+      "filename": "existing-msp-interview-keana-lga.jpg",
+      "bytes": 271367,
+      "sha256": "9fcc5255e17f9b75a09ac7ddbbaa5295b98644861fa8aaa19ff03c0b81a97921",
+      "uploadedAt": "2026-10-20T16:43:05.425Z",
+      "verified": true
+    },
+    "uploads/Existing MSP Interview Lafia LGA.jpg": {
+      "local": "/media/uploads/existing-msp-interview-lafia-lga.jpg",
+      "remote": "https://api.tractrac.co/media/images/1cfebd22-6d26-4ab0-8ea0-7b29d03b4f8e.jpg",
+      "filename": "existing-msp-interview-lafia-lga.jpg",
+      "bytes": 150303,
+      "sha256": "d7e6d834757fad9e7fafe6bd3302482fdb7a325db6affc96ab1eced9e5588031",
+      "uploadedAt": "2026-10-20T16:43:06.043Z",
+      "verified": true
+    },
+    "uploads/Farm Measurement.png": {
+      "local": "/media/uploads/farm-measurement.png",
+      "remote": "https://api.tractrac.co/media/images/a593fc1a-8be6-4608-a708-b8a0cdd08591.png",
+      "filename": "farm-measurement.png",
+      "bytes": 764714,
+      "sha256": "a7e3c42f28204f383a5ef288b5b79c56fe47b28dd227b582fe871af349ae26db",
+      "uploadedAt": "2026-10-20T16:43:07.092Z",
+      "verified": true
+    },
+    "uploads/Filter.png": {
+      "local": "/media/uploads/filter.png",
+      "remote": "https://api.tractrac.co/media/images/e7fedae9-2e17-4812-a54c-b1af91e12a03.png",
+      "filename": "filter.png",
+      "bytes": 294980,
+      "sha256": "01255eb93d8300cd716bd7f87f28c78417ab07ebd28f1e5c841e0094926648f1",
+      "uploadedAt": "2026-10-20T16:43:07.993Z",
+      "verified": true
+    },
+    "uploads/freepik_br_3d0c3a9a-6a2a-4afb-8645-a81911e4a668 1.png": {
+      "local": "/media/uploads/freepik-br-3d0c3a9a-6a2a-4afb-8645-a81911e4a668-1.png",
+      "remote": "https://api.tractrac.co/media/images/32a5dde0-bfba-4c6a-9b91-ffcaa23c8df5.png",
+      "filename": "freepik-br-3d0c3a9a-6a2a-4afb-8645-a81911e4a668-1.png",
+      "bytes": 152684,
+      "sha256": "abac564c1984807ea8d3b11faa57c2777a8ee5da502fb8ea395545305542e497",
+      "uploadedAt": "2026-10-20T16:43:09.573Z",
+      "verified": true
+    },
+    "uploads/google-play-badge-logo_svgrepo.com.png": {
+      "local": "/media/uploads/google-play-badge-logo-svgrepocom.png",
+      "remote": "https://api.tractrac.co/media/images/7d149625-c97a-4af3-ba50-3ca74a91bf6c.png",
+      "filename": "google-play-badge-logo-svgrepocom.png",
+      "bytes": 57072,
+      "sha256": "f2b1d9f56c04e9a1975186232653f68dc768ef38631837dfd1695b0494c90bb5",
+      "uploadedAt": "2026-10-20T16:43:10.240Z",
+      "verified": true
+    },
+    "uploads/Group 1000005124.png": {
+      "local": "/media/uploads/group-1000005124.png",
+      "remote": "https://api.tractrac.co/media/images/87c4dcb1-59f5-426a-a91b-90d870373bb3.png",
+      "filename": "group-1000005124.png",
+      "bytes": 102309,
+      "sha256": "fab91130ec04484d628b602631bb7cf80ef62a472d877abba21dbc927c0a8cf3",
+      "uploadedAt": "2026-10-20T16:43:11.141Z",
+      "verified": true
+    },
+    "uploads/hero-phones-final.png": {
+      "local": "/media/uploads/hero-phones-final.png",
+      "remote": "https://api.tractrac.co/media/images/3dbdacdc-4c59-43c0-a804-9065403d996a.png",
+      "filename": "hero-phones-final.png",
+      "bytes": 1480888,
+      "sha256": "7faf2a279fdf7a3b114473960f6a81e38c8c8aca0bad14eed81620366a27c059",
+      "uploadedAt": "2026-10-20T16:43:14.958Z",
+      "verified": true
+    },
+    "uploads/Hire a tractor.png": {
+      "local": "/media/uploads/hire-a-tractor.png",
+      "remote": "https://api.tractrac.co/media/images/2990f5e3-62f2-42af-b020-65fd19c29cf0.png",
+      "filename": "hire-a-tractor.png",
+      "bytes": 2935476,
+      "sha256": "3ccfbe5485162a2cc06a1ce84d7d5092928c14916ecd6ed2c2a539f2c5d7239a",
+      "uploadedAt": "2026-10-20T16:43:20.582Z",
+      "verified": true
+    },
+    "uploads/Ikore 1.png": {
+      "local": "/media/uploads/ikore-1.png",
+      "remote": "https://api.tractrac.co/media/images/c91c115b-acc5-4c09-ae51-9ddc144bc207.png",
+      "filename": "ikore-1.png",
+      "bytes": 44897,
+      "sha256": "a13d864e206bbbf6660a2098f18bf63f31ab6d6bad4069c54213e9b3b5e7b9e7",
+      "uploadedAt": "2026-10-20T16:43:21.250Z",
+      "verified": true
+    },
+    "uploads/imageye___-_imgi_1_AMTA c 1.png": {
+      "local": "/media/uploads/imageye-imgi-1-amta-c-1.png",
+      "remote": "https://api.tractrac.co/media/images/954f79aa-d182-4177-9dd5-ec431d80240a.png",
+      "filename": "imageye-imgi-1-amta-c-1.png",
+      "bytes": 46348,
+      "sha256": "2cafe7b9bc45aa0257a152c110140252c28edb0caf47256f43dd91dcd722d60b",
+      "uploadedAt": "2026-10-20T16:43:21.926Z",
+      "verified": true
+    },
+    "uploads/imageye___-_imgi_1_logo-final 1.png": {
+      "local": "/media/uploads/imageye-imgi-1-logo-final-1.png",
+      "remote": "https://api.tractrac.co/media/images/c93bace5-57ec-4803-ab28-d826650eaac4.png",
+      "filename": "imageye-imgi-1-logo-final-1.png",
+      "bytes": 124935,
+      "sha256": "2ef94ba40316272683f7796fb58e144071b4eb9b26c6a12f1191f2b83cbbf348",
+      "uploadedAt": "2026-10-20T16:43:22.674Z",
+      "verified": true
+    },
+    "uploads/imageye___-_imgi_3_2dd4a135-c846-4e1b-81fc-918e6868a96f.png": {
+      "local": "/media/uploads/imageye-imgi-3-2dd4a135-c846-4e1b-81fc-918e6868a96f.png",
+      "remote": "https://api.tractrac.co/media/images/00dfea00-b79a-4c85-8b6f-dd76b7bbbdab.png",
+      "filename": "imageye-imgi-3-2dd4a135-c846-4e1b-81fc-918e6868a96f.png",
+      "bytes": 2815545,
+      "sha256": "905d05245a91d9bd76185168446b058430cc783dba7aeb527b72727ba6eabef2",
+      "uploadedAt": "2026-10-20T16:43:25.295Z",
+      "verified": true
+    },
+    "uploads/imageye___-_imgi_4_8ce43617-deca-4a0b-b705-ca53e9cfb9bc.png": {
+      "local": "/media/uploads/imageye-imgi-4-8ce43617-deca-4a0b-b705-ca53e9cfb9bc.png",
+      "remote": "https://api.tractrac.co/media/images/300bfeae-7235-4790-9021-64586e9b3a20.png",
+      "filename": "imageye-imgi-4-8ce43617-deca-4a0b-b705-ca53e9cfb9bc.png",
+      "bytes": 289603,
+      "sha256": "3338fa609ed064c75de395e80aa42d7e1d8ec1fd497b2b09cbfb1f8f2885567a",
+      "uploadedAt": "2026-10-20T16:43:26.112Z",
+      "verified": true
+    },
+    "uploads/imageye___-_imgi_5_306bf8f8-99e7-464c-bd43-19329bf435d3.png": {
+      "local": "/media/uploads/imageye-imgi-5-306bf8f8-99e7-464c-bd43-19329bf435d3.png",
+      "remote": "https://api.tractrac.co/media/images/e8330951-4798-4c89-8ee0-ed8490c28347.png",
+      "filename": "imageye-imgi-5-306bf8f8-99e7-464c-bd43-19329bf435d3.png",
+      "bytes": 542689,
+      "sha256": "a2ba6eeecefac9e5b7755ecd8e43205a8d43a4156c3952b21c6b19409f857bd1",
+      "uploadedAt": "2026-10-20T16:43:27.159Z",
+      "verified": true
+    },
+    "uploads/imageye___-_imgi_6_b70413d1-ddd7-46a4-a5b7-8556bbb6694f.png": {
+      "local": "/media/uploads/imageye-imgi-6-b70413d1-ddd7-46a4-a5b7-8556bbb6694f.png",
+      "remote": "https://api.tractrac.co/media/images/fcdcb76e-cdf3-4820-8eda-5b9e30f7512c.png",
+      "filename": "imageye-imgi-6-b70413d1-ddd7-46a4-a5b7-8556bbb6694f.png",
+      "bytes": 421869,
+      "sha256": "7858ef669b99be651169770bbdb7ad971dd9a9997230b6006c2d650326a58166",
+      "uploadedAt": "2026-10-20T16:43:28.063Z",
+      "verified": true
+    },
+    "uploads/IMG_9824.JPEG": {
+      "local": "/media/uploads/img-9824.jpg",
+      "remote": "https://api.tractrac.co/media/images/7c64bcb7-4628-4d9a-9ef8-d563ad482b45.jpg",
+      "filename": "img-9824.jpg",
+      "bytes": 3631359,
+      "sha256": "34bcf1d70750eaa9b5b07d1e5f3216753bbbb62721cd7ffaf384b49895dae17e",
+      "uploadedAt": "2026-10-20T16:43:31.420Z",
+      "verified": true
+    },
+    "uploads/IMG-20260824-WA0025 (1).jpg": {
+      "local": "/media/uploads/img-20260824-wa0025-1.jpg",
+      "remote": "https://api.tractrac.co/media/images/07e9fdf0-b766-49a7-a45c-fa75ab982737.jpg",
+      "filename": "img-20260824-wa0025-1.jpg",
+      "bytes": 180726,
+      "sha256": "d54fd51dcb60b6066a8df07c00c87d083697153e62f461b1c7673fe38a283174",
+      "uploadedAt": "2026-10-20T16:43:32.116Z",
+      "verified": true
+    },
+    "uploads/IMG-20260824-WA0147.jpg": {
+      "local": "/media/uploads/img-20260824-wa0147.jpg",
+      "remote": "https://api.tractrac.co/media/images/e6d8dfc7-85ed-476f-b4e6-a2a90a7eef32.jpg",
+      "filename": "img-20260824-wa0147.jpg",
+      "bytes": 551405,
+      "sha256": "51d0b80fb4a6639989834de6f66482320ababab6a6bf2ea9eb32d84316eb5c33",
+      "uploadedAt": "2026-10-20T16:43:33.169Z",
+      "verified": true
+    },
+    "uploads/IMG-20260824-WA0154.jpg": {
+      "local": "/media/uploads/img-20260824-wa0154.jpg",
+      "remote": "https://api.tractrac.co/media/images/9cfa12ab-3734-4bbb-ba02-97abdbae5114.jpg",
+      "filename": "img-20260824-wa0154.jpg",
+      "bytes": 173687,
+      "sha256": "0e7cd2ffd4469d9f030f73fc2ced6d9663a005e6183f10a6854bebf21a371796",
+      "uploadedAt": "2026-10-20T16:43:33.978Z",
+      "verified": true
+    },
+    "uploads/IMG-20260824-WA0164.jpg": {
+      "local": "/media/uploads/img-20260824-wa0164.jpg",
+      "remote": "https://api.tractrac.co/media/images/f0030ce2-62e2-431a-9019-0eb1dbdba05d.jpg",
+      "filename": "img-20260824-wa0164.jpg",
+      "bytes": 130155,
+      "sha256": "4c683725a1af98d0a96a89d8d4ef606ee0b1c758aa7243e9aa067701ed5a9097",
+      "uploadedAt": "2026-10-20T16:43:34.731Z",
+      "verified": true
+    },
+    "uploads/Notification.png": {
+      "local": "/media/uploads/notification.png",
+      "remote": "https://api.tractrac.co/media/images/f759675e-e63f-4f36-b62c-e6515763602b.png",
+      "filename": "notification.png",
+      "bytes": 226376,
+      "sha256": "c225a33c72ee55440145546936021d28fdfa716c7003058b66838c5bfbe48edb",
+      "uploadedAt": "2026-10-20T16:43:35.557Z",
+      "verified": true
+    },
+    "uploads/Payment.png": {
+      "local": "/media/uploads/payment.png",
+      "remote": "https://api.tractrac.co/media/images/69a55fac-892b-4bf0-9632-cda0ce7f234d.png",
+      "filename": "payment.png",
+      "bytes": 273581,
+      "sha256": "d1242eb994ace2ce3261cacda3785689c71d4eb8dbdfc4527ff70ae5570ce5b9",
+      "uploadedAt": "2026-10-20T16:43:36.359Z",
+      "verified": true
+    },
+    "uploads/tractrac logo png 4.png": {
+      "local": "/media/uploads/tractrac-logo-png-4.png",
+      "remote": "https://api.tractrac.co/media/images/69cd5f73-92b7-4ffd-bc58-ffed4db72d4a.png",
+      "filename": "tractrac-logo-png-4.png",
+      "bytes": 207029,
+      "sha256": "f3b1eadd1ec07c0111428af1d558b69a69b66ca14ac6e3aba9c8e58a9c582d72",
+      "uploadedAt": "2026-10-20T16:43:36.975Z",
+      "verified": true
+    },
+    "uploads/Verification.png": {
+      "local": "/media/uploads/verification.png",
+      "remote": "https://api.tractrac.co/media/images/f116820a-aa01-4f6d-87df-c57b45095d17.png",
+      "filename": "verification.png",
+      "bytes": 2108328,
+      "sha256": "cafe7c25c9b094fe2de13dc7c8dff3f568649a37fb89aad0a9e15323d07a4226",
+      "uploadedAt": "2026-10-20T16:43:39.077Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-03 at 11.09.37 (1).jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-03-at-110937-1.jpg",
+      "remote": "https://api.tractrac.co/media/images/9b62ae26-0c25-4766-97a0-fd16798e073e.jpg",
+      "filename": "whatsapp-image-2026-09-03-at-110937-1.jpg",
+      "bytes": 274054,
+      "sha256": "acdece9625d3c586a26b7350b9276513a1352c108044ba156da4c7e99e3bbac5",
+      "uploadedAt": "2026-10-20T16:43:40.797Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-03 at 11.09.37 (2).jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-03-at-110937-2.jpg",
+      "remote": "https://api.tractrac.co/media/images/e5c6925f-4567-4ef9-a690-47a37f5aac69.jpg",
+      "filename": "whatsapp-image-2026-09-03-at-110937-2.jpg",
+      "bytes": 227431,
+      "sha256": "29798015414a90a199c0ee99a9a8a02f28016ecf3dd7b6e22fad634417e0fedf",
+      "uploadedAt": "2026-10-20T16:43:41.690Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-03 at 11.09.38 (1).jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-03-at-110938-1.jpg",
+      "remote": "https://api.tractrac.co/media/images/fbd32e07-ebc9-424b-93de-2e377444a9a0.jpg",
+      "filename": "whatsapp-image-2026-09-03-at-110938-1.jpg",
+      "bytes": 229641,
+      "sha256": "fcb37466b43cb9c734824dee99340187248d002b7e36fe7e7d3e5ff00ec0e320",
+      "uploadedAt": "2026-10-20T16:43:42.596Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-03 at 11.09.38 (5).jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-03-at-110938-5.jpg",
+      "remote": "https://api.tractrac.co/media/images/cc6e58cf-d2ce-44e0-b883-01ea71d8ac7b.jpg",
+      "filename": "whatsapp-image-2026-09-03-at-110938-5.jpg",
+      "bytes": 193958,
+      "sha256": "bb5cf4c5d0805f1349b8772f125ef4677e60b87d1549004766bccf2e395d624d",
+      "uploadedAt": "2026-10-20T16:43:43.419Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-03 at 11.09.38 (6).jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-03-at-110938-6.jpg",
+      "remote": "https://api.tractrac.co/media/images/3e54363e-c8da-4c9a-8aeb-ac53f6c64a35.jpg",
+      "filename": "whatsapp-image-2026-09-03-at-110938-6.jpg",
+      "bytes": 158771,
+      "sha256": "43a51ddba66c89dd50eb15e2f8dc8a8d19f6865f920770167720cd9ff2ce58c7",
+      "uploadedAt": "2026-10-20T16:43:44.172Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-24 at 14.35.20.jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-24-at-143520.jpg",
+      "remote": "https://api.tractrac.co/media/images/e7b36d40-87ca-40a5-8150-7f0f2abdfc14.jpg",
+      "filename": "whatsapp-image-2026-09-24-at-143520.jpg",
+      "bytes": 518984,
+      "sha256": "ef546cdf556d6c2bd7e14853616defec98fd38bff0f3c522751e0bc4505f231a",
+      "uploadedAt": "2026-10-20T16:43:44.988Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-24 at 14.35.40.jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-24-at-143540.jpg",
+      "remote": "https://api.tractrac.co/media/images/03fb74ec-97e4-4094-9d72-74f00fccf5b2.jpg",
+      "filename": "whatsapp-image-2026-09-24-at-143540.jpg",
+      "bytes": 472979,
+      "sha256": "0f6d17aa20cfbc062f3b5c91e40a40c37230f3ad2ce6416222ebc76ec0a53770",
+      "uploadedAt": "2026-10-20T16:43:45.894Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-24 at 14.36.33.jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-24-at-143633.jpg",
+      "remote": "https://api.tractrac.co/media/images/a56e68ab-b46d-4a4a-b0e0-4589d5ab69c0.jpg",
+      "filename": "whatsapp-image-2026-09-24-at-143633.jpg",
+      "bytes": 604899,
+      "sha256": "152f247e62373d101ff9c2cb5e4092b9befa27080f46d98a07757c164c8c03c2",
+      "uploadedAt": "2026-10-20T16:43:46.960Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-09-24 at 14.37.22.jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-09-24-at-143722.jpg",
+      "remote": "https://api.tractrac.co/media/images/6ea7bef6-319e-4c88-9e36-6fa233dadffd.jpg",
+      "filename": "whatsapp-image-2026-09-24-at-143722.jpg",
+      "bytes": 582108,
+      "sha256": "bb52f9170b5c799f13bdef5c08ad9563beac24cd151e1ca03766b8e34d63efc4",
+      "uploadedAt": "2026-10-20T16:43:47.986Z",
+      "verified": true
+    },
+    "uploads/WhatsApp Image 2026-10-15 at 13.10.08.jpeg": {
+      "local": "/media/uploads/whatsapp-image-2026-10-15-at-131008.jpg",
+      "remote": "https://api.tractrac.co/media/images/ce9ee254-648e-45a2-99e7-a67dbd0933c9.jpg",
+      "filename": "whatsapp-image-2026-10-15-at-131008.jpg",
+      "bytes": 132914,
+      "sha256": "fdb7773b1ba5e2e94a11baa4a07cb571b7287053fd47af6b692926e90f995f4b",
+      "uploadedAt": "2026-10-20T16:43:48.656Z",
+      "verified": true
+    },
+    "uploads/WIMA LOGO 1.png": {
+      "local": "/media/uploads/wima-logo-1.png",
+      "remote": "https://api.tractrac.co/media/images/30015b62-6e25-4d9c-96da-182481f27f5d.png",
+      "filename": "wima-logo-1.png",
+      "bytes": 120980,
+      "sha256": "a424005e82c72d8fc91ed1d148d01bff5c22e8a5721777761b6f1da6146a0c8e",
+      "uploadedAt": "2026-10-20T16:43:49.411Z",
+      "verified": true
+    }
+  }
+}

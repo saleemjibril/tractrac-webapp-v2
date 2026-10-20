@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="./team-data.js"></script>
+<style>
+:root{--tt-orange:#F36A02;--tt-ink:#14110F;--tt-green:#16342A;--tt-off:#F6F2EC;--tt-grey:#6E6A65;--tt-line:#DCD6CD}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tt-ink);font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+img{display:block;max-width:100%}
+a{color:var(--tt-ink);text-decoration:none}
+a:hover{color:var(--tt-orange)}
+:focus-visible{outline:2px solid var(--tt-orange);outline-offset:3px}
+.tt-wrap{width:100%;max-width:1520px;margin:0 auto;padding-left:clamp(20px,4vw,72px);padding-right:clamp(20px,4vw,72px)}
+.tt-mobonly{display:none!important}
+.tt-2{display:grid;grid-template-columns:1fr 1fr}
+.tt-foot{display:grid;grid-template-columns:repeat(6,1fr);gap:32px}
+@media (max-width:1180px){.tt-foot{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:880px){.tt-2{grid-template-columns:1fr}.tt-foot{grid-template-columns:1fr 1fr}}
+
+.tt-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.tt-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1240px){.tt-desk{display:none!important}.tt-mobonly{display:flex!important}}
+@media (max-width:880px){.tt-row{grid-template-columns:1fr!important}.tt-3{grid-template-columns:1fr}.tt-flip{order:-1}.tt-sticky{position:static!important;max-width:420px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+.tt-cat{display:grid;grid-template-columns:minmax(48px,120px) minmax(0,1.1fr) minmax(0,1fr)}
+@media (max-width:880px){.tt-cat{grid-template-columns:1fr}}
+.tt-field{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.tt-field>[data-span]{grid-column:span 2}
+@media (max-width:880px){.tt-field{grid-template-columns:1fr}.tt-field>[data-span]{grid-column:auto}}
+.tt-stats{display:grid;grid-template-columns:repeat(5,1fr)}
+@media (max-width:1180px){.tt-stats{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:880px){.tt-stats{grid-template-columns:1fr}}
+.tt-ceo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.tt-lead{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (min-width:1101px){.tt-lead>li:nth-child(3n+2){margin-top:clamp(56px,6vw,104px)}}
+@media (max-width:1100px){.tt-lead{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1100px) and (min-width:601px){.tt-lead>li:nth-child(2n){margin-top:64px}}
+@media (max-width:880px){.tt-ceo{grid-template-columns:1fr}}
+@media (max-width:600px){.tt-lead{grid-template-columns:1fr}.tt-lead .tt-pf-img{aspect-ratio:1/1!important}}
+.tt-pf-img image-slot,.tt-pf-img img{transition:transform .45s cubic-bezier(.22,.61,.36,1),filter .45s ease}
+.tt-pf:hover .tt-pf-img image-slot,.tt-pf:hover .tt-pf-img img,.tt-pf:focus-within .tt-pf-img img{transform:scale(1.035)}
+.tt-pf-img img{filter:saturate(.92)}.tt-pf:hover .tt-pf-img img{filter:saturate(1.05)}
+@media (prefers-reduced-motion:reduce){.tt-pf .tt-pf-img img,.tt-pf .tt-pf-img image-slot{transform:none!important}}
+</style>
+</helmet>
+
+<header data-hdr="1" style="position:sticky;top:0;z-index:80;--tt-nav:#ffffff;background:transparent;border-bottom:1px solid transparent;transition:background .25s ease,border-color .25s ease">
+  <div class="tt-wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px">
+    <a href="TracTrac%20Homepage%20v2.dc.html" aria-label="TracTrac home" style="display:flex;align-items:center;flex:0 0 auto">
+      <img data-logo="1" src="uploads/tractrac%20logo%20png%204.png" alt="TracTrac" style="height:34px;width:auto;filter:brightness(0) invert(1);transition:filter .25s ease">
+    </a>
+    <nav class="tt-desk" aria-label="Main" style="display:flex;align-items:stretch;gap:4px;height:84px">
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Solutions</a></div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Technology</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;min-width:240px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Technology.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">TracTrac Plus</a>
+          <a href="TracTrac%20Technology.dc.html#agent" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">TracTrac Agent</a>
+        </div>
+      </div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Programmes</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;width:680px;display:grid;grid-template-columns:180px 1fr;gap:10px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Programmes.dc.html" style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,0.06);color:#fff" style-hover="background:rgba(255,255,255,0.1);color:#fff">
+            <span style="font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Overview</span>
+            <span style="font:600 17px/1.2 'Instrument Sans'">All programmes →</span>
+          </a>
+          <div style="display:grid;grid-template-columns:1fr 1fr">
+            <a href="Programme%20-%20ISSAM.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">ISSAM</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Smallholder access to small-scale mechanisation</span>
+            </a>
+            <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">Young People in Mechanisation</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Skills and careers in mechanisation</span>
+            </a>
+            <a href="Programme%20-%20TRAxCelerate.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">TRAxCelerate</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Programme design and delivery</span>
+            </a>
+            <a href="Programme%20-%20TRACINVEST.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">TRACINVEST</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Asset-backed tractor investment</span>
+            </a>
+            <a href="Programme%20-%20H2O.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">H₂O</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Half-Way to Ownership</span>
+            </a>
+            <a href="Programme%20-%20Rise7.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">Rise7</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Empowering Seven to Scale</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Impact.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Impact</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Partners.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Partners</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Insights.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Insights</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20About.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">About Us</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Careers.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Careers</a></div>
+    </nav>
+    <div class="tt-desk" style="display:flex;align-items:center;gap:12px;flex:0 0 auto">
+      <a href="TracTrac%20Homepage%20v2.dc.html#final" style="font:600 15px/1 'Instrument Sans';padding:15px 24px;background:var(--tt-orange);color:#fff;min-height:48px;display:flex;align-items:center;white-space:nowrap" style-hover="background:#d85d02;color:#fff">Find Mechanisation</a>
+    </div>
+    <button class="tt-mobonly" onClick="{{ toggleMobile }}" aria-label="Open menu" aria-expanded="false" aria-controls="tt-mob" style="border:1px solid var(--tt-nav);background:transparent;width:48px;height:48px;cursor:pointer;align-items:center;justify-content:center">
+      <span style="display:block;width:20px;height:2px;background:var(--tt-nav);box-shadow:0 -6px 0 var(--tt-nav),0 6px 0 var(--tt-nav)"></span>
+    </button>
+  </div>
+  <div id="tt-mob" style="display:none;border-top:1px solid var(--tt-line);background:#fff;max-height:calc(100vh - 84px);overflow:auto;padding:8px 0 40px">
+    <div class="tt-wrap" style="display:flex;flex-direction:column">
+      <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Solutions</a>
+      <a href="TracTrac%20Technology.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Technology</a>
+      <div style="padding:20px 0 12px;border-bottom:1px solid var(--tt-line);display:flex;flex-direction:column;gap:4px">
+        <a href="TracTrac%20Programmes.dc.html" style="font:700 20px/1 'Instrument Sans';padding-bottom:10px">Programmes</a>
+        <a href="Programme%20-%20ISSAM.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">ISSAM</a>
+        <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Young People in Mechanisation</a>
+        <a href="Programme%20-%20TRAxCelerate.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TRAxCelerate</a>
+        <a href="Programme%20-%20TRACINVEST.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TRACINVEST</a>
+        <a href="Programme%20-%20H2O.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">H₂O: Half-Way to Ownership</a>
+        <a href="Programme%20-%20Rise7.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Rise7: Empowering Seven to Scale</a>
+      </div>
+      <a href="TracTrac%20Impact.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Impact</a>
+      <a href="TracTrac%20Partners.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Partners</a>
+      <a href="TracTrac%20Insights.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Insights</a>
+      <a href="TracTrac%20About.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">About Us</a>
+      <a href="TracTrac%20Careers.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Careers</a>
+      <a href="TracTrac%20Homepage%20v2.dc.html#final" style="margin-top:24px;font:600 17px/1 'Instrument Sans';padding:18px 22px;background:var(--tt-orange);color:#fff">Find Mechanisation</a>
+    </div>
+  </div>
+</header>
+
+<main id="top" style="margin-top:-84px">
+<section data-screen-label="About hero" style="position:relative;background:var(--tt-ink);color:#fff;overflow:hidden;min-height:100svh;display:flex;align-items:flex-end;box-sizing:border-box">
+  <div style="position:absolute;inset:0"><img data-rv="img" src="uploads/DSC07701.jpg" alt="An operator ploughing a field with a TracTrac tractor" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,15,0.55) 0%,rgba(20,17,15,0) 25%),linear-gradient(0deg,rgba(20,17,15,0.92) 0%,rgba(20,17,15,0.7) 45%,rgba(20,17,15,0.15) 80%)"></div>
+  <div class="tt-wrap" style="position:relative;width:100%;padding-top:180px;padding-bottom:clamp(48px,6vw,96px)">
+    <p data-rv="1" style="margin:0 0 20px;font:600 14px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:#F79A5B;text-shadow:0 1px 12px rgba(0,0,0,0.6)">About TracTrac</p>
+    <div style="width:fit-content;max-width:100%"><h1 data-rv="1" data-d="80" style="margin:0;max-width:14ch;font:700 clamp(48px,8vw,128px)/0.9 'Instrument Sans';letter-spacing:-0.045em">We are building the systems that make mechanisation work.</h1>
+    <p data-rv="1" data-d="180" style="margin:clamp(24px,3vw,36px) 0 0;width:0;min-width:100%;font:500 clamp(16px,1.3vw,18px)/1.5 'Instrument Sans';color:rgba(255,255,255,0.9)">TracTrac is a Nigerian agricultural mechanisation company. We connect smallholder farmers to affordable tractor services by bringing together equipment, technology, private investment and the people who deliver the work.</p></div>
+  </div>
+</section>
+
+<section data-screen-label="Why we exist" style="background:var(--tt-off);padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-2" style="gap:clamp(32px,6vw,110px);align-items:start">
+      <div>
+        <p data-rv="1" style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Why we exist</p>
+        <h2 data-rv="1" style="margin:0;max-width:17ch;font:700 clamp(28px,3.6vw,52px)/1.02 'Instrument Sans';letter-spacing:-0.025em;text-wrap:pretty">For too many farmers, the machine they need is too far away, too expensive or too hard to book.</h2>
+        <p data-rv="1" style="margin:28px 0 0;max-width:46ch;font:600 clamp(18px,1.6vw,22px)/1.45 'Instrument Sans'">TracTrac exists to change that.</p>
+      </div>
+      <div>
+        <p data-rv="1" style="margin:0 0 20px;max-width:50ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">We work to improve the lives of smallholder farmers by bringing private-sector investment, mechanisation and technology together, so affordable tractor services reach more farms across Africa. That means connecting five things:</p>
+        <div style="border-bottom:1px solid var(--tt-line)"><div data-rv="1" data-d="0" style="padding:22px 0;border-top:1px solid var(--tt-line);display:grid;grid-template-columns:minmax(110px,160px) minmax(0,1fr);gap:20px;align-items:baseline"><span style="font:700 clamp(20px,1.8vw,26px)/1 'Instrument Sans';letter-spacing:-0.02em">Farmers</span><span style="font:400 16px/1.5 'Instrument Sans';color:var(--tt-grey)">who need machines at the right time in the season</span></div><div data-rv="1" data-d="80" style="padding:22px 0;border-top:1px solid var(--tt-line);display:grid;grid-template-columns:minmax(110px,160px) minmax(0,1fr);gap:20px;align-items:baseline"><span style="font:700 clamp(20px,1.8vw,26px)/1 'Instrument Sans';letter-spacing:-0.02em">Machines</span><span style="font:400 16px/1.5 'Instrument Sans';color:var(--tt-grey)">tractors, implements and labour-saving devices</span></div><div data-rv="1" data-d="160" style="padding:22px 0;border-top:1px solid var(--tt-line);display:grid;grid-template-columns:minmax(110px,160px) minmax(0,1fr);gap:20px;align-items:baseline"><span style="font:700 clamp(20px,1.8vw,26px)/1 'Instrument Sans';letter-spacing:-0.02em">Technology</span><span style="font:400 16px/1.5 'Instrument Sans';color:var(--tt-grey)">apps that match requests to equipment and track the work</span></div><div data-rv="1" data-d="240" style="padding:22px 0;border-top:1px solid var(--tt-line);display:grid;grid-template-columns:minmax(110px,160px) minmax(0,1fr);gap:20px;align-items:baseline"><span style="font:700 clamp(20px,1.8vw,26px)/1 'Instrument Sans';letter-spacing:-0.02em">Capital</span><span style="font:400 16px/1.5 'Instrument Sans';color:var(--tt-grey)">financing that helps equipment reach the people who use it</span></div><div data-rv="1" data-d="320" style="padding:22px 0;border-top:1px solid var(--tt-line);display:grid;grid-template-columns:minmax(110px,160px) minmax(0,1fr);gap:20px;align-items:baseline"><span style="font:700 clamp(20px,1.8vw,26px)/1 'Instrument Sans';letter-spacing:-0.02em">People</span><span style="font:400 16px/1.5 'Instrument Sans';color:var(--tt-grey)">operators, agents and service providers who run the work</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="What we have built" style="background:var(--tt-ink);color:#fff;padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <p data-rv="1" style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">What we have built</p>
+    <h2 data-rv="1" style="margin:0 0 clamp(40px,5vw,72px);max-width:22ch;font:700 clamp(28px,3.6vw,52px)/1.02 'Instrument Sans';letter-spacing:-0.025em;text-wrap:pretty">A connected system for getting machines, people and capital to where the work happens.</h2>
+    <div class="tt-row" style="gap:clamp(32px,5vw,96px);align-items:stretch">
+      <div style="display:grid;grid-template-rows:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(12px,1.4vw,20px);min-height:clamp(520px,56vw,860px)">
+        <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);"><img data-rv="img" src="img/prog-11.jpg" alt="An MSP operating a tryctor with a disc plough attached" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,20px)">
+          <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);"><img data-rv="img" src="img/prog-3.jpg" alt="Trainees in ISSAM coveralls during practical equipment training" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+          <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);background:var(--tt-orange)"><img data-rv="img" src="uploads/hero-phones-final.png" alt="TracTrac Plus and TracTrac Agent apps on two phones" style="position:absolute;inset:8% 6% 0;width:88%;height:92%;object-fit:contain;object-position:bottom"></div>
+        </div>
+      </div>
+      <div style="border-bottom:1px solid rgba(255,255,255,0.2);align-self:center"><a href="TracTrac%20Technology.dc.html" data-rv="1" data-d="0" style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:clamp(18px,2vw,26px) 0;border-top:1px solid rgba(255,255,255,0.2);color:#fff" style-hover="color:var(--tt-orange)"><span style="font:600 13px/1.6 'Instrument Sans';color:var(--tt-orange)">01</span><span style="display:grid;gap:8px"><span style="font:700 clamp(19px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.015em">TracTrac Plus</span><span style="font:400 15px/1.55 'Instrument Sans';color:rgba(255,255,255,0.72)">The app farmers use to request tractors and mechanisation services.</span></span></a><a href="TracTrac%20Technology.dc.html#agent" data-rv="1" data-d="70" style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:clamp(18px,2vw,26px) 0;border-top:1px solid rgba(255,255,255,0.2);color:#fff" style-hover="color:var(--tt-orange)"><span style="font:600 13px/1.6 'Instrument Sans';color:var(--tt-orange)">02</span><span style="display:grid;gap:8px"><span style="font:700 clamp(19px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.015em">TracTrac Agent</span><span style="font:400 15px/1.55 'Instrument Sans';color:rgba(255,255,255,0.72)">The tool booking agents use to take requests, manage bookings and track work in their communities.</span></span></a><a href="Programme%20-%20ISSAM.dc.html" data-rv="1" data-d="140" style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:clamp(18px,2vw,26px) 0;border-top:1px solid rgba(255,255,255,0.2);color:#fff" style-hover="color:var(--tt-orange)"><span style="font:600 13px/1.6 'Instrument Sans';color:var(--tt-orange)">03</span><span style="display:grid;gap:8px"><span style="font:700 clamp(19px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.015em">MSP networks</span><span style="font:400 15px/1.55 'Instrument Sans';color:rgba(255,255,255,0.72)">Youth-led Mechanisation Service Providers trained and equipped to deliver services locally.</span></span></a><a href="Programme%20-%20ISSAM.dc.html" data-rv="1" data-d="210" style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:clamp(18px,2vw,26px) 0;border-top:1px solid rgba(255,255,255,0.2);color:#fff" style-hover="color:var(--tt-orange)"><span style="font:600 13px/1.6 'Instrument Sans';color:var(--tt-orange)">04</span><span style="display:grid;gap:8px"><span style="font:700 clamp(19px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.015em">Cooperative structures</span><span style="font:400 15px/1.55 'Instrument Sans';color:rgba(255,255,255,0.72)">MSPs organised into cooperatives that share equipment and run as businesses.</span></span></a><a href="TracTrac%20Impact.dc.html" data-rv="1" data-d="0" style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:clamp(18px,2vw,26px) 0;border-top:1px solid rgba(255,255,255,0.2);color:#fff" style-hover="color:var(--tt-orange)"><span style="font:600 13px/1.6 'Instrument Sans';color:var(--tt-orange)">05</span><span style="display:grid;gap:8px"><span style="font:700 clamp(19px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.015em">Equipment deployment</span><span style="font:400 15px/1.55 'Instrument Sans';color:rgba(255,255,255,0.72)">Tractors, implements and labour-saving devices placed where farmers need them.</span></span></a><a href="Programme%20-%20TRACINVEST.dc.html" data-rv="1" data-d="70" style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:clamp(18px,2vw,26px) 0;border-top:1px solid rgba(255,255,255,0.2);color:#fff" style-hover="color:var(--tt-orange)"><span style="font:600 13px/1.6 'Instrument Sans';color:var(--tt-orange)">06</span><span style="display:grid;gap:8px"><span style="font:700 clamp(19px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.015em">Financing pathways</span><span style="font:400 15px/1.55 'Instrument Sans';color:rgba(255,255,255,0.72)">Models that help equipment owners and investors put machines to work.</span></span></a><a href="TracTrac%20Programmes.dc.html" data-rv="1" data-d="140" style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:18px;padding:clamp(18px,2vw,26px) 0;border-top:1px solid rgba(255,255,255,0.2);color:#fff" style-hover="color:var(--tt-orange)"><span style="font:600 13px/1.6 'Instrument Sans';color:var(--tt-orange)">07</span><span style="display:grid;gap:8px"><span style="font:700 clamp(19px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.015em">Programmes</span><span style="font:400 15px/1.55 'Instrument Sans';color:rgba(255,255,255,0.72)">Structured initiatives including ISSAM, Young People in Mechanisation and TRAxCelerate.</span></span></a></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Our journey" style="background:#fff;padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-2" style="gap:clamp(32px,6vw,110px);align-items:end;margin-bottom:clamp(48px,6vw,88px)">
+      <div><h2 data-rv="1" style="margin:0;max-width:16ch;font:700 clamp(28px,3.6vw,52px)/1.02 'Instrument Sans';letter-spacing:-0.025em;text-wrap:pretty">Recent milestones.</h2></div>
+      <p data-rv="1" style="margin:0;max-width:46ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">A selection of documented milestones from TracTrac’s programme and policy work.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(28px,3vw,48px)"><div data-rv="1" data-d="0" style="display:flex;flex-direction:column;gap:14px;padding-top:26px;border-top:2px solid var(--tt-ink);position:relative"><span style="position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--tt-orange)"></span><span style="font:700 clamp(22px,2vw,30px)/1 'Instrument Sans';letter-spacing:-0.02em">2023</span><span style="font:600 16px/1.3 'Instrument Sans'">ISSAM begins</span><span style="font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">TracTrac and the Mastercard Foundation start the ISSAM project, planned to run to 2028 across two phases.</span></div><div data-rv="1" data-d="100" style="display:flex;flex-direction:column;gap:14px;padding-top:26px;border-top:2px solid var(--tt-ink);position:relative"><span style="position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--tt-orange)"></span><span style="font:700 clamp(22px,2vw,30px)/1 'Instrument Sans';letter-spacing:-0.02em">September 2025</span><span style="font:600 16px/1.3 'Instrument Sans'">Equipment to cooperatives</span><span style="font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">ISSAM distributes Tryctors, ploughs, harrows, planters and tractor buckets to farmer cooperatives in Nasarawa and Kaduna.</span></div><div data-rv="1" data-d="200" style="display:flex;flex-direction:column;gap:14px;padding-top:26px;border-top:2px solid var(--tt-ink);position:relative"><span style="position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--tt-orange)"></span><span style="font:700 clamp(22px,2vw,30px)/1 'Instrument Sans';letter-spacing:-0.02em">9 March 2026</span><span style="font:600 16px/1.3 'Instrument Sans'">Inclusive mechanisation strategy</span><span style="font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">TracTrac launches its Inclusive Agricultural Mechanization Strategy at a convening aligned with International Women’s Day.</span></div><div data-rv="1" data-d="300" style="display:flex;flex-direction:column;gap:14px;padding-top:26px;border-top:2px solid var(--tt-ink);position:relative"><span style="position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--tt-orange)"></span><span style="font:700 clamp(22px,2vw,30px)/1 'Instrument Sans';letter-spacing:-0.02em">August 2026</span><span style="font:600 16px/1.3 'Instrument Sans'">National policy ratified</span><span style="font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">TracTrac and the Federal Ministry of Agriculture and Food Security convene the High-Level National Policy Dialogue, where NAMP 2026 is ratified.</span></div></div>
+  </div>
+</section>
+
+<section data-screen-label="How we work" style="background:#fff;padding:0 0 clamp(72px,9vw,150px)">
+  <div class="tt-wrap">
+    <p data-rv="1" style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">How we work</p>
+    <h2 data-rv="1" style="margin:0 0 clamp(32px,4vw,56px);max-width:18ch;font:700 clamp(28px,3.6vw,52px)/1.02 'Instrument Sans';letter-spacing:-0.025em;text-wrap:pretty">Five principles behind the work.</h2>
+    <div style="border-bottom:1px solid var(--tt-line)"><div data-rv="1" data-d="0" class="tt-cat" style="gap:clamp(16px,3vw,56px);padding:clamp(22px,2.4vw,34px) 0;border-top:1px solid var(--tt-line);align-items:baseline"><span style="font:600 13px/1 'Instrument Sans';color:var(--tt-orange)">01</span><h3 style="margin:0;font:700 clamp(28px,3.4vw,52px)/1 'Instrument Sans';letter-spacing:-0.03em">Access</h3><p style="margin:0;max-width:40ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Make mechanisation easier to reach, closer to the farm and at the time it is needed.</p></div><div data-rv="1" data-d="80" class="tt-cat" style="gap:clamp(16px,3vw,56px);padding:clamp(22px,2.4vw,34px) 0;border-top:1px solid var(--tt-line);align-items:baseline"><span style="font:600 13px/1 'Instrument Sans';color:var(--tt-orange)">02</span><h3 style="margin:0;font:700 clamp(28px,3.4vw,52px)/1 'Instrument Sans';letter-spacing:-0.03em">Technology</h3><p style="margin:0;max-width:40ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Use practical digital tools to coordinate requests, equipment and payments.</p></div><div data-rv="1" data-d="160" class="tt-cat" style="gap:clamp(16px,3vw,56px);padding:clamp(22px,2.4vw,34px) 0;border-top:1px solid var(--tt-line);align-items:baseline"><span style="font:600 13px/1 'Instrument Sans';color:var(--tt-orange)">03</span><h3 style="margin:0;font:700 clamp(28px,3.4vw,52px)/1 'Instrument Sans';letter-spacing:-0.03em">People</h3><p style="margin:0;max-width:40ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Build the skills and small businesses needed to run mechanisation services.</p></div><div data-rv="1" data-d="240" class="tt-cat" style="gap:clamp(16px,3vw,56px);padding:clamp(22px,2.4vw,34px) 0;border-top:1px solid var(--tt-line);align-items:baseline"><span style="font:600 13px/1 'Instrument Sans';color:var(--tt-orange)">04</span><h3 style="margin:0;font:700 clamp(28px,3.4vw,52px)/1 'Instrument Sans';letter-spacing:-0.03em">Capital</h3><p style="margin:0;max-width:40ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Create pathways for equipment financing and investment.</p></div><div data-rv="1" data-d="320" class="tt-cat" style="gap:clamp(16px,3vw,56px);padding:clamp(22px,2.4vw,34px) 0;border-top:1px solid var(--tt-line);align-items:baseline"><span style="font:600 13px/1 'Instrument Sans';color:var(--tt-orange)">05</span><h3 style="margin:0;font:700 clamp(28px,3.4vw,52px)/1 'Instrument Sans';letter-spacing:-0.03em">Partnerships</h3><p style="margin:0;max-width:40ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Work with organisations that can extend the model further.</p></div></div>
+  </div>
+</section>
+
+<section data-screen-label="Vision and mission" style="position:relative;background:var(--tt-ink);color:#fff;overflow:hidden">
+  <img src="img/prog-5.jpg" alt="An MSP driving a tryctor across an open field" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35">
+  <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,17,15,0.95) 0%,rgba(20,17,15,0.6) 100%)"></div>
+  <div class="tt-wrap" style="position:relative;padding-top:clamp(88px,11vw,180px);padding-bottom:clamp(72px,9vw,140px)">
+    <p data-rv="1" style="margin:0 0 28px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Our vision</p>
+    <p data-rv="1" style="margin:0;max-width:12ch;font:700 clamp(52px,9vw,150px)/0.88 'Instrument Sans';letter-spacing:-0.05em">Leading a mechanisation revolution in Africa.</p>
+    <div class="tt-2" style="gap:clamp(32px,6vw,110px);margin-top:clamp(64px,8vw,120px);padding-top:clamp(32px,4vw,48px);border-top:1px solid rgba(255,255,255,0.25)">
+      <p data-rv="1" style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Our mission</p>
+      <p data-rv="1" style="margin:0;max-width:44ch;font:500 clamp(18px,1.7vw,24px)/1.45 'Instrument Sans';color:rgba(255,255,255,0.9)">To improve farmers’ access to mechanisation, create opportunities for investors and enterprising young people, increase the number of tractors available and use technology to make better use of every machine.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Our values" style="background:var(--tt-off);padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-row" style="gap:clamp(32px,6vw,110px);align-items:start">
+      <div style="position:sticky;top:120px">
+        <p data-rv="1" style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Our values</p>
+        <h2 data-rv="1" style="margin:0;max-width:14ch;font:700 clamp(28px,3.6vw,52px)/1.02 'Instrument Sans';letter-spacing:-0.025em;text-wrap:pretty">What we hold ourselves to.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));column-gap:clamp(24px,3vw,48px);border-bottom:1px solid var(--tt-line)"><div data-rv="1" data-d="0" style="display:grid;gap:12px;min-width:0;padding:clamp(24px,2.6vw,36px) 0;border-top:1px solid var(--tt-line)"><h3 style="margin:0;font:700 clamp(26px,2.4vw,38px)/1.05 'Instrument Sans';letter-spacing:-0.025em;overflow-wrap:anywhere">Inclusion</h3><p style="margin:0;max-width:40ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Create opportunities for farmers regardless of size or resources.</p></div><div data-rv="1" data-d="100" style="display:grid;gap:12px;min-width:0;padding:clamp(24px,2.6vw,36px) 0;border-top:1px solid var(--tt-line)"><h3 style="margin:0;font:700 clamp(26px,2.4vw,38px)/1.05 'Instrument Sans';letter-spacing:-0.025em;overflow-wrap:anywhere">Innovation</h3><p style="margin:0;max-width:40ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Develop practical technology that improves agricultural mechanisation.</p></div><div data-rv="1" data-d="0" style="display:grid;gap:12px;min-width:0;padding:clamp(24px,2.6vw,36px) 0;border-top:1px solid var(--tt-line)"><h3 style="margin:0;font:700 clamp(26px,2.4vw,38px)/1.05 'Instrument Sans';letter-spacing:-0.025em;overflow-wrap:anywhere">Accountability</h3><p style="margin:0;max-width:40ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Take responsibility for commitments and maintain trust.</p></div><div data-rv="1" data-d="100" style="display:grid;gap:12px;min-width:0;padding:clamp(24px,2.6vw,36px) 0;border-top:1px solid var(--tt-line)"><h3 style="margin:0;font:700 clamp(26px,2.4vw,38px)/1.05 'Instrument Sans';letter-spacing:-0.025em;overflow-wrap:anywhere">Sustainability</h3><p style="margin:0;max-width:40ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Support long-term agricultural productivity and responsible practices.</p></div><div data-rv="1" data-d="0" style="display:grid;gap:12px;min-width:0;padding:clamp(24px,2.6vw,36px) 0;border-top:1px solid var(--tt-line)"><h3 style="margin:0;font:700 clamp(26px,2.4vw,38px)/1.05 'Instrument Sans';letter-spacing:-0.025em;overflow-wrap:anywhere">Collaboration</h3><p style="margin:0;max-width:40ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Work with farmers, investors and stakeholders to build the system together.</p></div><div data-rv="1" data-d="100" style="display:grid;gap:12px;min-width:0;padding:clamp(24px,2.6vw,36px) 0;border-top:1px solid var(--tt-line)"><h3 style="margin:0;font:700 clamp(26px,2.4vw,38px)/1.05 'Instrument Sans';letter-spacing:-0.025em;overflow-wrap:anywhere">Respect</h3><p style="margin:0;max-width:40ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Value farmers and the people who make food production possible.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="The people" style="background:#fff;padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-2" style="gap:clamp(32px,6vw,110px);align-items:end;margin-bottom:clamp(40px,5vw,72px)">
+      <div><p data-rv="1" style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">The people</p><h2 data-rv="1" style="margin:0;max-width:16ch;font:700 clamp(28px,3.6vw,52px)/1.02 'Instrument Sans';letter-spacing:-0.025em;text-wrap:pretty">The people behind the work.</h2></div>
+      <p data-rv="1" style="margin:0;max-width:46ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">TracTrac’s team works across technology, field operations, programmes, partnerships and mechanisation services, alongside the operators, agents and MSPs who deliver the work on the ground.</p>
+    </div>
+    <div class="tt-row" style="gap:clamp(12px,1.4vw,20px)">
+      <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);min-height:clamp(320px,36vw,560px)"><img data-rv="img" src="uploads/WhatsApp%20Image%202026-09-24%20at%2014.35.20.jpeg" alt="TracTrac team and young participants at a youth in mechanisation event" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+      <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);min-height:clamp(320px,36vw,560px)"><img data-rv="img" src="uploads/DSC02281.jpg" alt="TracTrac programme team at an MSP onboarding event" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" data-screen-label="Our people" style="background:var(--tt-off);padding:clamp(88px,11vw,170px) 0 clamp(72px,8vw,130px);scroll-margin-top:84px">
+  <div class="tt-wrap">
+    <div class="tt-2" style="gap:clamp(28px,6vw,110px);align-items:end">
+      <div><p data-rv="1" style="margin:0 0 24px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Our people</p><h2 data-rv="1" style="margin:0;max-width:11ch;font:700 clamp(40px,5.6vw,88px)/0.96 'Instrument Sans';letter-spacing:-0.04em;text-wrap:balance">The people behind the movement.</h2></div>
+      <p data-rv="1" style="margin:0;max-width:40ch;font:400 clamp(17px,1.4vw,20px)/1.55 'Instrument Sans';color:var(--tt-grey)">Meet the people bringing together technology, agricultural expertise and partnerships to expand access to mechanisation.</p>
+    </div>
+
+    <article class="tt-ceo tt-pf" aria-labelledby="ceo-name" style="gap:clamp(36px,6vw,110px);align-items:center;margin-top:clamp(64px,8vw,128px)">
+      <div style="position:relative;padding:0 clamp(24px,3.4vw,56px) clamp(24px,3.4vw,56px) 0;max-width:640px;width:100%">
+        <div aria-hidden="true" style="position:absolute;top:clamp(40px,5vw,80px);left:clamp(40px,5vw,80px);right:0;bottom:0;border-radius:clamp(18px,2vw,32px);background:var(--tt-ink);overflow:hidden"><svg aria-hidden="true" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><g fill="none" stroke="rgba(246,242,236,0.2)" stroke-width="1" vector-effect="non-scaling-stroke"><path d="M0 118 L182 92 L400 136" vector-effect="non-scaling-stroke"></path><path d="M0 304 L148 278 L262 322 L400 294" vector-effect="non-scaling-stroke"></path><path d="M182 92 L148 278 L128 500" vector-effect="non-scaling-stroke"></path><path d="M262 322 L296 0" vector-effect="non-scaling-stroke"></path><path d="M262 322 L244 500" vector-effect="non-scaling-stroke"></path><path d="M0 420 L128 404" vector-effect="non-scaling-stroke"></path></g><g fill="#F36A02"><circle cx="182" cy="92" r="3"></circle><circle cx="148" cy="278" r="3"></circle><circle cx="262" cy="322" r="3"></circle><circle cx="128" cy="404" r="3"></circle></g></svg><span style="position:absolute;right:clamp(16px,1.6vw,24px);bottom:clamp(14px,1.4vw,20px);font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;color:rgba(246,242,236,0.7)">01 / {{ total }}</span></div>
+        <div class="tt-pf-img" style="position:relative;aspect-ratio:4/5;border-radius:clamp(18px,2vw,32px);overflow:hidden;background:#E6DFD4"><sc-if value="{{ ceo.photo }}" hint-placeholder-val="{{ false }}"><img src="{{ ceo.photo }}" alt="{{ ceo.alt }}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%"></sc-if><sc-if value="{{ ceo.noPhoto }}" hint-placeholder-val="{{ true }}"><image-slot id="team-{{ ceo.id }}" shape="rounded" radius="28" placeholder="Portrait of {{ ceo.name }} needed"></image-slot></sc-if></div>
+      </div>
+      <div style="max-width:58ch">
+        <p style="margin:0 0 20px;display:flex;align-items:center;gap:14px;font:600 12px/1.3 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)"><span aria-hidden="true" style="width:32px;height:1px;background:currentColor"></span>{{ ceo.title }}</p>
+        <h3 id="ceo-name" style="margin:0 0 clamp(24px,2.6vw,36px);font:700 clamp(38px,4.6vw,72px)/0.98 'Instrument Sans';letter-spacing:-0.04em;text-wrap:balance">{{ ceo.name }}</h3>
+        <p style="margin:0;font:500 clamp(18px,1.5vw,21px)/1.5 'Instrument Sans'">{{ ceo.lead }}</p>
+        <div style="display:grid;gap:14px;margin-top:18px"><sc-for list="{{ ceo.rest }}" as="para" hint-placeholder-count="2"><p style="margin:0;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">{{ para }}</p></sc-for></div>
+        <sc-if value="{{ ceo.linkedin }}" hint-placeholder-val="{{ false }}"><a href="{{ ceo.linkedin }}" target="_blank" rel="noopener" aria-label="{{ ceo.name }} on LinkedIn (opens in a new tab)" style="display:inline-flex;align-items:center;gap:10px;margin-top:28px;font:600 15px/1 'Instrument Sans'" style-hover="color:var(--tt-orange)"><span aria-hidden="true" style="width:28px;height:28px;border-radius:6px;background:var(--tt-ink);color:#fff;display:flex;align-items:center;justify-content:center;font:700 13px/1 'Instrument Sans'">in</span>LinkedIn</a></sc-if>
+      </div>
+    </article>
+
+    <div style="display:flex;align-items:center;gap:18px;margin-top:clamp(80px,9vw,150px);padding-top:22px;border-top:1px solid var(--tt-line)">
+      <h3 style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-ink)">Leadership team</h3>
+    </div>
+    <ul class="tt-lead" style="list-style:none;margin:clamp(36px,4vw,56px) 0 0;padding:0;column-gap:clamp(24px,3vw,56px);row-gap:clamp(56px,6vw,100px)">
+      <sc-for list="{{ leaders }}" as="p" hint-placeholder-count="8">
+        <li>
+          <article class="tt-pf" aria-labelledby="n-{{ p.id }}">
+            <div class="tt-pf-img" style="position:relative;aspect-ratio:4/5;border-radius:clamp(16px,1.6vw,24px);overflow:hidden;background:#E6DFD4"><sc-if value="{{ p.photo }}" hint-placeholder-val="{{ false }}"><img src="{{ p.photo }}" alt="{{ p.alt }}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%"></sc-if><sc-if value="{{ p.noPhoto }}" hint-placeholder-val="{{ true }}"><image-slot id="team-{{ p.id }}" shape="rounded" radius="22" placeholder="Portrait of {{ p.name }} needed"></image-slot></sc-if></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px;padding-bottom:14px;border-bottom:1px solid var(--tt-line)">
+              <span style="font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;color:var(--tt-orange)">{{ p.num }}</span>
+              <sc-if value="{{ p.linkedin }}" hint-placeholder-val="{{ false }}"><a href="{{ p.linkedin }}" target="_blank" rel="noopener" aria-label="{{ p.name }} on LinkedIn (opens in a new tab)" style="width:32px;height:32px;border-radius:6px;border:1px solid var(--tt-line);display:flex;align-items:center;justify-content:center;font:700 13px/1 'Instrument Sans';color:var(--tt-ink)" style-hover="background:var(--tt-ink);border-color:var(--tt-ink);color:#fff">in</a></sc-if>
+            </div>
+            <h4 id="n-{{ p.id }}" style="margin:18px 0 8px;font:700 clamp(22px,1.9vw,28px)/1.1 'Instrument Sans';letter-spacing:-0.025em;text-wrap:balance">{{ p.name }}</h4>
+            <p style="margin:0 0 16px;font:600 12px/1.4 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-grey)">{{ p.title }}</p>
+            <p style="margin:0;font:400 16px/1.6 'Instrument Sans';color:var(--tt-ink)">{{ p.lead }}</p>
+            <sc-if value="{{ p.isOpen }}" hint-placeholder-val="{{ false }}"><div id="{{ p.panelId }}" style="display:grid;gap:12px;margin-top:12px"><sc-for list="{{ p.rest }}" as="para"><p style="margin:0;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey)">{{ para }}</p></sc-for></div></sc-if>
+            <sc-if value="{{ p.hasMore }}" hint-placeholder-val="{{ false }}"><button onClick="{{ p.toggle }}" aria-expanded="{{ p.exp }}" aria-controls="{{ p.panelId }}" style="margin-top:16px;padding:10px 0;min-height:44px;background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font:600 14px/1 'Instrument Sans';color:var(--tt-ink)" style-hover="color:var(--tt-orange)">{{ p.moreLabel }} <span aria-hidden="true" style="width:22px;height:22px;border-radius:50%;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;font:600 13px/1 'Instrument Sans'">{{ p.sign }}</span></button></sc-if>
+          </article>
+        </li>
+      </sc-for>
+    </ul>
+
+    <a href="TracTrac%20Team.dc.html" style="margin-top:clamp(80px,9vw,140px);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:clamp(26px,3vw,40px) 0;border-top:1px solid var(--tt-ink);border-bottom:1px solid var(--tt-line);color:var(--tt-ink)" style-hover="color:var(--tt-orange)">
+      <span style="font:700 clamp(26px,3vw,44px)/1.05 'Instrument Sans';letter-spacing:-0.03em">Meet the entire team</span>
+      <span aria-hidden="true" style="flex:0 0 auto;width:clamp(48px,4vw,64px);height:clamp(48px,4vw,64px);border-radius:50%;background:var(--tt-orange);color:#fff;display:flex;align-items:center;justify-content:center;font:600 22px/1 'Instrument Sans'">→</span>
+    </a>
+  </div>
+</section>
+
+<section data-screen-label="TracTrac in the field" style="background:var(--tt-ink);padding:clamp(12px,1.4vw,20px)">
+  <div class="tt-field" style="grid-auto-rows:clamp(240px,26vw,420px);gap:clamp(12px,1.4vw,20px)">
+    <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);" data-span="1"><img data-rv="img" src="img/prog-1.jpg" alt="An operator ploughing with an orange ISSAM tryctor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+    <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);"><img data-rv="img" src="img/prog-9.jpg" alt="A woman MSP in the field" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+    <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);"><img data-rv="img" src="img/ypim-1.jpg" alt="Young people in mechanisation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+    <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);"><img data-rv="img" src="uploads/IMG-20260824-WA0147.jpg" alt="A TracTrac team member interviewing an MSP" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+    <div data-rv="1" style="position:relative;overflow:hidden;border-radius:clamp(14px,1.6vw,24px);"><img data-rv="img" src="uploads/WhatsApp%20Image%202026-09-03%20at%2011.09.37%20(1).jpeg" alt="A solar-powered knapsack sprayer distributed through ISSAM" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+  </div>
+  <p style="margin:0;padding:clamp(28px,3vw,44px) clamp(8px,3vw,52px) clamp(16px,2vw,24px);font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">TracTrac in the field</p>
+</section>
+
+<section data-screen-label="About CTA" style="background:var(--tt-off);padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <p data-rv="1" style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Let’s build the future of mechanisation</p>
+    <h2 data-rv="1" style="margin:0;max-width:22ch;font:700 clamp(32px,4.4vw,68px)/0.98 'Instrument Sans';letter-spacing:-0.035em;text-wrap:pretty">Whether you are a farmer, investor, partner, service provider or organisation working in agriculture, there is a place to work with TracTrac.</h2>
+    <div data-rv="1" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(32px,4vw,52px)">
+      <a href="TracTrac%20Partners.dc.html" style="font:600 17px/1 'Instrument Sans';padding:20px 30px;min-height:56px;display:inline-flex;align-items:center;background:var(--tt-orange);color:#fff" style-hover="background:var(--tt-ink);color:#fff">Partner With Us</a>
+      <a href="TracTrac%20Programmes.dc.html" style="font:600 17px/1 'Instrument Sans';padding:20px 30px;min-height:56px;display:inline-flex;align-items:center;border:1px solid var(--tt-ink)" style-hover="background:var(--tt-ink);color:#fff">Explore Our Programmes</a>
+      <a href="TracTrac%20Technology.dc.html" style="font:600 17px/1 'Instrument Sans';padding:20px 30px;min-height:56px;display:inline-flex;align-items:center;border:1px solid var(--tt-ink)" style-hover="background:var(--tt-ink);color:#fff">Find Mechanisation</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:#fff;border-top:1px solid var(--tt-line)">
+  <div class="tt-wrap" style="padding-top:clamp(48px,6vw,80px);padding-bottom:clamp(32px,4vw,56px)">
+    <div class="tt-2" style="gap:clamp(28px,4vw,64px);align-items:start;padding-bottom:clamp(36px,4vw,60px);border-bottom:1px solid var(--tt-line)">
+      <div>
+        <img src="uploads/tractrac%20logo%20png%204.png" alt="TracTrac" style="height:36px;width:auto;margin-bottom:22px">
+        <p style="margin:0;max-width:38ch;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey)">Making mechanisation easier to access for farmers, equipment owners, agents and service providers.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 16px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-grey)">Get the app</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <img src="uploads/google-play-badge-logo_svgrepo.com.png" alt="Get it on Google Play" style="height:46px;width:auto">
+          <span style="display:flex;flex-direction:column;justify-content:center;width:155px;height:46px;padding:0 14px;background:#14110F;border-radius:8px;color:#fff">
+            <span style="font:400 9px/1.3 'Instrument Sans';letter-spacing:0.04em;opacity:0.72">Download on the</span>
+            <span style="font:600 15px/1.2 'Instrument Sans';letter-spacing:-0.01em">App Store</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="tt-foot" style="padding-top:clamp(32px,4vw,56px)">
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">TracTrac</p>
+        <a href="TracTrac%20About.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">About Us</a>
+        <a href="TracTrac%20Impact.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Our Impact</a>
+        <a href="TracTrac%20Careers.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Careers</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#final" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Contact Us</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Get Mechanisation</p>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Farmers</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Equipment Owners</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Booking Agents</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Mechanisation Service Providers</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Technology</p>
+        <a href="TracTrac%20Technology.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TracTrac Plus</a>
+        <a href="TracTrac%20Technology.dc.html#agent" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TracTrac Agent</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Programmes</p>
+        <a href="TracTrac%20Programmes.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">All programmes</a>
+        <a href="Programme%20-%20ISSAM.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">ISSAM</a>
+        <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Young People in Mechanisation</a>
+        <a href="Programme%20-%20TRAxCelerate.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TRAxCelerate</a>
+        <a href="Programme%20-%20TRACINVEST.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TRACINVEST</a>
+        <a href="Programme%20-%20H2O.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">H₂O: Half-Way to Ownership</a>
+        <a href="Programme%20-%20Rise7.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Rise7: Empowering Seven to Scale</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Partners</p>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Work With Us</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Finance and Investment</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Government and Regulators</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Development Partners</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Resources</p>
+        <a href="TracTrac%20Insights.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Stories and News</a>
+        <a href="TracTrac%20Insights.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Research and Resources</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#faq" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">FAQs</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;margin-top:clamp(36px,4vw,60px);padding-top:26px;border-top:1px solid var(--tt-line)">
+      <div style="display:flex;flex-wrap:wrap;gap:22px">
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Privacy Policy</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Terms and Conditions</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:22px">
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">LinkedIn</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">Instagram</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">X</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">Facebook</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">YouTube</a>
+      </div>
+      <p style="margin:0;font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)">© 2026 TracTrac. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    if (!window.TT_TEAM) { const t = setInterval(() => { if (window.TT_TEAM) { clearInterval(t); this.forceUpdate(); } }, 100); setTimeout(() => clearInterval(t), 8000); }
+    const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ease = 'cubic-bezier(.22,.61,.36,1)';
+    const rv = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const el = e.target; el.style.opacity = '1'; el.style.transform = 'none'; rv.unobserve(el);
+    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+    document.querySelectorAll('[data-rv]').forEach((el) => {
+      if (rm || document.hidden) return;
+      const d = Number(el.dataset.d || 0);
+      el.style.opacity = '0';
+      el.style.transform = el.dataset.rv === 'img' ? 'scale(1.04)' : el.dataset.rv === 'x' ? 'scaleX(0)' : 'translateY(18px)';
+      if (el.dataset.rv === 'x') el.style.transformOrigin = 'left';
+      el.style.transition = `opacity 700ms ${ease} ${d}ms, transform ${el.dataset.rv === 'img' ? 1200 : 800}ms ${ease} ${d}ms`;
+      rv.observe(el);
+    });
+    const fmt = (el, v) => { const dp = Number(el.dataset.dec || 0); const n = v.toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp }); el.textContent = (el.dataset.prefix || '') + n + (el.dataset.suffix || ''); };
+    const cio = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting || e.target.dataset.done) return;
+      e.target.dataset.done = '1';
+      const t = parseFloat(e.target.dataset.count);
+      if (rm) return fmt(e.target, t);
+      const t0 = performance.now(), dur = 1400;
+      const tick = (now) => { const k = Math.min(1, (now - t0) / dur); fmt(e.target, t * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.4 });
+    document.querySelectorAll('[data-count]').forEach((n) => cio.observe(n));
+    this.onScroll = () => {
+      const h = document.querySelector('header[data-hdr]');
+      if (!h) return;
+      const solid = window.scrollY > 90 || h.dataset.light === '1';
+      h.style.background = solid ? '#fff' : 'transparent';
+      h.style.borderBottomColor = solid ? 'var(--tt-line)' : 'transparent';
+      h.style.setProperty('--tt-nav', solid ? '#201e1d' : '#ffffff');
+      const lg = h.querySelector('img[data-logo]');
+      if (lg) lg.style.filter = solid ? 'none' : 'brightness(0) invert(1)';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  renderVals() {
+    const dd = (el, open) => {
+      const p = el.querySelector('[data-dd]'); if (!p) return;
+      p.style.opacity = open ? '1' : '0'; p.style.visibility = open ? 'visible' : 'hidden'; p.style.transform = open ? 'none' : 'translateY(-6px)';
+      const b = el.querySelector('button'); if (b) b.setAttribute('aria-expanded', String(open));
+    };
+    return {
+      ...(() => {
+        const L = (window.TT_TEAM || []).filter((p) => p.leadership), open = (this.state && this.state.open) || {};
+        const pad = (n) => String(n).padStart(2, '0');
+        const mk = (p, i) => { const o = !!open[p.id]; return { ...p, num: pad(i + 1), alt: 'Portrait of ' + p.name + ', ' + p.title, noPhoto: !p.photo, lead: p.bio[0], rest: p.bio.slice(1), hasMore: p.bio.length > 1, isOpen: o, exp: String(o), moreLabel: o ? 'Show less' : 'Read full bio', sign: o ? '−' : '+', panelId: 'bio-' + p.id, toggle: () => this.setState((s) => { const cur = (s && s.open) || {}; return { open: { ...cur, [p.id]: !cur[p.id] } }; }) }; };
+        return { ceo: L[0] ? mk(L[0], 0) : {}, leaders: L.slice(1).map((p, i) => mk(p, i + 1)), total: pad(L.length) };
+      })(),
+      navEnter: (e) => dd(e.currentTarget, true),
+      navLeave: (e) => dd(e.currentTarget, false),
+      toggleMobile: (e) => {
+        const m = document.getElementById('tt-mob'); if (!m) return;
+        const open = m.style.display !== 'block';
+        m.style.display = open ? 'block' : 'none';
+        e.currentTarget.setAttribute('aria-expanded', String(open));
+        const h = document.querySelector('header[data-hdr]');
+        if (open && h) { h.style.background = '#fff'; h.style.setProperty('--tt-nav', '#201e1d'); h.querySelector('img[data-logo]').style.filter = 'none'; }
+        else if (this.onScroll) this.onScroll();
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

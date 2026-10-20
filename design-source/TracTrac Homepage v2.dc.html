@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--tt-orange:#F36A02;--tt-ink:#14110F;--tt-green:#16342A;--tt-off:#F6F2EC;--tt-grey:#6E6A65;--tt-line:#DCD6CD}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tt-ink);font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+img{display:block;max-width:100%}
+a{color:var(--tt-ink);text-decoration:none}
+a:hover{color:var(--tt-orange)}
+:focus-visible{outline:2px solid var(--tt-orange);outline-offset:3px}
+::selection{background:var(--tt-orange);color:#fff}
+.tt-wrap{width:100%;max-width:1520px;margin:0 auto;padding-left:clamp(20px,4vw,72px);padding-right:clamp(20px,4vw,72px)}
+.tt-2{display:grid;grid-template-columns:1fr 1fr}
+.tt-optical{padding-top:28px}
+.tt-stats{display:grid;grid-template-columns:repeat(5,1fr)}
+.tt-foot{display:grid;grid-template-columns:repeat(6,1fr);gap:32px}
+.tt-mobonly{display:none!important}
+.tt-prod{display:grid;grid-template-columns:0.85fr 1.15fr}
+.tt-herotxt{padding-right:0}
+.tt-net{display:grid;grid-template-columns:repeat(4,1fr)}
+.tt-netsub{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.6vw,44px)}
+@media (max-width:980px){.tt-row{grid-template-columns:1fr;gap:4px;padding:13px 0}}
+@keyframes ttmarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tt-marq{animation:ttmarq 46s linear infinite}
+@media (max-width:1240px){.tt-desk{display:none!important}.tt-mobonly{display:flex!important}}
+@media (max-width:1180px){.tt-stats{grid-template-columns:repeat(3,1fr)}.tt-foot{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){.tt-net{grid-template-columns:1fr 1fr;row-gap:clamp(28px,4vw,40px)}.tt-netrule{display:none}}
+@media (max-width:900px){.tt-netsub{grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,32px)}}
+@media (max-width:560px){.tt-net,.tt-netsub{grid-template-columns:1fr}}
+@media (max-width:880px){.tt-optical{padding-top:0}.tt-2{grid-template-columns:1fr}.tt-sticky{position:static!important}.tt-prod{grid-template-columns:1fr}.tt-foot{grid-template-columns:1fr 1fr}.tt-stats{grid-template-columns:1fr}.tt-stepgap{min-height:auto!important;padding:36px 0!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+</style>
+</helmet>
+
+<header data-hdr="1" style="position:sticky;top:0;z-index:80;--tt-nav:#ffffff;background:transparent;border-bottom:1px solid transparent;transition:background .25s ease,border-color .25s ease">
+  <div class="tt-wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px">
+    <a href="#top" aria-label="TracTrac home" style="display:flex;align-items:center;flex:0 0 auto">
+      <img data-logo="1" src="uploads/tractrac%20logo%20png%204.png" alt="TracTrac" style="height:34px;width:auto;filter:brightness(0) invert(1);transition:filter .25s ease">
+    </a>
+
+    <nav class="tt-desk" aria-label="Main" style="display:flex;align-items:stretch;gap:4px;height:84px">
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Solutions</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;min-width:300px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="#pathways" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">For Farmers</a>
+          <a href="#pathways" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">For Equipment Owners</a>
+          <a href="#pathways" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">For Booking Agents</a>
+          <a href="#pathways" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">For Mechanisation Service Providers</a>
+        </div>
+      </div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Technology</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;min-width:240px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Technology.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">TracTrac Plus</a>
+          <a href="TracTrac%20Technology.dc.html#agent" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">TracTrac Agent</a>
+        </div>
+      </div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Programmes</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;width:680px;display:grid;grid-template-columns:180px 1fr;gap:10px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Programmes.dc.html" style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,0.06);color:#fff" style-hover="background:rgba(255,255,255,0.1);color:#fff">
+            <span style="font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Overview</span>
+            <span style="font:600 17px/1.2 'Instrument Sans'">All programmes →</span>
+          </a>
+          <div style="display:grid;grid-template-columns:1fr 1fr">
+            <a href="Programme%20-%20ISSAM.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">ISSAM</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Smallholder access to small-scale mechanisation</span>
+            </a>
+            <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">Young People in Mechanisation</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Skills and careers in mechanisation</span>
+            </a>
+            <a href="Programme%20-%20TRAxCelerate.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">TRAxCelerate</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Programme design and delivery</span>
+            </a>
+            <a href="Programme%20-%20TRACINVEST.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">TRACINVEST</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Asset-backed tractor investment</span>
+            </a>
+            <a href="Programme%20-%20H2O.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">H₂O</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Half-Way to Ownership</span>
+            </a>
+            <a href="Programme%20-%20Rise7.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">Rise7</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Empowering Seven to Scale</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Impact</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;min-width:240px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Impact.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">Our Impact</a>
+          <a href="TracTrac%20Insights.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">Stories from the Field</a>
+        </div>
+      </div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Partners</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;min-width:260px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Partners.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">Work With Us</a>
+          <a href="TracTrac%20Partners.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">Finance and Investment</a>
+          <a href="TracTrac%20Partners.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">Development Partners</a>
+        </div>
+      </div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Insights</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;min-width:250px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Insights.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">Stories and News</a>
+          <a href="TracTrac%20Insights.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">Research and Resources</a>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center">
+        <a href="TracTrac%20About.dc.html" style="font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;min-height:44px;display:flex;align-items:center;white-space:nowrap" style-hover="color:var(--tt-orange)">About Us</a>
+      </div>
+      <div style="display:flex;align-items:center">
+        <a href="TracTrac%20Careers.dc.html" style="font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;min-height:44px;display:flex;align-items:center;white-space:nowrap" style-hover="color:var(--tt-orange)">Careers</a>
+      </div>
+      <div style="display:flex;align-items:center">
+        <a href="#faq" style="font:600 15px/1 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-nav);padding:12px 14px;min-height:44px;display:flex;align-items:center;white-space:nowrap" style-hover="color:var(--tt-orange)">FAQ</a>
+      </div>
+    </nav>
+
+    <div class="tt-desk" style="display:flex;align-items:center;gap:12px;flex:0 0 auto">
+      <a href="#partnership" style="font:500 15px/1 'Instrument Sans';color:var(--tt-nav);opacity:0.78;padding:14px 8px;min-height:48px;display:flex;align-items:center;white-space:nowrap;border-bottom:1px solid transparent" style-hover="opacity:1;border-bottom-color:currentColor">Partner With Us</a>
+      <a href="#final" style="font:600 15px/1 'Instrument Sans';padding:15px 24px;background:var(--tt-orange);color:#fff;min-height:48px;display:flex;align-items:center;white-space:nowrap" style-hover="background:#d85d02;color:#fff">Find Mechanisation</a>
+    </div>
+
+    <button class="tt-mobonly" onClick="{{ toggleMobile }}" aria-label="Open menu" aria-expanded="false" aria-controls="tt-mob" style="border:1px solid var(--tt-nav);background:transparent;width:48px;height:48px;cursor:pointer;align-items:center;justify-content:center">
+      <span style="display:block;width:20px;height:2px;background:var(--tt-nav);box-shadow:0 -6px 0 var(--tt-nav),0 6px 0 var(--tt-nav)"></span>
+    </button>
+  </div>
+
+  <div id="tt-mob" style="display:none;border-top:1px solid var(--tt-line);background:#fff;max-height:calc(100vh - 84px);overflow:auto;padding:8px 0 40px">
+    <div class="tt-wrap">
+      <div style="border-bottom:1px solid var(--tt-line)">
+        <button onClick="{{ toggleAcc }}" style="width:100%;text-align:left;border:0;background:none;font:700 20px/1 'Instrument Sans';padding:20px 0;cursor:pointer;color:var(--tt-ink);display:flex;justify-content:space-between;align-items:center"><span>Solutions</span><span data-plus="1" style="color:var(--tt-orange);font-size:24px">+</span></button>
+        <div data-panel="1" style="display:none;padding:0 0 16px">
+          <a href="#pathways" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">For Farmers</a>
+          <a href="#pathways" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">For Equipment Owners</a>
+          <a href="#pathways" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">For Booking Agents</a>
+          <a href="#pathways" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">For Mechanisation Service Providers</a>
+        </div>
+      </div>
+      <div style="border-bottom:1px solid var(--tt-line)">
+        <button onClick="{{ toggleAcc }}" style="width:100%;text-align:left;border:0;background:none;font:700 20px/1 'Instrument Sans';padding:20px 0;cursor:pointer;color:var(--tt-ink);display:flex;justify-content:space-between;align-items:center"><span>Technology</span><span data-plus="1" style="color:var(--tt-orange);font-size:24px">+</span></button>
+        <div data-panel="1" style="display:none;padding:0 0 16px">
+          <a href="TracTrac%20Technology.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TracTrac Plus</a>
+          <a href="TracTrac%20Technology.dc.html#agent" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TracTrac Agent</a>
+        </div>
+      </div>
+      <div style="border-bottom:1px solid var(--tt-line)">
+        <button onClick="{{ toggleAcc }}" style="width:100%;text-align:left;border:0;background:none;font:700 20px/1 'Instrument Sans';padding:20px 0;cursor:pointer;color:var(--tt-ink);display:flex;justify-content:space-between;align-items:center"><span>Programmes</span><span data-plus="1" style="color:var(--tt-orange);font-size:24px">+</span></button>
+        <div data-panel="1" style="display:none;padding:0 0 16px">
+          <a href="TracTrac%20Programmes.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">All programmes</a>
+          <a href="Programme%20-%20ISSAM.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">ISSAM</a>
+          <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Young People in Mechanisation</a>
+          <a href="Programme%20-%20TRAxCelerate.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TRAxCelerate</a>
+          <a href="Programme%20-%20TRACINVEST.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TRACINVEST</a>
+          <a href="Programme%20-%20H2O.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">H₂O: Half-Way to Ownership</a>
+          <a href="Programme%20-%20Rise7.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Rise7: Empowering Seven to Scale</a>
+        </div>
+      </div>
+      <div style="border-bottom:1px solid var(--tt-line)">
+        <button onClick="{{ toggleAcc }}" style="width:100%;text-align:left;border:0;background:none;font:700 20px/1 'Instrument Sans';padding:20px 0;cursor:pointer;color:var(--tt-ink);display:flex;justify-content:space-between;align-items:center"><span>Impact</span><span data-plus="1" style="color:var(--tt-orange);font-size:24px">+</span></button>
+        <div data-panel="1" style="display:none;padding:0 0 16px">
+          <a href="TracTrac%20Impact.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Our Impact</a>
+          <a href="TracTrac%20Insights.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Stories from the Field</a>
+        </div>
+      </div>
+      <div style="border-bottom:1px solid var(--tt-line)">
+        <button onClick="{{ toggleAcc }}" style="width:100%;text-align:left;border:0;background:none;font:700 20px/1 'Instrument Sans';padding:20px 0;cursor:pointer;color:var(--tt-ink);display:flex;justify-content:space-between;align-items:center"><span>Partners</span><span data-plus="1" style="color:var(--tt-orange);font-size:24px">+</span></button>
+        <div data-panel="1" style="display:none;padding:0 0 16px">
+          <a href="TracTrac%20Partners.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Work With Us</a>
+          <a href="TracTrac%20Partners.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Finance and Investment</a>
+          <a href="TracTrac%20Partners.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Development Partners</a>
+        </div>
+      </div>
+      <div style="border-bottom:1px solid var(--tt-line)">
+        <button onClick="{{ toggleAcc }}" style="width:100%;text-align:left;border:0;background:none;font:700 20px/1 'Instrument Sans';padding:20px 0;cursor:pointer;color:var(--tt-ink);display:flex;justify-content:space-between;align-items:center"><span>Insights</span><span data-plus="1" style="color:var(--tt-orange);font-size:24px">+</span></button>
+        <div data-panel="1" style="display:none;padding:0 0 16px">
+          <a href="TracTrac%20Insights.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Stories and News</a>
+          <a href="TracTrac%20Insights.dc.html" onClick="{{ closeMobile }}" style="display:block;padding:12px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Research and Resources</a>
+        </div>
+      </div>
+      <a href="TracTrac%20About.dc.html" onClick="{{ closeMobile }}" style="display:block;font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">About Us</a>
+      <a href="TracTrac%20Careers.dc.html" onClick="{{ closeMobile }}" style="display:block;font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Careers</a>
+      <a href="#faq" onClick="{{ closeMobile }}" style="display:block;font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-ink)">FAQ</a>
+      <div style="display:flex;flex-direction:column;gap:12px;padding-top:24px">
+        <a href="#final" onClick="{{ closeMobile }}" style="font:600 17px/1 'Instrument Sans';padding:18px 22px;background:var(--tt-orange);color:#fff;display:block">Find Mechanisation</a>
+        <a href="#partnership" onClick="{{ closeMobile }}" style="font:600 17px/1 'Instrument Sans';padding:18px 22px;border:1px solid var(--tt-ink);display:block">Partner With Us</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top" style="margin-top:-84px">
+
+<section style="position:relative;background:var(--tt-ink);color:#fff;overflow:hidden">
+  <video ref="{{ heroVideo }}" src="uploads/vvvvvv.mp4" preload="auto" autoplay="" loop="{{ true }}" playsinline="" aria-label="TracTrac operators preparing farmland with tractors" data-photo="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 700ms ease"></video>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,15,0.9) 0%,rgba(20,17,15,0.62) 46%,rgba(20,17,15,0.14) 100%)"></div>
+  <svg aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.5">
+    <path d="M62 96 L70 66 L88 58 L97 72" fill="none" stroke="#F36A02" stroke-width="0.18" stroke-dasharray="1.4 1.4"></path>
+    <circle cx="70" cy="66" r="0.7" fill="#F36A02"></circle>
+    <circle cx="88" cy="58" r="0.7" fill="#F36A02"></circle>
+  </svg>
+  <div class="tt-wrap" style="position:relative;padding-top:calc(84px + clamp(40px,6vw,96px));padding-bottom:clamp(56px,8vw,110px);min-height:100svh;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-end">
+    <div class="tt-herotxt" style="max-width:1020px">
+      <p style="margin:0 0 clamp(20px,3vw,34px);font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Making mechanisation easier to access</p>
+      <h1 style="margin:0;font:700 clamp(34px,5.2vw,76px)/0.98 'Instrument Sans';letter-spacing:-0.022em">Getting the right farm machinery should not be the hard part.</h1>
+      <p style="margin:clamp(24px,3vw,38px) 0 0;max-width:700px;font:400 clamp(16px,1.3vw,19px)/1.55 'Instrument Sans';color:rgba(255,255,255,0.82)">TracTrac helps farmers find tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:clamp(28px,3.5vw,44px)">
+        <a href="#final" style="font:600 17px/1 'Instrument Sans';padding:20px 30px;background:var(--tt-orange);color:#fff;min-height:56px;display:flex;align-items:center" style-hover="background:#fff;color:var(--tt-ink)">Find Mechanisation</a>
+        <a href="#tech" style="font:600 17px/1 'Instrument Sans';padding:20px 30px;border:1px solid rgba(255,255,255,0.55);color:#fff;min-height:56px;display:flex;align-items:center" style-hover="background:#fff;color:var(--tt-ink)">See How TracTrac Works</a>
+        <a href="#pathways" style="font:600 16px/1 'Instrument Sans';color:#fff;border-bottom:2px solid var(--tt-orange);padding:6px 2px;margin-left:6px" style-hover="color:var(--tt-orange)">Own equipment? Enlist it</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact" style="background:#fff;padding:clamp(56px,7vw,110px) 0">
+  <div class="tt-wrap">
+    <div style="position:relative;color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;min-height:clamp(560px,72vh,820px);background:var(--tt-ink);border-radius:clamp(16px,1.8vw,28px)">
+  <img src="uploads/DSC07701.jpg" alt="An operator ploughing a field with a TracTrac ISSAM tractor" data-photo="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,15,0.9) 0%,rgba(20,17,15,0.78) 40%,rgba(20,17,15,0.6) 62%,rgba(20,17,15,0.9) 100%)"></div>
+
+  <div style="position:relative;padding:clamp(40px,4.6vw,72px) clamp(28px,4vw,72px) 0">
+    <p style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">The work so far</p>
+    <h2 style="margin:0;max-width:18ch;font:700 clamp(28px,4vw,58px)/1.02 'Instrument Sans';letter-spacing:-0.028em;text-wrap:pretty">More farmers served. More machines working. More opportunities created.</h2>
+    <p style="margin:clamp(20px,2vw,28px) 0 0;max-width:52ch;font:400 clamp(15px,1.25vw,17px)/1.6 'Instrument Sans';color:#fff;text-shadow:0 1px 12px rgba(0,0,0,0.5)">Better access to mechanisation can change how quickly work gets done, how many farmers a machine can serve and how many people can build livelihoods around the sector.</p>
+  </div>
+
+  <div style="position:relative;padding:clamp(40px,6vw,88px) clamp(28px,4vw,72px) clamp(32px,4vw,56px)">
+    <div class="tt-stats" style="border-top:1px solid rgba(255,255,255,0.32);gap:clamp(18px,2vw,32px)">
+      <div style="padding:clamp(22px,2.4vw,34px) 0 0;text-align:center">
+        <div style="margin:0 auto clamp(14px,1.4vw,20px);color:#fff;width:fit-content"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:clamp(38px,4.2vw,62px);height:clamp(38px,4.2vw,62px);display:block;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M4 27h24"/><path d="M16 27V14"/><path d="M16 15c-4.4 0-7-2.4-7-6.4 4.4 0 7 2.4 7 6.4z"/><path d="M16 18c4.4 0 7-2.4 7-6.4-4.4 0-7 2.4-7 6.4z"/></svg></div>
+        <p data-count="500" data-suffix="K+" style="margin:0;font:700 clamp(32px,3.6vw,54px)/1 'Instrument Sans';letter-spacing:-0.025em;color:#fff">0</p>
+        <p style="margin:10px 0 0;font:500 clamp(13px,1.05vw,15px)/1.4 'Instrument Sans';color:#EDE7DF">Farmers reached</p>
+      </div>
+      <div style="padding:clamp(22px,2.4vw,34px) 0 0;text-align:center">
+        <div style="margin:0 auto clamp(14px,1.4vw,20px);color:#fff;width:fit-content"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:clamp(38px,4.2vw,62px);height:clamp(38px,4.2vw,62px);display:block;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M16 10.5v15"/><path d="M16 10.5C13.5 8.6 10.4 7.7 6 7.7v14.6c4.4 0 7.5.9 10 2.8"/><path d="M16 10.5c2.5-1.9 5.6-2.8 10-2.8v14.6c-4.4 0-7.5.9-10 2.8"/></svg></div>
+        <p data-count="6000" data-suffix="+" data-comma="1" style="margin:0;font:700 clamp(32px,3.6vw,54px)/1 'Instrument Sans';letter-spacing:-0.025em;color:#fff">0</p>
+        <p style="margin:10px 0 0;font:500 clamp(13px,1.05vw,15px)/1.4 'Instrument Sans';color:#EDE7DF">People trained</p>
+      </div>
+      <div style="padding:clamp(22px,2.4vw,34px) 0 0;text-align:center">
+        <div style="margin:0 auto clamp(14px,1.4vw,20px);color:#fff;width:fit-content"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:clamp(38px,4.2vw,62px);height:clamp(38px,4.2vw,62px);display:block;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M20.4 5.6a6.4 6.4 0 0 0-1.9 8.3L7.2 25.2a2.2 2.2 0 0 0 3.1 3.1L21.6 17a6.4 6.4 0 0 0 8.3-1.9l-4.6-1.2-1.2-4.6z"/><path d="M9.4 26.1h.02"/></svg></div>
+        <p data-count="3000" data-suffix="+" data-comma="1" style="margin:0;font:700 clamp(32px,3.6vw,54px)/1 'Instrument Sans';letter-spacing:-0.025em;color:#fff">0</p>
+        <p style="margin:10px 0 0;font:500 clamp(13px,1.05vw,15px)/1.4 'Instrument Sans';color:#EDE7DF">Jobs created</p>
+      </div>
+      <div style="padding:clamp(22px,2.4vw,34px) 0 0;text-align:center">
+        <div style="margin:0 auto clamp(14px,1.4vw,20px);color:#fff;width:fit-content"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:clamp(38px,4.2vw,62px);height:clamp(38px,4.2vw,62px);display:block;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><circle cx="16" cy="9" r="3.4"/><circle cx="7" cy="19.5" r="3"/><circle cx="25" cy="19.5" r="3"/><path d="M11.2 18.6a5.6 5.6 0 0 1 9.6 0"/><path d="M2.6 28a4.9 4.9 0 0 1 8.8 0"/><path d="M20.6 28a4.9 4.9 0 0 1 8.8 0"/></svg></div>
+        <p data-count="566" style="margin:0;font:700 clamp(32px,3.6vw,54px)/1 'Instrument Sans';letter-spacing:-0.025em;color:#fff">0</p>
+        <p style="margin:10px 0 0;font:500 clamp(13px,1.05vw,15px)/1.4 'Instrument Sans';color:#EDE7DF">Cooperatives established</p>
+      </div>
+      <div style="padding:clamp(22px,2.4vw,34px) 0 0;text-align:center">
+        <div style="margin:0 auto clamp(14px,1.4vw,20px);color:#fff;width:fit-content"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:clamp(38px,4.2vw,62px);height:clamp(38px,4.2vw,62px);display:block;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><rect x="3.5" y="9" width="25" height="14" rx="1"/><circle cx="16" cy="16" r="3.4"/><path d="M8 13v6M24 13v6"/></svg></div>
+        <p data-count="2" data-prefix="₦" data-suffix="B+" style="margin:0;font:700 clamp(32px,3.6vw,54px)/1 'Instrument Sans';letter-spacing:-0.025em;color:var(--tt-orange)">0</p>
+        <p style="margin:10px 0 0;font:500 clamp(13px,1.05vw,15px)/1.4 'Instrument Sans';color:#EDE7DF">Investment catalysed</p>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="background:#fff">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(56px,7vw,110px)">
+    <div class="tt-2" style="gap:clamp(32px,6vw,110px);align-items:start">
+      <div>
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Why this matters</p>
+        <h2 style="margin:0;font:700 clamp(26px,3.3vw,46px)/1.02 'Instrument Sans';letter-spacing:-0.02em">Farmers need the work done. They do not always need to own the machine.</h2>
+      </div>
+      <div style="max-width:54ch;padding-top:clamp(0px,2vw,28px)">
+        <p style="margin:0 0 20px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans'">Buying a tractor or labour-saving devices (Threshers, knapsack sprayers, Fertiliser applicators) is out of reach for many farmers.</p>
+        <p style="margin:0 0 20px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Even when machinery is available, it may be too far away, unavailable when the farm is ready, or difficult to find.</p>
+        <p style="margin:0 0 20px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">At the same time, equipment owners need steady demand to keep their machines productive.</p>
+        <p style="margin:0;font:600 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans'">TracTrac helps bring those needs together.</p>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative">
+    <img src="uploads/WhatsApp%20Image%202026-10-15%20at%2013.10.08.jpeg" alt="An ISSAM operator in TracTrac overalls demonstrating a motorised thresher" data-photo="1" style="width:100%;height:clamp(420px,64vw,860px);object-fit:cover;object-position:35% 60%">
+    <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,17,15,0.9) 0%,rgba(20,17,15,0.62) 34%,rgba(20,17,15,0.14) 68%,rgba(20,17,15,0) 100%)"></div>
+    <div class="tt-wrap" style="position:absolute;left:0;right:0;bottom:0;padding-bottom:clamp(36px,5vw,80px)">
+      <p style="margin:0;max-width:24ch;color:#fff;font:700 clamp(26px,3.6vw,52px)/1.02 'Instrument Sans';letter-spacing:-0.022em">We help farmers find machines, and we help machines find work.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ecosystem" style="background:var(--tt-off)">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px)">
+    <div class="tt-2" style="gap:clamp(28px,5vw,80px);align-items:start">
+      <div>
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">How TracTrac works</p>
+        <h2 style="margin:0;font:700 clamp(26px,3.3vw,46px)/1.02 'Instrument Sans';letter-spacing:-0.02em;max-width:22ch">It takes more than a tractor to make mechanisation work.</h2>
+      </div>
+      <div style="max-width:54ch">
+        <ul style="list-style:none;margin:0 0 22px;padding:0;display:grid;font:400 clamp(15px,1.25vw,17px)/1.5 'Instrument Sans';color:var(--tt-grey)">
+          <li style="display:flex;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(0,0,0,0.1)"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:currentColor;transform:translateY(-3px)"></span><span>Farmers need machinery.</span></li>
+          <li style="display:flex;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(0,0,0,0.1)"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:currentColor;transform:translateY(-3px)"></span><span>Equipment owners need demand.</span></li>
+          <li style="display:flex;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(0,0,0,0.1)"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:currentColor;transform:translateY(-3px)"></span><span>Service providers need customers.</span></li>
+          <li style="display:flex;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(0,0,0,0.1)"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:currentColor;transform:translateY(-3px)"></span><span>Young people need opportunities.</span></li>
+          <li style="display:flex;gap:14px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(0,0,0,0.1);border-bottom:1px solid rgba(0,0,0,0.1)"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:currentColor;transform:translateY(-3px)"></span><span>The sector needs skills, finance and strong partnerships.</span></li>
+        </ul>
+        <p style="margin:0;font:600 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans'">TracTrac helps connect the pieces.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tt-wrap" id="eco-map" style="padding-top:clamp(40px,5vw,80px);padding-bottom:clamp(56px,7vw,110px)">
+    <div class="tt-2" style="gap:clamp(28px,5vw,80px);align-items:start;padding-bottom:clamp(34px,4vw,56px)">
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.16em;text-transform:uppercase;color:var(--tt-orange)">Core service network</p>
+        <h3 style="margin:0;max-width:24ch;font:700 clamp(24px,2.4vw,34px)/1.14 'Instrument Sans';letter-spacing:-0.025em">TracTrac connects the four roles that move machinery from the farmer who needs it to the field where the work happens.</h3>
+      </div>
+      <p class="tt-optical" style="margin:0;max-width:40ch;font:400 clamp(15px,1.2vw,17px)/1.6 'Instrument Sans';color:var(--tt-grey)">Each one depends on the others. The network is what turns scattered demand into work that actually gets done.</p>
+    </div>
+
+    <div class="tt-netrule" style="display:flex;align-items:center;gap:16px;padding-bottom:18px">
+      <p style="margin:0;font:600 11px/1 'Instrument Sans';letter-spacing:0.18em;text-transform:uppercase;color:var(--tt-grey)">Demand</p>
+      <span aria-hidden="true" style="flex:1;height:1px;background:var(--tt-line)"></span>
+      <p style="margin:0;font:600 11px/1 'Instrument Sans';letter-spacing:0.18em;text-transform:uppercase;color:var(--tt-grey)">Delivery</p>
+    </div>
+    <div class="tt-net" style="gap:20px">
+      <div style="position:relative;background:#fff;border:1px solid var(--tt-line);border-radius:18px;padding:clamp(22px,2.4vw,34px);display:flex;flex-direction:column;gap:14px;min-height:clamp(200px,17vw,250px)">
+        <p style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.16em;color:var(--tt-orange)">01</p>
+        <h3 style="margin:14px 0 0;max-width:15ch;font:700 20px/1.18 'Instrument Sans';letter-spacing:-0.02em">Equipment Owners</h3>
+        <p style="margin:0;max-width:26ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Keep machinery available and working.</p>
+        <span aria-hidden="true" class="tt-netrule" style="position:absolute;top:50%;right:-26px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;background:var(--tt-orange);display:grid;place-items:center"><svg viewBox="0 0 12 12" style="width:12px;height:12px" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2 L8 6 L4 10"></path></svg></span>
+      </div>
+      <div style="position:relative;background:#fff;border:1px solid var(--tt-line);border-radius:18px;padding:clamp(22px,2.4vw,34px);display:flex;flex-direction:column;gap:14px;min-height:clamp(200px,17vw,250px)">
+        <p style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.16em;color:var(--tt-orange)">02</p>
+        <h3 style="margin:14px 0 0;max-width:15ch;font:700 20px/1.18 'Instrument Sans';letter-spacing:-0.02em">Farmers</h3>
+        <p style="margin:0;max-width:26ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Need mechanisation services and request the service.</p>
+        <span aria-hidden="true" class="tt-netrule" style="position:absolute;top:50%;right:-26px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;background:var(--tt-orange);display:grid;place-items:center"><svg viewBox="0 0 12 12" style="width:12px;height:12px" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2 L8 6 L4 10"></path></svg></span>
+      </div>
+      <div style="position:relative;background:#fff;border:1px solid var(--tt-line);border-radius:18px;padding:clamp(22px,2.4vw,34px);display:flex;flex-direction:column;gap:14px;min-height:clamp(200px,17vw,250px)">
+        <p style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.16em;color:var(--tt-orange)">03</p>
+        <h3 style="margin:14px 0 0;max-width:15ch;font:700 20px/1.18 'Instrument Sans';letter-spacing:-0.02em">Booking Agents</h3>
+        <p style="margin:0;max-width:26ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Bring nearby farmer demand together.</p>
+        <span aria-hidden="true" class="tt-netrule" style="position:absolute;top:50%;right:-26px;transform:translateY(-50%);z-index:2;width:32px;height:32px;border-radius:50%;background:var(--tt-orange);display:grid;place-items:center"><svg viewBox="0 0 12 12" style="width:12px;height:12px" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2 L8 6 L4 10"></path></svg></span>
+      </div>
+      <div style="position:relative;background:#fff;border:1px solid var(--tt-line);border-radius:18px;padding:clamp(22px,2.4vw,34px);display:flex;flex-direction:column;gap:14px;min-height:clamp(200px,17vw,250px)">
+        <p style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.16em;color:var(--tt-orange)">04</p>
+        <h3 style="margin:14px 0 0;max-width:15ch;font:700 20px/1.18 'Instrument Sans';letter-spacing:-0.02em">Mechanisation Service Providers</h3>
+        <p style="margin:0;max-width:26ch;font:400 16px/1.55 'Instrument Sans';color:var(--tt-grey)">Take the job and deliver it on the ground.</p>
+        
+      </div>
+    </div>
+
+    <div style="margin-top:20px;background:#fff;border:1px solid var(--tt-line);border-radius:18px;padding:clamp(26px,3.2vw,48px)">
+      <div class="tt-2" style="gap:clamp(18px,3vw,60px);align-items:baseline;padding-bottom:clamp(24px,2.8vw,40px)">
+        <h3 style="margin:0;font:700 clamp(24px,2.4vw,34px)/1.14 'Instrument Sans';letter-spacing:-0.025em;color:var(--tt-ink)">The Enabling environment</h3>
+        <p style="margin:0;max-width:46ch;font:400 clamp(15px,1.2vw,17px)/1.6 'Instrument Sans';color:var(--tt-grey)">The wider system that lets the network work at scale.</p>
+      </div>
+      <div class="tt-netsub">
+        <div style="border-top:1px solid var(--tt-line);padding-top:18px">
+          <p style="margin:0 0 8px;font:600 17px/1.3 'Instrument Sans';color:var(--tt-ink)">Cooperatives</p>
+          <p style="margin:0;max-width:26ch;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Organise local mechanisation businesses.</p>
+        </div>
+        <div style="border-top:1px solid var(--tt-line);padding-top:18px">
+          <p style="margin:0 0 8px;font:600 17px/1.3 'Instrument Sans';color:var(--tt-ink)">Finance &amp; Investors</p>
+          <p style="margin:0;max-width:26ch;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Put capital behind machinery.</p>
+        </div>
+        <div style="border-top:1px solid var(--tt-line);padding-top:18px">
+          <p style="margin:0 0 8px;font:600 17px/1.3 'Instrument Sans';color:var(--tt-ink)">Government &amp; Regulators</p>
+          <p style="margin:0;max-width:26ch;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Shape the operating environment.</p>
+        </div>
+        <div style="border-top:1px solid var(--tt-line);padding-top:18px">
+          <p style="margin:0 0 8px;font:600 17px/1.3 'Instrument Sans';color:var(--tt-ink)">Development Partners</p>
+          <p style="margin:0;max-width:26ch;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Help effective models grow.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pathways" style="background:#fff">
+  <div style="background:var(--tt-ink);color:#fff">
+  <div class="tt-wrap" style="padding-top:clamp(64px,7vw,110px);padding-bottom:clamp(40px,4.5vw,64px);border-bottom:1px solid rgba(255,255,255,0.14)">
+    <p style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:#F79A5B">Start with what you need</p>
+    <h2 style="margin:0;font:700 clamp(32px,4.6vw,68px)/1 'Instrument Sans';letter-spacing:-0.028em;color:#fff">What brings you to TracTrac?</h2>
+  </div>
+  </div>
+
+  <div class="tt-2" style="background:var(--tt-ink);gap:1px">
+    <div style="position:relative;min-height:clamp(380px,44vw,660px);display:flex;align-items:flex-end">
+      <img src="uploads/Copy%20of%20DSC08691.jpg" alt="An operator working farmland with a TracTrac tractor and disc plough" data-photo="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,17,15,0.95) 0%,rgba(20,17,15,0.86) 38%,rgba(20,17,15,0.5) 68%,rgba(20,17,15,0.55) 100%)"></div>
+      <div style="position:relative;padding:clamp(28px,3vw,52px);color:#fff;max-width:520px">
+        <p style="margin:0 0 16px;font:600 13px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:#F79A5B">Farmers</p>
+        <h3 style="margin:0 0 14px;font:700 clamp(22px,2.3vw,32px)/1.05 'Instrument Sans';letter-spacing:-0.025em">Get the machinery your farm needs.</h3>
+        <p style="margin:0 0 26px;font:400 17px/1.6 'Instrument Sans';color:rgba(255,255,255,0.82)">Find mechanisation services around you without having to buy and maintain expensive equipment yourself.</p>
+        <a href="#tech" style="font:600 16px/1 'Instrument Sans';padding:18px 26px;background:var(--tt-orange);color:#fff;min-height:52px;display:inline-flex;align-items:center" style-hover="background:#fff;color:var(--tt-ink)">Find Mechanisation</a>
+      </div>
+    </div>
+    <div style="position:relative;min-height:clamp(380px,44vw,660px);display:flex;align-items:flex-end">
+      <img src="uploads/Copy%20of%20DSC07693.jpg" alt="Close up of a disc plough turning soil behind a TracTrac tractor" data-photo="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,17,15,0.95) 0%,rgba(20,17,15,0.86) 38%,rgba(20,17,15,0.5) 68%,rgba(20,17,15,0.55) 100%)"></div>
+      <div style="position:relative;padding:clamp(28px,3vw,52px);color:#fff;max-width:520px">
+        <p style="margin:0 0 16px;font:600 13px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:#F79A5B">Equipment Owners</p>
+        <h3 style="margin:0 0 14px;font:700 clamp(22px,2.3vw,32px)/1.05 'Instrument Sans';letter-spacing:-0.025em">Put your machinery to work.</h3>
+        <p style="margin:0 0 26px;font:400 17px/1.6 'Instrument Sans';color:rgba(255,255,255,0.82)">Enlist your equipment, complete verification and connect your machines to farmer demand.</p>
+        <a href="#tech" style="font:600 16px/1 'Instrument Sans';padding:18px 26px;border:1px solid #fff;color:#fff;min-height:52px;display:inline-flex;align-items:center" style-hover="background:#fff;color:var(--tt-ink)">Enlist Your Equipment</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tt-wrap" style="padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(56px,7vw,110px)">
+    <div class="tt-2" style="gap:clamp(32px,6vw,110px)">
+      <div>
+        <p style="margin:0 0 14px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-grey)">Booking Agents</p>
+        <h3 style="margin:0 0 12px;font:700 clamp(20px,1.9vw,26px)/1.12 'Instrument Sans';letter-spacing:-0.02em;max-width:22ch">Help farmers around you get connected.</h3>
+        <p style="margin:0 0 18px;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey);max-width:50ch">Bring farmer demand together, connect communities to available services and earn while supporting the people around you.</p>
+        <a href="#tech" style="font:600 16px/1 'Instrument Sans';border-bottom:2px solid var(--tt-orange);padding-bottom:6px" style-hover="color:var(--tt-orange)">Become a Booking Agent</a>
+      </div>
+      <div>
+        <p style="margin:0 0 14px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-grey)">Mechanisation Service Providers</p>
+        <h3 style="margin:0 0 12px;font:700 clamp(20px,1.9vw,26px)/1.12 'Instrument Sans';letter-spacing:-0.02em;max-width:24ch">Build a business around the work farmers need done.</h3>
+        <p style="margin:0 0 18px;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey);max-width:50ch">Develop your skills, reach more farmers and grow a business providing mechanisation services.</p>
+        <a href="#programmes" style="font:600 16px/1 'Instrument Sans';border-bottom:2px solid var(--tt-orange);padding-bottom:6px" style-hover="color:var(--tt-orange)">Explore MSP Opportunities</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tech" style="background:var(--tt-ink);color:#fff">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px)">
+    <div class="tt-2" style="gap:clamp(28px,5vw,80px);align-items:end">
+      <div>
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Technology built for the work on the ground</p>
+        <h2 style="margin:0;font:700 clamp(26px,3.3vw,46px)/1.02 'Instrument Sans';letter-spacing:-0.02em;max-width:20ch">From finding a machine to finishing the job.</h2>
+      </div>
+      <div style="max-width:54ch">
+        <p style="margin:0 0 14px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:rgba(255,255,255,0.78)">TracTrac brings the steps around mechanisation into one connected experience.</p>
+        <p style="margin:0;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:rgba(255,255,255,0.78)">Farmers can find equipment, measure their farms and request services. Equipment owners and agents can manage machines, demand and field activity.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tt-wrap" style="padding-top:clamp(36px,4vw,64px);padding-bottom:clamp(40px,5vw,72px)">
+    <div class="tt-prod" style="gap:clamp(32px,5vw,80px);align-items:start">
+      <div class="tt-sticky" style="position:sticky;top:118px">
+        <div style="position:relative;width:100%;max-width:340px;aspect-ratio:360/740;background:#fff;overflow:hidden">
+          <img data-screen="0" src="uploads/Hire%20a%20tractor.png" alt="TracTrac Plus Hire a Tractor screen showing map based machinery discovery and equipment listings" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:1;transition:opacity .3s ease">
+          <img data-screen="1" src="uploads/Farm%20Measurement.png" alt="TracTrac Plus farm measurement screen mapping a farm boundary before a booking" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .3s ease">
+          <img data-screen="2" src="uploads/Notification.png" alt="TracTrac Plus notifications screen showing invoice and operation updates" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .3s ease">
+        </div>
+        <div style="display:flex;gap:8px;margin-top:22px;max-width:340px">
+          <span data-dot="0" style="flex:1;height:2px;background:var(--tt-orange)"></span>
+          <span data-dot="1" style="flex:1;height:2px;background:rgba(255,255,255,0.25)"></span>
+          <span data-dot="2" style="flex:1;height:2px;background:rgba(255,255,255,0.25)"></span>
+        </div>
+      </div>
+
+      <div>
+        <div data-step="0" class="tt-stepgap" style="min-height:34vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,2.4vw,34px) 0">
+          <p data-num="1" style="margin:0 0 14px;font:600 13px/1 'Instrument Sans';letter-spacing:0.12em;color:var(--tt-orange)">01 &middot; Find</p>
+          <h3 style="margin:0 0 14px;max-width:20ch;font:700 clamp(24px,2.6vw,38px)/1.02 'Instrument Sans';letter-spacing:-0.02em">Find the right machinery near you.</h3>
+          <p style="margin:0 0 8px;max-width:44ch;font:600 clamp(15px,1.3vw,18px)/1.45 'Instrument Sans'">See available tractors and equipment around you.</p>
+          <p style="margin:0;max-width:46ch;font:400 clamp(15px,1.3vw,18px)/1.6 'Instrument Sans';color:rgba(255,255,255,0.72)">Search by location, equipment type, capacity and availability, and filter down to what actually fits the job.</p>
+        </div>
+        <div data-step="1" class="tt-stepgap" style="min-height:34vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,2.4vw,34px) 0">
+          <p data-num="1" style="margin:0 0 14px;font:600 13px/1 'Instrument Sans';letter-spacing:0.12em;color:rgba(255,255,255,0.45)">02 &middot; Book</p>
+          <h3 style="margin:0 0 14px;max-width:20ch;font:700 clamp(24px,2.6vw,38px)/1.02 'Instrument Sans';letter-spacing:-0.02em">Choose the service and make the request.</h3>
+          <p style="margin:0 0 8px;max-width:44ch;font:600 clamp(15px,1.3vw,18px)/1.45 'Instrument Sans'">Walk the boundary. Your phone maps the farm.</p>
+          <p style="margin:0;max-width:46ch;font:400 clamp(15px,1.3vw,18px)/1.6 'Instrument Sans';color:rgba(255,255,255,0.72)">Accurate farm size means accurate pricing, so you can request the service now or plan ahead for when the work needs to happen.</p>
+          <svg aria-hidden="true" viewBox="0 0 120 40" style="margin-top:22px;width:clamp(140px,16vw,190px);height:auto;opacity:0.9">
+            <path d="M6 30 L34 8 L82 12 L112 26 L96 36 L26 34 Z" fill="none" stroke="#F36A02" stroke-width="1" stroke-dasharray="4 4"></path>
+            <circle cx="34" cy="8" r="2.4" fill="#F36A02"></circle>
+            <circle cx="112" cy="26" r="2.4" fill="#F36A02"></circle>
+          </svg>
+        </div>
+        <div data-step="2" class="tt-stepgap" style="min-height:34vh;display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,2.4vw,34px) 0">
+          <p data-num="1" style="margin:0 0 14px;font:600 13px/1 'Instrument Sans';letter-spacing:0.12em;color:rgba(255,255,255,0.45)">03 &middot; Follow</p>
+          <h3 style="margin:0 0 14px;max-width:20ch;font:700 clamp(24px,2.6vw,38px)/1.02 'Instrument Sans';letter-spacing:-0.02em">Track what happens next.</h3>
+          <p style="margin:0 0 8px;max-width:44ch;font:600 clamp(15px,1.3vw,18px)/1.45 'Instrument Sans'">Bookings, payments and field activity in one place.</p>
+          <p style="margin:0;max-width:46ch;font:400 clamp(15px,1.3vw,18px)/1.6 'Instrument Sans';color:rgba(255,255,255,0.72)">Agents can also capture information in low connectivity areas and sync it when a connection comes back, so the work is never held up.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid rgba(255,255,255,0.2);overflow:hidden;padding:20px 0">
+    <div class="tt-marq" style="display:flex;width:max-content">
+      <div style="display:flex">
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Live equipment tracking</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Smart farm mapping</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Equipment discovery</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Location based search</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Book ahead</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Operational updates</span><span style="color:var(--tt-orange)">/</span>
+        
+      </div>
+      <div aria-hidden="true" style="display:flex">
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Live equipment tracking</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Smart farm mapping</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Equipment discovery</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Location based search</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Book ahead</span><span style="color:var(--tt-orange)">/</span>
+        <span style="padding:0 26px;font:600 15px/1 'Instrument Sans';color:rgba(255,255,255,0.6);white-space:nowrap">Operational updates</span><span style="color:var(--tt-orange)">/</span>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipment" style="background:var(--tt-off)">
+  <div style="position:relative">
+    <img src="uploads/DSC03905.jpg" alt="A young operator ploughing farmland with a TracTrac tractor and disc plough" data-photo="1" style="width:100%;height:clamp(440px,62vw,820px);object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,17,15,0.92) 0%,rgba(20,17,15,0.7) 32%,rgba(20,17,15,0.16) 66%,rgba(20,17,15,0.3) 100%)"></div>
+    <div class="tt-wrap" style="position:absolute;left:0;right:0;bottom:0;padding-bottom:clamp(32px,4vw,72px);color:#fff">
+      <p style="margin:0 0 18px;font:600 13px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:#F79A5B">More ways to get the work done</p>
+      <h2 style="margin:0 0 20px;max-width:20ch;font:700 clamp(28px,4vw,58px)/1 'Instrument Sans';letter-spacing:-0.022em">The job changes. So does the equipment.</h2>
+      <div class="tt-2" style="gap:clamp(24px,4vw,64px);align-items:end">
+        <p style="margin:0;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:rgba(255,255,255,0.82);max-width:50ch">A farmer may need one machine for land preparation and a completely different tool later in the season.</p>
+        <p style="margin:0;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:rgba(255,255,255,0.82);max-width:50ch">TracTrac is being built around the work farmers need to get done, not around one type of machine.</p>
+      </div>
+    </div>
+  </div>
+  <div id="eq-rail" role="region" aria-label="Types of mechanisation work" tabindex="0" style="display:flex;gap:clamp(12px,1.6vw,28px);overflow-x:auto;scroll-snap-type:x mandatory;padding:clamp(32px,4vw,64px) clamp(20px,4vw,72px) clamp(48px,6vw,90px)">
+    <figure style="flex:0 0 clamp(300px,44vw,700px);scroll-snap-align:start;margin:0">
+      <img src="uploads/Copy%20of%20DSC07693.jpg" alt="Disc plough turning soil during land preparation" data-photo="1" style="width:100%;height:clamp(280px,34vw,520px);object-fit:cover;border-radius:22px">
+      <figcaption style="margin-top:16px">
+        <p style="margin:0;font:700 clamp(18px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.02em">Land preparation</p>
+        <p style="margin:6px 0 0;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Ploughing, harrowing and ridging with tractor mounted implements.</p>
+      </figcaption>
+    </figure>
+    <figure style="flex:0 0 clamp(300px,44vw,700px);scroll-snap-align:start;margin:0">
+      <img src="uploads/WhatsApp%20Image%202026-09-03%20at%2011.09.38%20(5).jpeg" alt="Rows of new TracTrac ISSAM manual seed planters ready for distribution" data-photo="1" style="width:100%;height:clamp(280px,34vw,520px);object-fit:cover;border-radius:22px">
+      <figcaption style="margin-top:16px">
+        <p style="margin:0;font:700 clamp(18px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.02em">Planting</p>
+        <p style="margin:6px 0 0;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Seeding and planting with matched implements.</p>
+      </figcaption>
+    </figure>
+    <figure style="flex:0 0 clamp(300px,44vw,700px);scroll-snap-align:start;margin:0">
+      <img src="uploads/WhatsApp%20Image%202026-09-03%20at%2011.09.37%20(1).jpeg" alt="A solar powered knapsack sprayer with its panel set up in a field" data-photo="1" style="width:100%;height:clamp(280px,34vw,520px);object-fit:cover;border-radius:22px">
+      <figcaption style="margin-top:16px">
+        <p style="margin:0;font:700 clamp(18px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.02em">Spraying</p>
+        <p style="margin:6px 0 0;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Crop protection with smaller powered equipment.</p>
+      </figcaption>
+    </figure>
+    <figure style="flex:0 0 clamp(300px,44vw,700px);scroll-snap-align:start;margin:0">
+      <img src="uploads/WhatsApp%20Image%202026-09-03%20at%2011.09.37%20(2).jpeg" alt="A 25 litre backpack fertiliser applicator branded TracTrac ISSAM" data-photo="1" style="width:100%;height:clamp(280px,34vw,520px);object-fit:cover;border-radius:22px">
+      <figcaption style="margin-top:16px">
+        <p style="margin:0;font:700 clamp(18px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.02em">Irrigation and fertiliser application</p>
+        <p style="margin:6px 0 0;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Keeping the crop supplied through the season.</p>
+      </figcaption>
+    </figure>
+    <figure style="flex:0 0 clamp(300px,44vw,700px);scroll-snap-align:start;margin:0">
+      <img src="uploads/WhatsApp%20Image%202026-09-03%20at%2011.09.38%20(1).jpeg" alt="A petrol powered thresher demonstrated in front of a farmer group" data-photo="1" style="width:100%;height:clamp(280px,34vw,520px);object-fit:cover;border-radius:22px">
+      <figcaption style="margin-top:16px">
+        <p style="margin:0;font:700 clamp(18px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.02em">Harvest and post harvest</p>
+        <p style="margin:6px 0 0;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Harvesting, threshing and soil testing services.</p>
+      </figcaption>
+    </figure>
+    <figure style="flex:0 0 clamp(300px,44vw,700px);scroll-snap-align:start;margin:0">
+      <img src="uploads/WhatsApp%20Image%202026-09-03%20at%2011.09.38%20(6).jpeg" alt="A yard of new orange TracTrac ISSAM tractor trailers" data-photo="1" style="width:100%;height:clamp(280px,34vw,520px);object-fit:cover;border-radius:22px">
+      <figcaption style="margin-top:16px">
+        <p style="margin:0;font:700 clamp(18px,1.7vw,24px)/1.15 'Instrument Sans';letter-spacing:-0.02em">Haulage and transport</p>
+        <p style="margin:6px 0 0;font:400 15px/1.5 'Instrument Sans';color:var(--tt-grey)">Moving inputs to the farm and produce to market.</p>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="tt-wrap" style="padding-bottom:clamp(40px,5vw,72px);display:flex;gap:10px">
+    <button onClick="{{ scrollLeft }}" aria-label="Previous equipment" style="width:52px;height:52px;border:1px solid var(--tt-ink);background:none;cursor:pointer;font:600 18px/1 'Instrument Sans'" style-hover="background:var(--tt-ink);color:#fff">&#8592;</button>
+    <button onClick="{{ scrollRight }}" aria-label="Next equipment" style="width:52px;height:52px;border:1px solid var(--tt-ink);background:none;cursor:pointer;font:600 18px/1 'Instrument Sans'" style-hover="background:var(--tt-ink);color:#fff">&#8594;</button>
+  </div>
+</section>
+
+<section id="programmes" style="background:#fff">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(36px,4vw,60px)">
+    <div class="tt-2" style="gap:clamp(28px,5vw,90px);align-items:center">
+      <div>
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">The people behind mechanisation</p>
+        <h2 style="margin:0;font:700 clamp(26px,3.3vw,46px)/1.02 'Instrument Sans';letter-spacing:-0.02em;max-width:20ch">Mechanisation needs skilled people too.</h2>
+      </div>
+      <div style="max-width:54ch">
+        <p style="margin:0 0 14px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">A machine is only useful when people can operate it, maintain it, organise demand and build a reliable service around it.</p>
+        <p style="margin:0 0 24px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">TracTrac invests in practical training and opportunities for young people, women and mechanisation service providers so more communities have the people needed to keep machinery working.</p>
+        <a href="#programmes" style="font:600 16px/1 'Instrument Sans';border-bottom:2px solid var(--tt-orange);padding-bottom:6px" style-hover="color:var(--tt-orange)">Explore Our Programmes</a>
+      </div>
+    </div>
+  </div>
+
+  <img src="uploads/Copy%20of%20DSC08709.jpg" alt="A woman operating a TracTrac tractor while other trainees look on" data-photo="1" style="width:100%;height:clamp(320px,44vw,660px);object-fit:cover">
+
+  <div class="tt-wrap" id="prog-loop" style="padding-top:clamp(40px,5vw,80px);padding-bottom:clamp(56px,7vw,110px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(24px,3vw,40px)">
+      <p style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Featured programmes</p>
+    </div>
+    <div style="display:grid">
+    <div data-prog="1" role="tabpanel" aria-label="ISSAM" class="tt-2" style="grid-area:1/1;gap:clamp(32px,6vw,110px);align-items:center;transition:opacity .6s ease">
+      <div>
+        <p style="margin:0 0 14px;font:700 clamp(40px,6vw,96px)/0.9 'Instrument Sans';letter-spacing:-0.05em">ISSAM</p>
+        <h3 style="margin:0 0 22px;font:700 clamp(21px,2.2vw,32px)/1.1 'Instrument Sans';letter-spacing:-0.018em;max-width:24ch">Building local businesses around mechanisation.</h3>
+        <p style="margin:0 0 24px;padding-bottom:22px;border-bottom:1px solid var(--tt-line);font:500 clamp(15px,1.4vw,18px)/1.5 'Instrument Sans';max-width:46ch">Improving Smallholder Farmers' Access to Small Scale Agricultural Mechanisation Services</p>
+        <p style="margin:0 0 16px;font:400 clamp(15px,1.2vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey);max-width:52ch">Through ISSAM, TracTrac and Mastercard Foundation are supporting young people to build businesses that bring agricultural machinery closer to farming communities.</p>
+        <p style="margin:0 0 28px;font:400 clamp(15px,1.2vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey);max-width:52ch">Youth led cooperatives receive machinery alongside technical training and business support, helping them provide mechanisation services while building sustainable livelihoods.</p>
+        <div data-flow="1" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:32px">
+          <span style="font:700 clamp(15px,1.4vw,19px)/1.2 'Instrument Sans';letter-spacing:-0.02em">Machinery</span><span style="color:var(--tt-orange)">&rarr;</span>
+          <span style="font:700 clamp(15px,1.4vw,19px)/1.2 'Instrument Sans';letter-spacing:-0.02em">Skills</span><span style="color:var(--tt-orange)">&rarr;</span>
+          <span style="font:700 clamp(15px,1.4vw,19px)/1.2 'Instrument Sans';letter-spacing:-0.02em">Youth led cooperatives</span><span style="color:var(--tt-orange)">&rarr;</span>
+          <span style="font:700 clamp(15px,1.4vw,19px)/1.2 'Instrument Sans';letter-spacing:-0.02em">Mechanisation businesses</span><span style="color:var(--tt-orange)">&rarr;</span>
+          <span style="font:700 clamp(15px,1.4vw,19px)/1.2 'Instrument Sans';letter-spacing:-0.02em;color:var(--tt-orange)">Farmers served</span>
+        </div>
+        <a href="#final" style="font:600 16px/1 'Instrument Sans';padding:18px 26px;background:var(--tt-orange);color:#fff;min-height:52px;display:inline-flex;align-items:center" style-hover="background:var(--tt-ink);color:#fff">Learn About ISSAM</a>
+      </div>
+      <div>
+        <div id="issam-slides" role="group" aria-label="ISSAM programme photography" style="position:relative;height:clamp(300px,34vw,560px);border-radius:22px;overflow:hidden;background:var(--tt-ink)">
+          <img src="uploads/Copy%20of%20DSC07683.jpg" alt="ISSAM participants working with tractors and implements in the field" data-slide="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 800ms cubic-bezier(.22,.61,.36,1),transform 3600ms linear">
+          <img loading="lazy" src="uploads/Copy%20of%20DSC08208.jpg" alt="ISSAM trainees on a tractor during a practical session" data-slide="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 800ms cubic-bezier(.22,.61,.36,1),transform 3600ms linear">
+          <img loading="lazy" src="uploads/Copy%20of%20DSC08699.jpg" alt="A young operator in ISSAM coveralls working farmland with a tryctor" data-slide="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 800ms cubic-bezier(.22,.61,.36,1),transform 3600ms linear">
+          <img loading="lazy" src="uploads/IMG_9824.JPEG" alt="Rows of new ISSAM machinery lined up before handover to youth led cooperatives" data-slide="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 800ms cubic-bezier(.22,.61,.36,1),transform 3600ms linear">
+          <div style="position:absolute;left:20px;bottom:20px;display:flex;gap:8px;z-index:2">
+            <button data-issdot="1" aria-label="Show photograph 1" style="width:26px;height:3px;border:0;padding:0;cursor:pointer;background:#fff"></button>
+            <button data-issdot="1" aria-label="Show photograph 2" style="width:26px;height:3px;border:0;padding:0;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+            <button data-issdot="1" aria-label="Show photograph 3" style="width:26px;height:3px;border:0;padding:0;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+            <button data-issdot="1" aria-label="Show photograph 4" style="width:26px;height:3px;border:0;padding:0;cursor:pointer;background:rgba(255,255,255,0.4)"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-prog="1" role="tabpanel" aria-label="Young People in Mechanisation" class="tt-2" style="grid-area:1/1;gap:clamp(32px,6vw,110px);align-items:center;opacity:0;visibility:hidden;transition:opacity .6s ease">
+      <div>
+        <p style="margin:0 0 14px;font:700 clamp(40px,6vw,96px)/0.9 'Instrument Sans';letter-spacing:-0.05em">YPiM</p>
+        <h3 style="margin:0 0 22px;font:700 clamp(21px,2.2vw,32px)/1.1 'Instrument Sans';letter-spacing:-0.018em;max-width:24ch">Agriculture needs people who know how to make machines work.</h3>
+        <p style="margin:0 0 24px;padding-bottom:22px;border-bottom:1px solid var(--tt-line);font:500 clamp(15px,1.4vw,18px)/1.5 'Instrument Sans';max-width:46ch">Young People in Mechanisation</p>
+        <p style="margin:0 0 16px;font:400 clamp(15px,1.2vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey);max-width:52ch">Young People in Mechanisation creates pathways for young Nigerians to learn practical skills, meet mentors and explore careers and businesses within agricultural mechanisation.</p>
+        <p style="margin:0 0 32px;font:400 clamp(15px,1.2vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey);max-width:52ch">It is about helping young people see mechanisation as somewhere they can build a career, a business and a future.</p>
+        <a href="#final" style="font:600 16px/1 'Instrument Sans';padding:18px 26px;background:var(--tt-orange);color:#fff;min-height:52px;display:inline-flex;align-items:center" style-hover="background:var(--tt-ink);color:#fff">Discover YPiM</a>
+      </div>
+      <div>
+        <img src="uploads/Copy%20of%20DSC07682.jpg" alt="A young operator learning to work a field with a tractor" data-photo="1" style="width:100%;height:clamp(300px,34vw,560px);object-fit:cover;border-radius:22px">
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="stories" style="background:var(--tt-off)">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(30px,3.4vw,52px)">
+    <div class="tt-2" style="gap:clamp(28px,5vw,90px);align-items:end">
+      <div>
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Stories from the field</p>
+        <h2 style="margin:0;max-width:20ch;font:700 clamp(26px,3.3vw,46px)/1.02 'Instrument Sans';letter-spacing:-0.02em">What changes when access gets easier?</h2>
+      </div>
+      <p style="margin:0;max-width:50ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">The clearest way to understand mechanisation is through the people using it &mdash; the farmers, operators and communities putting better access to work.</p>
+    </div>
+  </div>
+
+  <div class="tt-wrap" style="padding-bottom:clamp(40px,5vw,76px)">
+    <div class="tt-2" style="gap:clamp(24px,4vw,64px);align-items:end">
+      <img src="uploads/IMG-20260824-WA0025%20(1).jpg" alt="A TracTrac field researcher interviewing an elderly farmer seated beside his maize plot" data-photo="1" style="width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 35%;border-radius:22px">
+      <div>
+        <p style="margin:0 0 14px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Featured story</p>
+        <h3 style="margin:0 0 18px;max-width:22ch;font:700 clamp(22px,2.3vw,32px)/1.06 'Instrument Sans';letter-spacing:-0.022em">Before we build anything, we sit down and ask.</h3>
+        <p style="margin:0 0 14px;max-width:46ch;font:400 clamp(15px,1.2vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Across Nasarawa State, our field teams spend their days with farmers, operators and service providers &mdash; asking how they get machinery today, what it costs them and what goes wrong.</p>
+        <p style="margin:0;max-width:46ch;font:600 clamp(15px,1.2vw,17px)/1.6 'Instrument Sans'">Every feature in TracTrac starts in a conversation like this one.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tt-wrap" style="padding-bottom:clamp(56px,7vw,110px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(20px,3vw,48px);padding-top:clamp(28px,3.2vw,48px);border-top:1px solid var(--tt-line)">
+      <article style="border:1px solid var(--tt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#fff">
+        <img src="uploads/Existing%20MSP%20Interview%20Keana%20LGA.jpg" alt="A mechanisation service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA" data-photo="1" style="width:100%;height:clamp(190px,19vw,280px);object-fit:cover;object-position:50% 40%">
+        <div style="padding:22px 20px 24px">
+        <p style="margin:0 0 12px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Service providers</p>
+        <h3 style="margin:0 0 10px;font:700 clamp(18px,1.5vw,22px)/1.2 'Instrument Sans';letter-spacing:-0.018em">What it really costs to keep a machine working.</h3>
+        <p style="margin:0;font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">Keana LGA &mdash; on fuel, repairs, idle weeks and the jobs that never get paid.</p>
+      </div>
+      </article>
+      <article style="border:1px solid var(--tt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#fff">
+        <img src="uploads/Existing%20MSP%20Interview%20Lafia%20LGA.jpg" alt="A farmer speaking with a TracTrac field researcher on a bench under a tree in Lafia LGA" data-photo="1" style="width:100%;height:clamp(190px,19vw,280px);object-fit:cover;object-position:50% 40%">
+        <div style="padding:22px 20px 24px">
+        <p style="margin:0 0 12px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Farmers</p>
+        <h3 style="margin:0 0 10px;font:700 clamp(18px,1.5vw,22px)/1.2 'Instrument Sans';letter-spacing:-0.018em">Who you call when the rains arrive early.</h3>
+        <p style="margin:0;font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">Lafia LGA &mdash; how land preparation gets arranged when the window is only days long.</p>
+      </div>
+      </article>
+      <article style="border:1px solid var(--tt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#fff">
+        <img src="uploads/IMG-20260824-WA0164.jpg" alt="A woman farmer being interviewed by a TracTrac researcher outside her home" data-photo="1" style="width:100%;height:clamp(190px,19vw,280px);object-fit:cover;object-position:50% 40%">
+        <div style="padding:22px 20px 24px">
+        <p style="margin:0 0 12px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Women in farming</p>
+        <h3 style="margin:0 0 10px;font:700 clamp(18px,1.5vw,22px)/1.2 'Instrument Sans';letter-spacing:-0.018em">Access is not the same for everyone.</h3>
+        <p style="margin:0;font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">Women farmers describe a different set of barriers to getting machinery on their plots.</p>
+      </div>
+      </article>
+      <article style="border:1px solid var(--tt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#fff">
+        <img src="uploads/IMG-20260824-WA0147.jpg" alt="A TracTrac booking agent in a branded shirt being interviewed on a bench" data-photo="1" style="width:100%;height:clamp(190px,19vw,280px);object-fit:cover;object-position:50% 40%">
+        <div style="padding:22px 20px 24px">
+        <p style="margin:0 0 12px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Booking agents</p>
+        <h3 style="margin:0 0 10px;font:700 clamp(18px,1.5vw,22px)/1.2 'Instrument Sans';letter-spacing:-0.018em">The people behind every request.</h3>
+        <p style="margin:0;font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey)">Agents translate a phone call in a village into a booking a machine owner can act on.</p>
+      </div>
+      </article>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(18px,3vw,40px);margin-top:clamp(32px,4vw,56px)">
+      <a href="#stories" style="display:inline-flex;flex:0 0 auto;align-items:center;white-space:nowrap;font:600 16px/1 'Instrument Sans';padding:18px 26px;border:1px solid var(--tt-ink);min-height:52px" style-hover="background:var(--tt-ink);color:#fff">Read More Stories</a>
+    </div>
+  </div>
+</section>
+
+<section id="insights" style="background:#fff">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(56px,7vw,110px)">
+    <div class="tt-2" style="gap:clamp(28px,5vw,90px);align-items:end;margin-bottom:clamp(32px,4vw,56px)">
+      <div>
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Insights</p>
+        <h2 style="margin:0;max-width:24ch;font:700 clamp(26px,3.3vw,46px)/1.02 'Instrument Sans';letter-spacing:-0.02em">From the field and the wider mechanisation sector</h2>
+      </div>
+      <p style="margin:0;max-width:48ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Research, programme updates and perspectives published by our team as the work develops.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(20px,2.4vw,36px);padding-top:clamp(28px,3.2vw,44px);border-top:1px solid var(--tt-line)">
+      <article style="border:1px solid var(--tt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#fff">
+        <img src="uploads/Copy%20of%20DSC08699.jpg" alt="ISSAM programme trainees gathered around machinery during a practical session" data-photo="1" style="width:100%;height:clamp(190px,17vw,240px);object-fit:cover;object-position:50% 45%">
+        <div style="display:flex;flex-direction:column;gap:14px;padding:26px 24px 28px;flex:1">
+          <p style="margin:0;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Programme updates</p>
+          <h3 style="margin:0;font:700 clamp(18px,1.5vw,22px)/1.22 'Instrument Sans';letter-spacing:-0.018em;text-wrap:pretty">Operators&rsquo; Training and Community Demo Events Strengthen Mechanization Ecosystems Across Nasarawa &mdash; ISSAM Project</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Over 28,000 farmers were reached in April and May as the ISSAM project drives operator training and community demo events with year 1 MSPs across Nasarawa state.</p>
+          <a href="https://tractrac.co/blog" target="_blank" rel="noopener" style="margin:auto 0 0;font:600 15px/1 'Instrument Sans';border-bottom:2px solid var(--tt-orange);padding-bottom:5px;align-self:flex-start" style-hover="color:var(--tt-orange)">Read story</a>
+        </div>
+      </article>
+      <article style="border:1px solid var(--tt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#fff">
+        <img loading="lazy" src="uploads/DSC02329.jpg" alt="TracTrac and government stakeholders at a national mechanisation event" data-photo="1" style="width:100%;height:clamp(190px,17vw,240px);object-fit:cover;object-position:50% 45%">
+        <div style="display:flex;flex-direction:column;gap:14px;padding:26px 24px 28px;flex:1">
+          <p style="margin:0;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Sector perspective</p>
+          <h3 style="margin:0;font:700 clamp(18px,1.5vw,22px)/1.22 'Instrument Sans';letter-spacing:-0.018em;text-wrap:pretty">Nigeria&rsquo;s Mechanization Shift: What It Means for Farmers and the Future of Farming</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">There is a growing understanding that agricultural mechanization in Nigeria cannot succeed as a government-only effort.</p>
+          <a href="https://tractrac.co/blog/nigerias-mechanization-shift-what-it-means-for-farmers-and-the-future-of-farming" target="_blank" rel="noopener" style="margin:auto 0 0;font:600 15px/1 'Instrument Sans';border-bottom:2px solid var(--tt-orange);padding-bottom:5px;align-self:flex-start" style-hover="color:var(--tt-orange)">Read story</a>
+        </div>
+      </article>
+      <article style="border:1px solid var(--tt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#fff">
+        <img loading="lazy" src="uploads/Copy%20of%20DSC07691.jpg" alt="A TracTrac tryctor at work on farmland in Nasarawa State" data-photo="1" style="width:100%;height:clamp(190px,17vw,240px);object-fit:cover;object-position:50% 45%">
+        <div style="display:flex;flex-direction:column;gap:14px;padding:26px 24px 28px;flex:1">
+          <p style="margin:0;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Practical guidance</p>
+          <h3 style="margin:0;font:700 clamp(18px,1.5vw,22px)/1.22 'Instrument Sans';letter-spacing:-0.018em;text-wrap:pretty">Top 5 Tractors for Farming in Nigeria and Their Prices</h3>
+          <p style="margin:0;font:400 15px/1.55 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Buying a tractor in Nigeria is more than choosing a popular brand. We sat with our expert on farm mechanization to discuss the best options, prices and things to consider.</p>
+          <a href="https://tractrac.co/blog/top-5-tractors-for-farming-in-nigeria-and-their-prices" target="_blank" rel="noopener" style="margin:auto 0 0;font:600 15px/1 'Instrument Sans';border-bottom:2px solid var(--tt-orange);padding-bottom:5px;align-self:flex-start" style-hover="color:var(--tt-orange)">Read story</a>
+        </div>
+      </article>
+    </div>
+
+    <div style="margin-top:clamp(32px,4vw,52px)">
+      <a href="https://tractrac.co/blog" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;white-space:nowrap;font:600 16px/1 'Instrument Sans';padding:18px 26px;border:1px solid var(--tt-ink);min-height:52px" style-hover="background:var(--tt-ink);color:#fff">View All Insights</a>
+    </div>
+  </div>
+</section>
+
+<section id="partnership" style="background:#fff">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(40px,5vw,72px)">
+    <div class="tt-2" style="gap:clamp(32px,6vw,110px);align-items:start">
+      <div>
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Partnership</p>
+        <h2 style="margin:0 0 26px;font:700 clamp(26px,3.3vw,46px)/1.03 'Instrument Sans';letter-spacing:-0.02em;max-width:22ch">Scaling access takes more than equipment.</h2>
+        <p style="margin:0 0 16px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey);max-width:52ch">It takes finance, skills, service networks, policy and long term investment.</p>
+        <p style="margin:0 0 26px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey);max-width:52ch">TracTrac works with government, financial institutions, development partners, investors, equipment companies and agricultural organisations to strengthen the system around mechanisation.</p>
+        <p style="margin:0 0 32px;padding-left:22px;border-left:2px solid var(--tt-orange);font:600 clamp(17px,1.7vw,24px)/1.45 'Instrument Sans';max-width:38ch">From field delivery to national conversations, the goal is the same: make mechanisation work for more people.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <a href="#final" style="font:600 16px/1 'Instrument Sans';padding:18px 26px;background:var(--tt-orange);color:#fff;min-height:52px;display:flex;align-items:center;white-space:nowrap" style-hover="background:var(--tt-ink);color:#fff">Partner With TracTrac</a>
+          <a href="#final" style="font:600 16px/1 'Instrument Sans';padding:18px 26px;border:1px solid var(--tt-ink);min-height:52px;display:flex;align-items:center;white-space:nowrap" style-hover="background:var(--tt-ink);color:#fff">Explore Investment Opportunities</a>
+        </div>
+      </div>
+      <div>
+        <img src="uploads/DSC02281.jpg" alt="TracTrac and Mastercard Foundation programme team at a mechanisation service provider onboarding event" data-photo="1" style="width:100%;height:clamp(240px,26vw,400px);object-fit:cover;border-radius:22px;margin-bottom:30px">
+        <p style="margin:0 0 14px;font:400 clamp(15px,1.3vw,17px)/1.7 'Instrument Sans';color:var(--tt-grey);max-width:50ch">Government and regulators. Commercial banks. Development finance institutions. Investors. Development partners. Equipment manufacturers. Agricultural organisations.</p>
+        <div style="margin-top:26px;padding-top:24px;border-top:1px solid var(--tt-line)">
+          <p style="margin:0 0 12px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Beyond service delivery</p>
+          <h3 style="margin:0 0 12px;font:700 clamp(19px,1.9vw,26px)/1.2 'Instrument Sans';letter-spacing:-0.02em;max-width:24ch">Better access also depends on better systems.</h3>
+          <p style="margin:0 0 18px;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey);max-width:50ch">TracTrac brings stakeholders together, contributes to industry and policy conversations and helps turn ideas into practical action.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tt-wrap" style="padding-bottom:clamp(56px,7vw,110px)">
+    <p style="margin:0 0 28px;padding-top:clamp(28px,3vw,48px);border-top:1px solid var(--tt-line);font:700 clamp(20px,2.2vw,30px)/1.2 'Instrument Sans';letter-spacing:-0.018em;max-width:26ch">Working with organisations that want mechanisation to work.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-top:2px solid var(--tt-ink);border-left:1px solid var(--tt-line)">
+      <div style="border-right:1px solid var(--tt-line);border-bottom:1px solid var(--tt-line);min-height:170px;display:flex;align-items:center;justify-content:center;padding:26px">
+        <img src="uploads/Full%20Colour%20Negative%202%201.png" alt="In partnership with Mastercard Foundation" style="max-height:130px;max-width:100%;width:auto;object-fit:contain">
+      </div>
+      <div style="border-right:1px solid var(--tt-line);border-bottom:1px solid var(--tt-line);min-height:170px;display:flex;align-items:center;justify-content:center;padding:26px">
+        <img src="uploads/Group%201000005124.png" alt="Federal Ministry of Agriculture and Food Security" style="max-height:74px;max-width:100%;width:auto;object-fit:contain">
+      </div>
+      <div style="border-right:1px solid var(--tt-line);border-bottom:1px solid var(--tt-line);min-height:170px;display:flex;align-items:center;justify-content:center;padding:26px">
+        <img src="uploads/freepik_br_3d0c3a9a-6a2a-4afb-8645-a81911e4a668%201.png" alt="National Centre for Agricultural Mechanization" style="max-height:112px;max-width:100%;width:auto;object-fit:contain">
+      </div>
+      <div style="border-right:1px solid var(--tt-line);border-bottom:1px solid var(--tt-line);min-height:170px;display:flex;align-items:center;justify-content:center;padding:26px">
+        <img src="uploads/imageye___-_imgi_1_AMTA%20c%201.png" alt="AMTA" style="max-height:110px;max-width:100%;width:auto;object-fit:contain">
+      </div>
+      <div style="border-right:1px solid var(--tt-line);border-bottom:1px solid var(--tt-line);min-height:170px;display:flex;align-items:center;justify-content:center;padding:26px">
+        <img src="uploads/WIMA%20LOGO%201.png" alt="Women in Mechanized Agriculture" style="max-height:112px;max-width:100%;width:auto;object-fit:contain">
+      </div>
+      <div style="border-right:1px solid var(--tt-line);border-bottom:1px solid var(--tt-line);min-height:170px;display:flex;align-items:center;justify-content:center;padding:26px">
+        <img src="uploads/Ikore%201.png" alt="Ikore" style="max-height:92px;max-width:100%;width:auto;object-fit:contain">
+      </div>
+      <div style="border-right:1px solid var(--tt-line);border-bottom:1px solid var(--tt-line);min-height:170px;display:flex;align-items:center;justify-content:center;padding:26px">
+        <img src="uploads/imageye___-_imgi_1_logo-final%201.png" alt="Sane Konsult International Limited" style="max-height:80px;max-width:100%;width:auto;object-fit:contain">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--tt-off);scroll-margin-top:84px">
+  <div class="tt-wrap" style="padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(56px,7vw,110px)">
+    <div class="tt-2" style="gap:clamp(28px,5vw,90px);align-items:start;grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr)">
+      <div class="tt-sticky" style="position:sticky;top:110px">
+        <p style="margin:0 0 22px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">FAQ</p>
+        <h2 style="margin:0 0 18px;font:700 clamp(28px,3.3vw,40px)/1.05 'Instrument Sans';letter-spacing:-0.02em">Got questions?</h2>
+        <p style="margin:0;max-width:38ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">Find answers to common questions about TracTrac Plus and how it helps connect farmers to mechanisation services.</p>
+      </div>
+      <div>
+        <div style="border-top:1px solid var(--tt-line)">
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q0" data-faqq="0" aria-expanded="false" aria-controls="faq-a0" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">What is TracTrac Plus?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a0" role="region" aria-labelledby="faq-q0" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">TracTrac Plus is a digital platform that helps farmers access mechanisation services by connecting them with mechanisation service providers and equipment owners. It also provides tools for farm mapping, booking coordination, and tracking mechanisation activities.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q1" data-faqq="1" aria-expanded="false" aria-controls="faq-a1" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">How does TracTrac Plus work?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a1" role="region" aria-labelledby="faq-q1" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">Farmers can submit requests for tractor services or other farm equipment through the platform. Their requests help connect them with relevant mechanisation service providers. Details such as the farm location, size, type of operation, and preferred service date help providers assess the request and provide booking information or a quotation. Service availability must be confirmed.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q2" data-faqq="2" aria-expanded="false" aria-controls="faq-a2" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">What services can I request through TracTrac Plus?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a2" role="region" aria-labelledby="faq-q2" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">TracTrac Plus supports access to tractor services and other agricultural implements. The specific equipment and operations available depend on the service providers operating in your area.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q3" data-faqq="3" aria-expanded="false" aria-controls="faq-a3" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">Can I measure or map my farmland using TracTrac Plus?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a3" role="region" aria-labelledby="faq-q3" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">Yes. TracTrac Plus includes GPS-based farm mapping tools that help capture and measure farmland. This information can support farm planning and the coordination of mechanisation services.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q4" data-faqq="4" aria-expanded="false" aria-controls="faq-a4" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">Who can use TracTrac Plus?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a4" role="region" aria-labelledby="faq-q4" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">TracTrac Plus serves different participants in the agricultural mechanisation ecosystem, including farmers, cooperatives, mechanisation service providers, and equipment owners. Each uses the platform to support their role in connecting demand for farm services with available equipment and service capacity.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q5" data-faqq="5" aria-expanded="false" aria-controls="faq-a5" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">What is a Mechanisation Service Provider (MSP)?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a5" role="region" aria-labelledby="faq-q5" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">A Mechanisation Service Provider, or MSP, is an individual, cooperative, or business that provides agricultural mechanisation services to farmers using tractors, implements, or other relevant equipment. MSPs help farmers access the machinery and services they need for their farming operations.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q6" data-faqq="6" aria-expanded="false" aria-controls="faq-a6" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">What is the difference between TracTrac Plus and TracTrac Agent?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a6" role="region" aria-labelledby="faq-q6" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">TracTrac Plus focuses on connecting farmers and other users with mechanisation services, equipment, and booking opportunities. TracTrac Agent supports the operational side of the ecosystem, helping with activities such as managing bookings, monitoring fleet operations, and coordinating assets and service delivery.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q7" data-faqq="7" aria-expanded="false" aria-controls="faq-a7" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">Can I use TracTrac Plus anywhere in Nigeria?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a7" role="region" aria-labelledby="faq-q7" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">Service availability depends on the service providers and equipment operating in your area. Check the platform for available services or contact the TracTrac team to confirm whether your location can be served before making plans.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q8" data-faqq="8" aria-expanded="false" aria-controls="faq-a8" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">How much does it cost to book a tractor or other equipment?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a8" role="region" aria-labelledby="faq-q8" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">The cost depends on factors such as the type of operation, farm location, equipment required, and service provider. Submit a request to find out what services are available and obtain a quotation before confirming your booking.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q9" data-faqq="9" aria-expanded="false" aria-controls="faq-a9" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">How can I enlist my tractor or become a service provider?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a9" role="region" aria-labelledby="faq-q9" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">If you own agricultural equipment or provide mechanisation services, contact TracTrac through the official onboarding or contact channel to enquire about joining the platform. The team can confirm the current registration process and requirements.</p></div>
+          </div>
+        </div>
+        <div data-faq="1" style="border-bottom:1px solid var(--tt-line)">
+          <h3 style="margin:0">
+            <button id="faq-q10" data-faqq="10" aria-expanded="false" aria-controls="faq-a10" style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:22px 0;border:0;background:none;cursor:pointer;text-align:left;font:600 clamp(16px,1.25vw,18px)/1.4 'Instrument Sans';letter-spacing:-0.01em;color:var(--tt-ink)" style-hover="color:var(--tt-orange)"><span style="flex:1 1 auto;min-width:0;text-wrap:wrap">Where can I get help with TracTrac Plus?</span><svg data-faqicon="1" aria-hidden="true" viewBox="0 0 16 16" style="flex:none;width:16px;height:16px;margin-top:4px;transition:transform .3s ease" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6 L8 10.5 L12.5 6"></path></svg></button>
+          </h3>
+          <div id="faq-a10" role="region" aria-labelledby="faq-q10" data-faqa="1" style="display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.22,.61,.36,1)">
+            <div style="overflow:hidden"><p style="margin:0;padding:0 40px 24px 0;max-width:62ch;font:400 16px/1.65 'Instrument Sans';color:var(--tt-grey)">Use the contact or support option on the TracTrac website to reach the team. Include your question, relevant details, and contact information so the team can understand how to assist you.</p></div>
+          </div>
+        </div>
+        </div>
+        <form id="faq-ask" novalidate="" style="margin-top:clamp(36px,4vw,56px)">
+          <p style="margin:0 0 6px;font:700 20px/1.2 'Instrument Sans';letter-spacing:-0.015em">Still have a question?</p>
+          <p style="margin:0 0 18px;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey)">Ask us something else and we'll help you find the right information.</p>
+          <label for="faq-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Your question</label>
+          <div style="display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--tt-ink);padding:6px 0">
+            <input id="faq-input" name="question" type="text" autocomplete="off" maxlength="500" placeholder="Type your question here…" aria-describedby="faq-msg" style="flex:1;min-width:0;border:0;background:transparent;outline:none;padding:14px 0;font:400 17px/1.4 'Instrument Sans';color:var(--tt-ink)">
+            <button type="submit" aria-label="Submit your question" style="flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--tt-orange);color:#fff;cursor:pointer;display:grid;place-items:center" style-hover="background:var(--tt-ink)"><svg aria-hidden="true" viewBox="0 0 16 16" style="width:16px;height:16px" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13 V3 M3.5 7.5 L8 3 L12.5 7.5"></path></svg></button>
+          </div>
+          <div id="faq-msg" aria-live="polite" style="font:400 15px/1.6 'Instrument Sans';color:var(--tt-grey)"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="final" style="position:relative;background:var(--tt-ink);color:#fff;overflow:hidden">
+  <img src="uploads/DSC02329.jpg" alt="TracTrac staff and participants working together in the field" data-photo="1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.4">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,15,0.94) 0%,rgba(20,17,15,0.62) 62%,rgba(20,17,15,0.3) 100%)"></div>
+  <svg aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.45">
+    <path d="M4 92 C22 78 34 84 48 68 C60 55 74 58 96 40" fill="none" stroke="#F36A02" stroke-width="0.16" stroke-dasharray="1.3 1.3"></path>
+    <circle cx="48" cy="68" r="0.7" fill="#F36A02"></circle>
+    <circle cx="96" cy="40" r="0.7" fill="#F36A02"></circle>
+  </svg>
+  <div class="tt-wrap" style="position:relative;padding-top:clamp(64px,9vw,140px);padding-bottom:clamp(64px,9vw,140px)">
+    <h2 style="margin:0 0 24px;max-width:22ch;font:700 clamp(28px,4vw,58px)/1 'Instrument Sans';letter-spacing:-0.022em">There is more work to do. Let's get more machines working.</h2>
+    <p style="margin:0 0 36px;max-width:56ch;font:400 clamp(15px,1.3vw,18px)/1.6 'Instrument Sans';color:rgba(255,255,255,0.8)">Whether you need machinery, own equipment, work with farmers or want to invest in agricultural mechanisation, there is a place for you in the TracTrac network.</p>
+    <a href="#tech" style="display:inline-flex;align-items:center;font:600 clamp(17px,1.5vw,20px)/1 'Instrument Sans';padding:24px 38px;background:var(--tt-orange);color:#fff;min-height:64px" style-hover="background:#fff;color:var(--tt-ink)">Find Mechanisation</a>
+    <div style="display:flex;flex-wrap:wrap;gap:28px;margin-top:32px">
+      <a href="#pathways" style="font:600 16px/1 'Instrument Sans';color:#fff;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:6px" style-hover="color:var(--tt-orange);border-color:var(--tt-orange)">Enlist Your Equipment</a>
+      <a href="#pathways" style="font:600 16px/1 'Instrument Sans';color:#fff;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:6px" style-hover="color:var(--tt-orange);border-color:var(--tt-orange)">Become a Booking Agent</a>
+      <a href="#partnership" style="font:600 16px/1 'Instrument Sans';color:#fff;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:6px" style-hover="color:var(--tt-orange);border-color:var(--tt-orange)">Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer style="background:#fff;border-top:1px solid var(--tt-line)">
+  <div class="tt-wrap" style="padding-top:clamp(48px,6vw,80px);padding-bottom:clamp(32px,4vw,56px)">
+    <div class="tt-2" style="gap:clamp(28px,4vw,64px);align-items:start;padding-bottom:clamp(36px,4vw,60px);border-bottom:1px solid var(--tt-line)">
+      <div>
+        <img src="uploads/tractrac%20logo%20png%204.png" alt="TracTrac" style="height:36px;width:auto;margin-bottom:22px">
+        <p style="margin:0;max-width:38ch;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey)">Making mechanisation easier to access for farmers, equipment owners, agents and service providers.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 16px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-grey)">Get the app</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <img src="uploads/google-play-badge-logo_svgrepo.com.png" alt="Get it on Google Play" style="height:46px;width:auto">
+          <span style="display:flex;flex-direction:column;justify-content:center;width:155px;height:46px;padding:0 14px;background:#14110F;border-radius:8px;color:#fff">
+            <span style="font:400 9px/1.3 'Instrument Sans';letter-spacing:0.04em;opacity:0.72">Download on the</span>
+            <span style="font:600 15px/1.2 'Instrument Sans';letter-spacing:-0.01em">App Store</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="tt-foot" style="padding-top:clamp(32px,4vw,56px)">
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">TracTrac</p>
+        <a href="TracTrac%20About.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">About Us</a>
+        <a href="TracTrac%20Impact.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Our Impact</a>
+        <a href="TracTrac%20Careers.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Careers</a>
+        <a href="#final" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Contact Us</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Get Mechanisation</p>
+        <a href="#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Farmers</a>
+        <a href="#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Equipment Owners</a>
+        <a href="#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Booking Agents</a>
+        <a href="#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Mechanisation Service Providers</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Technology</p>
+        <a href="TracTrac%20Technology.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TracTrac Plus</a>
+        <a href="TracTrac%20Technology.dc.html#agent" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TracTrac Agent</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Programmes</p>
+        <a href="TracTrac%20Programmes.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">All programmes</a>
+        <a href="Programme%20-%20ISSAM.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">ISSAM</a>
+        <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Young People in Mechanisation</a>
+        <a href="Programme%20-%20TRAxCelerate.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TRAxCelerate</a>
+        <a href="Programme%20-%20TRACINVEST.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TRACINVEST</a>
+        <a href="Programme%20-%20H2O.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">H₂O: Half-Way to Ownership</a>
+        <a href="Programme%20-%20Rise7.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Rise7: Empowering Seven to Scale</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Partners</p>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Work With Us</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Finance and Investment</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Government and Regulators</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Development Partners</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Resources</p>
+        <a href="TracTrac%20Insights.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Stories and News</a>
+        <a href="TracTrac%20Insights.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Research and Resources</a>
+        <a href="#faq" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">FAQs</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;margin-top:clamp(36px,4vw,60px);padding-top:26px;border-top:1px solid var(--tt-line)">
+      <div style="display:flex;flex-wrap:wrap;gap:22px">
+        <a href="#top" style="font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Privacy Policy</a>
+        <a href="#top" style="font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Terms and Conditions</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:22px">
+        <a href="#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">LinkedIn</a>
+        <a href="#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">Instagram</a>
+        <a href="#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">X</a>
+        <a href="#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">Facebook</a>
+        <a href="#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">YouTube</a>
+      </div>
+      <p style="margin:0;font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)">© 2026 TracTrac. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#F36A02&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#F36A02&quot;,&quot;#E25200&quot;,&quot;#16342A&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;photoTone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Full colour&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;Full colour&quot;,&quot;Warm&quot;,&quot;Black and white&quot;],&quot;section&quot;:&quot;Photography&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.applyProps();
+    const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!rm) {
+      const hero = document.querySelector('.tt-herotxt');
+      if (hero) {
+        Array.from(hero.children).forEach((el, i) => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(10px)';
+          el.style.transition = 'opacity 620ms cubic-bezier(.22,.61,.36,1) ' + (90 + i * 90) + 'ms, transform 620ms cubic-bezier(.22,.61,.36,1) ' + (90 + i * 90) + 'ms';
+        });
+        const revealHero = () => Array.from(hero.children).forEach((el) => { el.style.opacity = ''; el.style.transform = 'translateY(0)'; });
+        requestAnimationFrame(revealHero);
+        setTimeout(revealHero, 60);
+        document.addEventListener('visibilitychange', revealHero, { once: true });
+      }
+      const photos = document.querySelectorAll('img[data-photo]');
+      const pio = new IntersectionObserver((es) => {
+        es.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.style.opacity = e.target.dataset.o0 || '';
+          e.target.style.transform = 'scale(1)';
+          pio.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      photos.forEach((im) => {
+        if (im.style.opacity) im.dataset.o0 = im.style.opacity;
+        const par = im.parentElement;
+        if (par && getComputedStyle(par).overflow === 'visible') par.style.overflow = 'hidden';
+        im.style.opacity = '0';
+        im.style.transform = 'scale(1.045)';
+        im.style.transition = 'opacity 700ms cubic-bezier(.22,.61,.36,1), transform 1100ms cubic-bezier(.16,.84,.28,1)';
+        pio.observe(im);
+      });
+    }
+
+    const iss = document.getElementById('issam-slides');
+    if (iss && !iss.dataset.ttInit) {
+      iss.dataset.ttInit = '1';
+      const slides = Array.from(iss.querySelectorAll('[data-slide]'));
+      const dots = Array.from(iss.querySelectorAll('[data-issdot]'));
+      let cur = 0, timer = null;
+      slides.forEach((s) => { s.style.opacity = '0'; s.style.transform = 'scale(1.06)'; });
+      const show = (n) => {
+        cur = (n + slides.length) % slides.length;
+        slides.forEach((s, i) => {
+          const on = i === cur;
+          s.style.opacity = on ? '1' : '0';
+          s.style.zIndex = on ? '1' : '0';
+          if (on) { s.style.transform = 'scale(1.06)'; requestAnimationFrame(() => { s.style.transform = 'scale(1)'; }); }
+        });
+        dots.forEach((d, i) => { d.style.background = i === cur ? '#fff' : 'rgba(255,255,255,0.4)'; });
+      };
+      const start = () => { if (!rm && !timer) { timer = setInterval(() => show(cur + 1), 3600); this._issTimer = timer; } };
+      const stop = () => { if (timer) { clearInterval(timer); timer = null; this._issTimer = null; } };
+      this._issStop = stop;
+      this._issShow = () => show(cur);
+      show(0);
+      dots.forEach((d, i) => d.addEventListener('click', () => { stop(); show(i); start(); }));
+      iss.addEventListener('mouseenter', stop);
+      iss.addEventListener('mouseleave', start);
+      let seen = false;
+      const sio = new IntersectionObserver((es) => {
+        es.forEach((e) => {
+          if (e.isIntersecting) { if (!seen) { seen = true; show(cur); } start(); }
+          else stop();
+        });
+      }, { threshold: 0.25 });
+      sio.observe(iss);
+      this._issIO = sio;
+    }
+
+    const pl = document.getElementById('prog-loop');
+    if (pl && !pl.dataset.ttInit) {
+      pl.dataset.ttInit = '1';
+      const panes = Array.from(pl.querySelectorAll('[data-prog]'));
+      const tabs = Array.from(pl.querySelectorAll('[data-progtab]'));
+      const fills = Array.from(pl.querySelectorAll('[data-progfill]'));
+      const DUR = 9000;
+      const flow = pl.querySelector('[data-flow]');
+      const fitems = flow ? Array.from(flow.children) : [];
+      const playFlow = () => {
+        if (rm) return;
+        (this._flowT || []).forEach(clearTimeout);
+        fitems.forEach((el) => { el.style.transition = 'none'; el.style.opacity = '0'; el.style.transform = 'translateX(-10px)'; el.style.display = 'inline-block'; });
+        void flow.offsetWidth;
+        this._flowT = fitems.map((el, i) => setTimeout(() => {
+          el.style.transition = 'opacity .45s ease, transform .45s cubic-bezier(.22,.61,.36,1)';
+          el.style.opacity = '1'; el.style.transform = 'none';
+          if (i === fitems.length - 1) setTimeout(() => { el.style.transition = 'transform .3s ease'; el.style.transform = 'scale(1.06)'; setTimeout(() => { el.style.transform = 'none'; }, 300); }, 450);
+        }, 250 + i * 170));
+      };
+      let flowSeen = false;
+      let pc = 0, pt = null, paused = false;
+      const pshow = (n) => {
+        pc = (n + panes.length) % panes.length;
+        panes.forEach((p, i) => { const on = i === pc; p.style.opacity = on ? '1' : '0'; p.style.visibility = on ? 'visible' : 'hidden'; p.style.zIndex = on ? '1' : '0'; });
+        if (pc === 0 && flowSeen && !this._noFlow) playFlow();
+        tabs.forEach((t, i) => { t.style.color = i === pc ? 'var(--tt-ink)' : 'var(--tt-grey)'; t.setAttribute('aria-selected', i === pc ? 'true' : 'false'); });
+        fills.forEach((f, i) => {
+          f.style.transition = 'none'; f.style.width = i < pc ? '100%' : '0';
+          if (i === pc) { f.style.width = rm ? '100%' : '0'; if (!rm && !paused) requestAnimationFrame(() => requestAnimationFrame(() => { f.style.transition = 'width ' + DUR + 'ms linear'; f.style.width = '100%'; })); }
+        });
+      };
+      const pstart = () => { paused = false; if (!rm && !pt) { this._noFlow = true; pshow(pc); this._noFlow = false; pt = setInterval(() => pshow(pc + 1), DUR); } };
+      const pstop = () => { paused = true; if (pt) { clearInterval(pt); pt = null; } const f = fills[pc]; if (f) { const w = getComputedStyle(f).width; f.style.transition = 'none'; f.style.width = w; } };
+      this._progStop = pstop;
+      pshow(0);
+      tabs.forEach((t, i) => t.addEventListener('click', () => { pstop(); pshow(i); pstart(); }));
+      pl.addEventListener('mouseenter', pstop);
+      pl.addEventListener('mouseleave', pstart);
+      if (!rm) fitems.forEach((el) => { el.style.opacity = '0'; el.style.display = 'inline-block'; });
+      const pio = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { if (!flowSeen) { flowSeen = true; if (pc === 0) playFlow(); } pstart(); } else pstop(); }), { threshold: 0.3 });
+      pio.observe(pl);
+      this._progIO = pio;
+    }
+
+    const fq = document.getElementById('faq');
+    if (fq && !fq.dataset.ttInit) {
+      fq.dataset.ttInit = '1';
+      const items = Array.from(fq.querySelectorAll('[data-faq]'));
+      const setOpen = (it, open) => {
+        const b = it.querySelector('[data-faqq]');
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+        it.querySelector('[data-faqa]').style.gridTemplateRows = open ? '1fr' : '0fr';
+        it.querySelector('[data-faqicon]').style.transform = open ? 'rotate(180deg)' : 'none';
+        b.style.color = open ? 'var(--tt-orange)' : '';
+      };
+      items.forEach((it) => it.querySelector('[data-faqq]').addEventListener('click', () => {
+        const was = it.querySelector('[data-faqq]').getAttribute('aria-expanded') === 'true';
+        items.forEach((o) => setOpen(o, false));
+        if (!was) setOpen(it, true);
+      }));
+      const form = document.getElementById('faq-ask');
+      const input = document.getElementById('faq-input');
+      const msg = document.getElementById('faq-msg');
+      const stop = new Set('a an and are can do does for from how i in is it my of on or the to what where who why with you your tractrac plus'.split(' '));
+      const words = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter((w) => w.length > 2 && !stop.has(w));
+      const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+      const linkStyle = "border:0;background:none;padding:6px 0;cursor:pointer;text-align:left;font:600 15px/1.4 'Instrument Sans';color:var(--tt-ink);border-bottom:1px solid var(--tt-orange)";
+      form.addEventListener('submit', (ev) => {
+        ev.preventDefault();
+        const q = input.value.trim();
+        if (q.length < 5) {
+          msg.style.color = '#B3261E';
+          msg.style.paddingTop = '12px';
+          msg.textContent = 'Please type your question before submitting.';
+          input.setAttribute('aria-invalid', 'true');
+          input.focus();
+          return;
+        }
+        input.removeAttribute('aria-invalid');
+        msg.style.color = 'var(--tt-grey)';
+        msg.style.paddingTop = '20px';
+        try { sessionStorage.setItem('tt-faq-question', q); } catch (e) {}
+        const qw = words(q);
+        const scored = items.map((it, i) => {
+          const t = words(it.textContent);
+          return { i, s: qw.reduce((n, w) => n + (t.some((x) => x.startsWith(w) || w.startsWith(x)) ? 1 : 0), 0) };
+        }).filter((r) => r.s > 0).sort((a, b) => b.s - a.s).slice(0, 3);
+        let html = '';
+        if (scored.length) {
+          html += '<p style="margin:0 0 8px;color:var(--tt-ink);font-weight:600">These answers may help:</p><div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-bottom:18px">';
+          scored.forEach((r) => { html += '<button type="button" data-faqjump="' + r.i + '" style="' + linkStyle + '">' + esc(items[r.i].querySelector('[data-faqq] span').textContent) + '</button>'; });
+          html += '</div>';
+        }
+        html += '<p style="margin:0 0 10px">' + (scored.length ? 'If not, ' : 'We could not find an answer to this in the FAQ. ') + 'the TracTrac team can help. There is no online question form yet, so copy your question and bring it to the team through Contact Us.</p>';
+        html += '<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><button type="button" data-faqcopy="1" style="border:1px solid var(--tt-ink);background:none;padding:12px 18px;min-height:44px;cursor:pointer;font:600 15px/1 \'Instrument Sans\';color:var(--tt-ink)">Copy my question</button><a href="#final" style="font:600 15px/1 \'Instrument Sans\';padding:14px 20px;min-height:44px;display:inline-flex;align-items:center;background:var(--tt-orange);color:#fff">Contact Us</a><span data-faqcopymsg="1" aria-live="polite"></span></div>';
+        msg.innerHTML = html;
+        msg.querySelectorAll('[data-faqjump]').forEach((b) => b.addEventListener('click', () => {
+          const it = items[+b.dataset.faqjump];
+          items.forEach((o) => setOpen(o, false));
+          setOpen(it, true);
+          const btn = it.querySelector('[data-faqq]');
+          window.scrollTo({ top: btn.getBoundingClientRect().top + window.scrollY - 110, behavior: rm ? 'auto' : 'smooth' });
+          btn.focus({ preventScroll: true });
+        }));
+        const cb = msg.querySelector('[data-faqcopy]');
+        const cm = msg.querySelector('[data-faqcopymsg]');
+        cb.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(q);
+            cm.style.color = 'var(--tt-ink)';
+            cm.textContent = 'Copied.';
+          } catch (e) {
+            cm.style.color = '#B3261E';
+            cm.textContent = 'Copy failed. Please select and copy the text in the box.';
+            input.focus(); input.select();
+          }
+        });
+      });
+      input.addEventListener('input', () => { if (input.getAttribute('aria-invalid')) { input.removeAttribute('aria-invalid'); msg.textContent = ''; msg.style.paddingTop = '0'; } });
+    }
+
+    const hv = this.heroVideo;
+    if (hv) {
+      hv.muted = true;
+      hv.defaultMuted = true;
+      hv.loop = true;
+      const reveal = () => { hv.style.opacity = '0.66'; };
+      if (hv.readyState >= 2) reveal();
+      else hv.addEventListener('loadeddata', reveal, { once: true });
+      if (rm) { hv.removeAttribute('autoplay'); hv.pause(); }
+      else { const t = hv.play(); if (t && t.catch) t.catch(() => {}); }
+    }
+
+    const fmt = (el, v) => {
+      const p = el.dataset.prefix || '';
+      const s = el.dataset.suffix || '';
+      const n = el.dataset.comma ? Math.round(v).toLocaleString('en-US') : Math.round(v);
+      el.textContent = p + n + s;
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting || e.target.dataset.done) return;
+        e.target.dataset.done = '1';
+        const target = parseFloat(e.target.dataset.count);
+        if (rm) { fmt(e.target, target); return; }
+        const dur = 1100, t0 = performance.now();
+        const tick = (t) => {
+          const k = Math.min(1, (t - t0) / dur);
+          fmt(e.target, target * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('[data-count]').forEach((n) => io.observe(n));
+
+    const map = document.getElementById('eco-map');
+    if (map) {
+      const nodes = Array.from(map.querySelectorAll('[data-enode]'));
+      const lines = Array.from(map.querySelectorAll('[data-eline]'));
+      if (!rm) {
+        Array.from(map.querySelectorAll('.tt-net > div')).forEach((r) => {
+          r.style.opacity = '0';
+          r.style.transform = 'translateY(14px)';
+        });
+      }
+      const io2 = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          lines.forEach((l, i) => setTimeout(() => {
+            l.style.transition = 'stroke-dashoffset 1s ease';
+            l.style.strokeDashoffset = '0';
+          }, rm ? 0 : 70 * i));
+          Array.from(map.querySelectorAll('[data-eline2]')).forEach((l, i) => setTimeout(() => {
+            l.style.transition = 'opacity .8s ease';
+            l.style.opacity = '1';
+          }, rm ? 0 : 420 + 70 * i));
+          nodes.forEach((n, i) => setTimeout(() => { n.style.opacity = '1'; }, rm ? 0 : 220 + 70 * i));
+          const roles = Array.from(map.querySelectorAll('.tt-net > div'));
+          roles.forEach((r, i) => setTimeout(() => {
+            r.style.transition = 'opacity 620ms cubic-bezier(.22,.61,.36,1), transform 620ms cubic-bezier(.22,.61,.36,1)';
+            r.style.opacity = '1';
+            r.style.transform = 'none';
+          }, rm ? 0 : 120 + 150 * i));
+          io2.disconnect();
+        });
+      }, { threshold: 0.2 });
+      io2.observe(map);
+    }
+
+    const steps = Array.from(document.querySelectorAll('[data-step]'));
+    const screens = Array.from(document.querySelectorAll('[data-screen]'));
+    const dots = Array.from(document.querySelectorAll('[data-dot]'));
+    if (steps.length && screens.length) {
+      const setActive = (i) => {
+        screens.forEach((s) => { s.style.opacity = String(Number(s.dataset.screen) === i ? 1 : 0); });
+        dots.forEach((d) => { d.style.background = Number(d.dataset.dot) === i ? 'var(--tt-orange)' : 'rgba(255,255,255,0.25)'; });
+        steps.forEach((s) => {
+          const on = Number(s.dataset.step) === i;
+          const num = s.querySelector('[data-num]');
+          if (num) num.style.color = on ? 'var(--tt-orange)' : 'rgba(255,255,255,0.45)';
+          s.style.opacity = on ? '1' : '0.5';
+          s.style.transition = 'opacity .3s ease';
+        });
+      };
+      const io3 = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) setActive(Number(e.target.dataset.step)); });
+      }, { rootMargin: '-42% 0px -42% 0px' });
+      steps.forEach((s) => io3.observe(s));
+      setActive(0);
+    }
+
+    this.onScroll = () => {
+      const h = document.querySelector('header[data-hdr]');
+      if (!h) return;
+      const solid = window.scrollY > 90;
+      h.style.boxShadow = solid ? '0 1px 12px rgba(20,17,15,0.10)' : 'none';
+      h.style.background = solid ? '#fff' : 'transparent';
+      h.style.borderBottomColor = solid ? 'var(--tt-line)' : 'transparent';
+      h.style.setProperty('--tt-nav', solid ? '#201e1d' : '#ffffff');
+      const lg = h.querySelector('img[data-logo]');
+      if (lg) lg.style.filter = solid ? 'none' : 'brightness(0) invert(1)';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+
+  componentDidUpdate() { this.applyProps(); if (this._issShow) this._issShow(); }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    if (this._issStop) this._issStop();
+    if (this._issIO) this._issIO.disconnect();
+    const iss = document.getElementById('issam-slides');
+    if (iss) delete iss.dataset.ttInit;
+    if (this._progStop) this._progStop();
+    if (this._progIO) this._progIO.disconnect();
+    const pl = document.getElementById('prog-loop');
+    if (pl) delete pl.dataset.ttInit;
+    const fq = document.getElementById('faq');
+    if (fq) delete fq.dataset.ttInit;
+  }
+
+  applyProps() {
+    document.documentElement.style.setProperty('--tt-orange', this.props.accent || '#F36A02');
+    const tone = this.props.photoTone || 'Full colour';
+    const filter = tone === 'Warm' ? 'saturate(1.08) contrast(1.04)' : tone === 'Black and white' ? 'grayscale(1) contrast(1.05)' : 'none';
+    document.querySelectorAll('[data-photo]').forEach((img) => { img.style.filter = filter; });
+  }
+
+  renderVals() {
+    const heroVideo = (el) => { this.heroVideo = el; };
+    const dd = (el, open) => {
+      const p = el.querySelector('[data-dd]');
+      if (!p) return;
+      p.style.opacity = open ? '1' : '0';
+      p.style.visibility = open ? 'visible' : 'hidden';
+      p.style.transform = open ? 'translateY(0)' : 'translateY(-6px)';
+      const b = el.querySelector('button');
+      if (b) b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    return {
+      heroVideo,
+      navEnter: (e) => dd(e.currentTarget, true),
+      navLeave: (e) => dd(e.currentTarget, false),
+      toggleMobile: (e) => {
+        const m = document.getElementById('tt-mob');
+        if (!m) return;
+        const open = m.style.display !== 'block';
+        m.style.display = open ? 'block' : 'none';
+        if (e && e.currentTarget) e.currentTarget.setAttribute('aria-expanded', open ? 'true' : 'false');
+      },
+      closeMobile: () => {
+        const m = document.getElementById('tt-mob');
+        if (m) m.style.display = 'none';
+        const t = document.querySelector('.tt-mobonly[aria-controls="tt-mob"]');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      },
+      toggleAcc: (e) => {
+        const row = e.currentTarget.parentElement;
+        const panel = row.querySelector('[data-panel]');
+        const plus = row.querySelector('[data-plus]');
+        if (!panel) return;
+        const open = panel.style.display === 'block';
+        panel.style.display = open ? 'none' : 'block';
+        if (plus) plus.textContent = open ? '+' : '–';
+        e.currentTarget.setAttribute('aria-expanded', open ? 'false' : 'true');
+      },
+      scrollLeft: () => {
+        const r = document.getElementById('eq-rail');
+        if (r) r.scrollBy({ left: -r.clientWidth * 0.55, behavior: 'smooth' });
+      },
+      scrollRight: () => {
+        const r = document.getElementById('eq-rail');
+        if (r) r.scrollBy({ left: r.clientWidth * 0.55, behavior: 'smooth' });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

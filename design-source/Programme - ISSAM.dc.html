@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--tt-orange:#F36A02;--tt-ink:#14110F;--tt-green:#16342A;--tt-off:#F6F2EC;--tt-grey:#6E6A65;--tt-line:#DCD6CD}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tt-ink);font-family:'Instrument Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+img{display:block;max-width:100%}
+a{color:var(--tt-ink);text-decoration:none}
+a:hover{color:var(--tt-orange)}
+:focus-visible{outline:2px solid var(--tt-orange);outline-offset:3px}
+.tt-wrap{width:100%;max-width:1520px;margin:0 auto;padding-left:clamp(20px,4vw,72px);padding-right:clamp(20px,4vw,72px)}
+.tt-mobonly{display:none!important}
+.tt-2{display:grid;grid-template-columns:1fr 1fr}
+.tt-foot{display:grid;grid-template-columns:repeat(6,1fr);gap:32px}
+@media (max-width:1180px){.tt-foot{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:880px){.tt-2{grid-template-columns:1fr}.tt-foot{grid-template-columns:1fr 1fr}}
+
+.tt-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.tt-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.tt-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1100px){.tt-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tt-4{grid-template-columns:1fr}}
+@media (max-width:1240px){.tt-desk{display:none!important}.tt-mobonly{display:flex!important}}
+@media (max-width:880px){.tt-row{grid-template-columns:1fr}.tt-3{grid-template-columns:1fr}.tt-flip{order:-1}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</helmet>
+
+<header data-hdr="1" style="position:sticky;top:0;z-index:80;--tt-nav:#ffffff;background:transparent;border-bottom:1px solid transparent;transition:background .25s ease,border-color .25s ease">
+  <div class="tt-wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px">
+    <a href="TracTrac%20Homepage%20v2.dc.html" aria-label="TracTrac home" style="display:flex;align-items:center;flex:0 0 auto">
+      <img data-logo="1" src="uploads/tractrac%20logo%20png%204.png" alt="TracTrac" style="height:34px;width:auto;filter:brightness(0) invert(1);transition:filter .25s ease">
+    </a>
+    <nav class="tt-desk" aria-label="Main" style="display:flex;align-items:stretch;gap:4px;height:84px">
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Solutions</a></div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Technology</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;min-width:240px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Technology.dc.html" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">TracTrac Plus</a>
+          <a href="TracTrac%20Technology.dc.html#agent" style="display:block;padding:13px 18px;border-radius:12px;font:500 15px/1.25 'Instrument Sans';color:rgba(255,255,255,0.86)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">TracTrac Agent</a>
+        </div>
+      </div>
+      <div onMouseEnter="{{ navEnter }}" onMouseLeave="{{ navLeave }}" style="position:relative;display:flex;align-items:center">
+        <button aria-haspopup="true" aria-expanded="false" style="border:0;background:none;font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px;cursor:pointer;min-height:44px" style-hover="color:var(--tt-orange)">Programmes</button>
+        <div data-dd="1" style="position:absolute;top:76px;left:0;width:680px;display:grid;grid-template-columns:180px 1fr;gap:10px;background:rgba(18,22,20,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.14);border-radius:22px;box-shadow:0 18px 44px rgba(0,0,0,0.32);padding:14px 12px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease">
+          <a href="TracTrac%20Programmes.dc.html" style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,0.06);color:#fff" style-hover="background:rgba(255,255,255,0.1);color:#fff">
+            <span style="font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-orange)">Overview</span>
+            <span style="font:600 17px/1.2 'Instrument Sans'">All programmes →</span>
+          </a>
+          <div style="display:grid;grid-template-columns:1fr 1fr">
+            <a href="Programme%20-%20ISSAM.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">ISSAM</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Smallholder access to small-scale mechanisation</span>
+            </a>
+            <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">Young People in Mechanisation</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Skills and careers in mechanisation</span>
+            </a>
+            <a href="Programme%20-%20TRAxCelerate.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">TRAxCelerate</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Programme design and delivery</span>
+            </a>
+            <a href="Programme%20-%20TRACINVEST.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">TRACINVEST</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Asset-backed tractor investment</span>
+            </a>
+            <a href="Programme%20-%20H2O.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">H₂O</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Half-Way to Ownership</span>
+            </a>
+            <a href="Programme%20-%20Rise7.dc.html" style="display:block;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.9)" style-hover="background:rgba(255,255,255,0.07);color:var(--tt-orange)">
+              <span style="display:block;font:600 15px/1.25 'Instrument Sans'">Rise7</span>
+              <span style="display:block;margin-top:4px;font:400 13px/1.35 'Instrument Sans';color:rgba(255,255,255,0.6)">Empowering Seven to Scale</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Impact.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Impact</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Partners.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Partners</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Insights.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Insights</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20About.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">About Us</a></div>
+      <div style="display:flex;align-items:center"><a href="TracTrac%20Careers.dc.html" style="font:600 15px/1 'Instrument Sans';color:var(--tt-nav);padding:12px 14px" style-hover="color:var(--tt-orange)">Careers</a></div>
+    </nav>
+    <div class="tt-desk" style="display:flex;align-items:center;gap:12px;flex:0 0 auto">
+      <a href="TracTrac%20Homepage%20v2.dc.html#final" style="font:600 15px/1 'Instrument Sans';padding:15px 24px;background:var(--tt-orange);color:#fff;min-height:48px;display:flex;align-items:center;white-space:nowrap" style-hover="background:#d85d02;color:#fff">Find Mechanisation</a>
+    </div>
+    <button class="tt-mobonly" onClick="{{ toggleMobile }}" aria-label="Open menu" aria-expanded="false" aria-controls="tt-mob" style="border:1px solid var(--tt-nav);background:transparent;width:48px;height:48px;cursor:pointer;align-items:center;justify-content:center">
+      <span style="display:block;width:20px;height:2px;background:var(--tt-nav);box-shadow:0 -6px 0 var(--tt-nav),0 6px 0 var(--tt-nav)"></span>
+    </button>
+  </div>
+  <div id="tt-mob" style="display:none;border-top:1px solid var(--tt-line);background:#fff;max-height:calc(100vh - 84px);overflow:auto;padding:8px 0 40px">
+    <div class="tt-wrap" style="display:flex;flex-direction:column">
+      <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Solutions</a>
+      <a href="TracTrac%20Technology.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Technology</a>
+      <div style="padding:20px 0 12px;border-bottom:1px solid var(--tt-line);display:flex;flex-direction:column;gap:4px">
+        <a href="TracTrac%20Programmes.dc.html" style="font:700 20px/1 'Instrument Sans';padding-bottom:10px">Programmes</a>
+        <a href="Programme%20-%20ISSAM.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">ISSAM</a>
+        <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Young People in Mechanisation</a>
+        <a href="Programme%20-%20TRAxCelerate.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TRAxCelerate</a>
+        <a href="Programme%20-%20TRACINVEST.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">TRACINVEST</a>
+        <a href="Programme%20-%20H2O.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">H₂O: Half-Way to Ownership</a>
+        <a href="Programme%20-%20Rise7.dc.html" style="padding:10px 0;font:500 17px/1.3 'Instrument Sans';color:var(--tt-grey)">Rise7: Empowering Seven to Scale</a>
+      </div>
+      <a href="TracTrac%20Impact.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Impact</a>
+      <a href="TracTrac%20Partners.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Partners</a>
+      <a href="TracTrac%20Insights.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Insights</a>
+      <a href="TracTrac%20About.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">About Us</a>
+      <a href="TracTrac%20Careers.dc.html" style="font:700 20px/1 'Instrument Sans';padding:20px 0;border-bottom:1px solid var(--tt-line)">Careers</a>
+      <a href="TracTrac%20Homepage%20v2.dc.html#final" style="margin-top:24px;font:600 17px/1 'Instrument Sans';padding:18px 22px;background:var(--tt-orange);color:#fff">Find Mechanisation</a>
+    </div>
+  </div>
+</header>
+
+<main id="top" style="margin-top:-84px">
+<section data-screen-label="ISSAM hero" style="position:relative;background:var(--tt-ink);color:#fff;overflow:hidden">
+  <img data-rv="img" src="img/prog-1.jpg" alt="An ISSAM operator ploughing farmland with an orange tryctor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 60%">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,15,0.9) 0%,rgba(20,17,15,0.55) 50%,rgba(20,17,15,0.2) 100%)"></div>
+  <div class="tt-wrap" style="position:relative;min-height:min(92vh,920px);padding-top:150px;padding-bottom:clamp(40px,5vw,72px);display:flex;flex-direction:column;justify-content:flex-end">
+    <a data-rv="1" href="TracTrac%20Programmes.dc.html" style="margin:0 0 28px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">← Programmes</a>
+    <h1 data-rv="1" data-d="80" style="margin:0;font:700 clamp(40px,6vw,88px)/0.95 'Instrument Sans';letter-spacing:-0.03em">ISSAM</h1>
+    <p data-rv="1" data-d="160" style="margin:clamp(22px,2.6vw,34px) 0 0;max-width:30ch;font:600 clamp(18px,1.6vw,24px)/1.3 'Instrument Sans';letter-spacing:-0.01em">Improving Smallholder Farmers' Access to Small-Scale Mechanisation Services</p>
+    <p data-rv="1" data-d="240" style="margin:18px 0 0;max-width:600px;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:rgba(255,255,255,0.82)">A strategic partnership between TracTrac Mechanisation Services Limited and the Mastercard Foundation, designed to improve how smallholder farmers in Nigeria access affordable and reliable mechanisation services.</p>
+    <dl data-rv="1" data-d="320" style="margin:clamp(36px,4vw,56px) 0 0;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);padding-top:24px">
+      <div><dt style="font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Partner</dt><dd style="margin:10px 0 0;font:600 17px/1.2 'Instrument Sans'">Mastercard Foundation</dd></div>
+      <div><dt style="font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6)">States</dt><dd style="margin:10px 0 0;font:600 17px/1.2 'Instrument Sans'">Kaduna and Nasarawa</dd></div>
+      <div><dt style="font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6)">Duration</dt><dd style="margin:10px 0 0;font:600 17px/1.2 'Instrument Sans'">Five-year programme</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section data-screen-label="At a glance" style="background:var(--tt-ink);color:#fff;padding:clamp(56px,7vw,110px) 0">
+  <div class="tt-wrap">
+    <p data-rv="1" style="margin:0 0 clamp(32px,4vw,56px);font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">ISSAM at a glance</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+      <div data-rv="1" style="padding:28px 24px 28px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;margin-bottom:20px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><circle cx="16" cy="9" r="4"/><path d="M8 27v-4a8 8 0 0116 0v4"/><path d="M11 5l5-2 5 2"/></svg><p data-count="5012" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">5,012</p><p style="margin:14px 0 0;font:400 15px/1.4 'Instrument Sans';color:rgba(255,255,255,0.72)">Young people trained</p></div>
+      <div data-rv="1" data-d="80" style="padding:28px 24px 28px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;margin-bottom:20px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><rect x="4" y="9" width="24" height="16" rx="2"/><circle cx="16" cy="17" r="3.5"/><path d="M8 13h.01M24 21h.01"/><path d="M11 9V6h10v3"/></svg><p data-count="2987" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">2,987</p><p style="margin:14px 0 0;font:400 15px/1.4 'Instrument Sans';color:rgba(255,255,255,0.72)">MSPs currently earning</p></div>
+      <div data-rv="1" data-d="160" style="padding:28px 24px 28px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;margin-bottom:20px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><circle cx="16" cy="9" r="3"/><circle cx="7" cy="13" r="2.5"/><circle cx="25" cy="13" r="2.5"/><path d="M10 26v-4a6 6 0 0112 0v4"/><path d="M3 26v-2.5a4 4 0 016-3.4M29 26v-2.5a4 4 0 00-6-3.4"/></svg><p data-count="566" data-suffix="+" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">566+</p><p style="margin:14px 0 0;font:400 15px/1.4 'Instrument Sans';color:rgba(255,255,255,0.72)">Cooperatives established</p></div>
+      <div data-rv="1" data-d="240" style="padding:28px 24px 28px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;margin-bottom:20px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><circle cx="10" cy="22" r="5"/><circle cx="24" cy="24" r="3"/><path d="M5 17V9h9l2 8h9v7"/><path d="M14 9v8M20 17v-5"/></svg><p data-count="3396" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">3,396</p><p style="margin:14px 0 0;font:400 15px/1.4 'Instrument Sans';color:rgba(255,255,255,0.72)">Pieces of equipment deployed</p></div>
+      <div data-rv="1" data-d="320" style="padding:28px 24px 28px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;margin-bottom:20px;fill:none;stroke:var(--tt-orange);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M16 28V16"/><path d="M16 18c0-5-3.5-8-9-8 0 5 3.5 8 9 8z"/><path d="M16 15c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M8 28h16"/></svg><p data-count="135000" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em;color:var(--tt-orange)">135,000</p><p style="margin:14px 0 0;font:400 15px/1.4 'Instrument Sans';color:rgba(255,255,255,0.72)">Five-year target: farmers reached with mechanisation services</p></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Objectives" style="background:var(--tt-off);padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-row" style="gap:clamp(32px,5vw,96px);align-items:start">
+      <div style="position:sticky;top:120px">
+        <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Five-year objectives</p>
+        <h2 data-rv="1" style="margin:0;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">A people-first model for mechanisation.</h2>
+        <p data-rv="1" style="margin:24px 0 0;max-width:46ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Youth-led Mechanisation Service Providers, a strong focus on women and persons with disabilities, technical skills, small-scale equipment and cooperative structures.</p>
+      </div>
+      <div>
+        <div data-rv="1" style="display:grid;grid-template-columns:72px 1fr;gap:20px;padding:32px 0"><span style="font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">01</span><div><h3 style="margin:0;font:700 clamp(20px,1.8vw,26px)/1.2 'Instrument Sans';letter-spacing:-0.015em">Create jobs</h3><p style="margin:12px 0 0;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Empower cooperatives to deliver mechanisation services within their communities.</p></div></div>
+        <div data-rv="1" style="display:grid;grid-template-columns:72px 1fr;gap:20px;padding:32px 0"><span style="font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">02</span><div><h3 style="margin:0;font:700 clamp(20px,1.8vw,26px)/1.2 'Instrument Sans';letter-spacing:-0.015em">Bridge inclusion gaps</h3><p style="margin:12px 0 0;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Actively involve women, youth and persons with disabilities in mechanisation opportunities.</p></div></div>
+        <div data-rv="1" style="display:grid;grid-template-columns:72px 1fr;gap:20px;padding:32px 0"><span style="font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">03</span><div><h3 style="margin:0;font:700 clamp(20px,1.8vw,26px)/1.2 'Instrument Sans';letter-spacing:-0.015em">Strengthen agricultural resilience</h3><p style="margin:12px 0 0;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Combine technology, affordability and hands-on training to strengthen local mechanisation capacity.</p></div></div>
+        <div data-rv="1" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;margin-top:24px;background:var(--tt-ink)">
+          <div style="background:var(--tt-ink);color:#fff;padding:clamp(24px,3vw,40px)"><p data-count="6054" style="margin:0;font:700 clamp(28px,3vw,44px)/1 'Instrument Sans';letter-spacing:-0.03em">6,054</p><p style="margin:12px 0 0;font:400 15px/1.4 'Instrument Sans';color:rgba(255,255,255,0.76)">Jobs to be created</p></div>
+          <div style="background:var(--tt-ink);color:#fff;padding:clamp(24px,3vw,40px)"><p data-count="135000" style="margin:0;font:700 clamp(28px,3vw,44px)/1 'Instrument Sans';letter-spacing:-0.03em">135,000</p><p style="margin:12px 0 0;font:400 15px/1.4 'Instrument Sans';color:rgba(255,255,255,0.76)">Smallholder farmers to be reached across Kaduna and Nasarawa</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-screen-label="Programme journey" style="background:var(--tt-ink);color:#fff;padding:clamp(72px,9vw,150px) 0;overflow:hidden">
+  <div class="tt-wrap">
+    <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">The ISSAM journey</p>
+    <h2 data-rv="1" style="margin:0;max-width:20ch;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">From community advocacy to equipment in the field.</h2>
+    <div style="margin-top:clamp(48px,6vw,88px);overflow-x:auto">
+      <ol style="position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(190px,1fr));gap:clamp(20px,2.4vw,40px)">
+        <div data-rv="x" style="position:absolute;left:0;right:0;top:9px;height:2px;background:var(--tt-orange)"></div>
+        <li data-rv="1" data-d="100" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">01</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Advocacy</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">Stakeholder engagement with traditional rulers, LGA chairpersons and district heads.</p></li>
+        <li data-rv="1" data-d="180" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">02</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Sensitisation</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">Community awareness through religious houses, marketplaces and digital channels.</p></li>
+        <li data-rv="1" data-d="260" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">03</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Mobilisation</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">25,000+ potential MSPs mobilised and screened across 2 states and 22 LGAs.</p></li>
+        <li data-rv="1" data-d="340" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">04</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Training</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">18 cohorts across two years in agribusiness, leadership, machine use and maintenance.</p></li>
+        </ol>
+      <ol start="5" style="position:relative;list-style:none;margin:clamp(48px,5vw,80px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(190px,1fr));gap:clamp(20px,2.4vw,40px)">
+        <div data-rv="x" style="position:absolute;left:0;right:0;top:9px;height:2px;background:var(--tt-orange)"></div>
+        <li data-rv="1" data-d="420" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">05</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Work Enabling Outreach</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">5,012 youths and women graduated as certified MSPs and received IT tools.</p></li>
+        <li data-rv="1" data-d="500" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">06</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Enterprises</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">566 youth- and women-led cooperatives formed and elections conducted.</p></li>
+        <li data-rv="1" data-d="580" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">07</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Youth in Work</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">2,987 MSPs currently earning.</p></li>
+        <li data-rv="1" data-d="660" style="position:relative;padding-top:40px"><span style="position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--tt-orange);box-shadow:0 0 0 5px var(--tt-ink)"></span><p style="margin:0;font:700 14px/1 'Instrument Sans';color:var(--tt-orange)">08</p><h3 style="margin:10px 0 0;font:700 clamp(16px,1.3vw,20px)/1.15 'Instrument Sans'">Equipment</h3><p style="margin:10px 0 0;max-width:30ch;font:400 16px/1.55 'Instrument Sans';color:rgba(255,255,255,0.74)">Labour-saving devices, tryctors and implements deployed.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Training photo" style="background:var(--tt-ink)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+    <div style="overflow:hidden;aspect-ratio:3/2"><img data-rv="img" src="img/prog-6.jpg" alt="ISSAM trainees working on tablets in a classroom session" style="width:100%;height:100%;object-fit:cover"></div>
+    <div style="overflow:hidden;aspect-ratio:3/2"><img data-rv="img" data-d="120" src="img/prog-3.jpg" alt="Trainees in ISSAM coveralls and helmets during practical equipment training" style="width:100%;height:100%;object-fit:cover"></div>
+  </div>
+</section>
+
+<section data-screen-label="Inclusion" style="background:#fff;padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-row" style="gap:clamp(32px,5vw,96px);align-items:center">
+      <div>
+        <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Inclusion by design</p>
+        <h2 data-rv="1" style="margin:0;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">Half the participants are women.</h2>
+        <p data-rv="1" style="margin:22px 0 0;max-width:48ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:var(--tt-grey)">Participant profile: youth aged 18–35, 50% women and 50% men, 5% persons with disabilities.</p>
+        <div style="margin-top:clamp(36px,4vw,56px)">
+          <p data-rv="1" style="margin:0 0 0;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Trained · Work Enabling Outreach</p>
+          <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0 clamp(16px,2vw,28px)">
+            <div data-rv="1" style="display:grid;gap:10px;align-content:start;padding:20px 12px 20px 0"><span data-count="2424" style="font:700 clamp(28px,2.8vw,40px)/1 'Instrument Sans';letter-spacing:-0.03em">2,424</span><span style="font:500 15px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Women</span></div>
+            <div data-rv="1" data-d="80" style="display:grid;gap:10px;align-content:start;padding:20px 12px 20px 0"><span data-count="249" style="font:700 clamp(28px,2.8vw,40px)/1 'Instrument Sans';letter-spacing:-0.03em">249</span><span style="font:500 15px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Internally displaced persons</span></div>
+            <div data-rv="1" data-d="160" style="display:grid;gap:10px;align-content:start;padding:20px 12px 20px 0"><span data-count="172" style="font:700 clamp(28px,2.8vw,40px)/1 'Instrument Sans';letter-spacing:-0.03em">172</span><span style="font:500 15px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Persons with disabilities</span></div>
+          </div>
+          <p data-rv="1" style="margin:40px 0 0;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Placed in work · Youth in Work</p>
+          <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0 clamp(16px,2vw,28px)">
+            <div data-rv="1" style="display:grid;gap:10px;align-content:start;padding:20px 12px 20px 0"><span data-count="1250" style="font:700 clamp(28px,2.8vw,40px)/1 'Instrument Sans';letter-spacing:-0.03em">1,250</span><span style="font:500 15px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Women placed in work</span></div>
+            <div data-rv="1" data-d="80" style="display:grid;gap:10px;align-content:start;padding:20px 12px 20px 0"><span data-count="338" style="font:700 clamp(28px,2.8vw,40px)/1 'Instrument Sans';letter-spacing:-0.03em">338</span><span style="font:500 15px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Women-led cooperatives</span></div>
+            <div data-rv="1" data-d="160" style="display:grid;gap:10px;align-content:start;padding:20px 12px 20px 0"><span data-count="123" style="font:700 clamp(28px,2.8vw,40px)/1 'Instrument Sans';letter-spacing:-0.03em">123</span><span style="font:500 15px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">IDPs placed in work</span></div>
+            <div data-rv="1" data-d="240" style="display:grid;gap:10px;align-content:start;padding:20px 12px 20px 0"><span data-count="84" style="font:700 clamp(28px,2.8vw,40px)/1 'Instrument Sans';letter-spacing:-0.03em">84</span><span style="font:500 15px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Persons with disabilities placed in work</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-flip" style="overflow:hidden;aspect-ratio:4/5;background:var(--tt-off)"><img data-rv="img" src="img/prog-12.jpg" alt="A woman MSP driving an orange tryctor" style="width:100%;height:100%;object-fit:cover;object-position:70% 50%"></div>
+    </div>
+  </div>
+</section>
+<section data-screen-label="Where it is happening" style="background:var(--tt-off);padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px">
+      <div>
+        <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Where it is happening</p>
+        <h2 data-rv="1" style="margin:0;max-width:18ch;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">Two states, expanding across two years.</h2>
+      </div>
+      <div data-rv="1" style="display:flex;gap:24px;font:500 14px/1 'Instrument Sans';color:var(--tt-grey)">
+        <span style="display:flex;align-items:center;gap:8px"><span style="width:12px;height:12px;background:var(--tt-ink)"></span>Year 1</span>
+        <span style="display:flex;align-items:center;gap:8px"><span style="width:12px;height:12px;background:var(--tt-orange)"></span>Year 2</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;margin-top:clamp(40px,5vw,72px);background:var(--tt-ink)">
+      <div style="background:#fff;padding:clamp(24px,3vw,48px)">
+        <h3 data-rv="1" style="margin:0 0 28px;font:700 clamp(20px,1.8vw,26px)/1.2 'Instrument Sans';letter-spacing:-0.015em">Kaduna</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span data-rv="1" data-d="0" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Zaria</span>
+          <span data-rv="1" data-d="60" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Lere</span>
+          <span data-rv="1" data-d="120" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Kachia</span>
+          <span data-rv="1" data-d="180" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Igabi</span>
+          <span data-rv="1" data-d="240" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Chikun</span>
+          <span data-rv="1" data-d="300" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Ikara</span>
+          <span data-rv="1" data-d="360" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Soba</span>
+          <span data-rv="1" data-d="480" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Sabon Gari</span>
+          <span data-rv="1" data-d="540" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Kauru</span>
+          <span data-rv="1" data-d="600" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Makarfi</span>
+          <span data-rv="1" data-d="660" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Kubau</span>
+          <span data-rv="1" data-d="720" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Zango Kataf</span>
+        </div>
+      </div>
+      <div style="background:#fff;padding:clamp(24px,3vw,48px)">
+        <h3 data-rv="1" style="margin:0 0 28px;font:700 clamp(20px,1.8vw,26px)/1.2 'Instrument Sans';letter-spacing:-0.015em">Nasarawa</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span data-rv="1" data-d="0" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Kokona</span>
+          <span data-rv="1" data-d="60" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Akwanga</span>
+          <span data-rv="1" data-d="120" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Wamba</span>
+          <span data-rv="1" data-d="180" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Nasarawa</span>
+          <span data-rv="1" data-d="240" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Karu</span>
+          <span data-rv="1" data-d="300" style="padding:10px 14px;background:var(--tt-ink);color:#fff;font:500 16px/1.4 'Instrument Sans'">Nasarawa Eggon</span>
+          <span data-rv="1" data-d="480" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Awe</span>
+          <span data-rv="1" data-d="540" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Obi</span>
+          <span data-rv="1" data-d="600" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Keana</span>
+          <span data-rv="1" data-d="660" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Lafia</span>
+          <span data-rv="1" data-d="720" style="padding:10px 14px;background:var(--tt-orange);color:#fff;font:500 16px/1.4 'Instrument Sans'">Doma</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin:20px 0 0;font:400 13px/1.5 'Instrument Sans';color:var(--tt-grey)">LGAs as listed in the ISSAM source pack. Mobilisation figure (20 or 22 LGAs) to be confirmed.</p>
+  </div>
+</section>
+
+<section data-screen-label="Equipment" style="background:var(--tt-ink);color:#fff;padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-row" style="gap:clamp(32px,5vw,96px);align-items:start">
+      <div>
+        <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Equipment and technical capacity</p>
+        <h2 data-rv="1" style="margin:0;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">10 types of tools and equipment deployed to MSPs.</h2>
+        <div data-rv="1" style="overflow:hidden;aspect-ratio:3/2;margin-top:clamp(32px,4vw,56px)"><img data-rv="img" src="img/prog-11.jpg" alt="An MSP operating a tryctor with a disc plough attached" style="width:100%;height:100%;object-fit:cover"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;background:rgba(255,255,255,0.14)">
+          <div style="background:var(--tt-ink);padding:24px 24px 24px 0"><p data-count="579" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">579</p><p style="margin:10px 0 0;font:400 15px/1.5 'Instrument Sans';color:rgba(255,255,255,0.7)">MSP operators trained</p></div>
+          <div style="background:var(--tt-ink);padding:24px"><p data-count="14" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">14</p><p style="margin:10px 0 0;font:400 15px/1.5 'Instrument Sans';color:rgba(255,255,255,0.7)">Mechanics given on-the-job training</p></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(16px,2vw,32px)">
+        <div data-rv="1" style="display:grid;gap:10px;align-content:start;padding:28px 24px 28px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:clamp(44px,4vw,56px);height:clamp(44px,4vw,56px);display:block;margin-bottom:6px;fill:none;stroke:var(--tt-orange);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M9 6h10v6l3 3v11H6V15l3-3z"/><path d="M9 6V4h10v2"/><path d="M22 18h3l2 3"/><circle cx="26" cy="25" r=".6"/><circle cx="23" cy="27" r=".6"/><circle cx="27" cy="28" r=".6"/></svg><span data-count="566" style="font:700 clamp(40px,4.4vw,64px)/1 'Instrument Sans';letter-spacing:-0.03em;color:var(--tt-orange)">566</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Fertiliser applicators</span></div>
+        <div data-rv="1" data-d="40" style="display:grid;gap:10px;align-content:start;padding:28px 24px 28px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:clamp(44px,4vw,56px);height:clamp(44px,4vw,56px);display:block;margin-bottom:6px;fill:none;stroke:var(--tt-orange);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><rect x="7" y="7" width="11" height="17" rx="3"/><path d="M10 7V5h5v2"/><path d="M18 20h4l5-8"/><path d="M27 12l1.5-1.5M27 12l2 .5M27 12l.5-2"/><path d="M9 24v3M16 24v3"/></svg><span data-count="566" style="font:700 clamp(40px,4.4vw,64px)/1 'Instrument Sans';letter-spacing:-0.03em;color:var(--tt-orange)">566</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Knapsack sprayers</span></div>
+        <div data-rv="1" data-d="80" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><circle cx="10" cy="22" r="5"/><circle cx="24" cy="24" r="3"/><path d="M5 17V9h9l2 8h9v7"/><path d="M14 9v8M20 17v-5"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Tractors</span></div>
+        <div data-rv="1" data-d="120" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M16 28V16"/><path d="M16 18c0-5-3.5-8-9-8 0 5 3.5 8 9 8z"/><path d="M16 15c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M8 28h16"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Planters</span></div>
+        <div data-rv="1" data-d="160" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M4 10h24"/><path d="M8 10v12l-1.5 3M14 10v12l-1.5 3M20 10v12l-1.5 3M26 10v12l-1.5 3"/><path d="M4 16h24"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Harrows</span></div>
+        <div data-rv="1" data-d="200" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><circle cx="11" cy="21" r="6"/><circle cx="22" cy="21" r="6"/><path d="M11 15V7h11v8"/><path d="M5 7h22"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Disc ploughs</span></div>
+        <div data-rv="1" data-d="240" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M5 10h19l-2 11H7z"/><circle cx="10" cy="25" r="2.5"/><circle cx="19" cy="25" r="2.5"/><path d="M24 17h4"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Trailer buckets</span></div>
+        <div data-rv="1" data-d="280" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M16 28V6"/><path d="M16 10c-2-1-3-3-3-5M16 10c2-1 3-3 3-5M16 16c-3-1-4-3-4-6M16 16c3-1 4-3 4-6M16 22c-3-1-4.5-3-4.5-6M16 22c3-1 4.5-3 4.5-6"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Threshers</span></div>
+        <div data-rv="1" data-d="320" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M6 26h20"/><path d="M9 26l3-9h8l3 9"/><path d="M16 17V8"/><path d="M12 8h8"/><path d="M24 12c1.5 2 1.5 3.5 0 5-1.5-1.5-1.5-3 0-5z"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Treadle pumps</span></div>
+        <div data-rv="1" data-d="360" style="display:grid;gap:10px;align-content:start;padding:20px 24px 20px 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:40px;height:40px;display:block;margin-bottom:6px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M13 4h6M14 4v9l-7 12a2 2 0 002 3h14a2 2 0 002-3l-7-12V4"/><path d="M10 21h12"/></svg><span data-count="283" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.03em">283</span><span style="font:500 16px/1.4 'Instrument Sans';color:rgba(255,255,255,0.78)">Soil testing kits</span></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-screen-label="Farmers and platform" style="background:#fff;padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Farmers, platform and last-mile delivery</p>
+    <h2 data-rv="1" style="margin:0;max-width:20ch;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">From community awareness to work done on the farm.</h2>
+    <div style="margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:clamp(24px,2.4vw,40px) clamp(16px,2vw,32px)">
+      <div data-rv="1" style="display:grid;align-content:start;gap:16px;padding:0 24px 0 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;fill:none;stroke:var(--tt-ink);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M6 13v6l14 6V7z"/><path d="M6 13H4v6h2"/><path d="M10 20.5V26h3v-4"/><path d="M24 12a5 5 0 010 8"/></svg><span data-count="300000" data-suffix="+" style="font:700 clamp(32px,3.2vw,48px)/1 'Instrument Sans';letter-spacing:-0.03em;white-space:nowrap">300,000+</span><p style="margin:0;max-width:22ch;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Smallholder farmers sensitised at community level</p></div>
+      <div data-rv="1" data-d="80" style="display:grid;align-content:start;gap:16px;padding:0 24px 0 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;fill:none;stroke:var(--tt-ink);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><rect x="8" y="3" width="16" height="26" rx="2.5"/><path d="M14 25h4"/><circle cx="16" cy="12" r="3"/><path d="M11 20a5 5 0 0110 0"/></svg><span data-count="146170" style="font:700 clamp(32px,3.2vw,48px)/1 'Instrument Sans';letter-spacing:-0.03em;white-space:nowrap">146,170</span><p style="margin:0;max-width:22ch;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Smallholder farmers registered and onboarded</p></div>
+      <div data-rv="1" data-d="160" style="display:grid;align-content:start;gap:16px;padding:0 24px 0 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;fill:none;stroke:var(--tt-ink);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M6 7h20v14H14l-6 5v-5H6z"/><path d="M11 12h10M11 16h6"/></svg><span data-count="8577" style="font:700 clamp(32px,3.2vw,48px)/1 'Instrument Sans';letter-spacing:-0.03em;white-space:nowrap">8,577</span><p style="margin:0;max-width:22ch;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Smallholder farmers requested services</p></div>
+      <div data-rv="1" data-d="240" style="display:grid;align-content:start;gap:16px;padding:0 24px 0 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;fill:none;stroke:var(--tt-ink);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><circle cx="16" cy="16" r="12"/><path d="M11 16.5l3.5 3.5 7-8"/></svg><span data-count="7872" style="font:700 clamp(32px,3.2vw,48px)/1 'Instrument Sans';letter-spacing:-0.03em;white-space:nowrap">7,872</span><p style="margin:0;max-width:22ch;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Demand requests fulfilled</p></div>
+      <div data-rv="1" data-d="320" style="display:grid;align-content:start;gap:16px;padding:0 24px 0 0"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" style="width:44px;height:44px;display:block;fill:none;stroke:var(--tt-ink);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round"><path d="M4 22c4-2 8-2 12 0s8 2 12 0"/><path d="M4 27c4-2 8-2 12 0s8 2 12 0"/><path d="M16 17V7"/><path d="M16 11c0-3-2.5-5-6-5 0 3 2.5 5 6 5zM16 9c0-2.5 2-4 5-4 0 2.5-2 4-5 4z"/></svg><span data-count="4740" style="font:700 clamp(32px,3.2vw,48px)/1 'Instrument Sans';letter-spacing:-0.03em;white-space:nowrap">4,740</span><p style="margin:0;max-width:22ch;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey);text-wrap:pretty">Unique farmers serviced</p></div>
+    </div>
+    <div class="tt-4" style="gap:2px;margin-top:clamp(32px,4vw,56px)">
+      <div data-rv="1" style="background:var(--tt-orange);color:#fff;padding:clamp(24px,3vw,40px)"><p data-count="91.8" data-dec="1" data-suffix="%" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">91.8%</p><p style="margin:12px 0 0;font:500 16px/1.4 'Instrument Sans'">Demand fulfilment rate</p></div>
+      <div data-rv="1" data-d="80" style="background:var(--tt-off);padding:clamp(24px,3vw,40px)"><p data-count="8719.88" data-dec="0" data-suffix=" ha" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">8,720 ha</p><p style="margin:12px 0 0;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey)">Farmland worked by MSPs</p></div>
+      <div data-rv="1" data-d="160" style="background:var(--tt-off);padding:clamp(24px,3vw,40px)"><p style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em"><span data-count="220">220</span><span style="color:var(--tt-grey)"> / </span><span data-count="191">191</span></p><p style="margin:12px 0 0;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey)">Cooperatives generating / fulfilling demand</p></div>
+      <div data-rv="1" data-d="240" style="background:var(--tt-off);padding:clamp(24px,3vw,40px)"><p data-count="5192" style="margin:0;font:700 clamp(36px,4vw,56px)/1 'Instrument Sans';letter-spacing:-0.03em">5,192</p><p style="margin:12px 0 0;font:500 16px/1.4 'Instrument Sans';color:var(--tt-grey)">TracTrac app installs · 5,000+ active users</p></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Enabling environment" style="background:var(--tt-ink);color:#fff;padding:clamp(72px,9vw,150px) 0">
+  <div class="tt-wrap">
+    <div class="tt-row" style="gap:clamp(32px,5vw,96px);align-items:start">
+      <div>
+        <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Policy and investment</p>
+        <h2 data-rv="1" style="margin:0;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">Shaping the enabling environment.</h2>
+        <p data-rv="1" style="margin:24px 0 0;max-width:44ch;font:400 clamp(15px,1.25vw,17px)/1.65 'Instrument Sans';color:rgba(255,255,255,0.78)">Support to the development of NAMP 2026 and the Mechanisation Investment Strategy Document.</p>
+        <div data-rv="1" style="margin-top:clamp(32px,4vw,48px);padding:clamp(24px,3vw,36px);background:var(--tt-orange)">
+          <p style="margin:0;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">NAMP 2026</p>
+          <p style="margin:14px 0 0;font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.02em">Officially ratified by government, with 500+ delegates and attendees.</p>
+        </div>
+      </div>
+      <div style="">
+        <div data-rv="1" style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0"><span data-count="500" data-suffix="+" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.02em">500+</span><span style="font:400 15px/1.5 'Instrument Sans';color:rgba(255,255,255,0.8)">Stakeholders engaged across the agricultural ecosystem</span></div>
+        <div data-rv="1" style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0"><span data-count="10" data-suffix="+" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.02em">10+</span><span style="font:400 15px/1.5 'Instrument Sans';color:rgba(255,255,255,0.8)">Key government institutions engaged across agriculture, mechanisation, research, investment and policy</span></div>
+        <div data-rv="1" style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0"><span data-count="2" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.02em">2</span><span style="font:400 15px/1.5 'Instrument Sans';color:rgba(255,255,255,0.8)">High-level national policy dialogues convened</span></div>
+        <div data-rv="1" style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0"><span data-count="70" data-suffix="+" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.02em">70+</span><span style="font:400 15px/1.5 'Instrument Sans';color:rgba(255,255,255,0.8)">Stakeholders in the NAMP 2026 draft review, across 4 thematic groups</span></div>
+        <div data-rv="1" style="display:grid;grid-template-columns:140px minmax(0,1fr);gap:20px;align-items:baseline;padding:22px 0"><span data-count="8" style="font:700 clamp(24px,2.4vw,32px)/1 'Instrument Sans';letter-spacing:-0.02em">8</span><span style="font:400 15px/1.5 'Instrument Sans';color:rgba(255,255,255,0.8)">Investment promotion engagements, with 10 government stakeholders</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Partner and CTA" style="position:relative;background:var(--tt-ink);color:#fff;overflow:hidden">
+  <img data-rv="img" src="img/prog-4.jpg" alt="A woman MSP in ISSAM coveralls using a knapsack sprayer" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,15,0.92) 0%,rgba(20,17,15,0.4) 100%)"></div>
+  <div class="tt-wrap" style="position:relative;padding-top:clamp(80px,10vw,160px);padding-bottom:clamp(80px,10vw,160px)">
+    <p data-rv="1" style="margin:0 0 20px;font:600 12px/1 'Instrument Sans';letter-spacing:0.14em;text-transform:uppercase;color:var(--tt-orange)">Delivered in partnership with the Mastercard Foundation</p>
+    <h2 data-rv="1" style="margin:0;max-width:18ch;font:700 clamp(28px,3.4vw,48px)/1.04 'Instrument Sans';letter-spacing:-0.022em">Work with TracTrac to take the model further.</h2>
+    <div data-rv="1" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(28px,3.5vw,44px)">
+      <a href="TracTrac%20Homepage%20v2.dc.html#partnership" style="font:600 17px/1 'Instrument Sans';padding:20px 30px;min-height:56px;white-space:nowrap;flex-shrink:0;display:inline-flex;align-items:center;background:var(--tt-orange);color:#fff" style-hover="background:#d85d02;color:#fff">Partner With Us</a>
+      <a href="TracTrac%20Programmes.dc.html" style="font:600 17px/1 'Instrument Sans';padding:20px 30px;min-height:56px;white-space:nowrap;flex-shrink:0;display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,0.55);color:#fff" style-hover="background:#fff;color:var(--tt-ink)">All programmes</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="background:#fff;border-top:1px solid var(--tt-line)">
+  <div class="tt-wrap" style="padding-top:clamp(48px,6vw,80px);padding-bottom:clamp(32px,4vw,56px)">
+    <div class="tt-2" style="gap:clamp(28px,4vw,64px);align-items:start;padding-bottom:clamp(36px,4vw,60px);border-bottom:1px solid var(--tt-line)">
+      <div>
+        <img src="uploads/tractrac%20logo%20png%204.png" alt="TracTrac" style="height:36px;width:auto;margin-bottom:22px">
+        <p style="margin:0;max-width:38ch;font:400 16px/1.6 'Instrument Sans';color:var(--tt-grey)">Making mechanisation easier to access for farmers, equipment owners, agents and service providers.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 16px;font:600 11px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase;color:var(--tt-grey)">Get the app</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <img src="uploads/google-play-badge-logo_svgrepo.com.png" alt="Get it on Google Play" style="height:46px;width:auto">
+          <span style="display:flex;flex-direction:column;justify-content:center;width:155px;height:46px;padding:0 14px;background:#14110F;border-radius:8px;color:#fff">
+            <span style="font:400 9px/1.3 'Instrument Sans';letter-spacing:0.04em;opacity:0.72">Download on the</span>
+            <span style="font:600 15px/1.2 'Instrument Sans';letter-spacing:-0.01em">App Store</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="tt-foot" style="padding-top:clamp(32px,4vw,56px)">
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">TracTrac</p>
+        <a href="TracTrac%20About.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">About Us</a>
+        <a href="TracTrac%20Impact.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Our Impact</a>
+        <a href="TracTrac%20Careers.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Careers</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#final" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Contact Us</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Get Mechanisation</p>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Farmers</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Equipment Owners</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Booking Agents</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#pathways" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">For Mechanisation Service Providers</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Technology</p>
+        <a href="TracTrac%20Technology.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TracTrac Plus</a>
+        <a href="TracTrac%20Technology.dc.html#agent" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TracTrac Agent</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Programmes</p>
+        <a href="TracTrac%20Programmes.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">All programmes</a>
+        <a href="Programme%20-%20ISSAM.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">ISSAM</a>
+        <a href="Programme%20-%20Young%20People%20in%20Mechanisation.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Young People in Mechanisation</a>
+        <a href="Programme%20-%20TRAxCelerate.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TRAxCelerate</a>
+        <a href="Programme%20-%20TRACINVEST.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">TRACINVEST</a>
+        <a href="Programme%20-%20H2O.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">H₂O: Half-Way to Ownership</a>
+        <a href="Programme%20-%20Rise7.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Rise7: Empowering Seven to Scale</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Partners</p>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Work With Us</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Finance and Investment</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Government and Regulators</a>
+        <a href="TracTrac%20Partners.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Development Partners</a>
+      </div>
+      <div>
+        <p style="margin:0 0 18px;font:600 12px/1 'Instrument Sans';letter-spacing:0.12em;text-transform:uppercase">Resources</p>
+        <a href="TracTrac%20Insights.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Stories and News</a>
+        <a href="TracTrac%20Insights.dc.html" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Research and Resources</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#faq" style="display:block;padding:8px 0;font:400 15px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">FAQs</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center;margin-top:clamp(36px,4vw,60px);padding-top:26px;border-top:1px solid var(--tt-line)">
+      <div style="display:flex;flex-wrap:wrap;gap:22px">
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Privacy Policy</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)" style-hover="color:var(--tt-orange)">Terms and Conditions</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:22px">
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">LinkedIn</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">Instagram</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">X</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">Facebook</a>
+        <a href="TracTrac%20Homepage%20v2.dc.html#top" style="font:600 14px/1.4 'Instrument Sans'" style-hover="color:var(--tt-orange)">YouTube</a>
+      </div>
+      <p style="margin:0;font:400 14px/1.4 'Instrument Sans';color:var(--tt-grey)">© 2026 TracTrac. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ease = 'cubic-bezier(.22,.61,.36,1)';
+    const rv = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const el = e.target; el.style.opacity = '1'; el.style.transform = 'none'; rv.unobserve(el);
+    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+    document.querySelectorAll('[data-rv]').forEach((el) => {
+      if (rm || document.hidden) return;
+      const d = Number(el.dataset.d || 0);
+      el.style.opacity = '0';
+      el.style.transform = el.dataset.rv === 'img' ? 'scale(1.04)' : el.dataset.rv === 'x' ? 'scaleX(0)' : 'translateY(18px)';
+      if (el.dataset.rv === 'x') el.style.transformOrigin = 'left';
+      el.style.transition = `opacity 700ms ${ease} ${d}ms, transform ${el.dataset.rv === 'img' ? 1200 : 800}ms ${ease} ${d}ms`;
+      rv.observe(el);
+    });
+    const fmt = (el, v) => { const dp = Number(el.dataset.dec || 0); const n = v.toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp }); el.textContent = (el.dataset.prefix || '') + n + (el.dataset.suffix || ''); };
+    const cio = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting || e.target.dataset.done) return;
+      e.target.dataset.done = '1';
+      const t = parseFloat(e.target.dataset.count);
+      if (rm) return fmt(e.target, t);
+      const t0 = performance.now(), dur = 1400;
+      const tick = (now) => { const k = Math.min(1, (now - t0) / dur); fmt(e.target, t * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.4 });
+    document.querySelectorAll('[data-count]').forEach((n) => cio.observe(n));
+    this.onScroll = () => {
+      const h = document.querySelector('header[data-hdr]');
+      if (!h) return;
+      const solid = window.scrollY > 90 || h.dataset.light === '1';
+      h.style.background = solid ? '#fff' : 'transparent';
+      h.style.borderBottomColor = solid ? 'var(--tt-line)' : 'transparent';
+      h.style.setProperty('--tt-nav', solid ? '#201e1d' : '#ffffff');
+      const lg = h.querySelector('img[data-logo]');
+      if (lg) lg.style.filter = solid ? 'none' : 'brightness(0) invert(1)';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  renderVals() {
+    const dd = (el, open) => {
+      const p = el.querySelector('[data-dd]'); if (!p) return;
+      p.style.opacity = open ? '1' : '0'; p.style.visibility = open ? 'visible' : 'hidden'; p.style.transform = open ? 'none' : 'translateY(-6px)';
+      const b = el.querySelector('button'); if (b) b.setAttribute('aria-expanded', String(open));
+    };
+    return {
+      navEnter: (e) => dd(e.currentTarget, true),
+      navLeave: (e) => dd(e.currentTarget, false),
+      toggleMobile: (e) => {
+        const m = document.getElementById('tt-mob'); if (!m) return;
+        const open = m.style.display !== 'block';
+        m.style.display = open ? 'block' : 'none';
+        e.currentTarget.setAttribute('aria-expanded', String(open));
+        const h = document.querySelector('header[data-hdr]');
+        if (open && h) { h.style.background = '#fff'; h.style.setProperty('--tt-nav', '#201e1d'); h.querySelector('img[data-logo]').style.filter = 'none'; }
+        else if (this.onScroll) this.onScroll();
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,741 @@
+/* ---------- hero ---------- */
+
+.issamHero__inner {
+  justify-content: flex-end;
+  padding-top: 150px;
+  padding-bottom: clamp(48px, 6vw, 96px);
+}
+
+.issamHero {
+  min-height: min(92vh, 920px);
+}
+
+.pageHero.issamHero {
+  min-height: min(92vh, 920px);
+}
+
+.issamHero__subtitle {
+  max-width: 30ch;
+  margin-top: clamp(22px, 2.6vw, 34px);
+  font: 600 clamp(18px, 1.6vw, 24px) / 1.3 var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+.issamHero__copy {
+  max-width: 600px;
+  margin-top: 18px;
+  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.issamHero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 64px);
+  margin-top: clamp(36px, 4vw, 56px);
+  padding-top: 24px;
+}
+
+.issamHero__meta dt {
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.issamHero__meta dd {
+  margin-top: 10px;
+  font: 600 17px/1.2 var(--font-sans);
+}
+
+/* ---------- at a glance ---------- */
+
+.issamGlance {
+  background: var(--ink);
+  color: #fff;
+  padding: clamp(56px, 7vw, 110px) 0;
+}
+
+.issamGlance__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.issamGlance > .wrap > .eyebrow {
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.issamGlance__grid > div {
+  padding: 28px 24px 28px 0;
+}
+
+.issamGlance__grid .ttIcon {
+  margin-bottom: 20px;
+}
+
+.issamGlance__accent {
+  stroke: var(--orange);
+}
+
+.issamGlance__big {
+  font: 700 clamp(36px, 4vw, 56px) / 1 var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+.issamGlance__big.isAccent {
+  color: var(--orange);
+}
+
+.issamGlance__grid > div > span:last-child {
+  display: block;
+  margin-top: 14px;
+  font: 400 15px/1.4 var(--font-sans);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ---------- objectives ---------- */
+
+.issamObjectives {
+  background: var(--cream);
+  padding: clamp(72px, 9vw, 150px) 0;
+}
+
+.issamObjectives__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 96px);
+  align-items: start;
+}
+
+.issamObjectives__intro {
+  position: sticky;
+  top: 120px;
+}
+
+.issamObjectives__intro h2 {
+  margin-top: 20px;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamObjectives__intro .prose {
+  max-width: 46ch;
+  margin-top: 24px;
+}
+
+.issamObjective {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 20px;
+  padding: 32px 0;
+}
+
+.issamObjective > span {
+  font: 700 14px/1 var(--font-sans);
+  color: var(--orange);
+}
+
+.issamObjective h3 {
+  font: 700 clamp(20px, 1.8vw, 26px) / 1.2 var(--font-sans);
+  letter-spacing: -0.015em;
+}
+
+.issamObjective p {
+  margin-top: 12px;
+}
+
+.issamObjectiveStats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  margin-top: 24px;
+  background: var(--ink);
+}
+
+.issamObjectiveStats > div {
+  padding: clamp(24px, 3vw, 40px);
+  background: var(--ink);
+  color: #fff;
+}
+
+.issamObjectiveStats p {
+  font: 700 clamp(28px, 3vw, 44px) / 1 var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+.issamObjectiveStats > div > span {
+  display: block;
+  margin-top: 12px;
+  font: 400 15px/1.4 var(--font-sans);
+  color: rgba(255, 255, 255, 0.76);
+}
+
+/* ---------- journey ---------- */
+
+.issamJourney {
+  background: var(--ink);
+  color: #fff;
+  padding: clamp(72px, 9vw, 150px) 0;
+  overflow: hidden;
+}
+
+.issamJourney h2 {
+  max-width: 20ch;
+  margin-top: 20px;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamJourney__scroll {
+  margin-top: clamp(48px, 6vw, 88px);
+  overflow-x: auto;
+}
+
+.issamJourney ol {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
+  gap: clamp(20px, 2.4vw, 40px);
+  list-style: none;
+}
+
+.issamJourney ol + ol {
+  margin-top: clamp(48px, 5vw, 80px);
+}
+
+.issamJourney__line {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--orange);
+}
+
+.issamJourney li {
+  position: relative;
+  padding-top: 40px;
+}
+
+.issamJourney__dot {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 5px var(--ink);
+}
+
+.issamJourney__num {
+  font: 700 14px/1 var(--font-sans);
+  color: var(--orange);
+}
+
+.issamJourney h3 {
+  margin-top: 10px;
+  font: 700 clamp(16px, 1.3vw, 20px) / 1.15 var(--font-sans);
+}
+
+.issamJourney__body {
+  max-width: 30ch;
+  margin-top: 10px;
+  font: 400 16px/1.55 var(--font-sans);
+  color: rgba(255, 255, 255, 0.74);
+}
+
+/* ---------- photos ---------- */
+
+.issamPhotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background: var(--ink);
+}
+
+.issamPhotos > div {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+/* ---------- inclusion ---------- */
+
+.issamInclusion {
+  background: #fff;
+  padding: clamp(72px, 9vw, 150px) 0;
+}
+
+.issamInclusion__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 96px);
+  align-items: center;
+}
+
+.issamInclusion h2 {
+  margin-top: 20px;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamInclusion__copy {
+  max-width: 48ch;
+  margin-top: 22px;
+}
+
+.issamInclusion__label {
+  margin-top: clamp(36px, 4vw, 56px);
+  font: 600 12px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.issamInclusion__stats + .issamInclusion__label {
+  margin-top: 40px;
+}
+
+.issamInclusion__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 0 clamp(16px, 2vw, 28px);
+  margin-top: 16px;
+}
+
+.issamInclusion__stats > div {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 20px 12px 20px 0;
+}
+
+.issamInclusion__stats > div > span:first-child {
+  font: 700 clamp(28px, 2.8vw, 40px) / 1 var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+.issamInclusion__stats > div > span:last-child {
+  font: 500 15px/1.4 var(--font-sans);
+  color: var(--grey);
+  text-wrap: pretty;
+}
+
+.issamInclusion__image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+/* ---------- where ---------- */
+
+.issamWhere {
+  background: var(--cream);
+  padding: clamp(72px, 9vw, 150px) 0;
+}
+
+.issamWhere__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+}
+
+.issamWhere__head h2 {
+  max-width: 18ch;
+  margin-top: 20px;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamWhere__legend {
+  display: flex;
+  gap: 24px;
+  font: 500 14px/1 var(--font-sans);
+  color: var(--grey);
+}
+
+.issamWhere__legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.issamWhere__swatch {
+  width: 12px;
+  height: 12px;
+}
+
+.issamWhere__swatch--ink {
+  background: var(--ink);
+}
+
+.issamWhere__swatch--orange {
+  background: var(--orange);
+}
+
+.issamWhere__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
+  margin-top: clamp(40px, 5vw, 72px);
+  background: var(--ink);
+}
+
+.issamWhere__grid > div {
+  padding: clamp(24px, 3vw, 48px);
+  background: #fff;
+}
+
+.issamWhere__grid h3 {
+  margin-bottom: 28px;
+  font: 700 clamp(20px, 1.8vw, 26px) / 1.2 var(--font-sans);
+  letter-spacing: -0.015em;
+}
+
+.issamWhere__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.issamWhere__chip {
+  padding: 10px 14px;
+  font: 500 16px/1.4 var(--font-sans);
+  color: #fff;
+}
+
+.issamWhere__chip--ink {
+  background: var(--ink);
+}
+
+.issamWhere__chip--orange {
+  background: var(--orange);
+}
+
+.issamWhere__note {
+  margin-top: 20px;
+  font: 400 13px/1.5 var(--font-sans);
+  color: var(--grey);
+}
+
+/* ---------- equipment ---------- */
+
+.issamEquipment {
+  background: var(--ink);
+  color: #fff;
+  padding: clamp(72px, 9vw, 150px) 0;
+}
+
+.issamEquipment__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 96px);
+  align-items: start;
+}
+
+.issamEquipment h2 {
+  margin-top: 20px;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamEquipment__image {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin-top: clamp(32px, 4vw, 56px);
+  overflow: hidden;
+}
+
+.issamEquipment__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.issamEquipment__pair > div {
+  padding: 24px;
+  background: var(--ink);
+}
+
+.issamEquipment__pair p {
+  font: 700 clamp(36px, 4vw, 56px) / 1 var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+.issamEquipment__pair > div > span {
+  display: block;
+  margin-top: 10px;
+  font: 400 15px/1.5 var(--font-sans);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.issamEquipment__items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(16px, 2vw, 32px);
+}
+
+.issamEquipment__items > div {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 20px 24px 20px 0;
+}
+
+.issamEquipment__items > div:nth-child(-n + 2) {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.issamEquipment__items .ttIcon {
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.issamEquipment__items > div:nth-child(-n + 2) .ttIcon {
+  color: var(--orange);
+}
+
+.issamEquipment__items p {
+  font: 700 clamp(24px, 2.4vw, 32px) / 1 var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+.issamEquipment__items > div:nth-child(-n + 2) p {
+  font-size: clamp(40px, 4.4vw, 64px);
+  color: var(--orange);
+}
+
+.issamEquipment__items > div > span {
+  font: 500 16px/1.4 var(--font-sans);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ---------- platform ---------- */
+
+.issamPlatform {
+  background: #fff;
+  padding: clamp(72px, 9vw, 150px) 0;
+}
+
+.issamPlatform__title {
+  max-width: 20ch;
+  margin-top: 20px;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamPlatform__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: clamp(24px, 2.4vw, 40px) clamp(16px, 2vw, 32px);
+  margin-top: clamp(40px, 5vw, 72px);
+}
+
+.issamPlatform__stats > div {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding-right: 24px;
+}
+
+.issamPlatform__stats .ttIcon {
+  stroke: var(--ink);
+}
+
+.issamPlatform__stats p {
+  font: 700 clamp(32px, 3.2vw, 48px) / 1 var(--font-sans);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.issamPlatform__stats > div > span {
+  max-width: 22ch;
+  font: 500 16px/1.4 var(--font-sans);
+  color: var(--grey);
+  text-wrap: pretty;
+}
+
+.issamPlatform__boxes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  margin-top: clamp(32px, 4vw, 56px);
+}
+
+.issamPlatform__box {
+  padding: clamp(24px, 3vw, 40px);
+  background: var(--cream);
+}
+
+.issamPlatform__box--accent {
+  background: var(--orange);
+  color: #fff;
+}
+
+.issamPlatform__box p {
+  font: 700 clamp(36px, 4vw, 56px) / 1 var(--font-sans);
+  letter-spacing: -0.03em;
+}
+
+.issamPlatform__box > span {
+  display: block;
+  margin-top: 12px;
+  font: 500 16px/1.4 var(--font-sans);
+  color: var(--grey);
+}
+
+.issamPlatform__box--accent > span {
+  color: #fff;
+}
+
+.issamPlatform__muted {
+  color: var(--grey);
+}
+
+/* ---------- enabling ---------- */
+
+.issamEnabling {
+  background: var(--ink);
+  color: #fff;
+  padding: clamp(72px, 9vw, 150px) 0;
+}
+
+.issamEnabling__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 96px);
+  align-items: start;
+}
+
+.issamEnabling h2 {
+  margin-top: 20px;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamEnabling__copy {
+  max-width: 44ch;
+  margin-top: 24px;
+  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.issamEnabling__box {
+  margin-top: clamp(32px, 4vw, 48px);
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--orange);
+}
+
+.issamEnabling__box p:first-child {
+  font: 600 12px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.issamEnabling__box p:last-child {
+  margin-top: 14px;
+  font: 700 clamp(24px, 2.4vw, 32px) / 1 var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+.issamEnabling__row {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 22px 0;
+}
+
+.issamEnabling__row > span:first-child {
+  font: 700 clamp(24px, 2.4vw, 32px) / 1 var(--font-sans);
+  letter-spacing: -0.02em;
+}
+
+.issamEnabling__row > span:last-child {
+  font: 400 15px/1.5 var(--font-sans);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- CTA ---------- */
+
+.issamCta {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
+}
+
+.issamCta__bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+}
+
+.issamCta__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 17, 15, 0.92) 0%,
+    rgba(20, 17, 15, 0.4) 100%
+  );
+}
+
+.issamCta__inner {
+  position: relative;
+  padding-top: clamp(80px, 10vw, 160px);
+  padding-bottom: clamp(80px, 10vw, 160px);
+}
+
+.issamCta__inner > .eyebrow {
+  margin-bottom: 20px;
+}
+
+.issamCta__inner h2 {
+  max-width: 18ch;
+  font: 700 clamp(28px, 3.4vw, 48px) / 1.04 var(--font-sans);
+  letter-spacing: -0.022em;
+}
+
+.issamCta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: clamp(28px, 3.5vw, 44px);
+}
+
+.issamCta__actions .btn {
+  white-space: nowrap;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1180px) {
+  .issamPlatform__boxes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .issamObjectives__grid,
+  .issamInclusion__grid,
+  .issamEquipment__grid,
+  .issamEnabling__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .issamObjectives__intro {
+    position: static;
+  }
+}
+
+@media (max-width: 880px) {
+  .issamPlatform__boxes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "endpoint": "https://api.tractrac.co/api/v1/uploads/videos",
+  "settings": {
+    "folder": "videos"
+  },
+  "assets": {
+    "uploads/Agent-Wallet.mp4": {
+      "local": "/media/uploads/agent-wallet.mp4",
+      "remote": "https://api.tractrac.co/media/videos/c641fd48-1024-4073-85f0-db9fd884535d.mp4",
+      "filename": "agent-wallet.mp4",
+      "bytes": 5233235,
+      "sha256": "55eb28e76803941ced0211365125ade4b0a6ad1b1b840c46e52446ac85a36b2d",
+      "uploadedAt": "2026-10-20T17:06:15.373621+00:00",
+      "verified": true
+    },
+    "uploads/Agent-Booking Management (1).mp4": {
+      "local": "/media/uploads/agent-booking-management-1.mp4",
+      "remote": "https://api.tractrac.co/media/videos/5eb5e398-9237-486c-90e9-02341b5d64ce.mp4",
+      "filename": "agent-booking-management-1.mp4",
+      "bytes": 7105683,
+      "sha256": "a9697124a389ab9ede2fc933217c323d00bbdbf3201225a49312a17ceb2c5aa3",
+      "uploadedAt": "2026-10-20T17:06:30.097Z",
+      "verified": true
+    },
+    "uploads/Agent-Track your tractor (1).mp4": {
+      "local": "/media/uploads/agent-track-your-tractor-1.mp4",
+      "remote": "https://api.tractrac.co/media/videos/5d50230f-8e71-47b2-98c8-675a18fd6546.mp4",
+      "filename": "agent-track-your-tractor-1.mp4",
+      "bytes": 9918814,
+      "sha256": "52b6d0c4dad3ffcf7cd8a4360a5f88c1f95bb172cbdd6cdd6ea2e7813d161962",
+      "uploadedAt": "2026-10-20T17:06:43.530Z",
+      "verified": true
+    },
+    "uploads/vvvvvv.mp4": {
+      "local": "/media/uploads/vvvvvv.mp4",
+      "remote": "https://api.tractrac.co/media/videos/e41c4b34-ba35-4b22-88f5-74bb18db430e.mp4",
+      "filename": "vvvvvv.mp4",
+      "bytes": 6717127,
+      "sha256": "d17805a5343943701ec2c0d23c11c743dbbf9b7dd8e9b3f00c0565f9041248cd",
+      "uploadedAt": "2026-10-20T17:06:57.355Z",
+      "verified": true
+    }
+  }
+}
