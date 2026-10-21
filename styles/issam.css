@@ -7,11 +7,11 @@
 }
 
 .issamHero {
-  min-height: min(92vh, 920px);
+  min-height: min(calc(92vh / var(--site-scale, 1)), 920px);
 }
 
 .pageHero.issamHero {
-  min-height: min(92vh, 920px);
+  min-height: min(calc(92vh / var(--site-scale, 1)), 920px);
 }
 
 .issamHero__subtitle {

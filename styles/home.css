@@ -45,7 +45,7 @@
   position: relative;
   padding-top: calc(var(--header-h) + clamp(40px, 6vw, 96px));
   padding-bottom: clamp(56px, 8vw, 110px);
-  min-height: 100svh;
+  min-height: calc(100svh / var(--site-scale, 1));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -111,7 +111,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: clamp(560px, 72vh, 820px);
+  min-height: clamp(560px, calc(72vh / var(--site-scale, 1)), 820px);
   background: var(--ink);
   border-radius: clamp(16px, 1.8vw, 28px);
 }
@@ -661,7 +661,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 34vh;
+  min-height: calc(34vh / var(--site-scale, 1));
   padding: clamp(20px, 2.4vw, 34px) 0;
   opacity: 0.5;
   transition: opacity 0.3s ease;

@@ -89,7 +89,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: clamp(560px, 72vh, 820px);
+  min-height: clamp(560px, calc(72vh / var(--site-scale, 1)), 820px);
   overflow: hidden;
   color: #fff;
   background: var(--ink);

@@ -12,7 +12,7 @@
   --white: #ffffff;
   --header-h: 84px;
   --font-sans: var(--font-instrument), "Instrument Sans", system-ui, sans-serif;
-  --pad-x: clamp(20px, 4vw, 72px);
+  --pad-x: clamp(20px, calc(4vw / var(--site-scale, 1)), 72px);
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -25,6 +25,26 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+/*
+ * Default design scale: the desktop site renders at 75%, matching the
+ * reference review zoom. Everything — type, spacing, images and the header —
+ * scales together. Phones and tablets keep the responsive layout.
+ *
+ * Viewport units do not scale with `zoom`, so vh-based heights and the
+ * horizontal padding divide by --site-scale to keep full-screen sections
+ * filling the window and the side margins consistent.
+ */
+:root {
+  --site-scale: 1;
+}
+
+@media (min-width: 1241px) {
+  :root {
+    --site-scale: 0.75;
+    zoom: var(--site-scale);
+  }
 }
 
 body {
@@ -427,15 +447,15 @@ div[id] {
 }
 
 .pageHero[data-size="full"] {
-  min-height: 100svh;
+  min-height: calc(100svh / var(--site-scale, 1));
 }
 
 .pageHero[data-size="tall"] {
-  min-height: min(94vh, 940px);
+  min-height: min(calc(94vh / var(--site-scale, 1)), 940px);
 }
 
 .pageHero[data-size="medium"] {
-  min-height: min(86vh, 860px);
+  min-height: min(calc(86vh / var(--site-scale, 1)), 860px);
 }
 
 .pageHero__bg {
@@ -541,7 +561,7 @@ div[id] {
 .notFound {
   display: flex;
   align-items: center;
-  min-height: 100svh;
+  min-height: calc(100svh / var(--site-scale, 1));
   margin-top: 0;
   padding-top: calc(var(--header-h) + clamp(60px, 8vw, 120px));
   padding-bottom: clamp(60px, 8vw, 120px);
