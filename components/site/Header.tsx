@@ -7,11 +7,12 @@ import { useEffect, useRef, useState } from "react";
 import { BRAND, CTAS, NAV, type NavItem } from "@/content/site";
 
 const ACTIVE_PREFIX: Record<string, string> = {
+  Solutions: "/solutions",
   Technology: "/technology",
   Programmes: "/programmes",
   Impact: "/impact",
   Partners: "/partners",
-  Insights: "/insights",
+  Blog: "/blog",
 };
 
 function isLinkActive(label: string, href: string, pathname: string) {
@@ -22,6 +23,16 @@ function isLinkActive(label: string, href: string, pathname: string) {
 }
 
 function isGroupActive(item: NavItem, pathname: string) {
+  if (item.label === "Company") {
+    return ["/about", "/careers"].some(
+      (path) => pathname === path || pathname.startsWith(`${path}/`),
+    );
+  }
+  if (item.label === "Impact") {
+    return ["/impact", "/stories"].some(
+      (path) => pathname === path || pathname.startsWith(`${path}/`),
+    );
+  }
   const prefix = item.href ?? ACTIVE_PREFIX[item.label];
   if (!prefix) return false;
   if (prefix === "/") return false;
@@ -132,16 +143,29 @@ export default function Header() {
                   }
                 }}
               >
-                <button
-                  type="button"
-                  className="siteHeader__button"
-                  aria-haspopup="true"
-                  aria-expanded={open}
-                  aria-current={isGroupActive(item, pathname) ? "page" : undefined}
-                  onClick={() => setOpenMenu(open ? null : item.label)}
-                >
-                  {item.label}
-                </button>
+                {item.href ? (
+                  <Link
+                    className="siteHeader__button"
+                    href={item.href}
+                    aria-haspopup="true"
+                    aria-expanded={open}
+                    aria-current={isGroupActive(item, pathname) ? "page" : undefined}
+                    onClick={() => setOpenMenu(null)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    className="siteHeader__button"
+                    aria-haspopup="true"
+                    aria-expanded={open}
+                    aria-current={isGroupActive(item, pathname) ? "page" : undefined}
+                    onClick={() => setOpenMenu(open ? null : item.label)}
+                  >
+                    {item.label}
+                  </button>
+                )}
                 <div
                   className={`siteHeader__menu${item.wide ? " siteHeader__menu--wide" : ""}`}
                 >

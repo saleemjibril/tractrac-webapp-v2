@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ProgrammeContactForm from "@/components/programmes/ProgrammeContactForm";
 import CountUp from "@/components/ui/CountUp";
 import Hero from "@/components/ui/Hero";
 import Photo from "@/components/ui/Photo";
 import { PARTNER_LOGOS } from "@/content/home";
 import { asset } from "@/lib/asset";
+import "@/styles/programmes.css";
 import "@/styles/partners.css";
 
 export const metadata: Metadata = {
@@ -40,6 +42,36 @@ const PARTNER_TYPES = [
     title: "Implementation partners",
     body: "Organisations involved in delivering programme activity on the ground, including the ISSAM equipment distribution.",
     names: "The ETK Group · WIMA · Sane Konsult",
+  },
+];
+
+const WAYS_TO_PARTNER = [
+  {
+    id: "work-with-us",
+    number: "01",
+    kicker: "Work With Us",
+    title: "Reach farmers through a working service network.",
+    body: "Equipment companies, agricultural organisations and service providers partner with TracTrac to reach farmers through our network of mechanisation service providers, booking agents and the TracTrac platform.",
+    points: ["Equipment supply and distribution", "Operator training and skills", "Service and maintenance networks"],
+    cta: { label: "Start a conversation", href: "#contact" },
+  },
+  {
+    id: "finance",
+    number: "02",
+    kicker: "Finance and Investment",
+    title: "Capital for the businesses behind mechanisation.",
+    body: "Mechanisation services need capital: equipment finance for service providers, working capital for operations and long-term investment in the platform. We work with financial institutions and investors to put that capital to work.",
+    points: ["Equipment finance for service providers", "Investment in TracTrac", "Blended finance programmes"],
+    cta: { label: "Talk to our team", href: "#contact" },
+  },
+  {
+    id: "development-partners",
+    number: "03",
+    kicker: "Development Partners",
+    title: "Programmes that extend access and inclusion.",
+    body: "Foundations, donors and multilateral organisations work with TracTrac to design and deliver programmes such as ISSAM, delivered with Mastercard Foundation, that bring mechanisation to young people, women and smallholder farmers.",
+    points: ["Programme design and delivery", "Youth and women inclusion", "Monitoring and impact reporting"],
+    cta: { label: "See our programmes", href: "/programmes" },
   },
 ];
 
@@ -157,6 +189,45 @@ export default function PartnersPage() {
                 system around mechanisation.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="partnersWays">
+        <div className="wrap">
+          <p className="eyebrow">Ways to partner</p>
+          <h2 className="h2 partnersWays__title">Three ways to build the system with us.</h2>
+          <div className="partnersWays__grid">
+            {WAYS_TO_PARTNER.map((way, index) => (
+              <article
+                className="partnersWay"
+                id={way.id}
+                key={way.id}
+                data-reveal
+                data-delay={index * 80}
+              >
+                <p className="partnersWay__kicker">
+                  <span>{way.number}</span>
+                  {way.kicker}
+                </p>
+                <h3>{way.title}</h3>
+                <p className="partnersWay__body">{way.body}</p>
+                <ul>
+                  {way.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+                {way.cta.href.startsWith("#") ? (
+                  <a className="linkUnderline" href={way.cta.href}>
+                    {way.cta.label}
+                  </a>
+                ) : (
+                  <Link className="linkUnderline" href={way.cta.href}>
+                    {way.cta.label}
+                  </Link>
+                )}
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -316,7 +387,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="partnersCta">
+      <section className="partnersCta" id="contact">
         <div className="partnersCta__bg">
           <Photo
             src={asset("uploads/DSC02329.jpg")}
@@ -326,19 +397,19 @@ export default function PartnersPage() {
         </div>
         <div className="partnersCta__shade" aria-hidden="true" />
         <div className="wrap partnersCta__inner">
-          <p className="eyebrow" data-reveal>
-            Work with TracTrac
-          </p>
-          <h2 data-reveal data-delay="80">
-            Mechanisation needs more than machines.
-          </h2>
-          <p className="partnersCta__lede" data-reveal data-delay="140">
-            It needs organisations willing to build the system around them.
-          </p>
-          <div className="partnersCta__actions" data-reveal data-delay="200">
-            <Link className="btn btn--primary btn--lg" href="/#final">
-              Partner With TracTrac
-            </Link>
+          <div className="partnersCta__grid">
+            <div>
+              <p className="eyebrow" data-reveal>
+                Work with TracTrac
+              </p>
+              <h2 data-reveal data-delay="80">
+                Mechanisation needs more than machines.
+              </h2>
+              <p className="partnersCta__lede" data-reveal data-delay="140">
+                It needs organisations willing to build the system around them.
+              </p>
+            </div>
+            <ProgrammeContactForm />
           </div>
         </div>
       </section>

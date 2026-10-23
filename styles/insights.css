@@ -444,6 +444,91 @@
   margin-top: clamp(28px, 3.5vw, 44px);
 }
 
+/* ---------- all posts ---------- */
+
+.insightsAll {
+  background: #fff;
+  padding: clamp(72px, 9vw, 140px) 0;
+}
+
+.insightsAll__head {
+  align-items: end;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.insightsAll__count {
+  justify-self: end;
+  font: 500 14px/1.4 var(--font-sans);
+  color: var(--grey);
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 36px);
+}
+
+.insightsCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: clamp(16px, 1.6vw, 22px);
+  background: var(--cream);
+  color: var(--ink);
+  transition:
+    transform 300ms var(--ease),
+    border-color 300ms var(--ease);
+}
+
+.insightsCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(243, 106, 2, 0.4);
+}
+
+.insightsCard__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #fff;
+}
+
+.insightsCard__media img {
+  transition: transform 600ms var(--ease);
+}
+
+.insightsCard:hover .insightsCard__media img {
+  transform: scale(1.04);
+}
+
+.insightsCard__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(18px, 1.8vw, 26px);
+}
+
+.insightsCard h3 {
+  font: 700 clamp(18px, 1.5vw, 22px) / 1.25 var(--font-sans);
+  letter-spacing: -0.014em;
+}
+
+.insightsCard .insightExcerpt {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  font: 400 15px/1.6 var(--font-sans);
+  color: var(--grey);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.insightsCard .insightRead {
+  margin-top: auto;
+  padding-top: 4px;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 980px) {
@@ -464,5 +549,21 @@
   .insightGuideList .insightRow {
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
+  }
+}
+
+@media (max-width: 980px) {
+  .insightsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .insightsAll__count {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .insightsGrid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

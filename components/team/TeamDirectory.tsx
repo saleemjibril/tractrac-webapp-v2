@@ -3,7 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import Photo from "@/components/ui/Photo";
 import PortraitPlaceholder from "@/components/ui/PortraitPlaceholder";
-import { TEAM, personAlt, personAnchor, type TeamMember } from "@/content/team";
+import {
+  TEAM,
+  TEAM_DEPARTMENTS,
+  personAlt,
+  personAnchor,
+  type TeamMember,
+} from "@/content/team";
 
 export default function TeamDirectory() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
@@ -26,49 +32,64 @@ export default function TeamDirectory() {
 
   const count = String(TEAM.length).padStart(2, "0");
   const selectedIndex = selected ? TEAM.findIndex((person) => person.id === selected.id) : -1;
+  const groups = TEAM_DEPARTMENTS.map((dept) => ({
+    dept,
+    people: TEAM.filter((person) => person.dept === dept),
+  })).filter((group) => group.people.length > 0);
 
   return (
     <>
-      <div className="teamDirectory__head">
-        <h2>Staff directory</h2>
-        <p>{count} people</p>
-      </div>
-      <ul className="teamGrid">
-        {TEAM.map((person) => (
-          <li id={personAnchor(person)} className="teamCard" key={person.id}>
-            <button
-              type="button"
-              className="teamCard__button"
-              aria-haspopup="dialog"
-              onClick={() => setSelected(person)}
-            >
-              <span className="teamCard__portrait">
-                {person.photo ? (
-                  <Photo src={person.photo} alt={personAlt(person)} sizes="(max-width: 880px) 45vw, 22vw" />
-                ) : (
-                  <PortraitPlaceholder person={person} />
-                )}
-              </span>
-              <span className="teamCard__name">{person.name}</span>
-              <span className="teamCard__title">{person.title}</span>
-              <span className="srOnly">View profile</span>
-            </button>
-            <div className="teamCard__foot">
-              <span>Profile +</span>
-              {person.linkedin ? (
-                <a
-                  href={person.linkedin}
-                  target="_blank"
-                  rel="noopener"
-                  aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
-                >
-                  in
-                </a>
-              ) : null}
-            </div>
-          </li>
+      <div className="teamDirectory__groups">
+        {groups.map(({ dept, people }) => (
+          <section
+            className="teamDept"
+            id={dept.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
+            key={dept}
+          >
+            <h2 className="teamDept__title">{dept}</h2>
+            <ul className="teamGrid">
+              {people.map((person) => (
+                <li id={personAnchor(person)} className="teamCard" key={person.id}>
+                  <button
+                    type="button"
+                    className="teamCard__button"
+                    aria-haspopup="dialog"
+                    onClick={() => setSelected(person)}
+                  >
+                    <span className="teamCard__portrait">
+                      {person.photo ? (
+                        <Photo
+                          src={person.photo}
+                          alt={personAlt(person)}
+                          sizes="(max-width: 880px) 45vw, 22vw"
+                        />
+                      ) : (
+                        <PortraitPlaceholder person={person} />
+                      )}
+                    </span>
+                    <span className="teamCard__name">{person.name}</span>
+                    <span className="teamCard__title">{person.title}</span>
+                    <span className="srOnly">View profile</span>
+                  </button>
+                  <div className="teamCard__foot">
+                    <span>Profile +</span>
+                    {person.linkedin ? (
+                      <a
+                        href={person.linkedin}
+                        target="_blank"
+                        rel="noopener"
+                        aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
+                      >
+                        in
+                      </a>
+                    ) : null}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
         ))}
-      </ul>
+      </div>
 
       <dialog
         ref={dialogRef}

@@ -2,6 +2,7 @@ export type TeamMember = {
   id: string;
   name: string;
   title: string;
+  dept: string;
   linkedin: string;
   photo: string;
   leadership: boolean;
@@ -13,6 +14,7 @@ export const TEAM: TeamMember[] = [
     id: "godson-ohuruogu",
     name: "Godson Ohuruogu",
     title: "Chief Executive Officer",
+    dept: "CEO",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -26,6 +28,7 @@ export const TEAM: TeamMember[] = [
     id: "stephen-aguebor",
     name: "Stephen Aguebor",
     title: "Deputy Team Lead, ISSAM Project",
+    dept: "Programmes and MERL",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -38,6 +41,7 @@ export const TEAM: TeamMember[] = [
     id: "alero-otis",
     name: "Alero Otis",
     title: "Head of Projects & Partnerships",
+    dept: "Partnerships and Communications",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -50,6 +54,7 @@ export const TEAM: TeamMember[] = [
     id: "samuel-olanikepun",
     name: "Samuel Olanikepun",
     title: "MERL Team Lead",
+    dept: "Programmes and MERL",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -62,6 +67,7 @@ export const TEAM: TeamMember[] = [
     id: "adanna-atounwu",
     name: "Adanna Atounwu",
     title: "Communications Lead",
+    dept: "Partnerships and Communications",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -74,6 +80,7 @@ export const TEAM: TeamMember[] = [
     id: "john-olanrewaju",
     name: "Dr. Engr. John Olaseye Olanrewaju",
     title: "Engineering Lead",
+    dept: "Engineering, Product and IT",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -86,6 +93,7 @@ export const TEAM: TeamMember[] = [
     id: "israel-olatunde",
     name: "Israel Olatunde",
     title: "IT Lead",
+    dept: "Engineering, Product and IT",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -98,6 +106,7 @@ export const TEAM: TeamMember[] = [
     id: "mercy-balogun",
     name: "Mercy Balogun",
     title: "Product Manager",
+    dept: "Engineering, Product and IT",
     linkedin: "",
     photo: "",
     leadership: true,
@@ -110,9 +119,10 @@ export const TEAM: TeamMember[] = [
     id: "ekene-chukwunyebendu-nnolum",
     name: "Ekene Chukwunyebendu-Nnolum",
     title: "Finance Manager",
+    dept: "Operations and Finance",
     linkedin: "",
     photo: "",
-    leadership: false,
+    leadership: true,
     bio: [
       "Ekene leads financial management at TracTrac, overseeing budgeting, financial reporting, and controls across the organisation’s programmes and operations.",
       "His work ensures that resources are managed responsibly and transparently, supporting TracTrac’s partners and the delivery of mechanisation services to farmers.",
@@ -122,13 +132,36 @@ export const TEAM: TeamMember[] = [
     id: "ojoma-okwute",
     name: "Barr. Ojoma Okwute",
     title: "Head of Operations",
+    dept: "Operations and Finance",
     linkedin: "",
     photo: "",
     leadership: true,
     bio: [
-      "Barrister Ojoma Okwute leads operational strategy and execution across TracTrac programmes, ensuring efficiency, compliance, and successful delivery of mechanisation services across operational regions.",
+      "Barrister Ojoma Okwute leads operational strategy and execution across TracTrac programmes.",
+      "She ensures efficiency, compliance, and successful delivery of mechanisation services across operational regions.",
     ],
   },
+  {
+    id: "jemaimah-jennifer-justice",
+    name: "Jemaimah Jennifer Justice",
+    title: "Investment and Asset Manager",
+    dept: "Operations and Finance",
+    linkedin: "",
+    photo: "",
+    leadership: true,
+    bio: [
+      "Jemaimah Jennifer Justice manages investment and assets at TracTrac, overseeing the organisation’s equipment portfolio and the financing arrangements that put tractors and implements in the hands of mechanisation service providers.",
+      "She works with financial partners and programme teams to structure asset ownership models, track asset performance, and ensure that investment in mechanisation delivers lasting value for service providers and the farmers they serve.",
+    ],
+  },
+];
+
+export const TEAM_DEPARTMENTS = [
+  "CEO",
+  "Operations and Finance",
+  "Programmes and MERL",
+  "Partnerships and Communications",
+  "Engineering, Product and IT",
 ];
 
 export const LEADERSHIP = TEAM.filter((person) => person.leadership);

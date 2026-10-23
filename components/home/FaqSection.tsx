@@ -1,89 +1,149 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FAQS } from "@/content/faqs";
 
-const STOP_WORDS = new Set(
-  "a an and are can do does for from how i in is it my of on or the to what where who why with you your tractrac plus".split(
-    " ",
-  ),
-);
+const STORAGE_KEY = "tt-faq-history-v1";
 
-function words(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9 ]/g, " ")
-    .split(/\s+/)
-    .filter((word) => word.length > 2 && !STOP_WORDS.has(word));
+type FaqEntry = {
+  id: string;
+  question: string;
+  answer: string;
+  createdAt: string;
+};
+
+function createId() {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    return crypto.randomUUID();
+  }
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 9)}`;
 }
+
+function isFaqEntry(value: unknown): value is FaqEntry {
+  if (!value || typeof value !== "object") return false;
+  const entry = value as Partial<FaqEntry>;
+  return (
+    typeof entry.id === "string" &&
+    typeof entry.question === "string" &&
+    typeof entry.answer === "string" &&
+    typeof entry.createdAt === "string"
+  );
+}
+
+const FALLBACK_COPY =
+  "We could not find an answer to this in the FAQ. The TracTrac team can help. There is no online question form yet, so copy your question and bring it to the team through Contact Us.";
 
 export default function FaqSection() {
   const [open, setOpen] = useState<number | null>(null);
   const [query, setQuery] = useState("");
   const [invalid, setInvalid] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [results, setResults] = useState<number[]>([]);
-  const [copyStatus, setCopyStatus] = useState("");
-  const questionRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const [pending, setPending] = useState<string | null>(null);
+  const [history, setHistory] = useState<FaqEntry[]>([]);
+  const [failedQuestion, setFailedQuestion] = useState<string | null>(null);
+  const [openAsked, setOpenAsked] = useState<Set<string>>(new Set());
+  const [hydrated, setHydrated] = useState(false);
+  const [copyStatus, setCopyStatus] = useState<{ id: string; text: string } | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const submit = (event: React.FormEvent<HTMLFormElement>) => {
+  useEffect(() => {
+    // Deferred so hydration finishes before localStorage state is applied.
+    const timer = window.setTimeout(() => {
+      try {
+        const raw = window.localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed: unknown = JSON.parse(raw);
+          if (Array.isArray(parsed)) setHistory(parsed.filter(isFaqEntry));
+        }
+      } catch {
+        // Storage can be unavailable in private modes.
+      }
+      setHydrated(true);
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+    } catch {
+      // If storage is full or blocked, the thread still works for this visit.
+    }
+  }, [history, hydrated]);
+
+  const submit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const value = query.trim();
+
     if (value.length < 5) {
       setInvalid(true);
-      setSubmitted(false);
-      setCopyStatus("");
       inputRef.current?.focus();
       return;
     }
+    if (pending) return;
 
     setInvalid(false);
-    setSubmitted(true);
-    setCopyStatus("");
+    setFailedQuestion(null);
+    setPending(value);
+    setCopyStatus(null);
+
+    let answered = false;
+
     try {
-      sessionStorage.setItem("tt-faq-question", value);
+      const response = await fetch("/api/faq", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: value }),
+      });
+      const data = await response.json().catch(() => ({}));
+      const answer =
+        data?.available && typeof data.answer === "string" ? data.answer.trim() : "";
+
+      if (answer) {
+        answered = true;
+        const entry: FaqEntry = {
+          id: createId(),
+          question: value,
+          answer,
+          createdAt: new Date().toISOString(),
+        };
+        setHistory((current) => [...current, entry]);
+        // Only the answer that was just received starts expanded.
+        setOpenAsked(new Set([entry.id]));
+      } else {
+        setFailedQuestion(value);
+      }
     } catch {
-      // Storage can be unavailable in private modes; the search still works.
+      setFailedQuestion(value);
+    } finally {
+      setPending(null);
+      if (answered) setQuery("");
+      inputRef.current?.focus();
     }
-
-    const queryWords = words(value);
-    const scored = FAQS.map((faq, index) => {
-      const faqWords = words(`${faq.question} ${faq.answer}`);
-      const score = queryWords.reduce(
-        (total, word) =>
-          total + (faqWords.some((candidate) => candidate.startsWith(word) || word.startsWith(candidate)) ? 1 : 0),
-        0,
-      );
-      return { index, score };
-    })
-      .filter((result) => result.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 3)
-      .map((result) => result.index);
-
-    setResults(scored);
   };
 
-  const jumpTo = (index: number) => {
-    setOpen(index);
-    const button = questionRefs.current[index];
-    if (!button) return;
-    window.scrollTo({
-      top: button.getBoundingClientRect().top + window.scrollY - 110,
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+  const toggleAsked = (id: string) => {
+    setOpenAsked((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
     });
-    button.focus({ preventScroll: true });
   };
 
-  const copyQuestion = async () => {
+  const copyQuestion = async (question: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(query.trim());
-      setCopyStatus("Copied.");
+      await navigator.clipboard.writeText(question);
+      setCopyStatus({ id, text: "Copied." });
     } catch {
-      setCopyStatus("Copy failed. Please select and copy the text in the box.");
+      setCopyStatus({
+        id,
+        text: "Copy failed. Please select and copy your question.",
+      });
     }
+    window.setTimeout(() => setCopyStatus(null), 2500);
   };
 
   return (
@@ -111,9 +171,6 @@ export default function FaqSection() {
                       className="faqQuestion"
                       aria-expanded={isOpen}
                       aria-controls={`faq-a${index}`}
-                      ref={(el) => {
-                        questionRefs.current[index] = el;
-                      }}
                       onClick={() => setOpen(isOpen ? null : index)}
                     >
                       <span>{faq.question}</span>
@@ -148,9 +205,68 @@ export default function FaqSection() {
                 </div>
               );
             })}
+
+            {history.map((entry) => {
+              const isOpen = openAsked.has(entry.id);
+              const questionId = `faq-asked-q-${entry.id}`;
+              const answerId = `faq-asked-a-${entry.id}`;
+              return (
+                <div className="faqItem faqItem--asked" key={entry.id}>
+                  <h3>
+                    <button
+                      type="button"
+                      id={questionId}
+                      className="faqQuestion"
+                      aria-expanded={isOpen}
+                      aria-controls={answerId}
+                      onClick={() => toggleAsked(entry.id)}
+                    >
+                      <span>{entry.question}</span>
+                      <svg
+                        viewBox="0 0 16 16"
+                        aria-hidden="true"
+                        data-open={isOpen}
+                        className="faqIcon"
+                      >
+                        <path
+                          d="M3.5 6 L8 10.5 L12.5 6"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </h3>
+                  <div
+                    id={answerId}
+                    role="region"
+                    aria-labelledby={questionId}
+                    className="faqAnswer"
+                    data-open={isOpen}
+                  >
+                    <div>
+                      <p>{entry.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+
+            {pending ? (
+              <div className="faqItem faqItem--asked" aria-busy="true">
+                <h3 className="faqQuestion faqQuestion--pending">{pending}</h3>
+                <div className="faqAnswer" data-open="true">
+                  <div>
+                    <p className="faqThinking">Looking for an answer…</p>
+                  </div>
+                </div>
+              </div>
+            ) : null}
           </div>
 
-          <form className="faqAsk" onSubmit={submit} noValidate>
+          <form className="faqAsk" onSubmit={submit} noValidate aria-busy={pending !== null}>
             <p className="faqAsk__title">Still have a question?</p>
             <p className="faqAsk__lede">
               Ask us something else and we&rsquo;ll help you find the right information.
@@ -166,21 +282,25 @@ export default function FaqSection() {
                 type="text"
                 autoComplete="off"
                 maxLength={500}
-                placeholder="Type your question here…"
+                placeholder={pending ? "Looking for an answer…" : "Type your question here…"}
                 aria-describedby="faq-msg"
                 aria-invalid={invalid}
                 value={query}
+                disabled={pending !== null}
                 onChange={(event) => {
                   setQuery(event.target.value);
                   if (invalid) setInvalid(false);
-                  if (submitted) {
-                    setSubmitted(false);
-                    setResults([]);
-                    setCopyStatus("");
+                  if (failedQuestion) {
+                    setFailedQuestion(null);
+                    setCopyStatus(null);
                   }
                 }}
               />
-              <button type="submit" aria-label="Submit your question">
+              <button
+                type="submit"
+                aria-label="Submit your question"
+                disabled={pending !== null}
+              >
                 <svg viewBox="0 0 16 16" aria-hidden="true">
                   <path
                     d="M8 13 V3 M3.5 7.5 L8 3 L12.5 7.5"
@@ -196,45 +316,32 @@ export default function FaqSection() {
 
             <div id="faq-msg" aria-live="polite" className="faqAsk__msg">
               {invalid ? (
-                <p className="faqAsk__error">
-                  Please type your question before submitting.
-                </p>
-              ) : null}
-
-              {submitted ? (
-                <div className="faqAsk__results">
-                  {results.length ? (
-                    <>
-                      <p className="faqAsk__resultsTitle">These answers may help:</p>
-                      <div className="faqAsk__suggestions">
-                        {results.map((index) => (
-                          <button type="button" key={index} onClick={() => jumpTo(index)}>
-                            {FAQS[index].question}
-                          </button>
-                        ))}
-                      </div>
-                    </>
-                  ) : null}
-                  <p>
-                    {results.length ? "If not, " : "We could not find an answer to this in the FAQ. "}
-                    the TracTrac team can help. There is no online question form yet, so copy your
-                    question and bring it to the team through Contact Us.
-                  </p>
-                  <div className="faqAsk__actions">
-                    <button type="button" className="faqAsk__copy" onClick={copyQuestion}>
-                      Copy my question
-                    </button>
-                    <Link className="btn btn--primary btn--noHover" href="/#final">
-                      Contact Us
-                    </Link>
-                    <span aria-live="polite" className="faqAsk__copyStatus">
-                      {copyStatus}
-                    </span>
-                  </div>
-                </div>
+                <p className="faqAsk__error">Please type your question before submitting.</p>
               ) : null}
             </div>
+
+            {failedQuestion ? (
+              <div className="faqAsk__results" aria-live="polite">
+                <p>{FALLBACK_COPY}</p>
+                <div className="faqAsk__actions">
+                  <button
+                    type="button"
+                    className="faqAsk__copy"
+                    onClick={() => copyQuestion(failedQuestion, "failed")}
+                  >
+                    Copy my question
+                  </button>
+                  <Link className="btn btn--primary btn--noHover" href="/#final">
+                    Contact Us
+                  </Link>
+                  <span aria-live="polite" className="faqAsk__copyStatus">
+                    {copyStatus?.id === "failed" ? copyStatus.text : ""}
+                  </span>
+                </div>
+              </div>
+            ) : null}
           </form>
+
         </div>
       </div>
     </section>

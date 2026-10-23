@@ -141,6 +141,7 @@ export const STORY_CARDS = [
     image: asset("uploads/Existing MSP Interview Keana LGA.jpg"),
     position: "50% 40%",
     alt: "A mechanisation service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
+    href: "/stories/service-providers",
   },
   {
     category: "Farmers",
@@ -150,6 +151,7 @@ export const STORY_CARDS = [
     image: asset("uploads/Existing MSP Interview Lafia LGA.jpg"),
     position: "50% 40%",
     alt: "A farmer speaking with a TracTrac field researcher on a bench under a tree in Lafia LGA",
+    href: "/stories/farmers",
   },
   {
     category: "Women in farming",
@@ -159,6 +161,7 @@ export const STORY_CARDS = [
     image: asset("uploads/IMG-20260824-WA0164.jpg"),
     position: "50% 40%",
     alt: "A woman farmer being interviewed by a TracTrac researcher outside her home",
+    href: "/stories/women-in-farming",
   },
   {
     category: "Booking agents",
@@ -168,6 +171,7 @@ export const STORY_CARDS = [
     image: asset("uploads/IMG-20260824-WA0147.jpg"),
     position: "50% 40%",
     alt: "A TracTrac booking agent in a branded shirt being interviewed on a bench",
+    href: "/stories/booking-agents",
   },
 ];
 

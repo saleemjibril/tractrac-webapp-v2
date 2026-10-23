@@ -5,14 +5,21 @@
 const base = process.argv[2] ?? "http://localhost:3000";
 
 const routes = [
-  ["/", "Getting the right farm machinery"],
+  ["/", "The right farm machinery"],
   ["/about", "We are building the systems"],
   ["/team", "One team. Different strengths."],
   ["/impact", "What happens when access changes."],
   ["/careers", "Join the Humans of TracTrac"],
-  ["/insights", "What we’re learning, building"],
+  ["/careers/talent-pool", "Join our talent pool"],
+  ["/blog", "What we’re learning, building"],
   ["/partners", "We do more when we build together."],
   ["/programmes", "Building mechanisation where farmers are."],
+  ["/solutions", "One network, four ways in."],
+  ["/stories", "What changes when access gets easier?"],
+  ["/stories/farmers", "Who you call when the rains arrive early."],
+  ["/stories/booking-agents", "The people behind every request."],
+  ["/stories/service-providers", "What it really costs to keep a machine working."],
+  ["/stories/women-in-farming", "Access is not the same for everyone."],
   ["/programmes/issam", "ISSAM"],
   ["/programmes/young-people-in-mechanisation", "Young People in Mechanisation"],
   ["/programmes/traxcellerate", "Building the Human Infrastructure"],
@@ -20,6 +27,8 @@ const routes = [
   ["/programmes/h2o", "Empowering Youth and Women"],
   ["/programmes/rise7", "Empowering Seven to Scale"],
   ["/technology", "Technology that moves the work."],
+  ["/privacy-policy", "Privacy Policy"],
+  ["/terms-and-conditions", "Terms and Conditions"],
 ];
 
 const legacy = [
@@ -28,7 +37,7 @@ const legacy = [
   ["/TracTrac Team.dc.html", "/team"],
   ["/TracTrac Impact.dc.html", "/impact"],
   ["/TracTrac Careers.dc.html", "/careers"],
-  ["/TracTrac Insights.dc.html", "/insights"],
+  ["/TracTrac Insights.dc.html", "/blog"],
   ["/TracTrac Partners.dc.html", "/partners"],
   ["/TracTrac Programmes.dc.html", "/programmes"],
   ["/TracTrac Technology.dc.html", "/technology"],

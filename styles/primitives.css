@@ -444,18 +444,7 @@ div[id] {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-}
-
-.pageHero[data-size="full"] {
   min-height: calc(100svh / var(--site-scale, 1));
-}
-
-.pageHero[data-size="tall"] {
-  min-height: min(calc(94vh / var(--site-scale, 1)), 940px);
-}
-
-.pageHero[data-size="medium"] {
-  min-height: min(calc(86vh / var(--site-scale, 1)), 860px);
 }
 
 .pageHero__bg {

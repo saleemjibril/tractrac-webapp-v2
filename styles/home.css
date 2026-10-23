@@ -56,11 +56,11 @@
 }
 
 .homeHero__text > .eyebrow {
-  margin-bottom: clamp(20px, 3vw, 34px);
+  margin-bottom: 28px;
 }
 
 .homeHero__title {
-  font: 700 clamp(34px, 5.2vw, 76px) / 0.98 var(--font-sans);
+  font: 700 clamp(34px, 5.2vw, 76px) / 1.02 var(--font-sans);
   letter-spacing: -0.022em;
 }
 
@@ -497,6 +497,26 @@
 .homePathway__media {
   position: absolute;
   inset: 0;
+}
+
+.homePathway__media img {
+  transition: transform 900ms var(--ease);
+}
+
+.homePathway:hover .homePathway__media img,
+.homePathway:focus-within .homePathway__media img {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homePathway__media img {
+    transition: none;
+  }
+
+  .homePathway:hover .homePathway__media img,
+  .homePathway:focus-within .homePathway__media img {
+    transform: none;
+  }
 }
 
 .homePathway__shade {
@@ -1108,6 +1128,15 @@
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 22px;
+  color: var(--ink);
+  transition:
+    border-color 200ms var(--ease),
+    transform 200ms var(--ease);
+}
+
+.homeStoryCard:hover {
+  border-color: var(--orange);
+  transform: translateY(-3px);
 }
 
 .homeStoryCard__media {
@@ -1551,6 +1580,27 @@
 .faqAsk__copyStatus {
   font: 400 14px/1.4 var(--font-sans);
   color: var(--ink);
+}
+
+.faqAsk__field input:disabled {
+  cursor: wait;
+}
+
+.faqAsk__field button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.faqQuestion--pending {
+  cursor: default;
+}
+
+.faqQuestion--pending:hover {
+  color: var(--ink);
+}
+
+.faqThinking {
+  font-style: italic;
 }
 
 /* ---------- final CTA ---------- */

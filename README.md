@@ -82,9 +82,16 @@ The uploaders are resumable and write each public URL to
 
 ## Forms
 
-The programme contact forms and the FAQ question box are client-side only: they validate
-and show a success state without sending anything. `components/programmes/ProgrammeContactForm.tsx`
-contains the single submit function to wire to an email service, CRM or server action later.
+The programme contact forms are client-side only: they validate and show a success state
+without sending anything. `components/programmes/ProgrammeContactForm.tsx` contains the single
+submit function to wire to an email service, CRM or server action later.
+
+The homepage FAQ assistant posts to `/api/faq`, which asks DeepSeek using a website-only
+knowledge base built in `lib/faq-knowledge.ts`. Set `DEEPSEEK_API_KEY` in `.env` (optionally
+`DEEPSEEK_MODEL`, default `deepseek-flash`). Thinking mode is explicitly disabled because FAQ
+answers are retrieved from the knowledge base; this keeps responses fast and cheap. If the key
+is missing or the AI cannot answer from the knowledge base, the UI shows the contact fallback. Each visitor's question/answer thread is
+kept in `localStorage`.
 
 ## Brand rules
 
@@ -124,5 +131,10 @@ The old `*.dc.html` URLs return `308` redirects to the new routes via
 
 - Set `NEXT_PUBLIC_SITE_URL` to the production origin so `sitemap.xml`, `robots.txt` and
   Open Graph URLs are absolute (defaults to `https://tractrac.co`).
-- The site is fully static except the legacy-redirect catch-all; it can be deployed to any
-  Next.js host.
+- The blog feed is fetched server-side from `BLOG_API_URL` (defaults to
+  `https://blogapi.tractrac.co/api/v1`) and revalidated every 60 seconds. `/` and `/blog`
+  are ISR pages; set `BLOG_API_URL` only to override the API host.
+- Set `DEEPSEEK_API_KEY` for the AI FAQ. Without it, every question returns the
+  contact fallback instead of an AI answer.
+- The remaining pages are static except the legacy-redirect catch-all; deploy to a Next.js host
+  that supports ISR.

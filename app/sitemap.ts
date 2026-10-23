@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { PROGRAMMES } from "@/content/programmes";
 import { SITE } from "@/content/site";
+import { STORIES } from "@/content/stories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -9,10 +10,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/team",
     "/impact",
     "/careers",
-    "/insights",
+    "/careers/talent-pool",
+    "/blog",
     "/partners",
     "/programmes",
+    "/solutions",
+    "/stories",
     "/technology",
+    "/privacy-policy",
+    "/terms-and-conditions",
   ];
 
   return [
@@ -24,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...PROGRAMMES.map((programme) => ({
       url: `${SITE.url}/programmes/${programme.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    ...STORIES.map((story) => ({
+      url: `${SITE.url}/stories/${story.slug}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,

@@ -53,8 +53,9 @@ export default function JobSequence() {
     let frame = 0;
     const update = () => {
       const rect = wrap.getBoundingClientRect();
-      const viewport = window.innerHeight || stage.offsetHeight;
-      const total = wrap.offsetHeight - Math.min(stage.offsetHeight, viewport);
+      const stageRect = stage.getBoundingClientRect();
+      const viewport = window.innerHeight || stageRect.height;
+      const total = rect.height - Math.min(stageRect.height, viewport);
       const progress = total > 0 ? clamp(-rect.top / total) : 0;
       const position = progress * (n - 1);
       const seg = Math.min(n - 1, Math.floor(position));

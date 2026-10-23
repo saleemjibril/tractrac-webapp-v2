@@ -17,15 +17,17 @@ export type NavItem = {
 export const NAV: NavItem[] = [
   {
     label: "Solutions",
+    href: "/solutions",
     links: [
-      { label: "For Farmers", href: "/#pathways" },
-      { label: "For Equipment Owners", href: "/#pathways" },
-      { label: "For Booking Agents", href: "/#pathways" },
-      { label: "For Mechanisation Service Providers", href: "/#pathways" },
+      { label: "For Farmers", href: "/solutions#farmers" },
+      { label: "For Equipment Owners", href: "/solutions#owners" },
+      { label: "For Booking Agents", href: "/solutions#agents" },
+      { label: "For Mechanisation Service Providers", href: "/solutions#msp" },
     ],
   },
   {
     label: "Technology",
+    href: "/technology",
     links: [
       { label: "TracTrac Plus", href: "/technology" },
       { label: "TracTrac Agent", href: "/technology#agent" },
@@ -63,29 +65,37 @@ export const NAV: NavItem[] = [
   },
   {
     label: "Impact",
+    href: "/impact",
     links: [
       { label: "Our Impact", href: "/impact" },
-      { label: "Stories from the Field", href: "/insights" },
+      { label: "Stories from the Field", href: "/stories" },
     ],
   },
   {
     label: "Partners",
+    href: "/partners",
     links: [
-      { label: "Work With Us", href: "/partners" },
-      { label: "Finance and Investment", href: "/partners" },
-      { label: "Development Partners", href: "/partners" },
+      { label: "Work With Us", href: "/partners#work-with-us" },
+      { label: "Finance and Investment", href: "/partners#finance" },
+      { label: "Development Partners", href: "/partners#development-partners" },
     ],
   },
   {
-    label: "Insights",
+    label: "Blog",
+    href: "/blog",
     links: [
-      { label: "Stories and News", href: "/insights" },
-      { label: "Research and Resources", href: "/insights" },
+      { label: "Stories and News", href: "/blog" },
+      { label: "Research and Resources", href: "/blog" },
     ],
   },
-  { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "FAQ", href: "/#faq" },
+  {
+    label: "Company",
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "FAQ", href: "/#faq" },
+    ],
+  },
 ];
 
 export const CTAS = {
@@ -96,6 +106,8 @@ export const CTAS = {
 export const BRAND = {
   logo: asset("uploads/tractrac logo png 4.png"),
   googlePlay: asset("uploads/google-play-badge-logo_svgrepo.com.png"),
+  googlePlayUrl: "https://play.google.com/store/apps/details?id=com.tractrac.plus",
+  appStoreUrl: "https://apps.apple.com/ng/app/tractrac-plus/id6754968082",
   blurb:
     "Making mechanisation easier to access for farmers, equipment owners, agents and service providers.",
 };
@@ -118,10 +130,10 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Get Mechanisation",
     links: [
-      { label: "For Farmers", href: "/#pathways" },
-      { label: "For Equipment Owners", href: "/#pathways" },
-      { label: "For Booking Agents", href: "/#pathways" },
-      { label: "For Mechanisation Service Providers", href: "/#pathways" },
+      { label: "For Farmers", href: "/solutions#farmers" },
+      { label: "For Equipment Owners", href: "/solutions#owners" },
+      { label: "For Booking Agents", href: "/solutions#agents" },
+      { label: "For Mechanisation Service Providers", href: "/solutions#msp" },
     ],
   },
   {
@@ -149,25 +161,25 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Partners",
     links: [
-      { label: "Work With Us", href: "/partners" },
-      { label: "Finance and Investment", href: "/partners" },
+      { label: "Work With Us", href: "/partners#work-with-us" },
+      { label: "Finance and Investment", href: "/partners#finance" },
       { label: "Government and Regulators", href: "/partners" },
-      { label: "Development Partners", href: "/partners" },
+      { label: "Development Partners", href: "/partners#development-partners" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Stories and News", href: "/insights" },
-      { label: "Research and Resources", href: "/insights" },
+      { label: "Stories and News", href: "/blog" },
+      { label: "Research and Resources", href: "/blog" },
       { label: "FAQs", href: "/#faq" },
     ],
   },
 ];
 
 export const LEGAL_LINKS: NavLink[] = [
-  { label: "Privacy Policy", href: "/" },
-  { label: "Terms and Conditions", href: "/" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms and Conditions", href: "/terms-and-conditions" },
 ];
 
 export const SOCIAL_LINKS: NavLink[] = [

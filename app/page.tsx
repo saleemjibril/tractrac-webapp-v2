@@ -11,6 +11,14 @@ import Icon from "@/components/ui/Icon";
 import Photo from "@/components/ui/Photo";
 import { asset } from "@/lib/asset";
 import {
+  formatPostDate,
+  getBlogPosts,
+  plainExcerpt,
+  postHref,
+  postImage,
+  postImageAlt,
+} from "@/lib/blog";
+import {
   ECOSYSTEM_ROLES,
   ENABLING_ENVIRONMENT,
   EQUIPMENT,
@@ -26,13 +34,28 @@ import "@/styles/home.css";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "TracTrac — Getting the right farm machinery should not be the hard part.",
+    absolute: "TracTrac — The right farm machinery, within reach.",
   },
   description:
     "TracTrac helps farmers find tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.",
 };
 
-export default function HomePage() {
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const posts = await getBlogPosts(3);
+  const homeInsights = posts.length
+    ? posts.map((post) => ({
+        category: formatPostDate(post.date),
+        title: post.title,
+        excerpt: plainExcerpt(post.excerpt),
+        image: postImage(post) ?? HOME_INSIGHTS[0].image,
+        position: "50% 45%",
+        alt: postImageAlt(post),
+        href: postHref(post),
+      }))
+    : HOME_INSIGHTS;
+
   return (
     <main id="main" className="pageMain">
       <section className="homeHero">
@@ -60,7 +83,7 @@ export default function HomePage() {
               Making mechanisation easier to access
             </p>
             <h1 className="homeHero__title" data-reveal data-delay="90">
-              Getting the right farm machinery should not be the hard part.
+              The right farm machinery, within reach.
             </h1>
             <p className="homeHero__lede" data-reveal data-delay="180">
               TracTrac helps farmers find tractors and other equipment when they need them, while
@@ -142,11 +165,11 @@ export default function HomePage() {
                 Buying a tractor or labour-saving devices (Threshers, knapsack sprayers, Fertiliser
                 applicators) is out of reach for many farmers.
               </p>
-              <p className="muted">
+              <p>
                 Even when machinery is available, it may be too far away, unavailable when the farm
                 is ready, or difficult to find.
               </p>
-              <p className="muted">
+              <p>
                 At the same time, equipment owners need steady demand to keep their machines
                 productive.
               </p>
@@ -504,7 +527,7 @@ export default function HomePage() {
         <div className="wrap homeStories__cardsWrap">
           <div className="homeStoryGrid">
             {STORY_CARDS.map((story) => (
-              <article className="homeStoryCard" key={story.title}>
+              <Link className="homeStoryCard" href={story.href} key={story.title}>
                 <div className="media homeStoryCard__media">
                   <Photo
                     src={story.image}
@@ -518,12 +541,12 @@ export default function HomePage() {
                   <h3 className="homeStoryCard__title">{story.title}</h3>
                   <p className="homeStoryCard__excerpt">{story.excerpt}</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
           <div className="homeStories__cta">
-            <Link className="btn btn--outline" href="#stories">
-              Read More Stories
+            <Link className="btn btn--outline" href="/stories">
+              View All Stories
             </Link>
           </div>
         </div>
@@ -533,7 +556,7 @@ export default function HomePage() {
         <div className="wrap homeInsights__inner">
           <div className="grid2 homeInsights__head">
             <div>
-              <p className="eyebrow">Insights</p>
+              <p className="eyebrow">Blog</p>
               <h2 className="h2 homeInsights__title">
                 From the field and the wider mechanisation sector
               </h2>
@@ -545,7 +568,7 @@ export default function HomePage() {
           </div>
 
           <div className="homeInsightGrid">
-            {HOME_INSIGHTS.map((article) => (
+            {homeInsights.map((article) => (
               <article className="homeInsightCard" key={article.title}>
                 <div className="media homeInsightCard__media">
                   <Photo
@@ -573,14 +596,9 @@ export default function HomePage() {
           </div>
 
           <div className="homeInsights__cta">
-            <a
-              className="btn btn--outline"
-              href="https://tractrac.co/blog"
-              target="_blank"
-              rel="noopener"
-            >
-              View All Insights
-            </a>
+            <Link className="btn btn--outline" href="/blog">
+              View all blog posts
+            </Link>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProgrammeContactForm from "@/components/programmes/ProgrammeContactForm";
 import CountUp from "@/components/ui/CountUp";
 import Hero from "@/components/ui/Hero";
 import Photo from "@/components/ui/Photo";
@@ -201,19 +202,21 @@ export default function YoungPeoplePage() {
         </div>
         <div className="ypimCta__shade" aria-hidden="true" />
         <div className="wrap ypimCta__inner">
-          <h2 data-reveal>Join Nigeria&apos;s youth mechanisation movement.</h2>
-          <div className="ypimCta__actions" data-reveal data-delay="100">
-            <a
-              className="btn btn--ypim btn--lg"
-              href="https://www.ypim.africa/"
-              target="_blank"
-              rel="noopener"
-            >
-              Apply on ypim.africa
-            </a>
-            <Link className="btn btn--outlineLight btn--lg" href="/#partnership">
-              Partner With Us
-            </Link>
+          <div className="ypimCta__grid">
+            <div>
+              <h2 data-reveal>Join Nigeria&apos;s youth mechanisation movement.</h2>
+              <div className="ypimCta__actions" data-reveal data-delay="100">
+                <a
+                  className="btn btn--ypim btn--lg"
+                  href="https://www.ypim.africa/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Apply on ypim.africa
+                </a>
+              </div>
+            </div>
+            <ProgrammeContactForm />
           </div>
         </div>
       </section>

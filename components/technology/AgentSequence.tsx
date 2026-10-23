@@ -48,43 +48,65 @@ export default function AgentSequence() {
 
     let frame = 0;
     let visible = true;
-    let lastKey = "";
-
-    const playActive = (key: string) => {
-      if (key === lastKey) return;
-      lastKey = key;
-      videos.forEach((video, index) => {
-        if (!video) return;
-        if (key === "all" || key === String(index)) {
-          void video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      });
-    };
 
     const update = () => {
       const rect = wrap.getBoundingClientRect();
-      const viewport = window.innerHeight || stage.offsetHeight;
-      const total = wrap.offsetHeight - Math.min(stage.offsetHeight, viewport);
+      const stageRect = stage.getBoundingClientRect();
+      const viewport = window.innerHeight || stageRect.height;
+      const total = rect.height - Math.min(stageRect.height, viewport);
       const enter = clamp((viewport - rect.top) / (viewport * 0.85));
       const progress = total > 0 ? clamp(-rect.top / total) : 0;
-      const position = progress * (n - 1);
+      // One scroll segment per mockup, so the last mockup gets a full turn.
+      const position = progress * n;
       const seg = Math.min(n - 1, Math.floor(position));
-      const k = seg >= n - 1 ? 0 : smoothstep((position - seg - 0.55) / 0.45);
+      const local = clamp(position - seg);
+      const transition = seg >= n - 1 ? 0 : smoothstep((local - 0.9) / 0.1);
       const mobile = mobileQuery.matches;
 
       items.forEach((item, index) => {
-        const active = mobile ? 1 : index === seg ? 1 - k : index === seg + 1 ? k : 0;
+        const active = mobile ? 1 : index === seg ? 1 - transition : index === seg + 1 ? transition : 0;
         const rise = mobile ? 0 : (1 - smoothstep(enter * 1.5 - index * 0.2)) * 56;
         item.style.opacity = (0.42 + 0.58 * active).toFixed(3);
         item.style.transform = `translate3d(0,${rise.toFixed(1)}px,0) scale(${(0.94 + 0.06 * active).toFixed(4)})`;
         const bar = item.querySelector<HTMLElement>("[data-ag-bar]");
-        if (bar) bar.style.width = `${(mobile ? 100 : clamp(position - index + 1) * 100).toFixed(2)}%`;
+        if (bar) {
+          bar.style.width = `${(mobile ? 100 : clamp(position - index) * 100).toFixed(2)}%`;
+        }
       });
 
-      const key = !visible ? "none" : mobile ? "all" : String(k > 0.5 ? seg + 1 : seg);
-      playActive(key);
+      videos.forEach((video, index) => {
+        if (!video) return;
+
+        if (mobile) {
+          if (visible) {
+            if (video.paused) void video.play().catch(() => {});
+          } else if (!video.paused) {
+            video.pause();
+          }
+          return;
+        }
+
+        if (!video.paused) video.pause();
+        if (!visible) return;
+
+        const duration = video.duration;
+        if (!Number.isFinite(duration) || duration <= 0) return;
+
+        // Scroll drives the recording: the active video plays through as its
+        // segment is scrolled, then holds its final frame. Only the active and
+        // next videos are seeked, so reverse scrubbing isn't competing with
+        // background seeks on the other recordings.
+        if (index !== seg && index !== seg + 1) return;
+        // Let the current seek finish before issuing another one; otherwise
+        // rapid scrolling (especially upward) aborts each seek mid-flight.
+        if (video.seeking) return;
+
+        const end = Math.max(0, duration - 0.04);
+        const target = index === seg ? local * end : 0;
+        if (Math.abs(video.currentTime - target) > 0.02) {
+          video.currentTime = target;
+        }
+      });
     };
 
     const onScroll = () => {
@@ -106,6 +128,12 @@ export default function AgentSequence() {
     );
     observer.observe(wrap);
 
+    videos.forEach((video) => {
+      video?.addEventListener("loadedmetadata", onScroll);
+      video?.addEventListener("loadeddata", onScroll);
+      video?.addEventListener("seeked", onScroll);
+    });
+
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     update();
@@ -115,7 +143,12 @@ export default function AgentSequence() {
       observer.disconnect();
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
-      videos.forEach((video) => video?.pause());
+      videos.forEach((video) => {
+        video?.removeEventListener("loadedmetadata", onScroll);
+        video?.removeEventListener("loadeddata", onScroll);
+        video?.removeEventListener("seeked", onScroll);
+        video?.pause();
+      });
     };
   }, []);
 
@@ -138,7 +171,7 @@ export default function AgentSequence() {
                 <div className="techAgent__phone">
                   <video
                     src={item.video}
-                    preload="metadata"
+                    preload="auto"
                     muted
                     loop
                     playsInline

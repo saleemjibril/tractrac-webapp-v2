@@ -7,11 +7,11 @@
 }
 
 .issamHero {
-  min-height: min(calc(92vh / var(--site-scale, 1)), 920px);
+  min-height: calc(100svh / var(--site-scale, 1));
 }
 
 .pageHero.issamHero {
-  min-height: min(calc(92vh / var(--site-scale, 1)), 920px);
+  min-height: calc(100svh / var(--site-scale, 1));
 }
 
 .issamHero__subtitle {
@@ -692,6 +692,13 @@
   padding-bottom: clamp(80px, 10vw, 160px);
 }
 
+.issamCta__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+
 .issamCta__inner > .eyebrow {
   margin-bottom: 20px;
 }
@@ -725,7 +732,8 @@
   .issamObjectives__grid,
   .issamInclusion__grid,
   .issamEquipment__grid,
-  .issamEnabling__grid {
+  .issamEnabling__grid,
+  .issamCta__grid {
     grid-template-columns: minmax(0, 1fr);
   }
 

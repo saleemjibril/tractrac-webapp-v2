@@ -3,11 +3,13 @@ import { Instrument_Sans } from "next/font/google";
 import Footer from "@/components/site/Footer";
 import Header from "@/components/site/Header";
 import MotionProvider from "@/components/site/MotionProvider";
+import ScrollTop from "@/components/site/ScrollTop";
 import { SITE } from "@/content/site";
 import { asset } from "@/lib/asset";
 import "@/app/globals.css";
 import "@/styles/header.css";
 import "@/styles/footer.css";
+import "@/styles/scroll-top.css";
 
 const instrument = Instrument_Sans({
   subsets: ["latin"],
@@ -48,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <ScrollTop />
         <MotionProvider />
       </body>
     </html>

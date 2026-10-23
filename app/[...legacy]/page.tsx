@@ -6,7 +6,7 @@ const LEGACY: Record<string, string> = {
   "TracTrac Team.dc.html": "/team",
   "TracTrac Impact.dc.html": "/impact",
   "TracTrac Careers.dc.html": "/careers",
-  "TracTrac Insights.dc.html": "/insights",
+  "TracTrac Insights.dc.html": "/blog",
   "TracTrac Partners.dc.html": "/partners",
   "TracTrac Programmes.dc.html": "/programmes",
   "TracTrac Programs.dc.html": "/programmes",

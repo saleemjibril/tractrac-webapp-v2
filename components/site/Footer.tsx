@@ -15,11 +15,27 @@ export default function Footer() {
         <div className="siteFooter__app">
           <p className="siteFooter__label">Get the app</p>
           <div className="siteFooter__badges">
-            <Image src={BRAND.googlePlay} alt="Get it on Google Play" width={155} height={46} />
-            <span className="siteFooter__appStore">
-              <span>Download on the</span>
-              <strong>App Store</strong>
-            </span>
+            <a
+              className="siteFooter__badge"
+              href={BRAND.googlePlayUrl}
+              target="_blank"
+              rel="noopener"
+              aria-label="Get TracTrac Plus on Google Play"
+            >
+              <Image src={BRAND.googlePlay} alt="Get it on Google Play" width={155} height={46} />
+            </a>
+            <a
+              className="siteFooter__badge"
+              href={BRAND.appStoreUrl}
+              target="_blank"
+              rel="noopener"
+              aria-label="Download TracTrac Plus on the App Store"
+            >
+              <span className="siteFooter__appStore">
+                <span>Download on the</span>
+                <strong>App Store</strong>
+              </span>
+            </a>
           </div>
         </div>
       </div>

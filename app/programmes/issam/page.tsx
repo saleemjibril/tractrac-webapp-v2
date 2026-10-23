@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProgrammeContactForm from "@/components/programmes/ProgrammeContactForm";
 import CountUp from "@/components/ui/CountUp";
 import Hero from "@/components/ui/Hero";
 import Icon, { type AnyIconName } from "@/components/ui/Icon";
@@ -510,15 +511,12 @@ export default function IssamPage() {
         </div>
         <div className="issamCta__shade" aria-hidden="true" />
         <div className="wrap issamCta__inner">
-          <p className="eyebrow">Delivered in partnership with the Mastercard Foundation</p>
-          <h2 data-reveal>Work with TracTrac to take the model further.</h2>
-          <div className="issamCta__actions" data-reveal data-delay="100">
-            <Link className="btn btn--primary btn--lg" href="/#partnership">
-              Partner With Us
-            </Link>
-            <Link className="btn btn--outlineLight btn--lg" href="/programmes">
-              All programmes
-            </Link>
+          <div className="issamCta__grid">
+            <div>
+              <p className="eyebrow">Delivered in partnership with the Mastercard Foundation</p>
+              <h2 data-reveal>Work with TracTrac to take the model further.</h2>
+            </div>
+            <ProgrammeContactForm />
           </div>
         </div>
       </section>

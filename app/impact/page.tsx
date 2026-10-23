@@ -585,10 +585,6 @@ export default function ImpactPage() {
               </a>
             ))}
           </div>
-          <p className="impactNote">
-            Links go to the TracTrac blog. Individual article links, images and the exact title of
-            the NAMP 2026 article to be confirmed.
-          </p>
         </div>
       </section>
 

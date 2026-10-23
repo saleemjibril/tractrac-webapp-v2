@@ -126,14 +126,9 @@ export default function CareersPage() {
                 <li>Ideal for specialists in agri-tech, operations, M&amp;E, and comms</li>
                 <li>Send your CV with a short note on what you&rsquo;d like to contribute</li>
               </ul>
-              <a
-                className="btn btn--primary btn--inkHover"
-                href="https://tractrac.co/careers"
-                target="_blank"
-                rel="noopener"
-              >
+              <Link className="btn btn--primary btn--inkHover" href="/careers/talent-pool">
                 Join the talent pool <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
