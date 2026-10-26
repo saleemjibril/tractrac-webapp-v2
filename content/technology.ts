@@ -43,8 +43,8 @@ export const PLUS_STEPS = [
     number: "01",
     title: "Find a machine",
     body: "Filter by tractor type, brand, capacity and location; see what is available now and what can be booked ahead.",
-    screen: asset("uploads/Filter.png"),
-    alt: "The machinery filter in TracTrac Plus, with tractor type, brand, capacity, location and availability",
+    screen: asset("uploads/Hire a tractor.png"),
+    alt: "TracTrac Plus Hire a Tractor screen showing map based machinery discovery and equipment listings",
   },
   {
     number: "02",

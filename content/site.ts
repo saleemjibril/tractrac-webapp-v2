@@ -99,7 +99,7 @@ export const NAV: NavItem[] = [
 ];
 
 export const CTAS = {
-  secondary: { label: "Partner With Us", href: "/#partnership" },
+  secondary: { label: "Partner With Us", href: "/partners#contact" },
   primary: { label: "Find Mechanisation", href: "/#final" },
 };
 
@@ -183,11 +183,11 @@ export const LEGAL_LINKS: NavLink[] = [
 ];
 
 export const SOCIAL_LINKS: NavLink[] = [
-  { label: "LinkedIn", href: "/" },
-  { label: "Instagram", href: "/" },
-  { label: "X", href: "/" },
-  { label: "Facebook", href: "/" },
-  { label: "YouTube", href: "/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/tractrac/" },
+  { label: "Instagram", href: "https://www.instagram.com/tractracglobal/" },
+  { label: "X", href: "https://x.com/tractracglobal" },
+  { label: "Facebook", href: "https://www.facebook.com/tractracglobal" },
+  { label: "YouTube", href: "https://www.youtube.com/@tractrac" },
 ];
 
 export const SITE = {

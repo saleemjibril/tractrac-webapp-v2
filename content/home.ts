@@ -117,9 +117,9 @@ export const TECH_STEPS = [
     title: "Choose the service and make the request.",
     lead: "Walk the boundary. Your phone maps the farm.",
     body: "Accurate farm size means accurate pricing, so you can request the service now or plan ahead for when the work needs to happen.",
-    screen: asset("uploads/Farm Measurement.png"),
+    screen: "https://api.tractrac.co/media/images/6b6e8cdc-f281-4cff-b046-5bdc7d4da58a.png",
     screenAlt:
-      "TracTrac Plus farm measurement screen mapping a farm boundary before a booking",
+      "TracTrac Plus implement selection screen showing harrow, plough, planter and farm carrier options before booking",
   },
   {
     number: "03",
@@ -127,9 +127,9 @@ export const TECH_STEPS = [
     title: "Track what happens next.",
     lead: "Bookings, payments and field activity in one place.",
     body: "Agents can also capture information in low connectivity areas and sync it when a connection comes back, so the work is never held up.",
-    screen: asset("uploads/Notification.png"),
+    screen: "https://api.tractrac.co/media/images/5780df76-09e1-4477-b432-826351344cc3.png",
     screenAlt:
-      "TracTrac Plus notifications screen showing invoice and operation updates",
+      "TracTrac Plus dashboard overview showing tractors hired, verification progress and recent bookings",
   },
 ];
 

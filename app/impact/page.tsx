@@ -603,7 +603,7 @@ export default function ImpactPage() {
             <Link className="btn btn--primary btn--lg" href="/programmes">
               Explore Our Programmes
             </Link>
-            <Link className="btn btn--outlineLight btn--lg" href="/#partnership">
+            <Link className="btn btn--outlineLight btn--lg" href="/partners#contact">
               Partner With Us
             </Link>
           </div>

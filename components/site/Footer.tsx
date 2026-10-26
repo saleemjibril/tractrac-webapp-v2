@@ -63,9 +63,15 @@ export default function Footer() {
         </div>
         <div className="siteFooter__social">
           {SOCIAL_LINKS.map((link) => (
-            <Link href={link.href} key={link.label}>
+            <a
+              href={link.href}
+              key={link.label}
+              target="_blank"
+              rel="noopener"
+              aria-label={`${link.label} (opens in a new tab)`}
+            >
               {link.label}
-            </Link>
+            </a>
           ))}
         </div>
         <p className="siteFooter__copy">© 2026 TracTrac. All rights reserved.</p>

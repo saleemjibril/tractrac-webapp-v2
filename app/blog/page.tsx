@@ -25,9 +25,7 @@ export const metadata: Metadata = {
     "Stories, ideas and practical insights from the work of making agricultural mechanisation more accessible.",
   openGraph: {
     images: [
-      asset(
-        "https://api.tractrac.co/media/blog-images/ab4eaf45-0af6-4dc1-94ed-fe8bccafb4c0.webp",
-      ),
+      "https://api.tractrac.co/media/images/f56cc36b-27b4-42d4-879c-92fbc77430d0.jpg",
     ],
   },
 };
@@ -73,8 +71,8 @@ export default async function InsightsPage() {
   return (
     <main id="main" className="pageMain">
       <Hero
-        image={INSIGHTS.heroImage}
-        imageAlt={INSIGHTS.heroAlt}
+        image="https://api.tractrac.co/media/images/f56cc36b-27b4-42d4-879c-92fbc77430d0.jpg"
+        imageAlt="A TracTrac field officer speaking with a group of farmers in a village"
         priority
         size="medium"
         className="insightsHero"

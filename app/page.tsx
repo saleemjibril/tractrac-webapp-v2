@@ -97,7 +97,7 @@ export default async function HomePage() {
               <Link className="btn btn--outlineLight btn--lg" href="#tech">
                 See How TracTrac Works
               </Link>
-              <Link className="homeHero__textLink" href="#pathways">
+              <Link className="homeHero__textLink" href="/solutions#owners">
                 Own equipment? Enlist it
               </Link>
             </div>
@@ -308,7 +308,7 @@ export default async function HomePage() {
                 Find mechanisation services around you without having to buy and maintain expensive
                 equipment yourself.
               </p>
-              <Link className="btn btn--primary btn--whiteHover" href="#tech">
+              <Link className="btn btn--primary btn--whiteHover" href="/solutions#farmers">
                 Find Mechanisation
               </Link>
             </div>
@@ -329,7 +329,7 @@ export default async function HomePage() {
                 Enlist your equipment, complete verification and connect your machines to farmer
                 demand.
               </p>
-              <Link className="btn btn--outlineLight btn--outlineSolid" href="#tech">
+              <Link className="btn btn--outlineLight btn--outlineSolid" href="/solutions#owners">
                 Enlist Your Equipment
               </Link>
             </div>
@@ -347,7 +347,7 @@ export default async function HomePage() {
                 Bring farmer demand together, connect communities to available services and earn
                 while supporting the people around you.
               </p>
-              <Link className="linkUnderline" href="#tech">
+              <Link className="linkUnderline" href="/solutions#agents">
                 Become a Booking Agent
               </Link>
             </div>
@@ -360,7 +360,7 @@ export default async function HomePage() {
                 Develop your skills, reach more farmers and grow a business providing mechanisation
                 services.
               </p>
-              <Link className="linkUnderline" href="#programmes">
+              <Link className="linkUnderline" href="/solutions#msp">
                 Explore MSP Opportunities
               </Link>
             </div>
@@ -624,10 +624,10 @@ export default async function HomePage() {
                 mechanisation work for more people.
               </p>
               <div className="homePartnership__ctas">
-                <Link className="btn btn--primary btn--inkHover" href="#final">
+                <Link className="btn btn--primary btn--inkHover" href="/partners#contact">
                   Partner With TracTrac
                 </Link>
-                <Link className="btn btn--outline" href="#final">
+                <Link className="btn btn--outline" href="/partners#finance">
                   Explore Investment Opportunities
                 </Link>
               </div>
@@ -723,9 +723,9 @@ export default async function HomePage() {
             Find Mechanisation
           </Link>
           <div className="homeFinal__links">
-            <Link href="#pathways">Enlist Your Equipment</Link>
-            <Link href="#pathways">Become a Booking Agent</Link>
-            <Link href="#partnership">Partner With Us</Link>
+            <Link href="/solutions#owners">Enlist Your Equipment</Link>
+            <Link href="/solutions#agents">Become a Booking Agent</Link>
+            <Link href="/partners#contact">Partner With Us</Link>
           </div>
         </div>
       </section>

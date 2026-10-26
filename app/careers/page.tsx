@@ -139,8 +139,8 @@ export default function CareersPage() {
           <div className="careersMission__grid">
             <div className="media media--rounded careersMission__media" data-reveal="img">
               <Photo
-                src={asset("uploads/IMG-20260824-WA0147.jpg")}
-                alt="A TracTrac team member interviewing a farmer"
+                src="https://api.tractrac.co/media/images/ea0cc4a4-520c-49e9-9ce9-d582a1849e31.jpg"
+                alt="TracTrac team and partners at the TracTrac Investment Roadshow 2026"
                 sizes="(max-width: 880px) 90vw, 45vw"
               />
             </div>

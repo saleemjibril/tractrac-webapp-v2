@@ -93,7 +93,7 @@ export default function ProgrammesPage() {
         <div className="programmesCta__shade" aria-hidden="true" />
         <div className="wrap programmesCta__inner">
           <h2 data-reveal>Partner with TracTrac on a programme.</h2>
-          <Link className="btn btn--primary btn--lg" href="/#partnership" data-reveal data-delay="80">
+          <Link className="btn btn--primary btn--lg" href="/partners#contact" data-reveal data-delay="80">
             Partner With Us
           </Link>
         </div>
