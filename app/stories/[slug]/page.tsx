@@ -39,23 +39,26 @@ export default async function StoryPage({ params }: PageProps) {
         <div className="storyArticleHero__shade" aria-hidden="true" />
         <div className="wrap storyArticleHero__inner">
           <Link className="storyArticleHero__back" href="/stories">
-            ← Stories from the field
+            <span aria-hidden="true">←</span>
+            <span>Stories from the field</span>
           </Link>
-          <p className="eyebrow">{story.category}</p>
-          <h1 className="display1 storyArticleHero__title">{story.title}</h1>
-          <p className="storyArticleHero__standfirst">{story.standfirst}</p>
-          <div className="storyArticleHero__meta">
-            <div>
-              <span>Location</span>
-              <p>{story.location}</p>
-            </div>
-            <div>
-              <span>In conversation with</span>
-              <p>{story.person}</p>
-            </div>
-            <div>
-              <span>Reading time</span>
-              <p>{story.readTime}</p>
+          <div className="storyArticleHero__content">
+            <p className="eyebrow">{story.category}</p>
+            <h1 className="storyArticleHero__title">{story.title}</h1>
+            <p className="storyArticleHero__standfirst">{story.standfirst}</p>
+            <div className="storyArticleHero__meta">
+              <div>
+                <span>Location</span>
+                <p>{story.location}</p>
+              </div>
+              <div>
+                <span>In conversation with</span>
+                <p>{story.person}</p>
+              </div>
+              <div>
+                <span>Reading time</span>
+                <p>{story.readTime}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -63,20 +66,44 @@ export default async function StoryPage({ params }: PageProps) {
 
       <article className="storyArticle">
         <div className="wrap storyArticle__body">
-          {story.body.map((block, index) =>
-            block.type === "quote" ? (
-              <blockquote key={index}>{block.text}</blockquote>
-            ) : (
-              <p key={index}>{block.text}</p>
-            ),
-          )}
+          {story.body.map((block, index) => {
+            if (block.type === "quote") {
+              return (
+                <figure className="storyQuote" key={index}>
+                  <span className="storyQuote__mark" aria-hidden="true">
+                    “
+                  </span>
+                  <blockquote>{block.text}</blockquote>
+                  <figcaption>{story.person.split(",")[0]}</figcaption>
+                </figure>
+              );
+            }
+            if (block.type === "image") {
+              return (
+                <figure className="storyWide" key={index}>
+                  <div className="storyWide__media">
+                    <Photo src={block.src} alt={block.alt} sizes="(max-width: 880px) 90vw, 70vw" />
+                  </div>
+                  <figcaption>{block.caption}</figcaption>
+                </figure>
+              );
+            }
+            return (
+              <p className={index === 0 ? "storyLead" : undefined} key={index}>
+                {block.text}
+              </p>
+            );
+          })}
         </div>
       </article>
 
       <section className="storyGallery">
         <div className="wrap">
           <div className="storyGallery__head">
-            <h2>From the visit</h2>
+            <div>
+              <p className="eyebrow">Gallery</p>
+              <h2>From the visit</h2>
+            </div>
             <p>{story.location}</p>
           </div>
           <div className="storyGallery__grid">
@@ -92,19 +119,19 @@ export default async function StoryPage({ params }: PageProps) {
       {next ? (
         <section className="storyNext">
           <div className="wrap">
-            <p className="storyNext__eyebrow">Next story · {next.category}</p>
-            <div className="storyNext__grid">
-              <div className="storyNext__copy">
-                <h2>{next.title}</h2>
-                <p>{next.standfirst}</p>
-                <Link className="storyNext__link" href={`/stories/${next.slug}`}>
-                  Read the story →
-                </Link>
-              </div>
+            <Link className="storyNext__card" href={`/stories/${next.slug}`}>
               <div className="storyNext__media">
                 <Photo src={next.heroImage} alt={next.heroAlt} sizes="(max-width: 980px) 90vw, 45vw" />
               </div>
-            </div>
+              <div className="storyNext__copy">
+                <p className="storyNext__eyebrow">
+                  Next story · <span>{next.category}</span>
+                </p>
+                <h2>{next.title}</h2>
+                <p>{next.standfirst}</p>
+                <span className="storyNext__link">Read the story →</span>
+              </div>
+            </Link>
           </div>
         </section>
       ) : null}

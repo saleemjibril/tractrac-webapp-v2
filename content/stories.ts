@@ -2,7 +2,8 @@ import { asset } from "@/lib/asset";
 
 export type StoryBlock =
   | { type: "paragraph"; text: string }
-  | { type: "quote"; text: string };
+  | { type: "quote"; text: string }
+  | { type: "image"; src: string; alt: string; caption: string };
 
 export type StoryImage = {
   src: string;
@@ -63,6 +64,12 @@ export const STORIES: Story[] = [
         text: "Then there are the jobs that never get paid. Musa estimates that one in ten jobs ends with a promise rather than cash. Some farmers pay after harvest. Some never do. Without a record of what was agreed, there is little he can do.",
       },
       {
+        type: "image",
+        src: asset("uploads/Copy of DSC08699.jpg"),
+        alt: "An operator working farmland with a TracTrac tractor",
+        caption: "Mechanisation work around Keana, Nasarawa State.",
+      },
+      {
         type: "quote",
         text: "If I know where the next job is before I finish this one, the whole season changes.",
       },
@@ -79,6 +86,18 @@ export const STORIES: Story[] = [
       {
         src: asset("uploads/Existing MSP Interview Lafia LGA.jpg"),
         alt: "A farmer speaking with a TracTrac field researcher on a bench under a tree in Lafia LGA",
+      },
+      {
+        src: asset("uploads/Copy of DSC08699.jpg"),
+        alt: "An operator working farmland with a TracTrac tractor",
+      },
+      {
+        src: asset("uploads/DSC07701.jpg"),
+        alt: "An operator ploughing a field with a TracTrac tractor",
+      },
+      {
+        src: asset("uploads/Copy of DSC07693.jpg"),
+        alt: "Close up of a disc plough turning soil behind a TracTrac tractor",
       },
     ],
     nextSlug: "farmers",
@@ -121,6 +140,12 @@ export const STORIES: Story[] = [
         text: "What Ibrahim described is common across the farmers our team spoke to. Most rely on one or two contacts. When those fall through, there is no simple way to see which machines are nearby and available.",
       },
       {
+        type: "image",
+        src: asset("uploads/Copy of DSC08691.jpg"),
+        alt: "An operator working farmland with a TracTrac tractor and disc plough",
+        caption: "Land preparation near Lafia, Nasarawa State.",
+      },
+      {
         type: "quote",
         text: "I do not need to own a tractor. I need to know one will come.",
       },
@@ -137,6 +162,18 @@ export const STORIES: Story[] = [
       {
         src: asset("uploads/IMG-20260824-WA0164.jpg"),
         alt: "A woman farmer being interviewed by a TracTrac researcher outside her home",
+      },
+      {
+        src: asset("uploads/Copy of DSC08691.jpg"),
+        alt: "An operator working farmland with a TracTrac tractor and disc plough",
+      },
+      {
+        src: asset("uploads/Copy of DSC07693.jpg"),
+        alt: "Close up of a disc plough turning soil behind a TracTrac tractor",
+      },
+      {
+        src: asset("uploads/IMG-20260824-WA0025 (1).jpg"),
+        alt: "A TracTrac field researcher interviewing a farmer",
       },
     ],
     nextSlug: "women-in-farming",
@@ -178,6 +215,12 @@ export const STORIES: Story[] = [
         text: "One solution the women raised themselves was grouping plots. If several neighbouring farms book together, the job becomes worth the operator’s trip, and the cost can be shared.",
       },
       {
+        type: "image",
+        src: asset("uploads/IMG-20260824-WA0025 (1).jpg"),
+        alt: "A TracTrac field researcher interviewing a farmer",
+        caption: "A field visit in Doma LGA, Nasarawa State.",
+      },
+      {
         type: "quote",
         text: "If we stand together, the tractor will come to us. Alone, it will not.",
       },
@@ -194,6 +237,18 @@ export const STORIES: Story[] = [
       {
         src: asset("uploads/IMG-20260824-WA0147.jpg"),
         alt: "A TracTrac booking agent in a branded shirt being interviewed on a bench",
+      },
+      {
+        src: asset("uploads/IMG-20260824-WA0025 (1).jpg"),
+        alt: "A TracTrac field researcher interviewing a farmer",
+      },
+      {
+        src: asset("uploads/DSC02329.jpg"),
+        alt: "TracTrac staff and participants working together in the field",
+      },
+      {
+        src: asset("uploads/Copy of DSC08691.jpg"),
+        alt: "An operator working farmland with a TracTrac tractor and disc plough",
       },
     ],
     nextSlug: "booking-agents",
@@ -235,6 +290,12 @@ export const STORIES: Story[] = [
         text: "Network coverage is patchy in several of his villages. He captures information offline and syncs it when he reaches a signal, sometimes at the end of the day.",
       },
       {
+        type: "image",
+        src: asset("uploads/IMG-20260824-WA0025 (1).jpg"),
+        alt: "A TracTrac field researcher interviewing a farmer",
+        caption: "A field visit in Akwanga LGA, Nasarawa State.",
+      },
+      {
         type: "quote",
         text: "When the tractor arrives on the day I said, people remember. That is how the next farmer calls me.",
       },
@@ -251,6 +312,18 @@ export const STORIES: Story[] = [
       {
         src: asset("uploads/Existing MSP Interview Keana LGA.jpg"),
         alt: "A mechanisation service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
+      },
+      {
+        src: asset("uploads/IMG-20260824-WA0025 (1).jpg"),
+        alt: "A TracTrac field researcher interviewing a farmer",
+      },
+      {
+        src: asset("uploads/DSC02281.jpg"),
+        alt: "TracTrac and Mastercard Foundation programme team at a mechanisation service provider onboarding event",
+      },
+      {
+        src: asset("uploads/Copy of DSC08691.jpg"),
+        alt: "An operator working farmland with a TracTrac tractor and disc plough",
       },
     ],
     nextSlug: "service-providers",
