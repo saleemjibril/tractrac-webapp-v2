@@ -54,6 +54,7 @@ export default function TeamDirectory() {
                     type="button"
                     className="teamCard__button"
                     aria-haspopup="dialog"
+                    aria-label={`${person.name}${person.title ? `, ${person.title}` : ""}. View profile`}
                     onClick={() => setSelected(person)}
                   >
                     <span className="teamCard__portrait">
@@ -68,22 +69,26 @@ export default function TeamDirectory() {
                       )}
                     </span>
                     <span className="teamCard__name">{person.name}</span>
-                    <span className="teamCard__title">{person.title}</span>
+                    {person.title ? (
+                      <span className="teamCard__title">{person.title}</span>
+                    ) : null}
                     <span className="srOnly">View profile</span>
                   </button>
-                  <div className="teamCard__foot">
-                    <span>Profile +</span>
-                    {person.linkedin ? (
-                      <a
-                        href={person.linkedin}
-                        target="_blank"
-                        rel="noopener"
-                        aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
-                      >
-                        in
-                      </a>
-                    ) : null}
-                  </div>
+                  {person.bio.length || person.linkedin ? (
+                    <div className="teamCard__foot">
+                      {person.bio.length ? <span>Profile +</span> : null}
+                      {person.linkedin ? (
+                        <a
+                          href={person.linkedin}
+                          target="_blank"
+                          rel="noopener"
+                          aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
+                        >
+                          in
+                        </a>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </li>
               ))}
             </ul>
@@ -121,7 +126,7 @@ export default function TeamDirectory() {
                   <PortraitPlaceholder person={selected} />
                 )}
               </div>
-              <p className="teamDialog__role">{selected.title}</p>
+              {selected.title ? <p className="teamDialog__role">{selected.title}</p> : null}
               <h2 id="dlg-name">{selected.name}</h2>
               <div className="teamDialog__bio">
                 {selected.bio.map((paragraph) => (

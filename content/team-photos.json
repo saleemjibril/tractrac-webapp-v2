@@ -1,0 +1,228 @@
+{
+  "endpoint": "https://api.tractrac.co/api/v1/uploads/images",
+  "settings": {
+    "folder": "images",
+    "optimize": "true",
+    "quality": "high",
+    "generate_thumbnail": "false",
+    "preserve_format": "true"
+  },
+  "photos": {
+    "Godsfavour Nyoyoko.jpg": {
+      "remote": "https://api.tractrac.co/media/images/9eb8761f-108c-4c82-b37b-8bfaa425cad1.jpg",
+      "filename": "Godsfavour Nyoyoko.jpg",
+      "bytes": 1283721,
+      "sha256": "680ea529de57b655b8251fd47652c28e4b6aca6cb8fd7c34f658492891485955",
+      "uploadedAt": "2026-10-26T23:42:29.433053+00:00",
+      "verified": true
+    },
+    "Adedolapo Olupona .E.jpg": {
+      "remote": "https://api.tractrac.co/media/images/606e3e3d-f9f0-4cc6-a175-22fb4bcba5bb.jpg",
+      "filename": "Adedolapo Olupona .E.jpg",
+      "bytes": 1456539,
+      "sha256": "939244631ee250c6a670fda4edc6ab589cdcbfdf080d3fb083d3c6388938456d",
+      "uploadedAt": "2026-10-26T23:42:56.991Z",
+      "verified": true
+    },
+    "Adeyinka Adelusi.jpg": {
+      "remote": "https://api.tractrac.co/media/images/e820b0c3-ebb5-4c0d-8767-170f01bc6937.jpg",
+      "filename": "Adeyinka Adelusi.jpg",
+      "bytes": 2062164,
+      "sha256": "6b64ea06735109fc760d3736cce5c09e58182c06ce55b537795a4405c579b3e6",
+      "uploadedAt": "2026-10-26T23:42:59.865Z",
+      "verified": true
+    },
+    "Ajibola Afolashade.jpg": {
+      "remote": "https://api.tractrac.co/media/images/7b40f821-e45b-4af6-8a7d-4476975a06f5.jpg",
+      "filename": "Ajibola Afolashade.jpg",
+      "bytes": 1437513,
+      "sha256": "0a50ac101a15ad7cc33f631a2182c06fb71e0d546daba83a08ed04e761b03100",
+      "uploadedAt": "2026-10-26T23:43:03.864Z",
+      "verified": true
+    },
+    "Anthony Attoh.jpg": {
+      "remote": "https://api.tractrac.co/media/images/796ec410-32ae-40d4-a630-5ffe1ace24d0.jpg",
+      "filename": "Anthony Attoh.jpg",
+      "bytes": 1736525,
+      "sha256": "a0ca006dcb305dcb4c6dc1d49df532b5fd05b88fa8072595552b4bb7cc5c5d33",
+      "uploadedAt": "2026-10-26T23:43:06.478Z",
+      "verified": true
+    },
+    "Ashey Matthew Osebi.jpg": {
+      "remote": "https://api.tractrac.co/media/images/d57bc579-4d37-47ef-aaf8-ecd39cddc52b.jpg",
+      "filename": "Ashey Matthew Osebi.jpg",
+      "bytes": 1981447,
+      "sha256": "5501fad0ed00eef95e36ec11e3e7cfe5a03eb736c999fafa0681b2347b58c151",
+      "uploadedAt": "2026-10-26T23:43:10.356Z",
+      "verified": true
+    },
+    "Atuonwu Adanna.jpg": {
+      "remote": "https://api.tractrac.co/media/images/5933a8c3-8a16-468c-aa4a-378e4eac593c.jpg",
+      "filename": "Atuonwu Adanna.jpg",
+      "bytes": 1134298,
+      "sha256": "20934e95d399c00986315d06dab1d931c1d4dd7759b66d7eb28dfe9f6b25835a",
+      "uploadedAt": "2026-10-26T23:43:13.880Z",
+      "verified": true
+    },
+    "Betini Akarandut.jpg": {
+      "remote": "https://api.tractrac.co/media/images/c1f9672e-0c80-4419-864b-e1b5a3796800.jpg",
+      "filename": "Betini Akarandut.jpg",
+      "bytes": 1341920,
+      "sha256": "338f89a935c53536a8654edab0ea5148688880920a1a55e0933b0b0a26679367",
+      "uploadedAt": "2026-10-26T23:43:17.253Z",
+      "verified": true
+    },
+    "Bridget Augustine.jpg": {
+      "remote": "https://api.tractrac.co/media/images/8259acfb-bf4d-4a9f-90df-92211df41d61.jpg",
+      "filename": "Bridget Augustine.jpg",
+      "bytes": 2416273,
+      "sha256": "b17d2233755cc165e60270aa22289eb93eb9ca9a16a1ea4e0a77cd81680da7e6",
+      "uploadedAt": "2026-10-26T23:43:21.411Z",
+      "verified": true
+    },
+    "Chidinma Ekwonu.jpg": {
+      "remote": "https://api.tractrac.co/media/images/b00b805d-df8d-4a76-adbe-8ac9cddd42a1.jpg",
+      "filename": "Chidinma Ekwonu.jpg",
+      "bytes": 2219320,
+      "sha256": "f3c6fe463e185b73a7149157aa5b3c7bfaa0c5cabdbcd580637ac071617d70de",
+      "uploadedAt": "2026-10-26T23:43:25.563Z",
+      "verified": true
+    },
+    "Ekene Nnolum Bright.jpg": {
+      "remote": "https://api.tractrac.co/media/images/49f37230-0065-4d97-a19a-f51d1f959fdb.jpg",
+      "filename": "Ekene Nnolum Bright.jpg",
+      "bytes": 1582972,
+      "sha256": "4b6c60833ce6737275127fbe5a11fcfc977a02c01ff3ad36c85b6c61f51d7d49",
+      "uploadedAt": "2026-10-26T23:43:28.151Z",
+      "verified": true
+    },
+    "Eunice Ademakinwa.jpg": {
+      "remote": "https://api.tractrac.co/media/images/a6d8409f-73ed-410e-a7bc-a4ee2eaaeeba.jpg",
+      "filename": "Eunice Ademakinwa.jpg",
+      "bytes": 1672737,
+      "sha256": "3d060838c65881cbcf686839abb8127b3d04990039cbca890193de0cb6facab6",
+      "uploadedAt": "2026-10-26T23:43:31.869Z",
+      "verified": true
+    },
+    "Godson Ohuruogu.jpg": {
+      "remote": "https://api.tractrac.co/media/images/b0ed053e-bbd1-4606-bd7f-88cfb6b909d0.jpg",
+      "filename": "Godson Ohuruogu.jpg",
+      "bytes": 3407483,
+      "sha256": "ff86e72fd433742f46de1b66583dcb89438408ffcd10d8524850e4cfe2b77bee",
+      "uploadedAt": "2026-10-26T23:43:36.454Z",
+      "verified": true
+    },
+    "Grace John.jpg": {
+      "remote": "https://api.tractrac.co/media/images/c4831ba9-3c91-48ca-8cb9-f4be5e330ce8.jpg",
+      "filename": "Grace John.jpg",
+      "bytes": 1576394,
+      "sha256": "34103be5f70a70ca3415c5073d82493beb4f73560b1a7abf739c3b998da6b78e",
+      "uploadedAt": "2026-10-26T23:43:39.898Z",
+      "verified": true
+    },
+    "Ikenna Nnorom.jpg": {
+      "remote": "https://api.tractrac.co/media/images/03d30b9e-011b-4b72-be6d-ee73d5accb88.jpg",
+      "filename": "Ikenna Nnorom.jpg",
+      "bytes": 1889252,
+      "sha256": "412c622922e3de638d7d35e60e96c323bd937437ba0f6c26ce958e4804c460f2",
+      "uploadedAt": "2026-10-26T23:43:43.863Z",
+      "verified": true
+    },
+    "Jemimah Justus Jennifer.jpg": {
+      "remote": "https://api.tractrac.co/media/images/209e1fb9-e2ea-4e97-920e-e0cd1db1f82c.jpg",
+      "filename": "Jemimah Justus Jennifer.jpg",
+      "bytes": 3079080,
+      "sha256": "2bd318f91f39ca107f6a64a6e6796c9cba27e37de25a3b7c66fdcc1f22338c8d",
+      "uploadedAt": "2026-10-26T23:43:49.563Z",
+      "verified": true
+    },
+    "John Olanrewaju.jpg": {
+      "remote": "https://api.tractrac.co/media/images/5acf5490-e290-4d7a-b533-966993660604.jpg",
+      "filename": "John Olanrewaju.jpg",
+      "bytes": 1599807,
+      "sha256": "c50ac5b2ad8bcd3a97a3038f9d9dff00815428f80a1ee95de8fd72ff19b5eec6",
+      "uploadedAt": "2026-10-26T23:43:52.806Z",
+      "verified": true
+    },
+    "Larai Tumba Sini.jpg": {
+      "remote": "https://api.tractrac.co/media/images/0b6d6adb-cc35-414b-8f1c-50a69872d092.jpg",
+      "filename": "Larai Tumba Sini.jpg",
+      "bytes": 2036866,
+      "sha256": "1f31af155c97d53a0cf7c9ba274498134c208bcd41fb900829901d2f6efcdd0e",
+      "uploadedAt": "2026-10-26T23:43:56.359Z",
+      "verified": true
+    },
+    "Magdalene Osagie.jpg": {
+      "remote": "https://api.tractrac.co/media/images/2cd77493-27c5-4235-9b3b-63dc73faee55.jpg",
+      "filename": "Magdalene Osagie.jpg",
+      "bytes": 3765671,
+      "sha256": "2654d95144ab3120c5b8bc224b7415a2344ee74ede0095f31f04c955c6f3d324",
+      "uploadedAt": "2026-10-26T23:44:03.174Z",
+      "verified": true
+    },
+    "Martha Peter.jpg": {
+      "remote": "https://api.tractrac.co/media/images/e5715d6c-9c1c-4e72-9a88-7c96ece22f63.jpg",
+      "filename": "Martha Peter.jpg",
+      "bytes": 1430468,
+      "sha256": "64ea9248b32201e75559ac13677163c8c3e04eece4a7ee64263ddda879996623",
+      "uploadedAt": "2026-10-26T23:44:06.464Z",
+      "verified": true
+    },
+    "Mercy Eduyubgbo.jpg": {
+      "remote": "https://api.tractrac.co/media/images/35f08b9d-0794-4a9d-909e-60d47904b767.jpg",
+      "filename": "Mercy Eduyubgbo.jpg",
+      "bytes": 2286286,
+      "sha256": "0f8095747643524a53d72080e80fc869defe4aca35bdcc3bf217ec1c6af9ed64",
+      "uploadedAt": "2026-10-26T23:44:09.751Z",
+      "verified": true
+    },
+    "Peter Agbo.jpg": {
+      "remote": "https://api.tractrac.co/media/images/f6d027d7-faf3-4e86-8ca2-d62ed3b56e4e.jpg",
+      "filename": "Peter Agbo.jpg",
+      "bytes": 1186558,
+      "sha256": "7688c738e1d25dc7f167fa3bd20b8a86d7a8467d84c35792981034bf7752f352",
+      "uploadedAt": "2026-10-26T23:44:12.279Z",
+      "verified": true
+    },
+    "Samson Ugbegbor.jpg": {
+      "remote": "https://api.tractrac.co/media/images/4eec5df9-dddd-4a98-a985-69f0959963a0.jpg",
+      "filename": "Samson Ugbegbor.jpg",
+      "bytes": 3669073,
+      "sha256": "49a8e52882c2251d86f093fc15f6fcd60f291f8869451277fa9132fdd533435d",
+      "uploadedAt": "2026-10-26T23:44:17.811Z",
+      "verified": true
+    },
+    "Samuel Olanipekun Adebayo.jpg": {
+      "remote": "https://api.tractrac.co/media/images/b8b136e0-100b-4358-9dc9-fb66ebec99be.jpg",
+      "filename": "Samuel Olanipekun Adebayo.jpg",
+      "bytes": 2321116,
+      "sha256": "ab18a4f9236fab80c125614d1910ad675df24e37cf2b82a3737268521cf660f2",
+      "uploadedAt": "2026-10-26T23:44:21.567Z",
+      "verified": true
+    },
+    "Stephen Aguebor.jpg": {
+      "remote": "https://api.tractrac.co/media/images/53bf9786-dc8d-4005-a1a7-3a4147972c45.jpg",
+      "filename": "Stephen Aguebor.jpg",
+      "bytes": 2764771,
+      "sha256": "19389590c77e3c522d42a20f932b7aa317d6a71b4b07042a2aac690c3157dd21",
+      "uploadedAt": "2026-10-26T23:44:25.615Z",
+      "verified": true
+    },
+    "ThankGod Onugwu.jpg": {
+      "remote": "https://api.tractrac.co/media/images/90ba42aa-ce7e-45c9-986c-7981ff78a480.jpg",
+      "filename": "ThankGod Onugwu.jpg",
+      "bytes": 1701192,
+      "sha256": "b6f36c287ce83e076a356a0466c78b9fae5ce6c2ce89700942c4b4818ca37cde",
+      "uploadedAt": "2026-10-26T23:44:28.167Z",
+      "verified": true
+    },
+    "yahaya emmanuel.jpg": {
+      "remote": "https://api.tractrac.co/media/images/30b436e9-2f68-4fa2-ba58-83e6d48869d4.jpg",
+      "filename": "yahaya emmanuel.jpg",
+      "bytes": 1944382,
+      "sha256": "206c6c21eeba5724382fca776091a96fe97a49895fd8ac6d60147def70e8d79d",
+      "uploadedAt": "2026-10-26T23:44:33.456Z",
+      "verified": true
+    }
+  }
+}
