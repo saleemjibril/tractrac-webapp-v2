@@ -91,7 +91,7 @@ export default async function HomePage() {
               machines working.
             </p>
             <div className="homeHero__ctas" data-reveal data-delay="270">
-              <Link className="btn btn--primary btn--lg btn--whiteHover" href="#final">
+              <Link className="btn btn--primary btn--lg btn--whiteHover" href="/technology#download">
                 Find Mechanisation
               </Link>
               <Link className="btn btn--outlineLight btn--lg" href="#tech">
@@ -162,7 +162,7 @@ export default async function HomePage() {
             </div>
             <div className="homeWhy__copy" data-reveal data-delay="160">
               <p>
-                Buying a tractor or labour-saving devices (Threshers, knapsack sprayers, Fertiliser
+                Buying a tractor or labour-saving devices (threshers, knapsack sprayers, fertiliser
                 applicators) is out of reach for many farmers.
               </p>
               <p>
@@ -308,7 +308,7 @@ export default async function HomePage() {
                 Find mechanisation services around you without having to buy and maintain expensive
                 equipment yourself.
               </p>
-              <Link className="btn btn--primary btn--whiteHover" href="/solutions#farmers">
+              <Link className="btn btn--primary btn--whiteHover" href="/technology#download">
                 Find Mechanisation
               </Link>
             </div>
@@ -461,7 +461,7 @@ export default async function HomePage() {
                 keep machinery working.
               </p>
               <Link className="linkUnderline" href="/programmes">
-                Explore Our Programmes
+                Explore Our Programs
               </Link>
             </div>
           </div>
@@ -476,7 +476,7 @@ export default async function HomePage() {
         </div>
 
         <div className="wrap homeProgrammes__body" id="prog-loop">
-          <p className="eyebrow">Featured programmes</p>
+          <p className="eyebrow">Featured programs</p>
           <ProgrammeShowcase />
         </div>
       </section>
@@ -562,7 +562,7 @@ export default async function HomePage() {
               </h2>
             </div>
             <p className="prose muted">
-              Research, programme updates and perspectives published by our team as the work
+              Research, program updates and perspectives published by our team as the work
               develops.
             </p>
           </div>
@@ -636,7 +636,7 @@ export default async function HomePage() {
               <div className="media media--rounded homePartnership__media">
                 <Photo
                   src={asset("uploads/DSC02281.jpg")}
-                  alt="TracTrac and Mastercard Foundation programme team at a mechanisation service provider onboarding event"
+                  alt="TracTrac and Mastercard Foundation program team at a mechanisation service provider onboarding event"
                   sizes="(max-width: 880px) 90vw, 45vw"
                 />
               </div>
@@ -719,7 +719,7 @@ export default async function HomePage() {
             Whether you need machinery, own equipment, work with farmers or want to invest in
             agricultural mechanisation, there is a place for you in the TracTrac network.
           </p>
-          <Link className="btn btn--primary btn--whiteHover homeFinal__button" href="#tech">
+          <Link className="btn btn--primary btn--whiteHover homeFinal__button" href="/technology#download">
             Find Mechanisation
           </Link>
           <div className="homeFinal__links">

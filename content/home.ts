@@ -19,7 +19,7 @@ export const HOME_STATS: HomeStat[] = [
   { count: 6000, suffix: "+", label: "People trained", icon: "book" },
   { count: 3000, suffix: "+", label: "Jobs created", icon: "wrench" },
   { count: 566, label: "Cooperatives established", icon: "people" },
-  { count: 2, prefix: "₦", suffix: "B+", label: "Investment catalysed", icon: "banknote", accent: true },
+  { count: 2, prefix: "₦", suffix: "B+", label: "Investment to be catalysed", icon: "banknote", accent: true },
 ];
 
 export const ECOSYSTEM_ROLES = [
@@ -177,22 +177,22 @@ export const STORY_CARDS = [
 
 export const HOME_INSIGHTS = [
   {
-    category: "Programme updates",
+    category: "Program updates",
     title:
-      "Operators’ Training and Community Demo Events Strengthen Mechanization Ecosystems Across Nasarawa — ISSAM Project",
+      "Operators’ Training and Community Demo Events Strengthen Mechanisation Ecosystems Across Nasarawa — ISSAM Project",
     excerpt:
       "Over 28,000 farmers were reached in April and May as the ISSAM project drives operator training and community demo events with year 1 MSPs across Nasarawa state.",
     image: asset("uploads/Copy of DSC08699.jpg"),
     position: "50% 45%",
-    alt: "ISSAM programme trainees gathered around machinery during a practical session",
+    alt: "ISSAM program trainees gathered around machinery during a practical session",
     href: "https://tractrac.co/blog",
   },
   {
     category: "Sector perspective",
     title:
-      "Nigeria’s Mechanization Shift: What It Means for Farmers and the Future of Farming",
+      "Nigeria’s Mechanisation Shift: What It Means for Farmers and the Future of Farming",
     excerpt:
-      "There is a growing understanding that agricultural mechanization in Nigeria cannot succeed as a government-only effort.",
+      "There is a growing understanding that agricultural mechanisation in Nigeria cannot succeed as a government-only effort.",
     image: asset("uploads/DSC02329.jpg"),
     position: "50% 45%",
     alt: "TracTrac and government stakeholders at a national mechanisation event",
@@ -202,7 +202,7 @@ export const HOME_INSIGHTS = [
     category: "Practical guidance",
     title: "Top 5 Tractors for Farming in Nigeria and Their Prices",
     excerpt:
-      "Buying a tractor in Nigeria is more than choosing a popular brand. We sat with our expert on farm mechanization to discuss the best options, prices and things to consider.",
+      "Buying a tractor in Nigeria is more than choosing a popular brand. We sat with our expert on farm mechanisation to discuss the best options, prices and things to consider.",
     image: asset("uploads/Copy of DSC07691.jpg"),
     position: "50% 45%",
     alt: "A TracTrac tryctor at work on farmland in Nasarawa State",

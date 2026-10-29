@@ -35,15 +35,15 @@ export const INSIGHTS = {
     category: "Policy",
     date: "September 4, 2026",
     title:
-      "The NAMP Journey: Building Nigeria's Roadmap for Agricultural Mechanization",
+      "The NAMP Journey: Building Nigeria's Roadmap for Agricultural Mechanisation",
     excerpt:
-      "For years, one question has shaped conversations around agricultural mechanization in Nigeria: how do we get modern farm equipment into the hands of the millions of farmers who need it most? The answers have never been simple.",
+      "For years, one question has shaped conversations around agricultural mechanisation in Nigeria: how do we get modern farm equipment into the hands of the millions of farmers who need it most? The answers have never been simple.",
     href: "https://tractrac.co/blog/the-national-agricultural-mechanisation-policy-2026-journey-so-far",
     image: IMG.namp,
     alt: "Featured image for The NAMP Journey article",
   } satisfies Article,
   programmeLead: {
-    category: "Programmes",
+    category: "Programs",
     date: "August 11, 2026",
     title:
       "Beyond Tractors: How ISSAM Project Is Powering Rural Farming with Labour-Saving Devices",
@@ -55,22 +55,22 @@ export const INSIGHTS = {
   } satisfies Article,
   programmeList: [
     {
-      category: "Programmes",
+      category: "Programs",
       title:
-        "Operators' Training and Community Demo Events Strengthen Mechanization Ecosystems Across Nasarawa - ISSAM Project",
+        "Operators' Training and Community Demo Events Strengthen Mechanisation Ecosystems Across Nasarawa - ISSAM Project",
       excerpt:
         "Over 28,000 farmers were reached in April and May as the ISSAM project drives operator training and community demo events with year 1 MSPs across Nasarawa state.",
       href: "https://tractrac.co/blog",
     },
     {
-      category: "Programmes",
+      category: "Programs",
       title: "Turning Lessons and Demand Into Impact: Inside the ISSAM Project Year 2",
       href: "https://tractrac.co/blog",
     },
     {
-      category: "Programmes",
+      category: "Programs",
       title:
-        "Inside Tractrac and Mastercard Foundation’s Partnership: Improving Smallholder Farmers’ Access to Small-Scale Agricultural Mechanization (ISSAM) Project",
+        "Inside Tractrac and Mastercard Foundation’s Partnership: Improving Smallholder Farmers’ Access to Small-Scale Agricultural Mechanisation (ISSAM) Project",
       href: "https://tractrac.co/blog",
     },
   ] satisfies Article[],
@@ -92,7 +92,7 @@ export const INSIGHTS = {
     {
       category: "People · Youth",
       title:
-        "International Youth Day 2025: Local Youth-Led Mechanization Enterprises for Global Impact",
+        "International Youth Day 2025: Local Youth-Led Mechanisation Enterprises for Global Impact",
       href: "https://tractrac.co/blog",
     },
   ] satisfies Article[],
@@ -104,7 +104,7 @@ export const INSIGHTS = {
         date: "July 6, 2026",
         title: "Top 5 Tractors for Farming in Nigeria and Their Prices",
         excerpt:
-          "Buying a tractor in Nigeria is more than choosing a popular brand. In this blog, we sat with our expert on farm mechanization to discuss the best options, prices and things to consider before making a costly farming investment.",
+          "Buying a tractor in Nigeria is more than choosing a popular brand. In this blog, we sat with our expert on farm mechanisation to discuss the best options, prices and things to consider before making a costly farming investment.",
         href: "https://tractrac.co/blog/top-5-tractors-for-farming-in-nigeria-and-their-prices",
         image: IMG.tractors,
         alt: "Banner for Top 5 Tractors for Farming in Nigeria and Their Prices",
@@ -115,7 +115,7 @@ export const INSIGHTS = {
         title:
           "Tractor-hailing in Nigeria: The Uber-Style Way to Book Farm Machinery",
         excerpt:
-          "Instead of relying solely on word-of-mouth or local contacts, farmers can connect with tractor owners and mechanization service providers through tractor hailing apps like TracTrac Plus, making access to farm machinery faster and more convenient.",
+          "Instead of relying solely on word-of-mouth or local contacts, farmers can connect with tractor owners and mechanisation service providers through tractor hailing apps like TracTrac Plus, making access to farm machinery faster and more convenient.",
         href: "https://tractrac.co/blog/tractor-hailing-in-nigeria-the-uber-style-way-to-book-farm-machinery",
         image: IMG.hailing,
         alt: "Banner for Tractor-hailing in Nigeria: The Uber-Style Way to Book Farm Machinery",
@@ -140,17 +140,17 @@ export const INSIGHTS = {
       {
         category: "Technology",
         title:
-          "Climate-Smart Agriculture and Mechanization: The Future of Nigerian Farming",
+          "Climate-Smart Agriculture and Mechanisation: The Future of Nigerian Farming",
         excerpt:
-          "Climate-smart mechanization is not only about physical machines. Digital tools are becoming an essential part of the picture.",
+          "Climate-smart mechanisation is not only about physical machines. Digital tools are becoming an essential part of the picture.",
         href: "https://tractrac.co/blog/climate-smart-agriculture-and-mechanization-the-future-of-nigerian-farming",
       },
       {
         category: "Mechanisation",
         title:
-          "Who is a Mechanization Service Provider (MSP)? Their Role in Nigerian Agriculture Fully Explained",
+          "Who is a Mechanisation Service Provider (MSP)? Their Role in Nigerian Agriculture Fully Explained",
         excerpt:
-          "According to the FAO and the Federal Ministry of Agriculture and Rural Development (FMARD), a mechanization service provider is an individual, cooperative, or firm that offers equipment-based agricultural services to farmers.",
+          "According to the FAO and the Federal Ministry of Agriculture and Rural Development (FMARD), a mechanisation service provider is an individual, cooperative, or firm that offers equipment-based agricultural services to farmers.",
         href: "https://tractrac.co/blog",
       },
       {
@@ -165,7 +165,7 @@ export const INSIGHTS = {
       },
       {
         category: "Mechanisation",
-        title: "Why farmers need mechanization services",
+        title: "Why farmers need mechanisation services",
         href: "https://tractrac.co/blog",
       },
       {
@@ -181,7 +181,7 @@ export const INSIGHTS = {
     title:
       "High-Level National Policy Dialogue and Ratification of the National Agricultural Mechanisation Policy 2026",
     excerpt:
-      "TracTrac MSL, in collaboration with the Federal Ministry of Agriculture and Food Security, is convening the High-Level National Dialogue on Agricultural Mechanization, themed: \"Anchoring National Food Sovereignty Through Sustainable Agricultural Mechanization Policy, Innovation and Strategic Investment.\"",
+      "TracTrac MSL, in collaboration with the Federal Ministry of Agriculture and Food Security, is convening the High-Level National Dialogue on Agricultural Mechanisation, themed: \"Anchoring National Food Sovereignty Through Sustainable Agricultural Mechanisation Policy, Innovation and Strategic Investment.\"",
     href: "https://tractrac.co/blog/high-level-national-policy-dialogue-and-ratification-of-the-national-agricultural-mechanisation-policy-2026",
     image: IMG.dialogue,
     alt: "High-level policy dialogue flier",
@@ -190,28 +190,28 @@ export const INSIGHTS = {
     {
       category: "Industry",
       title:
-        "Nigeria’s Mechanization Shift: What It Means for Farmers and the Future of Farming",
+        "Nigeria’s Mechanisation Shift: What It Means for Farmers and the Future of Farming",
       excerpt:
-        "There is a growing understanding that agricultural mechanization in Nigeria cannot succeed as a government-only effort.",
+        "There is a growing understanding that agricultural mechanisation in Nigeria cannot succeed as a government-only effort.",
       href: "https://tractrac.co/blog",
     },
     {
       category: "Policy",
-      title: "TracTrac Launches Inclusive Agricultural Mechanization Strategy",
+      title: "TracTrac Launches Inclusive Agricultural Mechanisation Strategy",
       excerpt:
-        "On March 9, 2026, at a convening aligned with International Women's Day, TracTrac launched its Inclusive Agricultural Mechanization Strategy.",
+        "On March 9, 2026, at a convening aligned with International Women's Day, TracTrac launched its Inclusive Agricultural Mechanisation Strategy.",
       href: "https://tractrac.co/blog",
     },
     {
       category: "Industry",
       title:
-        "Leading Agricultural Mechanization Service Firms Driving Farm Productivity in Nigeria",
+        "Leading Agricultural Mechanisation Service Firms Driving Farm Productivity in Nigeria",
       href: "https://tractrac.co/blog",
     },
     {
       category: "People · Policy",
       title:
-        "International Year of the Woman Farmer 2026: Women Must Be at the Center of Nigeria’s Mechanization Future",
+        "International Year of the Woman Farmer 2026: Women Must Be at the Center of Nigeria’s Mechanisation Future",
       href: "https://tractrac.co/blog",
     },
   ] satisfies Article[],

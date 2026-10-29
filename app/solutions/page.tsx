@@ -35,7 +35,6 @@ export default function SolutionsPage() {
         <div className="solutionsHero__links" data-reveal data-delay="240">
           {SOLUTIONS.map((path) => (
             <a className="solutionsHero__link" href={`#${path.id}`} key={path.id}>
-              <span>{path.number}</span>
               {path.label}
             </a>
           ))}
@@ -55,9 +54,7 @@ export default function SolutionsPage() {
                 <Photo src={path.image} alt={path.alt} sizes="(max-width: 880px) 90vw, 46vw" />
               </div>
               <div className="solutionPath__copy">
-                <p className="eyebrow">
-                  {path.number} · {path.label}
-                </p>
+                <p className="eyebrow">{path.label}</p>
                 <h2 className="h2">{path.title}</h2>
                 <p className="solutionPath__lede">{path.lede}</p>
                 <ol className="solutionPath__steps">

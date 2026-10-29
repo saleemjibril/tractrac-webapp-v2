@@ -275,10 +275,21 @@
 
 .partnersPeople__image {
   aspect-ratio: 4 / 3;
+  transition: aspect-ratio 320ms var(--ease);
 }
 
 .partnersPeople__grid figure:nth-child(2) .partnersPeople__image {
   aspect-ratio: 4 / 5;
+}
+
+@media (hover: hover) {
+  .partnersPeople__grid figure:hover .partnersPeople__image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .partnersPeople__grid:hover figure:not(:hover) .partnersPeople__image {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 .partnersPeople__grid figcaption {

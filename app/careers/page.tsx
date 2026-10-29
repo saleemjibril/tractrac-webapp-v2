@@ -8,7 +8,7 @@ import "@/styles/careers.css";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Build technology and partnerships that put mechanization in reach of smallholder farmers across Nigeria and Sub-Saharan Africa.",
+    "Build technology and partnerships that put mechanisation in reach of smallholder farmers across Nigeria and Sub-Saharan Africa.",
   openGraph: { images: [asset("uploads/DSC02329.jpg")] },
 };
 
@@ -18,7 +18,7 @@ const WHY_JOIN = [
     items: [
       {
         strong: "Be part of food security solutions:",
-        text: "contribute to transforming smallholder farming across Africa through technology and mechanization.",
+        text: "contribute to transforming smallholder farming across Africa through technology and mechanisation.",
       },
       {
         strong: "Inclusive innovation:",
@@ -73,7 +73,7 @@ export default function CareersPage() {
           Join the Humans of TracTrac
         </h1>
         <p className="careersHero__lede" data-reveal data-delay="180">
-          Build technology and partnerships that put mechanization in reach of smallholder farmers
+          Build technology and partnerships that put mechanisation in reach of smallholder farmers
           across Nigeria and Sub-Saharan Africa.
         </p>
         <div className="careersHero__cta" data-reveal data-delay="260">
@@ -90,7 +90,7 @@ export default function CareersPage() {
             <div data-reveal>
               <h2>Job Listings</h2>
               <p className="careersRoles__lede">
-                Explore current openings and find a role where your skills advance mechanization
+                Explore current openings and find a role where your skills advance mechanisation
                 for smallholder farmers.
               </p>
               <div className="careersRoleList">
@@ -214,7 +214,7 @@ export default function CareersPage() {
           <div className="careersLife__head" data-reveal>
             <span className="careersLife__pill">Culture</span>
             <h2>Life at TracTrac</h2>
-            <p>Field days, workshops, and the people powering mechanization across Africa.</p>
+            <p>Field days, workshops, and the people powering mechanisation across Africa.</p>
           </div>
           <div className="careersLife__top">
             <div className="media media--rounded careersLife__big" data-reveal="img">

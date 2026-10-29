@@ -1,0 +1,68 @@
+{
+  "endpoint": "https://api.tractrac.co/api/v1/uploads/images",
+  "settings": {
+    "folder": "images",
+    "optimize": "true",
+    "quality": "high",
+    "generate_thumbnail": "false",
+    "preserve_format": "true"
+  },
+  "photos": {
+    "DSC09882.jpg": {
+      "remote": "https://api.tractrac.co/media/images/0145a327-c3d5-474b-a74a-f48140ae0aa2.jpg",
+      "filename": "DSC09882.jpg",
+      "bytes": 2927807,
+      "sha256": "68f1e537888ed8fefc75ebddde647803d873b932162a651cdb6835a71d7f626f",
+      "uploadedAt": "2026-10-28T16:11:56.194Z",
+      "verified": true
+    },
+    "DSC00579.jpg": {
+      "remote": "https://api.tractrac.co/media/images/c14530a4-e0cf-43a6-a47c-f439be6d6a55.jpg",
+      "filename": "DSC00579.jpg",
+      "bytes": 4556461,
+      "sha256": "843a06659de25ba89454bbe816448cc27983b52e30e4bcd04ab03ebe82e35c4f",
+      "uploadedAt": "2026-10-28T16:12:04.268Z",
+      "verified": true
+    },
+    "DSC00574.jpg": {
+      "remote": "https://api.tractrac.co/media/images/322eac12-3cfb-4f26-b3a0-46d160b449da.jpg",
+      "filename": "DSC00574.jpg",
+      "bytes": 5206336,
+      "sha256": "006dde735f806333000e7bb9769a74e640dddb6dc35e875f87017a0a3bc326bb",
+      "uploadedAt": "2026-10-28T16:12:12.505Z",
+      "verified": true
+    },
+    "DSC00415.jpg": {
+      "remote": "https://api.tractrac.co/media/images/05567092-5cdd-41c1-ad46-f30546d34045.jpg",
+      "filename": "DSC00415.jpg",
+      "bytes": 2708931,
+      "sha256": "8f6102694d351ed91d6f3d136867599c6d2d8fc19832dec21ff21dc69a6ce71b",
+      "uploadedAt": "2026-10-28T16:12:19.249Z",
+      "verified": true
+    },
+    "DSC00265.jpg": {
+      "remote": "https://api.tractrac.co/media/images/14ca1518-3659-4489-a590-32f3c54ee329.jpg",
+      "filename": "DSC00265.jpg",
+      "bytes": 3483219,
+      "sha256": "4c4ca179cb2acbc7f37ce32886a946215dd0ecb2722afab09b392bfcaf3b5526",
+      "uploadedAt": "2026-10-28T16:12:24.524Z",
+      "verified": true
+    },
+    "DSC00127 (1).jpg": {
+      "remote": "https://api.tractrac.co/media/images/60102fa8-5f5b-4ca3-9d90-929a3ed12bba.jpg",
+      "filename": "DSC00127 (1).jpg",
+      "bytes": 2632272,
+      "sha256": "c689de411184eb4596c08a6c36fe79d6ffb4cdd044a5117159c8d6f095515e52",
+      "uploadedAt": "2026-10-28T16:12:29.183Z",
+      "verified": true
+    },
+    "DSC00001.jpg": {
+      "remote": "https://api.tractrac.co/media/images/54a41d9a-c9fa-4dfa-be8e-f81d5eed020c.jpg",
+      "filename": "DSC00001.jpg",
+      "bytes": 2153335,
+      "sha256": "cba157c5a1c0cb03ddd5da8c18dbc3be8951aeb86caf6bc4b576b6edae70d1b8",
+      "uploadedAt": "2026-10-28T16:12:34.975Z",
+      "verified": true
+    }
+  }
+}

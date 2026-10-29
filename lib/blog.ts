@@ -30,6 +30,13 @@ type BlogResponse = {
   };
 };
 
+/** Blog titles and excerpts occasionally use US spelling; the site uses British. */
+function britishSpelling(value: string) {
+  return value
+    .replace(/Mechanization/g, "Mechanisation")
+    .replace(/mechanization/g, "mechanisation");
+}
+
 /** Fetch the published blog feed. Returns an empty list if the API is down. */
 export async function getBlogPosts(limit = 100): Promise<BlogPost[]> {
   try {
@@ -45,6 +52,11 @@ export async function getBlogPosts(limit = 100): Promise<BlogPost[]> {
     };
     return json.data
       .filter((post) => post?.slug && post?.title)
+      .map((post) => ({
+        ...post,
+        title: britishSpelling(post.title),
+        excerpt: britishSpelling(post.excerpt ?? ""),
+      }))
       .sort((a, b) => timestamp(b) - timestamp(a));
   } catch {
     return [];
@@ -56,7 +68,10 @@ export function postHref(post: BlogPost) {
 }
 
 export function postImage(post: BlogPost) {
-  return post.featuredImage?.node?.sourceUrl ?? null;
+  const src = post.featuredImage?.node?.sourceUrl ?? null;
+  // The old WordPress host serves multi-megabyte PNGs that the image
+  // optimizer times out on, which leaves blank cards. Omit them for now.
+  return src && !src.includes("msps.tractrac.co") ? src : null;
 }
 
 export function postImageAlt(post: BlogPost) {

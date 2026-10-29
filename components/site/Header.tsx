@@ -9,8 +9,7 @@ import { BRAND, CTAS, NAV, type NavItem } from "@/content/site";
 const ACTIVE_PREFIX: Record<string, string> = {
   Solutions: "/solutions",
   Technology: "/technology",
-  Programmes: "/programmes",
-  Impact: "/impact",
+  Programs: "/programmes",
   Partners: "/partners",
   Blog: "/blog",
 };
@@ -28,8 +27,8 @@ function isGroupActive(item: NavItem, pathname: string) {
       (path) => pathname === path || pathname.startsWith(`${path}/`),
     );
   }
-  if (item.label === "Impact") {
-    return ["/impact", "/stories"].some(
+  if (item.label === "Blog") {
+    return ["/blog", "/resources"].some(
       (path) => pathname === path || pathname.startsWith(`${path}/`),
     );
   }
@@ -245,7 +244,7 @@ export default function Header() {
                           href="/programmes"
                           onClick={() => setMobileOpen(false)}
                         >
-                          All programmes
+                          All programs
                         </Link>
                       ) : null}
                       {(item.links ?? []).map((link) => (

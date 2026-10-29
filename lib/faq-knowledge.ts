@@ -59,7 +59,7 @@ TracTrac is a Nigerian agricultural mechanisation company. We connect smallholde
 - TracTrac Plus on the App Store: ${BRAND.appStoreUrl}
 
 ## Website pages
-Home /, About /about, Team /team, Impact /impact, Careers /careers, Blog /blog, Partners /partners, Programmes /programmes, Technology /technology, Privacy Policy /privacy-policy, Terms /terms-and-conditions.
+Home /, About /about, Team /team, Impact /impact, Careers /careers, Blog /blog, Partners /partners, Programs /programmes, Technology /technology, Privacy Policy /privacy-policy, Terms /terms-and-conditions.
 Primary website calls to action: ${CTAS.primary.label} and ${CTAS.secondary.label}.
 
 ## Impact at a glance
@@ -67,9 +67,9 @@ ${stats}.
 ISSAM MSPs have worked 8,720 hectares of farmland.
 ISSAM coverage is reported across Kaduna and Nasarawa states, 23 LGAs and about 146,170 registered farmers.
 
-## Programmes
+## Programs
 ${programmes}
-Featured programme stories:
+Featured program stories:
 ${showcases}
 
 ## Equipment and services

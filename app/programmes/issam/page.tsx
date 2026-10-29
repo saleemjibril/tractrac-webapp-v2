@@ -150,7 +150,7 @@ export default function IssamPage() {
         innerClassName="issamHero__inner"
       >
         <Link className="programmeHero__back" href="/programmes">
-          ← Programmes
+          ← Programs
         </Link>
         <h1 className="display2" data-reveal data-delay="80">
           ISSAM
@@ -174,7 +174,7 @@ export default function IssamPage() {
           </div>
           <div>
             <dt>Duration</dt>
-            <dd>Five-year programme</dd>
+            <dd>Five-year program</dd>
           </div>
         </dl>
       </Hero>

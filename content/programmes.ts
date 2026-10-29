@@ -43,9 +43,9 @@ export const PROGRAMMES: ProgrammeCard[] = [
     slug: "traxcellerate",
     name: "TRAxCelerate",
     shortName: "TRAxCelerate",
-    category: "Programme delivery",
+    category: "Program delivery",
     description:
-      "TracTrac's programme design and delivery arm, training, certifying, equipping and organising MSPs into cooperatives.",
+      "TracTrac's program design and delivery arm, training, certifying, equipping and organising MSPs into cooperatives.",
     image: asset("uploads/imageye___-_imgi_3_2dd4a135-c846-4e1b-81fc-918e6868a96f.png"),
     alt: "TRAxCelerate key visual with photos of trainees in orange TracTrac shirts",
   },
@@ -435,7 +435,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
         eyebrow: "Impact",
         title: "Measuring Progress and Real Results",
         intro:
-          "Rise7 tracks measurable outcomes that show how the programme strengthens mechanisation, boosts productivity, and drives economic growth across rural communities.",
+          "Rise7 tracks measurable outcomes that show how the program strengthens mechanisation, boosts productivity, and drives economic growth across rural communities.",
         background: "cream",
         columns: 4,
         cardSize: "roomy",

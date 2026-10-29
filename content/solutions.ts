@@ -35,7 +35,7 @@ export const SOLUTIONS: SolutionPath[] = [
     ],
     image: asset("uploads/Copy of DSC08691.jpg"),
     alt: "An operator working farmland with a TracTrac tractor and disc plough",
-    cta: { label: "Find Mechanisation", href: "/#final" },
+    cta: { label: "Find Mechanisation", href: "/technology#download" },
   },
   {
     id: "owners",
@@ -77,7 +77,7 @@ export const SOLUTIONS: SolutionPath[] = [
     lede:
       "Develop your skills, reach more farmers and grow a business providing mechanisation services.",
     steps: [
-      "Train in operation, maintenance and running a mechanisation business through TracTrac programmes.",
+      "Train in operation, maintenance and running a mechanisation business through TracTrac programs.",
       "Receive bookings from agents and deliver services on the ground with owned or leased equipment.",
       "Use your job history to reach more farmers and access finance for more equipment.",
     ],

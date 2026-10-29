@@ -216,7 +216,7 @@ export default function ProgrammeStandardPage({ programme }: { programme: Standa
         innerClassName="programmeHero__inner"
       >
         <Link className="programmeHero__back" href="/programmes">
-          ← Programmes
+          ← Programs
         </Link>
         <p className="eyebrow" data-reveal>
           {programme.eyebrow}

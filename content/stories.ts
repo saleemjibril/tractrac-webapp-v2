@@ -319,7 +319,7 @@ export const STORIES: Story[] = [
       },
       {
         src: asset("uploads/DSC02281.jpg"),
-        alt: "TracTrac and Mastercard Foundation programme team at a mechanisation service provider onboarding event",
+        alt: "TracTrac and Mastercard Foundation program team at a mechanisation service provider onboarding event",
       },
       {
         src: asset("uploads/Copy of DSC08691.jpg"),

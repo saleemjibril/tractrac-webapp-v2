@@ -21,13 +21,13 @@ const PARTNER_TYPES = [
   {
     number: "01",
     title: "Development partners",
-    body: "Programmes, funding and technical support that extend access and inclusion.",
+    body: "Programs, funding and technical support that extend access and inclusion.",
     names: "Mastercard Foundation",
   },
   {
     number: "02",
     title: "Government & public institutions",
-    body: "Policy, systems and programmes that support agricultural mechanisation.",
+    body: "Policy, systems and programs that support agricultural mechanisation.",
     names:
       "Federal Ministry of Agriculture and Food Security · National Centre for Agricultural Mechanization",
   },
@@ -40,7 +40,7 @@ const PARTNER_TYPES = [
   {
     number: "04",
     title: "Implementation partners",
-    body: "Organisations involved in delivering programme activity on the ground, including the ISSAM equipment distribution.",
+    body: "Organisations involved in delivering program activity on the ground, including the ISSAM equipment distribution.",
     names: "The ETK Group · WIMA · Sane Konsult",
   },
 ];
@@ -61,17 +61,17 @@ const WAYS_TO_PARTNER = [
     kicker: "Finance and Investment",
     title: "Capital for the businesses behind mechanisation.",
     body: "Mechanisation services need capital: equipment finance for service providers, working capital for operations and long-term investment in the platform. We work with financial institutions and investors to put that capital to work.",
-    points: ["Equipment finance for service providers", "Investment in TracTrac", "Blended finance programmes"],
+    points: ["Equipment finance for service providers", "Investment in TracTrac", "Blended finance programs"],
     cta: { label: "Talk to our team", href: "#contact" },
   },
   {
     id: "development-partners",
     number: "03",
     kicker: "Development Partners",
-    title: "Programmes that extend access and inclusion.",
-    body: "Foundations, donors and multilateral organisations work with TracTrac to design and deliver programmes such as ISSAM, delivered with Mastercard Foundation, that bring mechanisation to young people, women and smallholder farmers.",
-    points: ["Programme design and delivery", "Youth and women inclusion", "Monitoring and impact reporting"],
-    cta: { label: "See our programmes", href: "/programmes" },
+    title: "Programs that extend access and inclusion.",
+    body: "Foundations, donors and multilateral organisations work with TracTrac to design and deliver programs such as ISSAM, delivered with Mastercard Foundation, that bring mechanisation to young people, women and smallholder farmers.",
+    points: ["Program design and delivery", "Youth and women inclusion", "Monitoring and impact reporting"],
+    cta: { label: "See our programs", href: "/programmes" },
   },
 ];
 
@@ -82,7 +82,7 @@ const STORIES = [
     title: "Building youth-led mechanisation services.",
     paragraphs: [
       "ISSAM is a strategic partnership between TracTrac Mechanisation Services Limited and the Mastercard Foundation.",
-      "The partnership supports TracTrac’s ISSAM programme to improve access to small-scale mechanisation for smallholder farmers while building the capacity of youth-led Mechanisation Service Providers.",
+      "The partnership supports TracTrac’s ISSAM program to improve access to small-scale mechanisation for smallholder farmers while building the capacity of youth-led Mechanisation Service Providers.",
     ],
     image: "img/prog-3.jpg",
     alt: "Trainees in ISSAM coveralls and helmets during practical equipment training",
@@ -151,7 +151,7 @@ export default function PartnersPage() {
     <main id="main" className="pageMain">
       <Hero
         image={asset("uploads/DSC02281.jpg")}
-        imageAlt="TracTrac and Mastercard Foundation programme team at a mechanisation service provider onboarding event"
+        imageAlt="TracTrac and Mastercard Foundation program team at a mechanisation service provider onboarding event"
         priority
         size="tall"
         className="partnersHero"
@@ -335,8 +335,8 @@ export default function PartnersPage() {
               <h2 className="h2">What the ISSAM partnership has delivered.</h2>
             </div>
             <p className="partnersImpact__lede">
-              Figures from the ISSAM programme, delivered by TracTrac in partnership with the
-              Mastercard Foundation. These are programme outcomes, not company-wide totals.
+              Figures from the ISSAM program, delivered by TracTrac in partnership with the
+              Mastercard Foundation. These are program outcomes, not company-wide totals.
             </p>
           </div>
           <div className="partnersImpact__stats">
@@ -361,9 +361,9 @@ export default function PartnersPage() {
           <div className="partnersPeople__grid">
             {[
               [
-                "uploads/WhatsApp Image 2026-09-24 at 14.35.20.jpeg",
-                "Young people at a TracTrac and Federal Ministry of Agriculture and Food Security youth event",
-                "Youth in mechanisation event with the Federal Ministry of Agriculture and Food Security",
+                "https://api.tractrac.co/media/images/654949b2-9925-4f5b-8f32-95e9bec92a3d.jpg",
+                "Officials holding copies of the National Agricultural Mechanisation Policy 2026 at its launch",
+                "National Agricultural Mechanisation Policy 2026 launch",
               ],
               [
                 "img/prog-2.jpg",
@@ -371,14 +371,14 @@ export default function PartnersPage() {
                 "ISSAM practical training",
               ],
               [
-                "uploads/IMG-20260824-WA0147.jpg",
-                "A TracTrac team member interviewing an MSP",
-                "Field engagement with an MSP",
+                "https://api.tractrac.co/media/images/1b53475c-3399-4aa5-8579-7c7d820eaf23.jpg",
+                "TracTrac staff and guests on stage at the TracTrac Investment Roadshow 2026",
+                "TracTrac Investment Roadshow 2026",
               ],
             ].map(([src, alt, caption], index) => (
               <figure key={src} data-reveal data-delay={index * 100}>
                 <div className="media media--rounded partnersPeople__image">
-                  <Photo src={asset(src)} alt={alt} sizes="30vw" />
+                  <Photo src={src.startsWith("http") ? src : asset(src)} alt={alt} sizes="30vw" />
                 </div>
                 <figcaption>{caption}</figcaption>
               </figure>

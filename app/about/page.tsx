@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Leadership from "@/components/about/Leadership";
+import PeopleSlider from "@/components/about/PeopleSlider";
 import Hero from "@/components/ui/Hero";
 import Photo from "@/components/ui/Photo";
+import { ABOUT_PEOPLE } from "@/content/about-people";
 import { asset } from "@/lib/asset";
 import "@/styles/about.css";
 
@@ -71,7 +73,7 @@ const VALUES = [
 
 const MILESTONES = [
   {
-    date: "2023",
+    date: "October 2023",
     title: "ISSAM begins",
     body: "TracTrac and the Mastercard Foundation start the ISSAM project, planned to run to 2028 across two phases.",
   },
@@ -81,9 +83,9 @@ const MILESTONES = [
     body: "ISSAM distributes Tryctors, ploughs, harrows, planters and tractor buckets to farmer cooperatives in Nasarawa and Kaduna.",
   },
   {
-    date: "9 March 2026",
+    date: "March 2026",
     title: "Inclusive mechanisation strategy",
-    body: "TracTrac launches its Inclusive Agricultural Mechanization Strategy at a convening aligned with International Women’s Day.",
+    body: "TracTrac launches its Inclusive Agricultural Mechanisation Strategy at a convening aligned with International Women’s Day.",
   },
   {
     date: "August 2026",
@@ -116,7 +118,7 @@ const BUILT = [
   {
     title: "Equipment deployment",
     body: "Tractors, implements and labour-saving devices placed where farmers need them.",
-    href: "/impact",
+    href: "/programmes/issam",
   },
   {
     title: "Financing pathways",
@@ -124,7 +126,7 @@ const BUILT = [
     href: "/programmes/tracinvest",
   },
   {
-    title: "Programmes",
+    title: "Programs",
     body: "Structured initiatives including ISSAM, Young People in Mechanisation and TRAxCelerate.",
     href: "/programmes",
   },
@@ -263,7 +265,7 @@ export default function AboutPage() {
           <div className="grid2 aboutMilestones__head">
             <h2 className="display3">Recent milestones.</h2>
             <p className="prose muted">
-              A selection of documented milestones from TracTrac’s programme and policy work.
+              A selection of documented milestones from TracTrac’s program and policy work.
             </p>
           </div>
           <div className="aboutMilestones__grid">
@@ -344,27 +346,12 @@ export default function AboutPage() {
               <h2>The people behind the work.</h2>
             </div>
             <p className="prose muted">
-              TracTrac’s team works across technology, field operations, programmes, partnerships
+              TracTrac’s team works across technology, field operations, programs, partnerships
               and mechanisation services, alongside the operators, agents and MSPs who deliver the
               work on the ground.
             </p>
           </div>
-          <div className="grid2 aboutPeopleIntro__images">
-            <div className="media media--rounded" data-reveal="img">
-              <Photo
-                src={asset("uploads/WhatsApp Image 2026-09-24 at 14.35.20.jpeg")}
-                alt="TracTrac team and young participants at a youth in mechanisation event"
-                sizes="(max-width: 880px) 90vw, 45vw"
-              />
-            </div>
-            <div className="media media--rounded" data-reveal="img" data-delay="100">
-              <Photo
-                src={asset("uploads/DSC02281.jpg")}
-                alt="TracTrac programme team at an MSP onboarding event"
-                sizes="(max-width: 880px) 90vw, 45vw"
-              />
-            </div>
-          </div>
+          <PeopleSlider photos={ABOUT_PEOPLE} />
         </div>
       </section>
 
@@ -427,9 +414,9 @@ export default function AboutPage() {
               Partner With Us
             </Link>
             <Link className="btn btn--outline" href="/programmes">
-              Explore Our Programmes
+              Explore Our Programs
             </Link>
-            <Link className="btn btn--outline" href="/technology">
+            <Link className="btn btn--outline" href="/technology#download">
               Find Mechanisation
             </Link>
           </div>

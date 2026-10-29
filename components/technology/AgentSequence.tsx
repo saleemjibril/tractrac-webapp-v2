@@ -22,10 +22,15 @@ export default function AgentSequence() {
     if (!wrap || !stage) return;
 
     const items = Array.from(wrap.querySelectorAll<HTMLElement>("[data-ag-item]"));
+    const row = wrap.querySelector<HTMLElement>(".techAgent__row");
+    const phones = items.map((item) =>
+      item.querySelector<HTMLElement>(".techAgent__phone"),
+    );
     const videos = items.map((item) => item.querySelector<HTMLVideoElement>("video"));
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const mobileQuery = window.matchMedia("(max-width: 980px)");
     const n = items.length;
+    let mobileIndex = 0;
 
     videos.forEach((video) => {
       if (!video) return;
@@ -50,41 +55,85 @@ export default function AgentSequence() {
     let visible = true;
 
     const update = () => {
-      const rect = wrap.getBoundingClientRect();
-      const stageRect = stage.getBoundingClientRect();
-      const viewport = window.innerHeight || stageRect.height;
-      const total = rect.height - Math.min(stageRect.height, viewport);
-      const enter = clamp((viewport - rect.top) / (viewport * 0.85));
-      const progress = total > 0 ? clamp(-rect.top / total) : 0;
-      // One scroll segment per mockup, so the last mockup gets a full turn.
-      const position = progress * n;
-      const seg = Math.min(n - 1, Math.floor(position));
-      const local = clamp(position - seg);
-      const transition = seg >= n - 1 ? 0 : smoothstep((local - 0.9) / 0.1);
       const mobile = mobileQuery.matches;
+      let seg = 0;
+      let local = 0;
+      let transition = 0;
+      let enter = 0;
+      let progress = 0;
+
+      if (mobile) {
+        // On mobile the row is a one-at-a-time carousel; the figure nearest
+        // the centre of the viewport is the one playing.
+        if (row) {
+          const rowRect = row.getBoundingClientRect();
+          const centre = rowRect.left + rowRect.width / 2;
+          let closest = Number.POSITIVE_INFINITY;
+          items.forEach((item, index) => {
+            const rect = item.getBoundingClientRect();
+            const distance = Math.abs(rect.left + rect.width / 2 - centre);
+            if (distance < closest) {
+              closest = distance;
+              mobileIndex = index;
+            }
+          });
+        }
+      } else {
+        const rect = wrap.getBoundingClientRect();
+        const stageRect = stage.getBoundingClientRect();
+        const viewport = window.innerHeight || stageRect.height;
+        const total = rect.height - Math.min(stageRect.height, viewport);
+        enter = clamp((viewport - rect.top) / (viewport * 0.85));
+        progress = total > 0 ? clamp(-rect.top / total) : 0;
+        // One scroll segment per mockup, so the last mockup gets a full turn.
+        const position = progress * n;
+        seg = Math.min(n - 1, Math.floor(position));
+        local = clamp(position - seg);
+        transition = seg >= n - 1 ? 0 : smoothstep((local - 0.9) / 0.1);
+      }
 
       items.forEach((item, index) => {
         const active = mobile ? 1 : index === seg ? 1 - transition : index === seg + 1 ? transition : 0;
         const rise = mobile ? 0 : (1 - smoothstep(enter * 1.5 - index * 0.2)) * 56;
-        item.style.opacity = (0.42 + 0.58 * active).toFixed(3);
-        item.style.transform = `translate3d(0,${rise.toFixed(1)}px,0) scale(${(0.94 + 0.06 * active).toFixed(4)})`;
+        item.style.opacity = (mobile ? (index === mobileIndex ? 1 : 0.55) : 0.42 + 0.58 * active).toFixed(3);
+        item.style.transform = `translate3d(0,${rise.toFixed(1)}px,0)`;
+        const phone = phones[index];
+        if (phone) {
+          phone.style.transform = `scale(${(mobile ? 1 : 0.86 + 0.26 * active).toFixed(4)})`;
+        }
         const bar = item.querySelector<HTMLElement>("[data-ag-bar]");
         if (bar) {
-          bar.style.width = `${(mobile ? 100 : clamp(position - index) * 100).toFixed(2)}%`;
+          bar.style.width = mobile
+            ? index === mobileIndex
+              ? "100%"
+              : "0%"
+            : `${(clamp(progress - index) * 100).toFixed(2)}%`;
         }
       });
 
-      videos.forEach((video, index) => {
-        if (!video) return;
+      videos.forEach((video) => {
+        if (video) video.loop = !mobile;
+      });
 
-        if (mobile) {
-          if (visible) {
+      if (mobile) {
+        videos.forEach((video, index) => {
+          if (!video) return;
+          if (!visible) {
+            if (!video.paused) video.pause();
+            return;
+          }
+          if (index === mobileIndex) {
+            if (video.ended) video.currentTime = 0;
             if (video.paused) void video.play().catch(() => {});
           } else if (!video.paused) {
             video.pause();
           }
-          return;
-        }
+        });
+        return;
+      }
+
+      videos.forEach((video, index) => {
+        if (!video) return;
 
         if (!video.paused) video.pause();
         if (!visible) return;
@@ -107,6 +156,25 @@ export default function AgentSequence() {
           video.currentTime = target;
         }
       });
+    };
+
+    const scrollToIndex = (index: number) => {
+      const figure = items[index];
+      if (!row || !figure) return;
+      const rowRect = row.getBoundingClientRect();
+      const figureRect = figure.getBoundingClientRect();
+      row.scrollTo({
+        left: row.scrollLeft + figureRect.left - rowRect.left,
+        behavior: "smooth",
+      });
+    };
+
+    const onEnded = (event: Event) => {
+      if (!mobileQuery.matches || !visible) return;
+      const video = event.currentTarget as HTMLVideoElement;
+      const index = videos.indexOf(video);
+      if (index !== mobileIndex) return;
+      scrollToIndex((index + 1) % n);
     };
 
     const onScroll = () => {
@@ -132,8 +200,10 @@ export default function AgentSequence() {
       video?.addEventListener("loadedmetadata", onScroll);
       video?.addEventListener("loadeddata", onScroll);
       video?.addEventListener("seeked", onScroll);
+      video?.addEventListener("ended", onEnded);
     });
 
+    row?.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     update();
@@ -141,12 +211,14 @@ export default function AgentSequence() {
     return () => {
       cancelAnimationFrame(frame);
       observer.disconnect();
+      row?.removeEventListener("scroll", onScroll);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
       videos.forEach((video) => {
         video?.removeEventListener("loadedmetadata", onScroll);
         video?.removeEventListener("loadeddata", onScroll);
         video?.removeEventListener("seeked", onScroll);
+        video?.removeEventListener("ended", onEnded);
         video?.pause();
       });
     };

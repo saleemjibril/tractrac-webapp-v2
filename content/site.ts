@@ -34,10 +34,10 @@ export const NAV: NavItem[] = [
     ],
   },
   {
-    label: "Programmes",
+    label: "Programs",
     wide: true,
     href: "/programmes",
-    feature: { label: "All programmes →", href: "/programmes", description: "Overview" },
+    feature: { label: "All programs →", href: "/programmes", description: "Overview" },
     links: [
       {
         label: "ISSAM",
@@ -52,7 +52,7 @@ export const NAV: NavItem[] = [
       {
         label: "TRAxCelerate",
         href: "/programmes/traxcellerate",
-        description: "Programme design and delivery",
+        description: "Program design and delivery",
       },
       {
         label: "TRACINVEST",
@@ -64,12 +64,8 @@ export const NAV: NavItem[] = [
     ],
   },
   {
-    label: "Impact",
-    href: "/impact",
-    links: [
-      { label: "Our Impact", href: "/impact" },
-      { label: "Stories from the Field", href: "/stories" },
-    ],
+    label: "Stories",
+    href: "/stories",
   },
   {
     label: "Partners",
@@ -85,7 +81,7 @@ export const NAV: NavItem[] = [
     href: "/blog",
     links: [
       { label: "Stories and News", href: "/blog" },
-      { label: "Research and Resources", href: "/blog" },
+      { label: "Research and Resources", href: "/resources" },
     ],
   },
   {
@@ -100,7 +96,7 @@ export const NAV: NavItem[] = [
 
 export const CTAS = {
   secondary: { label: "Partner With Us", href: "/partners#contact" },
-  primary: { label: "Find Mechanisation", href: "/#final" },
+  primary: { label: "Find Mechanisation", href: "/technology#download" },
 };
 
 export const BRAND = {
@@ -122,7 +118,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "TracTrac",
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Our Impact", href: "/impact" },
+      { label: "Stories from the Field", href: "/stories" },
       { label: "Careers", href: "/careers" },
       { label: "Contact Us", href: "/#final" },
     ],
@@ -144,9 +140,9 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     ],
   },
   {
-    title: "Programmes",
+    title: "Programs",
     links: [
-      { label: "All programmes", href: "/programmes" },
+      { label: "All programs", href: "/programmes" },
       { label: "ISSAM", href: "/programmes/issam" },
       {
         label: "Young People in Mechanisation",
@@ -171,7 +167,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Resources",
     links: [
       { label: "Stories and News", href: "/blog" },
-      { label: "Research and Resources", href: "/blog" },
+      { label: "Research and Resources", href: "/resources" },
       { label: "FAQs", href: "/#faq" },
     ],
   },

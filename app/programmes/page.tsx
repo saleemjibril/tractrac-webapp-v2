@@ -7,9 +7,9 @@ import { asset } from "@/lib/asset";
 import "@/styles/programmes.css";
 
 export const metadata: Metadata = {
-  title: "Programmes",
+  title: "Programs",
   description:
-    "TracTrac's programmes train young people, organise them into service businesses and put small-scale equipment to work for smallholder farmers.",
+    "TracTrac's programs train young people, organise them into service businesses and put small-scale equipment to work for smallholder farmers.",
   openGraph: { images: [asset("img/prog-2.jpg")] },
 };
 
@@ -25,13 +25,13 @@ export default function ProgrammesPage() {
         className="programmesHero"
       >
         <p className="eyebrow" data-reveal>
-          Programmes
+          Programs
         </p>
         <h1 className="display2 programmesHero__title" data-reveal data-delay="80">
           Building mechanisation where farmers are.
         </h1>
         <p className="programmesHero__lede" data-reveal data-delay="180">
-          TracTrac&apos;s programmes train young people, organise them into service businesses and
+          TracTrac&apos;s programs train young people, organise them into service businesses and
           put small-scale equipment to work for smallholder farmers.
         </p>
       </Hero>
@@ -40,14 +40,14 @@ export default function ProgrammesPage() {
         <div className="wrap">
           <div className="grid2 programmesIndex__head">
             <div>
-              <p className="eyebrow">Our programmes</p>
+              <p className="eyebrow">Our programs</p>
               <h2 className="display3 programmesIndex__title">
-                Programmes built around the people who make mechanisation work.
+                Programs built around the people who make mechanisation work.
               </h2>
             </div>
             <p className="prose muted">
               From farmers and young people to service providers, cooperatives and investors, each
-              programme tackles a different part of the mechanisation system.
+              program tackles a different part of the mechanisation system.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function ProgrammesPage() {
                     className="programmeCard__link"
                     href={`/programmes/${programme.slug}`}
                   >
-                    View programme
+                    View program
                   </Link>
                 </div>
               </article>
@@ -92,7 +92,7 @@ export default function ProgrammesPage() {
         </div>
         <div className="programmesCta__shade" aria-hidden="true" />
         <div className="wrap programmesCta__inner">
-          <h2 data-reveal>Partner with TracTrac on a programme.</h2>
+          <h2 data-reveal>Partner with TracTrac on a program.</h2>
           <Link className="btn btn--primary btn--lg" href="/partners#contact" data-reveal data-delay="80">
             Partner With Us
           </Link>

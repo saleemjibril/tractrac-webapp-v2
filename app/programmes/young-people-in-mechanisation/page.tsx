@@ -56,7 +56,7 @@ export default function YoungPeoplePage() {
         innerClassName="programmeHero__inner"
       >
         <Link className="programmeHero__back" href="/programmes">
-          ← Programmes
+          ← Programs
         </Link>
         <h1 className="display2 programmeHero__title" data-reveal data-delay="80">
           Young People in Mechanisation

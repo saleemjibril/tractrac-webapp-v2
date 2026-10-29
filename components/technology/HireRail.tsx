@@ -82,26 +82,9 @@ export default function HireRail() {
           <h2>Machinery for the job you need done.</h2>
         </div>
         <p>
-          From land preparation to planting and crop protection, find the machinery and services
-          you need for the work ahead.
+          From tractors and farm implements to labour-saving devices, find what you need for every
+          season.
         </p>
-      </div>
-      <div className="wrap techHire__intro">
-        <div>
-          <p>Tractors and mechanisation services</p>
-          <p>
-            Hire a Tractor lists machines by type, brand, capacity and location &mdash; utility,
-            compact, row crop, 4WD, crawler, orchard, rotary tiller and garden tractors, from 50 to
-            135 HP.
-          </p>
-        </div>
-        <div>
-          <p>Agro-tools, implements and other services</p>
-          <p>
-            Other Services covers the smaller equipment booked the same way: sprayers, applicators,
-            planters, threshers and the implements matched to a tractor.
-          </p>
-        </div>
       </div>
       <div
         className="techHire__rail"

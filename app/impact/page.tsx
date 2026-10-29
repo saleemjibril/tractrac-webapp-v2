@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Fragment } from "react";
 import CountUp from "@/components/ui/CountUp";
 import Hero from "@/components/ui/Hero";
@@ -184,6 +185,9 @@ const STORIES = [
 ];
 
 export default function ImpactPage() {
+  // Hidden for now. Remove this guard to bring the page back.
+  notFound();
+
   return (
     <main id="main" className="pageMain">
       <Hero
@@ -261,7 +265,6 @@ export default function ImpactPage() {
             </div>
             <div>
               <p className="impactNumberEyebrow" data-reveal>
-                <span>01</span>
                 <span>Farmers</span>
               </p>
               <h2 className="h2" data-reveal data-delay="80">
@@ -288,7 +291,7 @@ export default function ImpactPage() {
                 </p>
                 <p>Demand fulfilment rate. 7,872 of 8,577 service requests fulfilled.</p>
               </div>
-              <p className="impactNote">ISSAM programme figures.</p>
+              <p className="impactNote">ISSAM program figures.</p>
             </div>
           </div>
         </div>
@@ -297,7 +300,6 @@ export default function ImpactPage() {
       <section className="impactPeople on-dark">
         <div className="wrap">
           <p className="impactNumberEyebrow" data-reveal>
-            <span>02</span>
             <span>People</span>
           </p>
           <div className="grid2 impactPeople__head">
@@ -334,7 +336,7 @@ export default function ImpactPage() {
             ))}
           </div>
           <div className="impactTagWrap">
-            <span className="impactTag">ISSAM programme</span>
+            <span className="impactTag">ISSAM program</span>
           </div>
         </div>
       </section>
@@ -344,7 +346,6 @@ export default function ImpactPage() {
           <div className="grid2 impactMachines__grid">
             <div>
               <p className="impactNumberEyebrow" data-reveal>
-                <span>03</span>
                 <span>Machines</span>
               </p>
               <p className="impactGiant" data-reveal data-delay="80">
@@ -357,7 +358,7 @@ export default function ImpactPage() {
                 Small-scale machines and labour-saving devices placed with youth- and women-led
                 MSPs, so the work can happen in the community.
               </p>
-              <p className="impactCaption impactMachines__tag">ISSAM programme</p>
+              <p className="impactCaption impactMachines__tag">ISSAM program</p>
             </div>
             <div className="media media--rounded impactMachines__image" data-reveal="img">
               <Photo
@@ -394,7 +395,6 @@ export default function ImpactPage() {
       <section className="impactLand">
         <div className="wrap">
           <p className="impactNumberEyebrow" data-reveal>
-            <span>04</span>
             <span>Land and place</span>
           </p>
           <p className="impactLand__value" data-reveal data-delay="80">
@@ -449,7 +449,6 @@ export default function ImpactPage() {
           <div className="grid2 impactBusinesses__grid">
             <div>
               <p className="impactNumberEyebrow" data-reveal>
-                <span>05</span>
                 <span>Businesses</span>
               </p>
               <p className="impactGiant" data-reveal data-delay="80">
@@ -459,7 +458,7 @@ export default function ImpactPage() {
                 youth- and women-led cooperatives formed, with elections conducted.
               </p>
               <div className="impactTagWrap" data-reveal>
-                <span className="impactTag impactTag--cream">ISSAM programme</span>
+                <span className="impactTag impactTag--cream">ISSAM program</span>
               </div>
             </div>
             <div className="impactBusinesses__stats">
@@ -492,7 +491,6 @@ export default function ImpactPage() {
           <div className="grid2 impactSystems__head">
             <div>
               <p className="impactNumberEyebrow" data-reveal>
-                <span>06</span>
                 <span>Systems</span>
               </p>
               <h2 className="h2" data-reveal data-delay="80">
@@ -524,7 +522,7 @@ export default function ImpactPage() {
               </div>
             ))}
             <div className="impactTagWrap">
-              <span className="impactTag">ISSAM programme</span>
+              <span className="impactTag">ISSAM program</span>
             </div>
           </div>
         </div>
@@ -601,7 +599,7 @@ export default function ImpactPage() {
           <h2 data-reveal>See the work behind the numbers.</h2>
           <div className="impactCta__actions" data-reveal data-delay="100">
             <Link className="btn btn--primary btn--lg" href="/programmes">
-              Explore Our Programmes
+              Explore Our Programs
             </Link>
             <Link className="btn btn--outlineLight btn--lg" href="/partners#contact">
               Partner With Us
