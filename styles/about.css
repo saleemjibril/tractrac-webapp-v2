@@ -582,19 +582,15 @@
 
 .aboutCeo__portrait img,
 .aboutCeo__portrait .portraitPlaceholder {
-  transition:
-    transform 0.45s var(--ease),
-    filter 0.45s ease;
+  transition: transform 0.45s var(--ease);
 }
 
 .aboutCeo__portrait img {
   object-position: 50% 25%;
-  filter: saturate(0.92);
 }
 
 .aboutCeo:hover .aboutCeo__portrait img {
   transform: scale(1.035);
-  filter: saturate(1.05);
 }
 
 .aboutCeo:hover .aboutCeo__portrait .portraitPlaceholder {
@@ -704,10 +700,7 @@
 
 .aboutLeader__portrait img {
   object-position: 50% 25%;
-  transition:
-    transform 0.45s var(--ease),
-    filter 0.45s ease;
-  filter: saturate(0.92);
+  transition: transform 0.45s var(--ease);
 }
 
 .aboutLeader__portrait .portraitPlaceholder {
@@ -716,7 +709,6 @@
 
 .aboutLeader:hover .aboutLeader__portrait img {
   transform: scale(1.035);
-  filter: saturate(1.05);
 }
 
 .aboutLeader:hover .aboutLeader__portrait .portraitPlaceholder {

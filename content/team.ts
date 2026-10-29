@@ -121,7 +121,7 @@ export const TEAM: TeamMember[] = [
     title: "Finance Manager",
     dept: "Operations and Finance",
     linkedin: "",
-    photo: "https://api.tractrac.co/media/images/49f37230-0065-4d97-a19a-f51d1f959fdb.jpg",
+    photo: "https://api.tractrac.co/media/images/8ee37f84-ed45-48c6-9a1e-849695b9e33d.png",
     leadership: true,
     bio: [
       "Ekene leads financial management at TracTrac, overseeing budgeting, financial reporting, and controls across the organisation’s programs and operations.",
