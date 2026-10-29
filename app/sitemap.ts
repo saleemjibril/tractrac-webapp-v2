@@ -2,11 +2,14 @@ import type { MetadataRoute } from "next";
 import { PROGRAMMES } from "@/content/programmes";
 import { SITE } from "@/content/site";
 import { STORIES } from "@/content/stories";
+import { getBlogPosts } from "@/lib/blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getBlogPosts();
   const routes = [
     "",
     "/about",
+    "/contact",
     "/team",
     "/careers",
     "/careers/talent-pool",
@@ -39,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    ...posts.map((post) => ({
+      url: `${SITE.url}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }

@@ -78,7 +78,7 @@ export default function SolutionsPage() {
         <div className="wrap solutionsCta__inner">
           <p className="eyebrow">Not sure where you fit?</p>
           <h2>Talk to us and we&rsquo;ll point you to the right place in the network.</h2>
-          <Link className="btn btn--primary btn--lg" href="/#final">
+          <Link className="btn btn--primary btn--lg" href="/contact">
             Contact Us
           </Link>
         </div>

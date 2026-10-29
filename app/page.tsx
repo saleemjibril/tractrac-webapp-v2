@@ -329,7 +329,7 @@ export default async function HomePage() {
                 Enlist your equipment, complete verification and connect your machines to farmer
                 demand.
               </p>
-              <Link className="btn btn--outlineLight btn--outlineSolid" href="/solutions#owners">
+              <Link className="btn btn--outlineLight btn--outlineSolid" href="/technology#download">
                 Enlist Your Equipment
               </Link>
             </div>
@@ -347,7 +347,7 @@ export default async function HomePage() {
                 Bring farmer demand together, connect communities to available services and earn
                 while supporting the people around you.
               </p>
-              <Link className="linkUnderline" href="/solutions#agents">
+              <Link className="linkUnderline" href="/technology#download">
                 Become a Booking Agent
               </Link>
             </div>
@@ -582,14 +582,12 @@ export default async function HomePage() {
                   <p className="homeInsightCard__category">{article.category}</p>
                   <h3 className="homeInsightCard__title">{article.title}</h3>
                   <p className="homeInsightCard__excerpt">{article.excerpt}</p>
-                  <a
+                  <Link
                     className="linkUnderline homeInsightCard__link"
                     href={article.href}
-                    target="_blank"
-                    rel="noopener"
                   >
                     Read story
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -723,8 +721,8 @@ export default async function HomePage() {
             Find Mechanisation
           </Link>
           <div className="homeFinal__links">
-            <Link href="/solutions#owners">Enlist Your Equipment</Link>
-            <Link href="/solutions#agents">Become a Booking Agent</Link>
+            <Link href="/technology#download">Enlist Your Equipment</Link>
+            <Link href="/technology#download">Become a Booking Agent</Link>
             <Link href="/partners#contact">Partner With Us</Link>
           </div>
         </div>

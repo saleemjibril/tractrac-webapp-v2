@@ -6,7 +6,7 @@ import {
   formatPostDate,
   getBlogPosts,
   plainExcerpt,
-  postHref,
+  postExternalHref,
   postImage,
   postImageAlt,
 } from "@/lib/blog";
@@ -70,7 +70,7 @@ export default async function ResourcesPage() {
                 return (
                   <a
                     className="insightsCard"
-                    href={postHref(post)}
+                    href={postExternalHref(post)}
                     target="_blank"
                     rel="noopener"
                     key={post.id}

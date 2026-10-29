@@ -86,6 +86,10 @@ The programme contact forms are client-side only: they validate and show a succe
 without sending anything. `components/programmes/ProgrammeContactForm.tsx` contains the single
 submit function to wire to an email service, CRM or server action later.
 
+The `/contact` page form posts to `/api/contact`, which forwards the name, email and message to
+the TracTrac backend's `/collaborate` endpoint. Set `CONTACT_API_URL` (defaults to
+`https://tractracplus-backend-v6.onrender.com/api/v1`) to override it.
+
 The homepage FAQ assistant posts to `/api/faq`, which asks DeepSeek using a website-only
 knowledge base built in `lib/faq-knowledge.ts`. Set `DEEPSEEK_API_KEY` in `.env` (optionally
 `DEEPSEEK_MODEL`, default `deepseek-flash`). Thinking mode is explicitly disabled because FAQ

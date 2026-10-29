@@ -20,6 +20,15 @@ export type BlogPost = {
   };
 };
 
+export type BlogPostDetail = BlogPost & {
+  content: string;
+  author?: {
+    node?: {
+      name?: string;
+    };
+  };
+};
+
 type BlogResponse = {
   status?: string;
   data?: BlogPost[];
@@ -28,6 +37,11 @@ type BlogResponse = {
     totalPages: number;
     totalItems: number;
   };
+};
+
+type BlogDetailResponse = {
+  status?: string;
+  data?: BlogPostDetail;
 };
 
 /** Blog titles and excerpts occasionally use US spelling; the site uses British. */
@@ -64,7 +78,53 @@ export async function getBlogPosts(limit = 100): Promise<BlogPost[]> {
 }
 
 export function postHref(post: BlogPost) {
+  return `/blog/${post.slug}`;
+}
+
+/** The canonical post on the legacy blog site. */
+export function postExternalHref(post: BlogPost) {
   return `https://tractrac.co/blog/${post.slug}`;
+}
+
+/** Turn links to legacy blog posts into links within this site. */
+function internalizeBlogLinks(html: string) {
+  return html.replace(
+    /https?:\/\/(?:www\.)?tractrac\.co\/blog\//gi,
+    "/blog/",
+  );
+}
+
+/** Strip script tags and inline event handlers from CMS HTML. */
+function sanitizeBlogHtml(html: string) {
+  return html
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/\son\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, "");
+}
+
+export function blogContent(html: string) {
+  return sanitizeBlogHtml(internalizeBlogLinks(html)).replace(
+    />([^<]+)</g,
+    (match, text: string) => `>${britishSpelling(text)}<`,
+  );
+}
+
+export async function getBlogPost(slug: string): Promise<BlogPostDetail | null> {
+  try {
+    const response = await fetch(`${BLOG_API_BASE}/blog/${encodeURIComponent(slug)}`, {
+      next: { revalidate: 60 },
+    });
+    if (!response.ok) return null;
+    const json: BlogDetailResponse = await response.json();
+    if (!json.data?.slug) return null;
+    return {
+      ...json.data,
+      title: britishSpelling(json.data.title),
+      excerpt: britishSpelling(json.data.excerpt ?? ""),
+      content: blogContent(json.data.content ?? ""),
+    };
+  } catch {
+    return null;
+  }
 }
 
 export function postImage(post: BlogPost) {

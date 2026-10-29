@@ -7,10 +7,15 @@ const base = process.argv[2] ?? "http://localhost:3000";
 const routes = [
   ["/", "The right farm machinery"],
   ["/about", "We are building the systems"],
+  ["/contact", "Send a message"],
   ["/team", "One team. Different strengths."],
   ["/careers", "Join the Humans of TracTrac"],
   ["/careers/talent-pool", "Join our talent pool"],
   ["/blog", "What we’re learning, building"],
+  [
+    "/blog/how-a-mechanization-cooperative-works-a-plain-guide-for-nigerian-farming-groups",
+    "How a Mechanisation Cooperative Works",
+  ],
   ["/resources", "Every resource from TracTrac."],
   ["/partners", "We do more when we build together."],
   ["/programmes", "Building mechanisation where farmers are."],

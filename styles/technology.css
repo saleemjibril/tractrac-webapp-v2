@@ -750,40 +750,71 @@
 /* ---------- download ---------- */
 
 .techDownload {
+  display: flex;
+  min-height: calc(90svh / var(--site-scale, 1));
+  box-sizing: border-box;
   background: var(--cream);
+  border-top: 4px solid var(--orange);
+  scroll-margin-top: 88px;
+}
+
+.techDownload:target {
+  animation: techDownloadTarget 1.5s var(--ease);
+}
+
+@keyframes techDownloadTarget {
+  0% {
+    box-shadow: inset 0 0 0 0 rgba(243, 106, 2, 0);
+  }
+  35% {
+    box-shadow: inset 0 0 0 6px rgba(243, 106, 2, 0.9);
+  }
+  100% {
+    box-shadow: inset 0 0 0 0 rgba(243, 106, 2, 0);
+  }
 }
 
 .techDownload__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: clamp(28px, 5vw, 80px);
+  flex: 1;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 1.05fr) auto;
+  gap: clamp(32px, 6vw, 100px);
   align-items: center;
-  padding-top: clamp(48px, 6vw, 92px);
-  padding-bottom: clamp(48px, 6vw, 92px);
+  align-content: center;
+  padding-top: clamp(72px, 9vw, 148px);
+  padding-bottom: clamp(72px, 9vw, 148px);
 }
 
 .techDownload h2 {
-  max-width: 18ch;
-  margin: 16px 0 12px;
-  font: 700 clamp(28px, 3.6vw, 52px) / 1 var(--font-sans);
-  letter-spacing: -0.03em;
+  max-width: 16ch;
+  margin: 18px 0 16px;
+  font: 700 clamp(38px, 5.4vw, 78px) / 0.98 var(--font-sans);
+  letter-spacing: -0.035em;
 }
 
-.techDownload p {
-  max-width: 48ch;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.6 var(--font-sans);
+.techDownload__lede {
+  max-width: 46ch;
+  font: 400 clamp(16px, 1.45vw, 20px) / 1.6 var(--font-sans);
   color: var(--grey);
+}
+
+.techDownload__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .techDownload__badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
 }
 
 .techDownload__badge {
   display: flex;
-  border-radius: 9px;
+  border-radius: 11px;
   transition: opacity 200ms var(--ease);
 }
 
@@ -797,7 +828,7 @@
 }
 
 .techDownload__badge img {
-  height: 52px;
+  height: 64px;
   width: auto;
 }
 
@@ -805,23 +836,35 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 176px;
-  height: 52px;
-  padding: 0 16px;
-  border-radius: 9px;
+  width: 210px;
+  height: 64px;
+  padding: 0 20px;
+  border-radius: 11px;
   background: var(--ink);
   color: #fff;
 }
 
 .techDownload__appStore span {
-  font: 400 10px/1.3 var(--font-sans);
+  font: 400 11px/1.3 var(--font-sans);
   letter-spacing: 0.04em;
   opacity: 0.72;
 }
 
 .techDownload__appStore strong {
-  font: 600 17px/1.2 var(--font-sans);
+  font: 600 21px/1.15 var(--font-sans);
   letter-spacing: -0.01em;
+}
+
+.techDownload__note {
+  margin: 0;
+  font: 500 13px/1.4 var(--font-sans);
+  color: var(--grey);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .techDownload:target {
+    animation: none;
+  }
 }
 
 /* ---------- final ---------- */

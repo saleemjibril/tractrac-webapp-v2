@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Hero from "@/components/ui/Hero";
 import Photo from "@/components/ui/Photo";
 import {
@@ -65,11 +66,9 @@ export default async function InsightsPage() {
               {posts.map((post, index) => {
                 const image = postImage(post);
                 return (
-                  <a
+                  <Link
                     className="insightsCard"
                     href={postHref(post)}
-                    target="_blank"
-                    rel="noopener"
                     key={post.id}
                     data-reveal
                     data-delay={Math.min(index * 40, 360)}
@@ -91,7 +90,7 @@ export default async function InsightsPage() {
                       <p className="insightExcerpt">{plainExcerpt(post.excerpt)}</p>
                       <span className="insightRead">Read article</span>
                     </div>
-                  </a>
+                  </Link>
                 );
               })}
             </div>

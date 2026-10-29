@@ -32,7 +32,7 @@ function isFaqEntry(value: unknown): value is FaqEntry {
 }
 
 const FALLBACK_COPY =
-  "We could not find an answer to this in the FAQ. The TracTrac team can help. There is no online question form yet, so copy your question and bring it to the team through Contact Us.";
+  "We could not find an answer to this in the FAQ. The TracTrac team can help. Send your question to the team through the contact page.";
 
 export default function FaqSection() {
   const [open, setOpen] = useState<number | null>(null);
@@ -331,7 +331,7 @@ export default function FaqSection() {
                   >
                     Copy my question
                   </button>
-                  <Link className="btn btn--primary btn--noHover" href="/#final">
+                  <Link className="btn btn--primary btn--noHover" href="/contact">
                     Contact Us
                   </Link>
                   <span aria-live="polite" className="faqAsk__copyStatus">

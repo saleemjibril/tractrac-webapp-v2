@@ -23,7 +23,7 @@ function isLinkActive(label: string, href: string, pathname: string) {
 
 function isGroupActive(item: NavItem, pathname: string) {
   if (item.label === "Company") {
-    return ["/about", "/careers"].some(
+    return ["/about", "/careers", "/contact"].some(
       (path) => pathname === path || pathname.startsWith(`${path}/`),
     );
   }

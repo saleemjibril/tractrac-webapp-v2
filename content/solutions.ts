@@ -51,7 +51,7 @@ export const SOLUTIONS: SolutionPath[] = [
     ],
     image: asset("uploads/Copy of DSC07693.jpg"),
     alt: "Close up of a disc plough turning soil behind a TracTrac tractor",
-    cta: { label: "Enlist Your Equipment", href: "/#final" },
+    cta: { label: "Enlist Your Equipment", href: "/technology#download" },
   },
   {
     id: "agents",
@@ -67,7 +67,7 @@ export const SOLUTIONS: SolutionPath[] = [
     ],
     image: asset("uploads/IMG-20260824-WA0147.jpg"),
     alt: "A TracTrac booking agent in a branded shirt talking with a farmer",
-    cta: { label: "Become a Booking Agent", href: "/#final" },
+    cta: { label: "Become a Booking Agent", href: "/technology#download" },
   },
   {
     id: "msp",
@@ -83,6 +83,6 @@ export const SOLUTIONS: SolutionPath[] = [
     ],
     image: asset("uploads/Copy of DSC08208.jpg"),
     alt: "Trainees operating a tractor during a practical session",
-    cta: { label: "Get Started", href: "/#final" },
+    cta: { label: "Get Started", href: "/technology#download" },
   },
 ];

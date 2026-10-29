@@ -142,38 +142,41 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <section id="download" className="techDownload">
+      <section id="download" className="techDownload" aria-labelledby="download-title">
         <div className="wrap techDownload__inner">
           <div>
             <p className="eyebrow">Get TracTrac Plus</p>
-            <h2>Download the app. Put the network to work.</h2>
-            <p>
+            <h2 id="download-title">Download the app. Put the network to work.</h2>
+            <p className="techDownload__lede">
               Enlist your equipment, get a tractor to your farm or become an agent — from your
               phone.
             </p>
           </div>
-          <div className="techDownload__badges">
-            <a
-              className="techDownload__badge"
-              href={BRAND.googlePlayUrl}
-              target="_blank"
-              rel="noopener"
-              aria-label="Get TracTrac Plus on Google Play"
-            >
-              <Image src={BRAND.googlePlay} alt="Get it on Google Play" width={155} height={46} />
-            </a>
-            <a
-              className="techDownload__badge"
-              href={BRAND.appStoreUrl}
-              target="_blank"
-              rel="noopener"
-              aria-label="Download TracTrac Plus on the App Store"
-            >
-              <span className="techDownload__appStore">
-                <span>Download on the</span>
-                <strong>App Store</strong>
-              </span>
-            </a>
+          <div className="techDownload__actions">
+            <div className="techDownload__badges">
+              <a
+                className="techDownload__badge"
+                href={BRAND.googlePlayUrl}
+                target="_blank"
+                rel="noopener"
+                aria-label="Get TracTrac Plus on Google Play"
+              >
+                <Image src={BRAND.googlePlay} alt="Get it on Google Play" width={155} height={46} />
+              </a>
+              <a
+                className="techDownload__badge"
+                href={BRAND.appStoreUrl}
+                target="_blank"
+                rel="noopener"
+                aria-label="Download TracTrac Plus on the App Store"
+              >
+                <span className="techDownload__appStore">
+                  <span>Download on the</span>
+                  <strong>App Store</strong>
+                </span>
+              </a>
+            </div>
+            <p className="techDownload__note">Free to download. Available on iOS and Android.</p>
           </div>
         </div>
       </section>
@@ -193,10 +196,10 @@ export default function TechnologyPage() {
             <Link className="btn btn--primary btn--lg" href="#download">
               Find Mechanisation
             </Link>
-            <Link className="btn btn--outlineLight btn--outlineFaint btn--lg" href="#plus">
+            <Link className="btn btn--outlineLight btn--outlineFaint btn--lg" href="#download">
               Enlist Your Equipment
             </Link>
-            <Link className="btn btn--outlineLight btn--outlineFaint btn--lg" href="#plus">
+            <Link className="btn btn--outlineLight btn--outlineFaint btn--lg" href="#download">
               Become a Booking Agent
             </Link>
           </div>

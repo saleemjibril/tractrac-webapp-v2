@@ -484,7 +484,7 @@ export const LEGAL_DOCUMENTS: Record<
       },
       {
         "tag": "p",
-        "html": "By visiting this page on our website: <a href=\"https://tractrac.co/contact\">https://tractrac.co/contact</a>"
+        "html": "By visiting this page on our website: <a href=\"/contact\">https://tractrac.co/contact</a>"
       },
       {
         "tag": "p",
@@ -730,7 +730,7 @@ export const LEGAL_DOCUMENTS: Record<
       },
       {
         "tag": "p",
-        "html": "By visiting this page on our website: <a href=\"https://tractrac.co/contact\">https://tractrac.co/contact</a>"
+        "html": "By visiting this page on our website: <a href=\"/contact\">https://tractrac.co/contact</a>"
       },
       {
         "tag": "p",

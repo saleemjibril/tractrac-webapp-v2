@@ -30,11 +30,6 @@ const FIELDS = [
     type: "tel",
     autoComplete: "tel",
   },
-  {
-    name: "support",
-    label: "How do you want to support",
-    type: "text",
-  },
 ] as const;
 
 type Values = Record<string, string>;
@@ -73,7 +68,7 @@ export default function ProgrammeContactForm() {
         <p>Thank you — your message is ready for the TracTrac team.</p>
         <p>
           Online delivery is not connected yet. To reach the team now, use the{" "}
-          <Link href="/#final">Contact Us</Link> link.
+          <Link href="/contact">contact page</Link>.
         </p>
       </div>
     );
