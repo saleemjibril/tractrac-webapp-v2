@@ -149,7 +149,7 @@ export default function YoungPeoplePage() {
         {[
           ["img/ypim-4.jpg", "Participants holding signs reading Young, Skilled and Mechanising Nigeria and I am a Youth in Mechanization"],
           ["img/ypim-5.jpg", "Three young people in a TracTrac photo frame holding mechanisation signs"],
-          ["img/ypim-6.jpg", "Young participants in orange and green shirts seated at the NAMP 2026 ratification event"],
+          ["img/ypim-6.jpg", "Members of YPiM present at the Ratification of the NAMP 2026 at Abuja"],
           ["img/ypim-3.jpg", "A group of young people in TracTrac shirts in front of an FMAFS and TracTrac banner"],
         ].map(([src, alt], index) => (
           <div key={src} data-reveal="img" data-delay={index * 100}>

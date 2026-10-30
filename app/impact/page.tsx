@@ -180,7 +180,7 @@ const STORIES = [
     category: "Policy",
     title: "The National Agricultural Mechanisation Policy 2026 journey",
     image: "img/ypim-6.jpg",
-    alt: "Young participants seated at the NAMP 2026 ratification event",
+    alt: "Members of YPiM present at the Ratification of the NAMP 2026 at Abuja",
   },
 ];
 
@@ -508,7 +508,7 @@ export default function ImpactPage() {
           <div className="media media--rounded impactSystems__image" data-reveal="img">
             <Photo
               src={asset("img/ypim-6.jpg")}
-              alt="Young participants seated at the NAMP 2026 ratification event"
+              alt="Members of YPiM present at the Ratification of the NAMP 2026 at Abuja"
               sizes="(max-width: 880px) 100vw, 50vw"
             />
           </div>

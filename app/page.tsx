@@ -34,7 +34,7 @@ import "@/styles/home.css";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "TracTrac — The right farm machinery, within reach.",
+    absolute: "TracTrac — Making mechanisation work for African farmers.",
   },
   description:
     "TracTrac helps farmers find tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.",
@@ -83,7 +83,7 @@ export default async function HomePage() {
               Making mechanisation easier to access
             </p>
             <h1 className="homeHero__title" data-reveal data-delay="90">
-              The right farm machinery, within reach.
+              Making mechanisation work for African farmers.
             </h1>
             <p className="homeHero__lede" data-reveal data-delay="180">
               TracTrac helps farmers find tractors and other equipment when they need them, while
@@ -96,9 +96,6 @@ export default async function HomePage() {
               </Link>
               <Link className="btn btn--outlineLight btn--lg" href="#tech">
                 See How TracTrac Works
-              </Link>
-              <Link className="homeHero__textLink" href="/solutions#owners">
-                Own equipment? Enlist it
               </Link>
             </div>
           </div>

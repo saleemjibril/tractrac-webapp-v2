@@ -479,8 +479,8 @@ export default function IssamPage() {
               <p className="eyebrow">Policy and investment</p>
               <h2>Shaping the enabling environment.</h2>
               <p className="issamEnabling__copy">
-                Support to the development of NAMP 2026 and the Mechanisation Investment Strategy
-                Document.
+                Led the development of the NAMP 2026 and the Mechanisation Investment Document in
+                collaboration with the Federal Government
               </p>
               <div className="issamEnabling__box">
                 <p>NAMP 2026</p>

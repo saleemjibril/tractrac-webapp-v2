@@ -131,7 +131,7 @@ const STORIES = [
       ],
       [
         "TracTrac’s role",
-        "Support to the development of NAMP 2026 and the Mechanisation Investment Strategy Document",
+        "Led the development of the NAMP 2026 and the Mechanisation Investment Document in collaboration with the Federal Government",
       ],
     ],
     link: null,

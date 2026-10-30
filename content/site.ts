@@ -70,11 +70,6 @@ export const NAV: NavItem[] = [
   {
     label: "Partners",
     href: "/partners",
-    links: [
-      { label: "Work With Us", href: "/partners#work-with-us" },
-      { label: "Finance and Investment", href: "/partners#finance" },
-      { label: "Development Partners", href: "/partners#development-partners" },
-    ],
   },
   {
     label: "Resources",
