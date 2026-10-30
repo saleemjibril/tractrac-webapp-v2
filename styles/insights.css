@@ -493,6 +493,14 @@
   background: #fff;
 }
 
+.insightsCard__media--resource {
+  aspect-ratio: 1 / 1;
+}
+
+.insightsCard__media--resource img {
+  object-position: 50% 42%;
+}
+
 .insightsCard__media img {
   transition: transform 600ms var(--ease);
 }

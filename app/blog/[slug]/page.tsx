@@ -9,6 +9,7 @@ import {
   plainExcerpt,
   postImage,
   postImageAlt,
+  readingTime,
 } from "@/lib/blog";
 import "@/styles/blog-post.css";
 
@@ -42,33 +43,48 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
 
   const image = postImage(post);
+  const author = post.author?.node?.name;
 
   return (
     <main id="main" className="pageMain blogPostPage">
-      <header className="blogPostHero">
+      <section className="blogPostHero">
+        {image ? (
+          <div className="blogPostHero__bg">
+            <Photo src={image} alt={postImageAlt(post)} sizes="100vw" priority />
+          </div>
+        ) : null}
+        <div className="blogPostHero__shade" aria-hidden="true" />
         <div className="wrap blogPostHero__inner">
           <Link className="blogPostHero__back" href="/blog">
-            <span aria-hidden="true">←</span> Back to the blog
+            <span aria-hidden="true">←</span>
+            <span>Back to the blog</span>
           </Link>
-          <p className="eyebrow eyebrow--light">Blog</p>
-          <h1>{post.title}</h1>
-          <p className="blogPostHero__meta">{formatPostDate(post.date)}</p>
-          {post.excerpt ? (
-            <p className="blogPostHero__lede">{plainExcerpt(post.excerpt)}</p>
-          ) : null}
-        </div>
-      </header>
 
-      {image ? (
-        <div className="wrap blogPostMedia">
-          <Photo
-            src={image}
-            alt={postImageAlt(post)}
-            sizes="(max-width: 880px) 100vw, 86vw"
-            priority
-          />
+          <div className="blogPostHero__content">
+            <p className="eyebrow">Blog</p>
+            <h1>{post.title}</h1>
+            {post.excerpt ? (
+              <p className="blogPostHero__standfirst">{plainExcerpt(post.excerpt)}</p>
+            ) : null}
+            <div className="blogPostHero__meta">
+              <div>
+                <span>Published</span>
+                <p>{formatPostDate(post.date)}</p>
+              </div>
+              <div>
+                <span>Reading time</span>
+                <p>{readingTime(post.content)}</p>
+              </div>
+              {author ? (
+                <div>
+                  <span>Written by</span>
+                  <p>{author}</p>
+                </div>
+              ) : null}
+            </div>
+          </div>
         </div>
-      ) : null}
+      </section>
 
       <article
         className="wrap blogPostBody"

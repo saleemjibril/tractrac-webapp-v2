@@ -102,10 +102,32 @@ function sanitizeBlogHtml(html: string) {
 }
 
 export function blogContent(html: string) {
-  return sanitizeBlogHtml(internalizeBlogLinks(html)).replace(
+  let content = sanitizeBlogHtml(internalizeBlogLinks(html)).replace(
     />([^<]+)</g,
     (match, text: string) => `>${britishSpelling(text)}<`,
   );
+
+  // Give the first paragraph that carries text the larger lead treatment.
+  let leadAdded = false;
+  content = content.replace(
+    /<p(\s[^>]*)?>([\s\S]*?)<\/p>/gi,
+    (match, attrs: string | undefined, inner: string) => {
+      if (leadAdded) return match;
+      const text = inner.replace(/<[^>]+>/g, " ").replace(/&nbsp;/gi, " ").trim();
+      if (!text) return match;
+      leadAdded = true;
+      const tagAttrs = attrs ?? "";
+      const classMatch = tagAttrs.match(/\bclass=("([^"]*)"|'([^']*)')/i);
+      if (classMatch) {
+        const quote = classMatch[1][0];
+        const classes = (classMatch[2] ?? classMatch[3] ?? "").trim();
+        return `<p${tagAttrs.replace(classMatch[0], `class=${quote}${classes} blogLead${quote}`)}>${inner}</p>`;
+      }
+      return `<p class="blogLead"${tagAttrs}>${inner}</p>`;
+    },
+  );
+
+  return content;
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPostDetail | null> {
@@ -160,6 +182,13 @@ export function plainExcerpt(value: string) {
     .replace(/&gt;/gi, ">")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+/** Rough reading time for an article, based on 200 words per minute. */
+export function readingTime(html: string) {
+  const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const words = text ? text.split(" ").length : 0;
+  return `${Math.max(1, Math.ceil(words / 200))} min read`;
 }
 
 function normalizeTitle(value: string) {

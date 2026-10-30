@@ -2,17 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/ui/Hero";
 import Photo from "@/components/ui/Photo";
-import {
-  formatPostDate,
-  getBlogPosts,
-  plainExcerpt,
-  postExternalHref,
-  postImage,
-  postImageAlt,
-} from "@/lib/blog";
+import { RESOURCES } from "@/content/resources";
 import "@/styles/insights.css";
-
-export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -25,9 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function ResourcesPage() {
-  const posts = await getBlogPosts();
-
+export default function ResourcesPage() {
   return (
     <main id="main" className="pageMain">
       <Hero
@@ -56,47 +45,43 @@ export default async function ResourcesPage() {
               <p className="eyebrow">Downloads</p>
               <h2 className="h2">Every resource from TracTrac.</h2>
             </div>
-            {posts.length ? (
+            {RESOURCES.length ? (
               <p className="insightsAll__count">
-                {posts.length} {posts.length === 1 ? "resource" : "resources"}
+                {RESOURCES.length} {RESOURCES.length === 1 ? "resource" : "resources"}
               </p>
             ) : null}
           </div>
 
-          {posts.length ? (
+          {RESOURCES.length ? (
             <div className="insightsGrid">
-              {posts.map((post, index) => {
-                const image = postImage(post);
-                return (
-                  <a
-                    className="insightsCard"
-                    href={postExternalHref(post)}
-                    target="_blank"
-                    rel="noopener"
-                    key={post.id}
-                    data-reveal
-                    data-delay={Math.min(index * 40, 360)}
-                  >
-                    {image ? (
-                      <div className="media insightsCard__media">
-                        <Photo
-                          src={image}
-                          alt={postImageAlt(post)}
-                          sizes="(max-width: 880px) 90vw, 30vw"
-                        />
-                      </div>
-                    ) : null}
-                    <div className="insightsCard__body">
-                      <p className="insightMeta">
-                        <span>{formatPostDate(post.date)}</span>
-                      </p>
-                      <h3>{post.title}</h3>
-                      <p className="insightExcerpt">{plainExcerpt(post.excerpt)}</p>
-                      <span className="insightRead">Download</span>
-                    </div>
-                  </a>
-                );
-              })}
+              {RESOURCES.map((resource, index) => (
+                <a
+                  className="insightsCard"
+                  href={`/api/resources/${resource.slug}`}
+                  download={resource.fileName}
+                  type="application/pdf"
+                  key={resource.slug}
+                  data-reveal
+                  data-delay={Math.min(index * 40, 360)}
+                >
+                  <div className="media insightsCard__media insightsCard__media--resource">
+                    <Photo
+                      src={resource.image}
+                      alt={resource.imageAlt}
+                      sizes="(max-width: 880px) 90vw, 30vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="insightsCard__body">
+                    <p className="insightMeta">
+                      <span>{resource.eyebrow}</span>
+                    </p>
+                    <h3>{resource.title}</h3>
+                    <p className="insightExcerpt">{resource.description}</p>
+                    <span className="insightRead">Download</span>
+                  </div>
+                </a>
+              ))}
             </div>
           ) : (
             <p className="prose muted">

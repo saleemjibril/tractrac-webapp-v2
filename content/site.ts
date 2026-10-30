@@ -77,11 +77,11 @@ export const NAV: NavItem[] = [
     ],
   },
   {
-    label: "Blog",
+    label: "Resources",
     href: "/blog",
     links: [
-      { label: "Stories and News", href: "/blog" },
-      { label: "Research and Resources", href: "/resources" },
+      { label: "Blog", href: "/blog" },
+      { label: "Research and report", href: "/resources" },
     ],
   },
   {
@@ -167,8 +167,8 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Resources",
     links: [
-      { label: "Stories and News", href: "/blog" },
-      { label: "Research and Resources", href: "/resources" },
+      { label: "Blog", href: "/blog" },
+      { label: "Research and report", href: "/resources" },
       { label: "FAQs", href: "/#faq" },
     ],
   },

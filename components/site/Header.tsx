@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { BRAND, CTAS, NAV, type NavItem } from "@/content/site";
 
 const ACTIVE_PREFIX: Record<string, string> = {
@@ -11,7 +11,6 @@ const ACTIVE_PREFIX: Record<string, string> = {
   Technology: "/technology",
   Programs: "/programmes",
   Partners: "/partners",
-  Blog: "/blog",
 };
 
 function isLinkActive(label: string, href: string, pathname: string) {
@@ -27,7 +26,7 @@ function isGroupActive(item: NavItem, pathname: string) {
       (path) => pathname === path || pathname.startsWith(`${path}/`),
     );
   }
-  if (item.label === "Blog") {
+  if (item.label === "Resources") {
     return ["/blog", "/resources"].some(
       (path) => pathname === path || pathname.startsWith(`${path}/`),
     );
@@ -50,6 +49,19 @@ export default function Header() {
   const mobileForcesSolid = mobileOpen && pathname !== "/" && pathname !== "/technology";
   const solid = scrolled || mobileForcesSolid || forceSolid;
   const shadow = pathname === "/" || pathname === "/technology";
+
+  const onPrimaryCtaClick = (event: ReactMouseEvent<HTMLAnchorElement>) => {
+    const [path, hash] = CTAS.primary.href.split("#");
+    if (!hash || pathname !== path) return;
+    const target = document.getElementById(hash);
+    if (!target) return;
+    event.preventDefault();
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+    if (window.location.hash !== `#${hash}`) {
+      window.history.replaceState(null, "", `#${hash}`);
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 90);
@@ -203,7 +215,7 @@ export default function Header() {
           <Link className="siteHeader__partner" href={CTAS.secondary.href}>
             {CTAS.secondary.label}
           </Link>
-          <Link className="btn btn--primary" href={CTAS.primary.href}>
+          <Link className="btn btn--primary" href={CTAS.primary.href} onClick={onPrimaryCtaClick}>
             {CTAS.primary.label}
           </Link>
         </div>
@@ -276,7 +288,10 @@ export default function Header() {
               <Link
                 className="btn btn--primary btn--noHover"
                 href={CTAS.primary.href}
-                onClick={() => setMobileOpen(false)}
+                onClick={(event) => {
+                  onPrimaryCtaClick(event);
+                  setMobileOpen(false);
+                }}
               >
                 {CTAS.primary.label}
               </Link>

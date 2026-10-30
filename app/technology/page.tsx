@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import AgentSequence from "@/components/technology/AgentSequence";
 import HireRail from "@/components/technology/HireRail";
 import JobSequence from "@/components/technology/JobSequence";
 import Photo from "@/components/ui/Photo";
+import SectionLink from "@/components/ui/SectionLink";
 import { FIELD_POINTS, NETWORK_POINTS, PLUS_STEPS } from "@/content/technology";
 import { BRAND } from "@/content/site";
 import { asset } from "@/lib/asset";
@@ -193,15 +193,21 @@ export default function TechnologyPage() {
         <div className="wrap techFinal__inner">
           <h2>Technology should make access easier.</h2>
           <div className="techFinal__actions">
-            <Link className="btn btn--primary btn--lg" href="#download">
+            <SectionLink className="btn btn--primary btn--lg" href="#download">
               Find Mechanisation
-            </Link>
-            <Link className="btn btn--outlineLight btn--outlineFaint btn--lg" href="#download">
+            </SectionLink>
+            <SectionLink
+              className="btn btn--outlineLight btn--outlineFaint btn--lg"
+              href="#download"
+            >
               Enlist Your Equipment
-            </Link>
-            <Link className="btn btn--outlineLight btn--outlineFaint btn--lg" href="#download">
+            </SectionLink>
+            <SectionLink
+              className="btn btn--outlineLight btn--outlineFaint btn--lg"
+              href="#download"
+            >
               Become a Booking Agent
-            </Link>
+            </SectionLink>
           </div>
         </div>
       </section>
