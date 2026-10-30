@@ -431,7 +431,7 @@ export const TEAM: TeamMember[] = [
     dept: "Partnerships and Communications",
     linkedin:
       "https://www.linkedin.com/in/margaret-thomas-acihrm-cpm-pgd-hrm-pgdm-314a46202",
-    photo: "https://api.tractrac.co/media/images/30db0230-fd7e-48f8-b3a4-432bddd31a25.jpg",
+    photo: "https://api.tractrac.co/media/images/3ef6cf61-6b5f-42fb-8c9a-48d596d49f57.jpeg",
     leadership: false,
     bio: [
       "Margaret Thomas is a Regional Business Development Officer for the North East at TracTrac MSL. She has experience in agricultural mechanisation, field operations, stakeholder engagement, data management, and community development.",
