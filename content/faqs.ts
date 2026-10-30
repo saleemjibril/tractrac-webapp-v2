@@ -7,12 +7,12 @@ export const FAQS: Faq[] = [
   {
     question: "What is TracTrac Plus?",
     answer:
-      "TracTrac Plus is a digital platform that helps farmers access mechanisation services by connecting them with mechanisation service providers and equipment owners. It also provides tools for farm mapping, booking coordination, and tracking mechanisation activities.",
+      "TracTrac Plus is a digital platform that connects farmers to mechanisation service providers and equipment owners. It also provides tools for farm mapping, booking coordination, and tracking mechanisation activities.",
   },
   {
     question: "How does TracTrac Plus work?",
     answer:
-      "Farmers can submit requests for tractor services or other farm equipment through the platform. Their requests help connect them with relevant mechanisation service providers. Details such as the farm location, size, type of operation, and preferred service date help providers assess the request and provide booking information or a quotation. Service availability must be confirmed.",
+      "Farmers can submit requests for tractor services or other farm equipment through the platform. Their requests connect them with relevant mechanisation service providers. Details such as the farm location, size, type of operation, and preferred service date allow providers to assess the request and provide booking information or a quotation. Service availability must be confirmed.",
   },
   {
     question: "What services can I request through TracTrac Plus?",
@@ -22,7 +22,7 @@ export const FAQS: Faq[] = [
   {
     question: "Can I measure or map my farmland using TracTrac Plus?",
     answer:
-      "Yes. TracTrac Plus includes GPS-based farm mapping tools that help capture and measure farmland. This information can support farm planning and the coordination of mechanisation services.",
+      "Yes. TracTrac Plus includes GPS-based farm mapping tools that capture and measure farmland. This information can support farm planning and the coordination of mechanisation services.",
   },
   {
     question: "Who can use TracTrac Plus?",
@@ -32,12 +32,12 @@ export const FAQS: Faq[] = [
   {
     question: "What is a Mechanisation Service Provider (MSP)?",
     answer:
-      "A Mechanisation Service Provider, or MSP, is an individual, cooperative, or business that provides agricultural mechanisation services to farmers using tractors, implements, or other relevant equipment. MSPs help farmers access the machinery and services they need for their farming operations.",
+      "A Mechanisation Service Provider, or MSP, is an individual, cooperative, or business that provides agricultural mechanisation services to farmers using tractors, implements, or other relevant equipment. MSPs connect farmers to the machinery and services they need for their farming operations.",
   },
   {
     question: "What is the difference between TracTrac Plus and TracTrac Agent?",
     answer:
-      "TracTrac Plus focuses on connecting farmers and other users with mechanisation services, equipment, and booking opportunities. TracTrac Agent supports the operational side of the ecosystem, helping with activities such as managing bookings, monitoring fleet operations, and coordinating assets and service delivery.",
+      "TracTrac Plus focuses on connecting farmers and other users with mechanisation services, equipment, and booking opportunities. TracTrac Agent supports the operational side of the ecosystem, with activities such as managing bookings, monitoring fleet operations, and coordinating assets and service delivery.",
   },
   {
     question: "Can I use TracTrac Plus anywhere in Nigeria?",
@@ -55,7 +55,7 @@ export const FAQS: Faq[] = [
       "If you own agricultural equipment or provide mechanisation services, contact TracTrac through the official onboarding or contact channel to enquire about joining the platform. The team can confirm the current registration process and requirements.",
   },
   {
-    question: "Where can I get help with TracTrac Plus?",
+    question: "Where can I get support with TracTrac Plus?",
     answer:
       "Use the contact or support option on the TracTrac website to reach the team. Include your question, relevant details, and contact information so the team can understand how to assist you.",
   },

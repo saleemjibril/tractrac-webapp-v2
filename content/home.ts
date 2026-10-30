@@ -49,7 +49,7 @@ export const ENABLING_ENVIRONMENT = [
   { title: "Cooperatives", body: "Organise local mechanisation businesses." },
   { title: "Finance & Investors", body: "Put capital behind machinery." },
   { title: "Government & Regulators", body: "Shape the operating environment." },
-  { title: "Development Partners", body: "Help effective models grow." },
+  { title: "Development Partners", body: "Support effective models to grow." },
 ];
 
 export const EQUIPMENT = [
@@ -262,7 +262,7 @@ export const SHOWCASES = [
       "Improving Smallholder Farmers' Access to Small Scale Agricultural Mechanisation Services",
     paragraphs: [
       "Through ISSAM, TracTrac and Mastercard Foundation are supporting young people to build businesses that bring agricultural machinery closer to farming communities.",
-      "Youth led cooperatives receive machinery alongside technical training and business support, helping them provide mechanisation services while building sustainable livelihoods.",
+      "Youth led cooperatives receive machinery alongside technical training and business support, enabling them to provide mechanisation services while building sustainable livelihoods.",
     ],
     flow: [
       "Machinery",
@@ -298,7 +298,7 @@ export const SHOWCASES = [
     subtitle: "Young People in Mechanisation",
     paragraphs: [
       "Young People in Mechanisation creates pathways for young Nigerians to learn practical skills, meet mentors and explore careers and businesses within agricultural mechanisation.",
-      "It is about helping young people see mechanisation as somewhere they can build a career, a business and a future.",
+      "It is about enabling young people to see mechanisation as somewhere they can build a career, a business and a future.",
     ],
     flow: [],
     slides: [

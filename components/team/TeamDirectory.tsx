@@ -76,7 +76,17 @@ export default function TeamDirectory() {
                   </button>
                   {person.bio.length || person.linkedin ? (
                     <div className="teamCard__foot">
-                      {person.bio.length ? <span>Profile +</span> : null}
+                      {person.bio.length ? (
+                        <button
+                          type="button"
+                          className="teamCard__profile"
+                          aria-haspopup="dialog"
+                          aria-label={`View ${person.name}’s profile`}
+                          onClick={() => setSelected(person)}
+                        >
+                          Profile <span aria-hidden="true">+</span>
+                        </button>
+                      ) : null}
                       {person.linkedin ? (
                         <a
                           href={person.linkedin}

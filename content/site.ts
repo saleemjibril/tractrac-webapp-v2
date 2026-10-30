@@ -186,5 +186,5 @@ export const SITE = {
   name: "TracTrac",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://tractrac.co",
   description:
-    "TracTrac helps farmers find tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.",
+    "TracTrac connects farmers to tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.",
 };

@@ -139,8 +139,8 @@ export default function YoungPeoplePage() {
             ))}
           </div>
           <p className="ypimOffers__copy" data-reveal>
-            Helping young people build sustainable livelihoods while contributing to agricultural
-            transformation and food security.
+            Enabling young people to build sustainable livelihoods while contributing to
+            agricultural transformation and food security.
           </p>
         </div>
       </section>

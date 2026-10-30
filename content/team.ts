@@ -94,7 +94,7 @@ export const TEAM: TeamMember[] = [
     name: "Israel Feranmi Olatunde",
     title: "IT Lead",
     dept: "Engineering, Product and IT",
-    linkedin: "https://www.linkedin.com/in/ayeni-israel-96a9b4268",
+    linkedin: "",
     photo: "",
     leadership: true,
     bio: [
@@ -108,7 +108,7 @@ export const TEAM: TeamMember[] = [
     title: "Product Manager",
     dept: "Engineering, Product and IT",
     linkedin: "",
-    photo: "",
+    photo: "https://api.tractrac.co/media/images/35f08b9d-0794-4a9d-909e-60d47904b767.jpg",
     leadership: true,
     bio: [
       "Mercy Balogun is a product and design professional with over eight years of experience in product design, digital experiences, and technology-driven solutions across agriculture, fintech, SaaS, and other sectors.",
@@ -143,13 +143,13 @@ export const TEAM: TeamMember[] = [
     ],
   },
   {
-    id: "jemaimah-jennifer-justus",
+    id: "jemimah-jennifer-justus",
     name: "Jemimah Jennifer Justus",
     title:
       "Investment and Asset Management, Gender, Diversity and Social Inclusion (GEDSI) Lead",
     dept: "Investment, Asset Management and GEDSI",
     linkedin: "",
-    photo: "https://api.tractrac.co/media/images/209e1fb9-e2ea-4e97-920e-e0cd1db1f82c.jpg",
+    photo: "https://api.tractrac.co/media/images/052d5cb8-dae3-4cc9-a285-c532d379fd9a.jpeg",
     leadership: true,
     bio: [
       "Jemimah Jennifer Justus manages investment and assets at TracTrac, overseeing the organisation’s equipment portfolio and the financing arrangements that put tractors and implements in the hands of mechanisation service providers.",
@@ -182,7 +182,7 @@ export const TEAM: TeamMember[] = [
     title: "Communications, Media and Digital Marketing Specialist",
     dept: "Partnerships and Communications",
     linkedin: "https://www.linkedin.com/in/folaajibola",
-    photo: "https://api.tractrac.co/media/images/7b40f821-e45b-4af6-8a7d-4476975a06f5.jpg",
+    photo: "https://api.tractrac.co/media/images/a795deee-3ce6-4839-9d71-64e455a0e56d.jpg",
     leadership: false,
     bio: [
       "Afolashade is a Communications, Media and Digital Marketing Specialist at TracTrac MSL. She works across storytelling, content and product marketing, SEO, growth, digital channels and internal communications.",
@@ -243,7 +243,7 @@ export const TEAM: TeamMember[] = [
     title: "",
     dept: "Our team",
     linkedin: "",
-    photo: "https://api.tractrac.co/media/images/8259acfb-bf4d-4a9f-90df-92211df41d61.jpg",
+    photo: "https://api.tractrac.co/media/images/93df5c98-28df-4e0c-8988-4c063a8a0e45.jpg",
     leadership: false,
     bio: [],
   },
@@ -283,7 +283,7 @@ export const TEAM: TeamMember[] = [
     title: "Finance Officer",
     dept: "Operations and Finance",
     linkedin: "https://www.linkedin.com/in/grace-wata-john-4b598136b",
-    photo: "https://api.tractrac.co/media/images/c4831ba9-3c91-48ca-8cb9-f4be5e330ce8.jpg",
+    photo: "https://api.tractrac.co/media/images/75322280-feb1-4d66-92a2-9e1287924034.jpg",
     leadership: false,
     bio: [
       "Grace Wata John is a Chartered Accountant working as a Finance Officer at TracTrac MSL, supporting the organisation’s financial management and resource allocation processes to promote accountability, transparency, and operational efficiency.",
@@ -291,11 +291,21 @@ export const TEAM: TeamMember[] = [
     ],
   },
   {
+    id: "israel-ayeni",
+    name: "Israel Ayeni",
+    title: "",
+    dept: "Our team",
+    linkedin: "https://www.linkedin.com/in/ayeni-israel-96a9b4268",
+    photo: "https://api.tractrac.co/media/images/bf80a01a-73ae-40ab-b080-d7ec5769ef87.jpg",
+    leadership: false,
+    bio: [],
+  },
+  {
     id: "ikenna-nnorom",
     name: "Ikenna Nnorom",
     title: "",
     dept: "Our team",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/ikenna-nnorom-916135145/",
     photo: "https://api.tractrac.co/media/images/03d30b9e-011b-4b72-be6d-ee73d5accb88.jpg",
     leadership: false,
     bio: [],
@@ -340,16 +350,6 @@ export const TEAM: TeamMember[] = [
     ],
   },
   {
-    id: "mercy-eduyubgbo",
-    name: "Mercy Eduyubgbo",
-    title: "",
-    dept: "Our team",
-    linkedin: "",
-    photo: "https://api.tractrac.co/media/images/35f08b9d-0794-4a9d-909e-60d47904b767.jpg",
-    leadership: false,
-    bio: [],
-  },
-  {
     id: "peter-agbo",
     name: "Peter Agbo",
     title: "",
@@ -378,7 +378,7 @@ export const TEAM: TeamMember[] = [
     title: "Program Associate/Relationship Officer",
     dept: "Programs and MERL",
     linkedin: "https://www.linkedin.com/in/izuchukwu-onugwu-6722a1247",
-    photo: "https://api.tractrac.co/media/images/90ba42aa-ce7e-45c9-986c-7981ff78a480.jpg",
+    photo: "https://api.tractrac.co/media/images/216086e7-5095-413e-85cc-3bdfa46346d6.jpg",
     leadership: false,
     bio: [
       "ThankGod Izuchukwu Onugwu is a Program Associate/Relationship Officer at TracTrac MSL. He works closely with Mechanisation Service Provider (MSP) cooperatives to strengthen their operations, build stakeholder relationships, and improve access to agricultural mechanisation services for smallholder farmers.",
@@ -404,7 +404,7 @@ export const TEAM: TeamMember[] = [
     title: "MERL Associate",
     dept: "Programs and MERL",
     linkedin: "https://www.linkedin.com/in/godwin-okokoro",
-    photo: "",
+    photo: "https://api.tractrac.co/media/images/15b84ea4-52d2-4746-ba13-570979922a51.jpg",
     leadership: false,
     bio: [
       "Godwin Okokoro is a Monitoring, Evaluation, Research and Learning (MERL) professional with over five years of experience in development programs, data systems, and project management. He specialises in digital data collection, performance monitoring, data analysis, dashboards, knowledge management, and SharePoint administration.",
@@ -417,7 +417,7 @@ export const TEAM: TeamMember[] = [
     title: "YPiM National Coordinator",
     dept: "Programs and MERL",
     linkedin: "https://www.linkedin.com/in/faith-amanata-316895274",
-    photo: "",
+    photo: "https://api.tractrac.co/media/images/5acfd5c0-ad0b-4671-b589-73e4f5a417bd.jpeg",
     leadership: false,
     bio: [
       "Faith Amanata coordinates the activities of Young People in Mechanisation (YPiM) nationwide, supporting efforts to engage young Nigerians in agricultural mechanisation.",
@@ -431,7 +431,7 @@ export const TEAM: TeamMember[] = [
     dept: "Partnerships and Communications",
     linkedin:
       "https://www.linkedin.com/in/margaret-thomas-acihrm-cpm-pgd-hrm-pgdm-314a46202",
-    photo: "",
+    photo: "https://api.tractrac.co/media/images/30db0230-fd7e-48f8-b3a4-432bddd31a25.jpg",
     leadership: false,
     bio: [
       "Margaret Thomas is a Regional Business Development Officer for the North East at TracTrac MSL. She has experience in agricultural mechanisation, field operations, stakeholder engagement, data management, and community development.",

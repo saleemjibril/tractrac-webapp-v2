@@ -105,8 +105,8 @@ export default function TechnologyPage() {
               <h2>One network. Different paths.</h2>
             </div>
             <p>
-              TracTrac Plus helps farmers request the work. TracTrac Agent helps manage what
-              happens next.
+              TracTrac Plus is how farmers request the work. TracTrac Agent manages what happens
+              next.
             </p>
           </div>
           <div className="techNetwork__row">

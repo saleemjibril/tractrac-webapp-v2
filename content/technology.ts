@@ -133,7 +133,7 @@ export const AGENT_ITEMS = [
 
 export const NETWORK_POINTS = [
   "A farmer can request a tractor directly.",
-  "A farmer without a smartphone, or who wants help, can work through a Booking Agent.",
+  "A farmer without a smartphone, or who needs support, can work through a Booking Agent.",
   "Equipment owners can enlist their machines for hire.",
   "Booking Agents can support verification and connect local demand.",
 ];

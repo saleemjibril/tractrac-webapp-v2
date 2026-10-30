@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     absolute: "TracTrac — Making mechanisation work for African farmers.",
   },
   description:
-    "TracTrac helps farmers find tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.",
+    "TracTrac connects farmers to tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.",
 };
 
 export const revalidate = 60;
@@ -86,7 +86,7 @@ export default async function HomePage() {
               Making mechanisation work for African farmers.
             </h1>
             <p className="homeHero__lede" data-reveal data-delay="180">
-              TracTrac helps farmers find tractors and other equipment when they need them, while
+              TracTrac connects farmers to tractors and other equipment when they need them, while
               giving equipment owners, agents and service providers the tools to keep those
               machines working.
             </p>
@@ -170,7 +170,9 @@ export default async function HomePage() {
                 At the same time, equipment owners need steady demand to keep their machines
                 productive.
               </p>
-              <p className="homeWhy__strong">TracTrac helps bring those needs together.</p>
+              <p className="homeWhy__strong">
+                TracTrac connects farmers to the machines that can do the work.
+              </p>
             </div>
           </div>
         </div>
@@ -184,7 +186,7 @@ export default async function HomePage() {
           </div>
           <div className="homeWhy__bandShade" aria-hidden="true" />
           <div className="wrap homeWhy__bandText">
-            <p>We help farmers find machines, and we help machines find work.</p>
+            <p>We connect farmers to machines, and we connect machines to work.</p>
           </div>
         </div>
       </section>
@@ -208,7 +210,7 @@ export default async function HomePage() {
                 <li>Young people need opportunities.</li>
                 <li>The sector needs skills, finance and strong partnerships.</li>
               </ul>
-              <p className="homeEcoList__strong">TracTrac helps connect the pieces.</p>
+              <p className="homeEcoList__strong">TracTrac connects the pieces.</p>
             </div>
           </div>
         </div>
@@ -338,7 +340,7 @@ export default async function HomePage() {
             <div>
               <p className="homePathways__label">Booking Agents</p>
               <h3 className="homePathways__subtitle">
-                Help farmers around you get connected.
+                Get farmers around you connected.
               </h3>
               <p className="prose muted homePathways__subCopy">
                 Bring farmer demand together, connect communities to available services and earn
@@ -647,7 +649,7 @@ export default async function HomePage() {
                 </h3>
                 <p className="prose muted">
                   TracTrac brings stakeholders together, contributes to industry and policy
-                  conversations and helps turn ideas into practical action.
+                  conversations and turns ideas into practical action.
                 </p>
               </div>
             </div>

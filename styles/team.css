@@ -163,8 +163,19 @@
   color: var(--orange);
 }
 
-.teamCard__foot > span:first-child {
+.teamCard__profile {
   padding: 8px 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.teamCard__profile:hover,
+.teamCard__profile:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .teamCard__foot a {

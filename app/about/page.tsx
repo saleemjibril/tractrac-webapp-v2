@@ -122,7 +122,7 @@ const BUILT = [
   },
   {
     title: "Financing pathways",
-    body: "Models that help equipment owners and investors put machines to work.",
+    body: "Models that enable equipment owners and investors to put machines to work.",
     href: "/programmes/tracinvest",
   },
   {
@@ -181,7 +181,7 @@ export default function AboutPage() {
                   ["Farmers", "who need machines at the right time in the season"],
                   ["Machines", "tractors, implements and labour-saving devices"],
                   ["Technology", "apps that match requests to equipment and track the work"],
-                  ["Capital", "financing that helps equipment reach the people who use it"],
+                  ["Capital", "financing that connects equipment to the people who use it"],
                   ["People", "operators, agents and service providers who run the work"],
                 ].map(([title, body]) => (
                   <div key={title}>

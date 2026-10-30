@@ -32,7 +32,7 @@ function isFaqEntry(value: unknown): value is FaqEntry {
 }
 
 const FALLBACK_COPY =
-  "We could not find an answer to this in the FAQ. The TracTrac team can help. Send your question to the team through the contact page.";
+  "We could not find an answer to this in the FAQ. The TracTrac team can point you in the right direction. Send your question to the team through the contact page.";
 
 export default function FaqSection() {
   const [open, setOpen] = useState<number | null>(null);
@@ -153,8 +153,8 @@ export default function FaqSection() {
           <p className="eyebrow">FAQ</p>
           <h2 className="homeFaq__title">Got questions?</h2>
           <p className="prose muted">
-            Find answers to common questions about TracTrac Plus and how it helps connect farmers
-            to mechanisation services.
+            Find answers to common questions about TracTrac Plus and how it connects farmers to
+            mechanisation services.
           </p>
         </div>
 
@@ -269,7 +269,7 @@ export default function FaqSection() {
           <form className="faqAsk" onSubmit={submit} noValidate aria-busy={pending !== null}>
             <p className="faqAsk__title">Still have a question?</p>
             <p className="faqAsk__lede">
-              Ask us something else and we&rsquo;ll help you find the right information.
+              Ask us something else and we&rsquo;ll point you to the right information.
             </p>
             <label className="srOnly" htmlFor="faq-input">
               Your question

@@ -57,7 +57,7 @@ export const SOLUTIONS: SolutionPath[] = [
     id: "agents",
     number: "03",
     label: "For Booking Agents",
-    title: "Help farmers around you get connected.",
+    title: "Get farmers around you connected.",
     lede:
       "Bring farmer demand together, connect communities to available services and earn while supporting the people around you.",
     steps: [
