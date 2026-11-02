@@ -57,29 +57,17 @@ export default function TeamDirectory() {
                     ) : null}
                     <span className="srOnly">View profile</span>
                   </button>
-                  {person.bio.length || person.linkedin ? (
+                  {person.bio.length ? (
                     <div className="teamCard__foot">
-                      {person.bio.length ? (
-                        <button
-                          type="button"
-                          className="teamCard__profile"
-                          aria-haspopup="dialog"
-                          aria-label={`View ${person.name}’s profile`}
-                          onClick={() => setSelected(person)}
-                        >
-                          Profile <span aria-hidden="true">+</span>
-                        </button>
-                      ) : null}
-                      {person.linkedin ? (
-                        <a
-                          href={person.linkedin}
-                          target="_blank"
-                          rel="noopener"
-                          aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
-                        >
-                          in
-                        </a>
-                      ) : null}
+                      <button
+                        type="button"
+                        className="teamCard__profile"
+                        aria-haspopup="dialog"
+                        aria-label={`View ${person.name}’s profile`}
+                        onClick={() => setSelected(person)}
+                      >
+                        Profile <span aria-hidden="true">+</span>
+                      </button>
                     </div>
                   ) : null}
                 </li>

@@ -59,17 +59,6 @@ export default function Leadership() {
               </p>
             ))}
           </div>
-          {ceo.linkedin ? (
-            <a
-              className="aboutLinkedin"
-              href={ceo.linkedin}
-              target="_blank"
-              rel="noopener"
-              aria-label={`${ceo.name} on LinkedIn (opens in a new tab)`}
-            >
-              <span aria-hidden="true">in</span>LinkedIn
-            </a>
-          ) : null}
         </div>
       </article>
 
@@ -88,16 +77,6 @@ export default function Leadership() {
                 </div>
                 <div className="aboutLeader__meta">
                   <span>{String(index + 2).padStart(2, "0")}</span>
-                  {person.linkedin ? (
-                    <a
-                      href={person.linkedin}
-                      target="_blank"
-                      rel="noopener"
-                      aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
-                    >
-                      in
-                    </a>
-                  ) : null}
                 </div>
                 <h4>{person.name}</h4>
                 <p className="aboutLeader__title">{person.title}</p>

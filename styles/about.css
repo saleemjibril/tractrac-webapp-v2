@@ -636,30 +636,6 @@
   font: 400 16px/1.65 var(--font-sans);
 }
 
-.aboutLinkedin {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 28px;
-  font: 600 15px/1 var(--font-sans);
-}
-
-.aboutLinkedin:hover {
-  color: var(--orange);
-}
-
-.aboutLinkedin span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: var(--ink);
-  color: #fff;
-  font: 700 13px/1 var(--font-sans);
-}
-
 .aboutLeadersHead {
   display: flex;
   align-items: center;
@@ -726,24 +702,6 @@
   font: 600 12px/1 var(--font-sans);
   letter-spacing: 0.14em;
   color: var(--orange);
-}
-
-.aboutLeader__meta a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  color: var(--ink);
-  font: 700 13px/1 var(--font-sans);
-}
-
-.aboutLeader__meta a:hover {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
 }
 
 .aboutLeader h4 {

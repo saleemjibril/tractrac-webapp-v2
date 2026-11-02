@@ -91,19 +91,22 @@
 .techHero__app {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-right: clamp(-110px, -7vw, -40px);
-  padding: 18px;
+  align-self: flex-end;
+  gap: 18px;
+  width: min(100%, 560px);
+  margin-bottom: clamp(22px, 2.6vw, 40px);
+  padding: 24px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 18px;
+  border-radius: 22px;
   background: rgba(20, 17, 15, 0.62);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  text-align: left;
 }
 
 .techHero__appTitle {
-  font: 600 11px/1 var(--font-sans);
+  font: 600 13px/1 var(--font-sans);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
@@ -112,11 +115,13 @@
 .techHero__badges {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  width: 100%;
 }
 
 .techHero__badge {
   display: inline-flex;
+  width: 100%;
   border-radius: 8px;
   transition: opacity 200ms var(--ease);
 }
@@ -131,7 +136,7 @@
 }
 
 .techHero__badge img {
-  width: clamp(170px, 15vw, 225px);
+  width: 100%;
   height: auto;
 }
 
@@ -143,12 +148,12 @@
   text-align: right;
 }
 
-.techHero__num p:first-child {
+.techHero__num > p:first-of-type {
   font: 700 min(clamp(64px, 13vw, 214px), calc(22svh / var(--site-scale, 1))) / 0.82 var(--font-sans);
   letter-spacing: -0.06em;
 }
 
-.techHero__num p:last-child {
+.techHero__num > p:last-of-type {
   margin-top: min(clamp(14px, 1.6vw, 22px), calc(2.4svh / var(--site-scale, 1)));
   font: 600 clamp(11px, 1vw, 14px) / 1 var(--font-sans);
   letter-spacing: 0.18em;
@@ -1089,27 +1094,6 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .techHero__visual {
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .techHero__app {
-    margin-right: 0;
-    padding: 14px;
-  }
-
-  .techHero__badges {
-    flex-direction: row;
-  }
-
-  .techHero__badge img {
-    width: auto;
-    height: clamp(40px, 6vw, 52px);
-  }
-}
-
 @media (max-width: 900px) {
   .techHero__top {
     grid-template-columns: minmax(0, 1fr);
@@ -1117,22 +1101,26 @@
     align-items: start;
   }
 
-  .techHero__visual {
-    flex-wrap: wrap;
-    align-items: flex-start;
+  .techHero__app {
+    align-self: flex-start;
+    width: min(100%, 460px);
+    margin-bottom: 24px;
+    padding: 18px;
+    gap: 14px;
   }
 
-  .techHero__app {
-    padding: 14px;
+  .techHero__appTitle {
+    font-size: 11px;
   }
 
   .techHero__badges {
     flex-direction: row;
+    gap: 10px;
   }
 
   .techHero__badge img {
-    width: auto;
-    height: clamp(40px, 6vw, 52px);
+    width: 100%;
+    height: auto;
   }
 
   .techHero__phones {

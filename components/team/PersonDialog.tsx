@@ -68,17 +68,6 @@ export default function PersonDialog({ person, index, total, onClose }: PersonDi
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-            {person.linkedin ? (
-              <a
-                className="teamDialog__linkedin"
-                href={person.linkedin}
-                target="_blank"
-                rel="noopener"
-                aria-label={`${person.name} on LinkedIn (opens in a new tab)`}
-              >
-                <span aria-hidden="true">in</span>LinkedIn
-              </a>
-            ) : null}
           </div>
         </div>
       ) : null}

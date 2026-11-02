@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import EquipmentRail from "@/components/home/EquipmentRail";
 import FaqSection from "@/components/home/FaqSection";
@@ -23,6 +24,7 @@ import {
   HERO_POSTER,
   HOME_INSIGHTS,
   HOME_STATS,
+  PARTNER_LOGOS,
 } from "@/content/home";
 import "@/styles/home.css";
 
@@ -426,6 +428,87 @@ export default async function HomePage() {
             <Link className="btn btn--outline" href="/blog">
               View all blog posts
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="partnership" className="homePartnership">
+        <div className="wrap homePartnership__inner">
+          <div className="grid2 homePartnership__grid">
+            <div>
+              <p className="eyebrow">Partnership</p>
+              <h2 className="h2 homePartnership__title">
+                Scaling access takes more than equipment.
+              </h2>
+              <p className="prose muted">
+                It takes finance, skills, service networks, policy and long term investment.
+              </p>
+              <p className="prose muted homePartnership__para">
+                TracTrac works with government, financial institutions, development partners,
+                investors, equipment companies and agricultural organisations to strengthen the
+                system around mechanization.
+              </p>
+              <p className="homePartnership__quote">
+                From field delivery to national conversations, the goal is the same: make
+                mechanization work for more people.
+              </p>
+              <div className="homePartnership__ctas">
+                <Link className="btn btn--primary btn--inkHover" href="/partners#contact">
+                  Partner With TracTrac
+                </Link>
+                <Link className="btn btn--outline" href="/partners#finance">
+                  Explore Investment Opportunities
+                </Link>
+              </div>
+            </div>
+            <div>
+              <div className="media media--rounded homePartnership__media">
+                <Photo
+                  src={asset("uploads/DSC02281.jpg")}
+                  alt="TracTrac and Mastercard Foundation program team at a mechanization service provider onboarding event"
+                  sizes="(max-width: 880px) 90vw, 45vw"
+                />
+              </div>
+              <p className="prose muted homePartnership__partners">
+                Government and regulators. Commercial banks. Development finance institutions.
+                Investors. Development partners. Equipment manufacturers. Agricultural
+                organisations.
+              </p>
+              <div className="homePartnership__beyond">
+                <p className="eyebrow">Beyond service delivery</p>
+                <h3 className="homePartnership__beyondTitle">
+                  Better access also depends on better systems.
+                </h3>
+                <p className="prose muted">
+                  TracTrac brings stakeholders together, contributes to industry and policy
+                  conversations and turns ideas into practical action.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="wrap homePartnership__logosWrap">
+          <p className="homePartnership__logosTitle">
+            Working with organisations that want mechanization to work.
+          </p>
+          <div className="homePartnerLogos">
+            {PARTNER_LOGOS.map((logo) => (
+              <div className="homePartnerLogo" key={logo.name}>
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={logo.width}
+                  height={logo.height}
+                  style={{
+                    maxHeight: logo.maxHeight,
+                    width: "auto",
+                    height: "auto",
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

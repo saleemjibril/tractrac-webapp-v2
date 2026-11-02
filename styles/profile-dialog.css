@@ -97,23 +97,3 @@
 .teamDialog__bio p {
   font: 400 18px/1.65 var(--font-sans);
 }
-
-.teamDialog__linkedin {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 28px;
-  font: 600 15px/1 var(--font-sans);
-}
-
-.teamDialog__linkedin span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: var(--ink);
-  color: #fff;
-  font: 700 13px/1 var(--font-sans);
-}

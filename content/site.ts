@@ -177,7 +177,6 @@ export const LEGAL_LINKS: NavLink[] = [
 ];
 
 export const SOCIAL_LINKS: NavLink[] = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/tractrac/" },
   { label: "Instagram", href: "https://www.instagram.com/tractracglobal/" },
   { label: "X", href: "https://x.com/tractracglobal" },
   { label: "Facebook", href: "https://www.facebook.com/tractracglobal" },

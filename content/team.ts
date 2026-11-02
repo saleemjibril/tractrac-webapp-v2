@@ -3,7 +3,6 @@ export type TeamMember = {
   name: string;
   title: string;
   dept: string;
-  linkedin: string;
   photo: string;
   leadership: boolean;
   bio: string[];
@@ -15,7 +14,6 @@ export const TEAM: TeamMember[] = [
     name: "Godson Ohuruogu",
     title: "Chief Executive Officer",
     dept: "CEO",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/b0ed053e-bbd1-4606-bd7f-88cfb6b909d0.jpg",
     leadership: true,
     bio: [
@@ -29,7 +27,6 @@ export const TEAM: TeamMember[] = [
     name: "Stephen Aguebor",
     title: "Deputy Team Lead, ISSAM Project",
     dept: "Programs",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/53bf9786-dc8d-4005-a1a7-3a4147972c45.jpg",
     leadership: true,
     bio: [
@@ -42,7 +39,6 @@ export const TEAM: TeamMember[] = [
     name: "Alero Otis",
     title: "Head of Projects and Partnerships",
     dept: "Partnerships",
-    linkedin: "",
     photo: "/staff/alero-otis.jpg",
     leadership: true,
     bio: [
@@ -58,7 +54,6 @@ export const TEAM: TeamMember[] = [
     name: "Samuel Olanikepun",
     title: "MERL Team Lead",
     dept: "MERL",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/b8b136e0-100b-4358-9dc9-fb66ebec99be.jpg",
     leadership: true,
     bio: [
@@ -71,7 +66,6 @@ export const TEAM: TeamMember[] = [
     name: "Adanna Atuonwu",
     title: "Communications Lead",
     dept: "Communications",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/3b9fbaa2-3936-4345-a62e-01bc30b5d7d8.jpeg",
     leadership: true,
     bio: [
@@ -87,7 +81,6 @@ export const TEAM: TeamMember[] = [
     name: "John Olaseye Olanrewaju",
     title: "Engineering Lead",
     dept: "Engineering",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/5acf5490-e290-4d7a-b533-966993660604.jpg",
     leadership: true,
     bio: [
@@ -100,7 +93,6 @@ export const TEAM: TeamMember[] = [
     name: "Israel Feranmi Olatunde",
     title: "IT Lead",
     dept: "IT and Designs",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/252da971-8969-4c37-9e24-98877091547a.jpeg",
     leadership: true,
     bio: [
@@ -113,7 +105,6 @@ export const TEAM: TeamMember[] = [
     name: "Mercy Balogun",
     title: "Product Manager",
     dept: "IT and Designs",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/35f08b9d-0794-4a9d-909e-60d47904b767.jpg",
     leadership: true,
     bio: [
@@ -126,7 +117,6 @@ export const TEAM: TeamMember[] = [
     name: "Ekene Chukwunyebendu-Nnolum",
     title: "Finance Manager",
     dept: "Finance",
-    linkedin: "https://www.linkedin.com/in/chukwunyebendu-nnolum-bright-36105499/",
     photo: "https://api.tractrac.co/media/images/8ee37f84-ed45-48c6-9a1e-849695b9e33d.png",
     leadership: true,
     bio: [
@@ -140,7 +130,6 @@ export const TEAM: TeamMember[] = [
     name: "Ojoma Okwute",
     title: "Head of Operations",
     dept: "Operations",
-    linkedin: "",
     photo: "",
     leadership: true,
     bio: [
@@ -154,7 +143,6 @@ export const TEAM: TeamMember[] = [
     title:
       "Investment and Asset Management, Gender, Diversity and Social Inclusion (GEDSI) Lead",
     dept: "Investment, Asset Management and GEDSI",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/052d5cb8-dae3-4cc9-a285-c532d379fd9a.jpeg",
     leadership: true,
     bio: [
@@ -168,7 +156,6 @@ export const TEAM: TeamMember[] = [
     name: "Chika Nelson",
     title: "Policy Lead",
     dept: "Policy and Business development",
-    linkedin: "",
     photo: "",
     leadership: true,
     bio: [
@@ -181,7 +168,6 @@ export const TEAM: TeamMember[] = [
     name: "Monday Orji",
     title: "",
     dept: "Policy and Business development",
-    linkedin: "",
     photo: "",
     leadership: false,
     bio: [],
@@ -191,7 +177,6 @@ export const TEAM: TeamMember[] = [
     name: "Adedolapo Olupona",
     title: "",
     dept: "Policy and Business development",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/606e3e3d-f9f0-4cc6-a175-22fb4bcba5bb.jpg",
     leadership: false,
     bio: [],
@@ -201,7 +186,6 @@ export const TEAM: TeamMember[] = [
     name: "Afolashade Sophie Ajibola-Adeyinka",
     title: "Communications, Media and Digital Marketing Specialist",
     dept: "Communications",
-    linkedin: "https://www.linkedin.com/in/folaajibola",
     photo: "https://api.tractrac.co/media/images/a795deee-3ce6-4839-9d71-64e455a0e56d.jpg",
     leadership: false,
     bio: [
@@ -213,7 +197,6 @@ export const TEAM: TeamMember[] = [
     name: "Isaiah Ogede",
     title: "Documentary Photographer, Cinematographer and Visual Storyteller",
     dept: "Communications",
-    linkedin: "https://www.linkedin.com/in/isaiah-ogede/",
     photo: "https://api.tractrac.co/media/images/0f4cca2b-243b-4c6f-b1b0-988dbaa01bc3.jpg",
     leadership: false,
     bio: [
@@ -226,7 +209,6 @@ export const TEAM: TeamMember[] = [
     name: "Ashey Matthew Osebi",
     title: "MERL Associate",
     dept: "MERL",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/d57bc579-4d37-47ef-aaf8-ecd39cddc52b.jpg",
     leadership: false,
     bio: [
@@ -239,7 +221,6 @@ export const TEAM: TeamMember[] = [
     name: "Betini Akarandut",
     title: "Lead Backend/DevOps Engineer",
     dept: "IT and Designs",
-    linkedin: "https://www.linkedin.com/in/betiniakarandut/",
     photo: "https://api.tractrac.co/media/images/c1f9672e-0c80-4419-864b-e1b5a3796800.jpg",
     leadership: false,
     bio: [
@@ -251,8 +232,7 @@ export const TEAM: TeamMember[] = [
     id: "bridget-augustine",
     name: "Bridget Augustine",
     title: "",
-    dept: "Our team",
-    linkedin: "",
+    dept: "IT and Designs",
     photo: "https://api.tractrac.co/media/images/93df5c98-28df-4e0c-8988-4c063a8a0e45.jpg",
     leadership: false,
     bio: [],
@@ -262,7 +242,6 @@ export const TEAM: TeamMember[] = [
     name: "Chidinma Ekwonu",
     title: "",
     dept: "Partnerships",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/b00b805d-df8d-4a76-adbe-8ac9cddd42a1.jpg",
     leadership: false,
     bio: [],
@@ -271,8 +250,7 @@ export const TEAM: TeamMember[] = [
     id: "godsfavour-nyoyoko",
     name: "Godsfavour Nyoyoko",
     title: "",
-    dept: "Our team",
-    linkedin: "",
+    dept: "Operations",
     photo: "https://api.tractrac.co/media/images/9eb8761f-108c-4c82-b37b-8bfaa425cad1.jpg",
     leadership: false,
     bio: [],
@@ -282,7 +260,6 @@ export const TEAM: TeamMember[] = [
     name: "Grace Wata John",
     title: "Finance Officer",
     dept: "Finance",
-    linkedin: "https://www.linkedin.com/in/grace-wata-john-4b598136b",
     photo: "https://api.tractrac.co/media/images/75322280-feb1-4d66-92a2-9e1287924034.jpg",
     leadership: false,
     bio: [
@@ -294,8 +271,7 @@ export const TEAM: TeamMember[] = [
     id: "israel-ayeni",
     name: "Israel Ayeni",
     title: "",
-    dept: "Our team",
-    linkedin: "https://www.linkedin.com/in/ayeni-israel-96a9b4268",
+    dept: "Programs",
     photo: "https://api.tractrac.co/media/images/bf80a01a-73ae-40ab-b080-d7ec5769ef87.jpg",
     leadership: false,
     bio: [],
@@ -304,8 +280,7 @@ export const TEAM: TeamMember[] = [
     id: "ikenna-nnorom",
     name: "Ikenna Nnorom",
     title: "",
-    dept: "Our team",
-    linkedin: "https://www.linkedin.com/in/ikenna-nnorom-916135145/",
+    dept: "Engineering",
     photo: "https://api.tractrac.co/media/images/03d30b9e-011b-4b72-be6d-ee73d5accb88.jpg",
     leadership: false,
     bio: [],
@@ -315,7 +290,6 @@ export const TEAM: TeamMember[] = [
     name: "Larai Tumba Sini",
     title: "Programs Associate/Relationship Officer",
     dept: "Programs",
-    linkedin: "https://www.linkedin.com/in/larai-tumba-bb6918288",
     photo: "https://api.tractrac.co/media/images/0b6d6adb-cc35-414b-8f1c-50a69872d092.jpg",
     leadership: false,
     bio: [
@@ -328,7 +302,6 @@ export const TEAM: TeamMember[] = [
     name: "Magdalene Osagie Omohze",
     title: "Gender, Disability and Social Inclusion (GEDSI) Associate",
     dept: "Investment, Asset Management and GEDSI",
-    linkedin: "https://www.linkedin.com/in/magdalene-osagie-9a5164421",
     photo: "https://api.tractrac.co/media/images/2cd77493-27c5-4235-9b3b-63dc73faee55.jpg",
     leadership: false,
     bio: [
@@ -341,7 +314,6 @@ export const TEAM: TeamMember[] = [
     name: "Martha Peter Aladi",
     title: "Project Associate and Relationship Officer",
     dept: "Programs",
-    linkedin: "https://www.linkedin.com/in/marthapeteraladi",
     photo: "https://api.tractrac.co/media/images/e5715d6c-9c1c-4e72-9a88-7c96ece22f63.jpg",
     leadership: false,
     bio: [
@@ -354,7 +326,6 @@ export const TEAM: TeamMember[] = [
     name: "Peter Agbo",
     title: "",
     dept: "Operations",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/f6d027d7-faf3-4e86-8ca2-d62ed3b56e4e.jpg",
     leadership: false,
     bio: [],
@@ -364,7 +335,6 @@ export const TEAM: TeamMember[] = [
     name: "Samson Ugbebor",
     title: "Loan Recovery Manager",
     dept: "Investment, Asset Management and GEDSI",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/4eec5df9-dddd-4a98-a985-69f0959963a0.jpg",
     leadership: false,
     bio: [
@@ -377,7 +347,6 @@ export const TEAM: TeamMember[] = [
     name: "ThankGod Izuchukwu Onugwu",
     title: "Program Associate/Relationship Officer",
     dept: "Programs",
-    linkedin: "https://www.linkedin.com/in/izuchukwu-onugwu-6722a1247",
     photo: "https://api.tractrac.co/media/images/216086e7-5095-413e-85cc-3bdfa46346d6.jpg",
     leadership: false,
     bio: [
@@ -390,7 +359,6 @@ export const TEAM: TeamMember[] = [
     name: "Yahaya Emmanuel Ojonugwa",
     title: "Program Associate and Relationship Officer",
     dept: "Programs",
-    linkedin: "",
     photo: "https://api.tractrac.co/media/images/30b436e9-2f68-4fa2-ba58-83e6d48869d4.jpg",
     leadership: false,
     bio: [
@@ -403,7 +371,6 @@ export const TEAM: TeamMember[] = [
     name: "Godwin Okokoro",
     title: "MERL Associate",
     dept: "MERL",
-    linkedin: "https://www.linkedin.com/in/godwin-okokoro",
     photo: "https://api.tractrac.co/media/images/15b84ea4-52d2-4746-ba13-570979922a51.jpg",
     leadership: false,
     bio: [
@@ -416,7 +383,6 @@ export const TEAM: TeamMember[] = [
     name: "Faith Amanata",
     title: "YPiM National Coordinator",
     dept: "Policy and Business development",
-    linkedin: "https://www.linkedin.com/in/faith-amanata-316895274",
     photo: "https://api.tractrac.co/media/images/5acfd5c0-ad0b-4671-b589-73e4f5a417bd.jpeg",
     leadership: false,
     bio: [
@@ -429,8 +395,6 @@ export const TEAM: TeamMember[] = [
     name: "Margaret Thomas",
     title: "Regional Business Development Officer, North East",
     dept: "Policy and Business development",
-    linkedin:
-      "https://www.linkedin.com/in/margaret-thomas-acihrm-cpm-pgd-hrm-pgdm-314a46202",
     photo: "https://api.tractrac.co/media/images/3ef6cf61-6b5f-42fb-8c9a-48d596d49f57.jpeg",
     leadership: false,
     bio: [
@@ -452,7 +416,6 @@ export const TEAM_DEPARTMENTS = [
   "Finance",
   "Programs",
   "Operations",
-  "Our team",
 ];
 
 export const LEADERSHIP = TEAM.filter((person) => person.leadership);
