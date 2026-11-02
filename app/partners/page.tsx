@@ -261,7 +261,7 @@ export default function PartnersPage() {
       <section className="partnersLogos">
         <div className="wrap">
           <p className="partnersLogos__title">
-            Mechanizing Africa requires bold collaborations.
+            Mechanising Africa requires bold collaborations.
           </p>
           <div className="partnersLogos__grid">
             {PARTNER_LOGOS.map((logo, index) => (

@@ -46,7 +46,7 @@ export default function TechnologyPage() {
               <div className="techHero__text">
                 {/* <p className="eyebrow">TracTrac Plus</p> */}
                 <h1>
-                  TracTrac Plus - Technology
+                  TracTrac Plus: Technology
                   <br />
                   that moves the work.
                 </h1>

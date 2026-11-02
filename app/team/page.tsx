@@ -46,11 +46,13 @@ export default function TeamPage() {
         <Link className="teamHero__back" href="/about#team">
           <span aria-hidden="true">←</span> About TracTrac
         </Link>
-        <p className="eyebrow eyebrow--light">Our people</p>
-        <h1 className="teamHero__title">Our people - Powering food systems</h1>
+        <h1 className="teamHero__title">
+          Our people:
+          <br />
+          Powering food systems
+        </h1>
         <p className="teamHero__lede">
-          Meet the people working across TracTrac to connect agriculture, technology and
-          mechanization.
+          We are united by a mission to build a mechanized Africa
         </p>
       </Hero>
 

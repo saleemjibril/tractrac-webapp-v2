@@ -28,7 +28,7 @@
 }
 
 .teamHero__title {
-  max-width: 12ch;
+  max-width: 22ch;
   font: 700 clamp(44px, 6.4vw, 104px) / 0.94 var(--font-sans);
   letter-spacing: -0.045em;
   text-wrap: balance;
