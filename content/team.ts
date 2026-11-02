@@ -155,7 +155,7 @@ export const TEAM: TeamMember[] = [
     id: "chika-nelson",
     name: "Chika Nelson",
     title: "Policy Lead",
-    dept: "Policy and Business development",
+    dept: "Policy and Business Development",
     photo: "",
     leadership: true,
     bio: [
@@ -165,9 +165,9 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: "monday-orji",
-    name: "Monday Orji",
-    title: "",
-    dept: "Policy and Business development",
+    name: "Monday Ojih",
+    title: "Regional Business Development Officer, North West",
+    dept: "Policy and Business Development",
     photo: "",
     leadership: false,
     bio: [],
@@ -175,8 +175,8 @@ export const TEAM: TeamMember[] = [
   {
     id: "adedolapo-olupona",
     name: "Adedolapo Olupona",
-    title: "",
-    dept: "Policy and Business development",
+    title: "Regional Business Development Officer, South South",
+    dept: "Policy and Business Development",
     photo: "https://api.tractrac.co/media/images/606e3e3d-f9f0-4cc6-a175-22fb4bcba5bb.jpg",
     leadership: false,
     bio: [],
@@ -382,7 +382,7 @@ export const TEAM: TeamMember[] = [
     id: "faith-amanata",
     name: "Faith Amanata",
     title: "YPiM National Coordinator",
-    dept: "Policy and Business development",
+    dept: "Policy and Business Development",
     photo: "https://api.tractrac.co/media/images/5acfd5c0-ad0b-4671-b589-73e4f5a417bd.jpeg",
     leadership: false,
     bio: [
@@ -394,7 +394,7 @@ export const TEAM: TeamMember[] = [
     id: "margaret-thomas",
     name: "Margaret Thomas",
     title: "Regional Business Development Officer, North East",
-    dept: "Policy and Business development",
+    dept: "Policy and Business Development",
     photo: "https://api.tractrac.co/media/images/3ef6cf61-6b5f-42fb-8c9a-48d596d49f57.jpeg",
     leadership: false,
     bio: [
@@ -406,7 +406,7 @@ export const TEAM: TeamMember[] = [
 
 export const TEAM_DEPARTMENTS = [
   "CEO",
-  "Policy and Business development",
+  "Policy and Business Development",
   "Partnerships",
   "Investment, Asset Management and GEDSI",
   "Engineering",

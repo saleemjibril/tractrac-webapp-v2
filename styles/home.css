@@ -1364,8 +1364,7 @@
 .homePartnership__logosTitle {
   max-width: 26ch;
   margin-bottom: 28px;
-  padding-top: clamp(28px, 3vw, 48px);
-  border-top: 1px solid var(--line);
+  padding-top: clamp(14px, 1.6vw, 20px);
   font: 700 clamp(20px, 2.2vw, 30px) / 1.2 var(--font-sans);
   letter-spacing: -0.018em;
 }

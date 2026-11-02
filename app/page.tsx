@@ -434,6 +434,7 @@ export default async function HomePage() {
 
       <section id="partnership" className="homePartnership">
         <div className="wrap homePartnership__logosWrap">
+          <p className="eyebrow">Our partners</p>
           <p className="homePartnership__logosTitle">
             Mechanising Africa requires bold collaborations.
           </p>
