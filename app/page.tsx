@@ -89,7 +89,7 @@ export default async function HomePage() {
             </p>
             <div className="homeHero__ctas" data-reveal data-delay="270">
               <Link className="btn btn--primary btn--lg btn--whiteHover" href="/technology#download">
-                Enlist farm machineries
+                Access Farm Machinery
               </Link>
               <Link className="btn btn--outlineLight btn--lg" href="/technology#download">
                 Become a booking agent
