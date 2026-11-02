@@ -75,8 +75,11 @@ export const TEAM: TeamMember[] = [
     photo: "https://api.tractrac.co/media/images/3b9fbaa2-3936-4345-a62e-01bc30b5d7d8.jpeg",
     leadership: true,
     bio: [
-      "Adanna leads TracTrac’s communications strategy, shaping how the organisation tells its story, amplifies its impact, and engages stakeholders across the agricultural ecosystem.",
-      "Her work ensures that TracTrac’s mission, programs, and partnerships reach the audiences that matter.",
+      "Adanna Atuonwu is a marketing and communications professional with over nine years of experience developing and executing strategic marketing, public relations and brand communications initiatives across B2B and B2C markets. Her expertise spans corporate communications, brand management, digital marketing, media relations, stakeholder engagement and integrated campaign management, with a track record of strengthening brand reputation, driving audience engagement and supporting business growth.",
+      "She currently serves as Communications Lead at TracTrac MSL, where she leads communications strategy, media relations and stakeholder engagement to advance the adoption of agricultural mechanisation services among smallholder farmers in Nigeria. Her work focuses on strategic storytelling, thought leadership, content development and integrated campaigns that strengthen the organisation’s visibility and position within the agricultural mechanisation ecosystem.",
+      "Previously, as Public Relations Lead at AFEX, Adanna led public relations and media engagement strategies across Nigeria, Kenya, Uganda and Côte d’Ivoire. She played an instrumental role in strengthening the company’s brand positioning and supporting its expansion into East Africa through strategic communications, media partnerships and high-impact campaigns. She also led marketing and communications initiatives for flagship projects, including CodeCashCrop and ComX, contributing to increased brand visibility, event participation and product adoption.",
+      "Adanna holds a Master of Science in Media and Communications from Pan-Atlantic University and a Bachelor of Arts in Mass Communication from the University of Nigeria, Nsukka. Her professional interests lie at the intersection of strategic communications, brand building, storytelling and the use of marketing to drive organisational growth and impact.",
+      "Beyond her professional work, she is passionate about mental health advocacy, travel and cultural exploration.",
     ],
   },
   {

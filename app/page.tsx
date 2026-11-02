@@ -5,7 +5,6 @@ import EquipmentRail from "@/components/home/EquipmentRail";
 import FaqSection from "@/components/home/FaqSection";
 import HeroVideo from "@/components/home/HeroVideo";
 import ProgrammeShowcase from "@/components/home/ProgrammeShowcase";
-import TechnologySteps from "@/components/home/TechnologySteps";
 import CountUp from "@/components/ui/CountUp";
 import Icon from "@/components/ui/Icon";
 import Photo from "@/components/ui/Photo";
@@ -25,10 +24,8 @@ import {
   HERO_POSTER,
   HOME_INSIGHTS,
   HOME_STATS,
-  MARQUEE_ITEMS,
   PARTNER_LOGOS,
   STORY_CARDS,
-  TECH_STEPS,
 } from "@/content/home";
 import "@/styles/home.css";
 
@@ -92,10 +89,10 @@ export default async function HomePage() {
             </p>
             <div className="homeHero__ctas" data-reveal data-delay="270">
               <Link className="btn btn--primary btn--lg btn--whiteHover" href="/technology#download">
-                Find Mechanisation
+                Enlist farm machineries
               </Link>
-              <Link className="btn btn--outlineLight btn--lg" href="#tech">
-                See How TracTrac Works
+              <Link className="btn btn--outlineLight btn--lg" href="/technology#download">
+                Become a booking agent
               </Link>
             </div>
           </div>
@@ -311,49 +308,6 @@ export default async function HomePage() {
                 Explore MSP Opportunities
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="tech" className="homeTechSection on-dark">
-        <div className="wrap homeTechSection__intro">
-          <div className="grid2 homeTechSection__grid">
-            <div>
-              <p className="eyebrow" data-reveal>
-                Technology built for the work on the ground
-              </p>
-              <h2 className="display3" data-reveal data-delay="80">
-                From finding a machine to finishing the job.
-              </h2>
-            </div>
-            <div className="prose homeTechSection__copy" data-reveal data-delay="160">
-              <p>
-                TracTrac brings the steps around mechanisation into one connected experience.
-              </p>
-              <p className="homeTechSection__soft">
-                Farmers can find equipment, measure their farms and request services. Equipment
-                owners and agents can manage machines, demand and field activity.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="wrap homeTechSection__body">
-          <TechnologySteps steps={TECH_STEPS} />
-        </div>
-
-        <div className="homeMarquee">
-          <div className="homeMarquee__track">
-            {[0, 1].map((copy) => (
-              <div className="homeMarquee__group" aria-hidden={copy === 1} key={copy}>
-                {MARQUEE_ITEMS.map((item) => (
-                  <span key={item}>
-                    {item}
-                    <span className="homeMarquee__slash">/</span>
-                  </span>
-                ))}
-              </div>
-            ))}
           </div>
         </div>
       </section>
