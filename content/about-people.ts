@@ -19,7 +19,7 @@ export const ABOUT_PEOPLE: AboutPeoplePhoto[] = [
   },
   {
     src: "https://api.tractrac.co/media/images/05567092-5cdd-41c1-ad46-f30546d34045.jpg",
-    alt: "Two TracTrac colleagues working at a laptop during a mechanisation event",
+    alt: "Two TracTrac colleagues working at a laptop during a mechanization event",
   },
   {
     src: "https://api.tractrac.co/media/images/14ca1518-3659-4489-a590-32f3c54ee329.jpg",

@@ -13,6 +13,11 @@ export default function ProgrammeShowcase() {
   const [paused, setPaused] = useState(false);
   const [slide, setSlide] = useState(0);
 
+  const go = (direction: number) => {
+    setSlide(0);
+    setActive((current) => (current + direction + SHOWCASES.length) % SHOWCASES.length);
+  };
+
   useEffect(() => {
     if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setInterval(
@@ -125,6 +130,15 @@ export default function ProgrammeShowcase() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="programmeNav">
+        <button type="button" aria-label="Previous featured program" onClick={() => go(-1)}>
+          <span aria-hidden="true">←</span>
+        </button>
+        <button type="button" aria-label="Next featured program" onClick={() => go(1)}>
+          <span aria-hidden="true">→</span>
+        </button>
       </div>
     </div>
   );

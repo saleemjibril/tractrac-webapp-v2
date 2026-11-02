@@ -77,7 +77,7 @@ export default function EquipmentRail({ items }: { items: Item[] }) {
         className="homeRail"
         id="eq-rail"
         role="region"
-        aria-label="Types of mechanisation work"
+        aria-label="Types of mechanization work"
         tabIndex={0}
         ref={rail}
       >

@@ -9,7 +9,7 @@ import "@/styles/profile-dialog.css";
 export const metadata: Metadata = {
   title: "Team",
   description:
-    "Meet the people working across TracTrac to connect agriculture, technology and mechanisation.",
+    "Meet the people working across TracTrac to connect agriculture, technology and mechanization.",
   openGraph: { images: [asset("img/prog-1.jpg")] },
 };
 
@@ -50,7 +50,7 @@ export default function TeamPage() {
         <h1 className="teamHero__title">One team. Different strengths.</h1>
         <p className="teamHero__lede">
           Meet the people working across TracTrac to connect agriculture, technology and
-          mechanisation.
+          mechanization.
         </p>
       </Hero>
 

@@ -41,7 +41,7 @@
 
 .insightExcerpt {
   max-width: 52ch;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: var(--grey);
 }
 

@@ -28,7 +28,7 @@ export default function ProgrammesPage() {
           Programs
         </p>
         <h1 className="display2 programmesHero__title" data-reveal data-delay="80">
-          Building mechanisation where farmers are.
+          Building mechanization where farmers are.
         </h1>
         <p className="programmesHero__lede" data-reveal data-delay="180">
           TracTrac&apos;s programs train young people, organise them into service businesses and
@@ -42,12 +42,12 @@ export default function ProgrammesPage() {
             <div>
               <p className="eyebrow">Our programs</p>
               <h2 className="display3 programmesIndex__title">
-                Programs built around the people who make mechanisation work.
+                Programs built around the people who make mechanization work.
               </h2>
             </div>
             <p className="prose muted">
               From farmers and young people to service providers, cooperatives and investors, each
-              program tackles a different part of the mechanisation system.
+              program tackles a different part of the mechanization system.
             </p>
           </div>
 

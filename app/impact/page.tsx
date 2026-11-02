@@ -12,7 +12,7 @@ import "@/styles/impact.css";
 export const metadata: Metadata = {
   title: "Impact",
   description:
-    "From farmers getting access to machinery, to young people building mechanisation businesses. The impact is in the people, machines, land and systems involved.",
+    "From farmers getting access to machinery, to young people building mechanization businesses. The impact is in the people, machines, land and systems involved.",
   openGraph: { images: [asset("img/prog-5.jpg")] },
 };
 
@@ -120,7 +120,7 @@ const SYSTEM_STATS = [
     count: 10,
     suffix: "+",
     label:
-      "Key government institutions engaged across agriculture, mechanisation, research, investment and policy",
+      "Key government institutions engaged across agriculture, mechanization, research, investment and policy",
   },
   { count: 2, label: "High-level national policy dialogues convened" },
   {
@@ -145,14 +145,14 @@ const TIMELINE = [
   {
     date: "June 2026",
     accent: true,
-    title: "Young People in Mechanisation launches in Abuja",
+    title: "Young People in Mechanization launches in Abuja",
     body: "A pilot to train 36,000 young Nigerians over six months.",
   },
   {
     date: "September 2026",
     accent: false,
     title: "NAMP 2026",
-    body: "The National Agricultural Mechanisation Policy 2026 is officially ratified by government.",
+    body: "The National Agricultural Mechanization Policy 2026 is officially ratified by government.",
   },
 ];
 
@@ -165,7 +165,7 @@ const STORIES = [
   },
   {
     category: "Enterprise",
-    title: "Local Youth-Led Mechanisation Enterprises for Global Impact",
+    title: "Local Youth-Led Mechanization Enterprises for Global Impact",
     image: "img/ypim-3.jpg",
     alt: "Young people in TracTrac shirts in front of an FMAFS and TracTrac banner",
   },
@@ -178,7 +178,7 @@ const STORIES = [
   },
   {
     category: "Policy",
-    title: "The National Agricultural Mechanisation Policy 2026 journey",
+    title: "The National Agricultural Mechanization Policy 2026 journey",
     image: "img/ypim-6.jpg",
     alt: "Members of YPiM present at the Ratification of the NAMP 2026 at Abuja",
   },
@@ -204,7 +204,7 @@ export default function ImpactPage() {
           What happens when access changes.
         </h1>
         <p className="impactHero__lede" data-reveal data-delay="180">
-          From farmers getting access to machinery, to young people building mechanisation
+          From farmers getting access to machinery, to young people building mechanization
           businesses. The impact is in the people, machines, land and systems involved.
         </p>
       </Hero>
@@ -226,7 +226,7 @@ export default function ImpactPage() {
                 More farmers served. More machines working. More opportunities created.
               </h2>
               <p>
-                Better access to mechanisation can change how quickly work gets done, how many
+                Better access to mechanization can change how quickly work gets done, how many
                 farmers a machine can serve and how many people can build livelihoods around the
                 sector.
               </p>
@@ -268,7 +268,7 @@ export default function ImpactPage() {
                 <span>Farmers</span>
               </p>
               <h2 className="h2" data-reveal data-delay="80">
-                From hearing about mechanisation to getting the work done.
+                From hearing about mechanization to getting the work done.
               </h2>
               <p className="prose muted impactFarmers__lede" data-reveal data-delay="140">
                 Through ISSAM, farmers are reached in stages. Each figure below is a different
@@ -308,14 +308,14 @@ export default function ImpactPage() {
             </h2>
             <p className="impactPeople__lede" data-reveal data-delay="140">
               The impact is not just equipment deployed. It is people working, earning and building
-              businesses around mechanisation.
+              businesses around mechanization.
             </p>
           </div>
           <div className="impactPeople__gallery">
             {[
               ["img/prog-9.jpg", "A woman MSP in a white cap driving an orange tryctor", "A woman MSP at work on an ISSAM tryctor."],
               ["img/prog-2.jpg", "ISSAM trainees in orange coveralls and helmets learning to handle equipment", "Practical equipment training for ISSAM trainees."],
-              ["img/ypim-1.jpg", "Young people cheering with Youth in Mechanization signs", "Young People in Mechanisation participants."],
+              ["img/ypim-1.jpg", "Young people cheering with Youth in Mechanization signs", "Young People in Mechanization participants."],
             ].map(([src, alt, caption], index) => (
               <figure key={src} data-reveal data-delay={index * 100}>
                 <div className="media media--rounded ratio-3-4">
@@ -499,7 +499,7 @@ export default function ImpactPage() {
             </div>
             <p className="impactSystems__lede" data-reveal data-delay="140">
               Through ISSAM, TracTrac supported the development of the National Agricultural
-              Mechanisation Policy (NAMP) 2026 and the Mechanisation Investment Strategy Document.
+              Mechanization Policy (NAMP) 2026 and the Mechanization Investment Strategy Document.
               NAMP 2026 has been officially ratified by government.
             </p>
           </div>

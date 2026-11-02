@@ -17,7 +17,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Stories, ideas and practical insights from the work of making agricultural mechanisation more accessible.",
+    "Stories, ideas and practical insights from the work of making agricultural mechanization more accessible.",
   openGraph: {
     images: [
       "https://api.tractrac.co/media/images/f56cc36b-27b4-42d4-879c-92fbc77430d0.jpg",
@@ -44,7 +44,7 @@ export default async function InsightsPage() {
           What we&rsquo;re learning, building and seeing in the field.
         </h1>
         <p className="insightsHero__lede" data-reveal data-delay="180">
-          Stories, ideas and practical insights from the work of making agricultural mechanisation
+          Stories, ideas and practical insights from the work of making agricultural mechanization
           more accessible.
         </p>
       </Hero>

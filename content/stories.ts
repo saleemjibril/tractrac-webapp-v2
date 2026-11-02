@@ -37,7 +37,7 @@ export const STORIES: Story[] = [
     readTime: "6 min read",
     heroImage: asset("uploads/Existing MSP Interview Keana LGA.jpg"),
     heroAlt:
-      "A mechanisation service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
+      "A mechanization service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
     body: [
       {
         type: "paragraph",
@@ -67,7 +67,7 @@ export const STORIES: Story[] = [
         type: "image",
         src: asset("uploads/Copy of DSC08699.jpg"),
         alt: "An operator working farmland with a TracTrac tractor",
-        caption: "Mechanisation work around Keana, Nasarawa State.",
+        caption: "Mechanization work around Keana, Nasarawa State.",
       },
       {
         type: "quote",
@@ -81,7 +81,7 @@ export const STORIES: Story[] = [
     gallery: [
       {
         src: asset("uploads/Existing MSP Interview Keana LGA.jpg"),
-        alt: "A mechanisation service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
+        alt: "A mechanization service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
       },
       {
         src: asset("uploads/Existing MSP Interview Lafia LGA.jpg"),
@@ -311,7 +311,7 @@ export const STORIES: Story[] = [
       },
       {
         src: asset("uploads/Existing MSP Interview Keana LGA.jpg"),
-        alt: "A mechanisation service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
+        alt: "A mechanization service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
       },
       {
         src: asset("uploads/IMG-20260824-WA0025 (1).jpg"),
@@ -319,7 +319,7 @@ export const STORIES: Story[] = [
       },
       {
         src: asset("uploads/DSC02281.jpg"),
-        alt: "TracTrac and Mastercard Foundation program team at a mechanisation service provider onboarding event",
+        alt: "TracTrac and Mastercard Foundation program team at a mechanization service provider onboarding event",
       },
       {
         src: asset("uploads/Copy of DSC08691.jpg"),

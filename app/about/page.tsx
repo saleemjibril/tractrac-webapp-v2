@@ -13,7 +13,7 @@ import "@/styles/profile-dialog.css";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "TracTrac is a Nigerian agricultural mechanisation company connecting smallholder farmers to affordable tractor services through equipment, technology, private investment and the people who deliver the work.",
+    "TracTrac is a Nigerian agricultural mechanization company connecting smallholder farmers to affordable tractor services through equipment, technology, private investment and the people who deliver the work.",
   openGraph: { images: [asset("uploads/DSC07701.jpg")] },
 };
 
@@ -21,7 +21,7 @@ const PRINCIPLES = [
   {
     number: "01",
     title: "Access",
-    body: "Make mechanisation easier to reach, closer to the farm and at the time it is needed.",
+    body: "Make mechanization easier to reach, closer to the farm and at the time it is needed.",
   },
   {
     number: "02",
@@ -31,7 +31,7 @@ const PRINCIPLES = [
   {
     number: "03",
     title: "People",
-    body: "Build the skills and small businesses needed to run mechanisation services.",
+    body: "Build the skills and small businesses needed to run mechanization services.",
   },
   {
     number: "04",
@@ -52,7 +52,7 @@ const VALUES = [
   },
   {
     title: "Innovation",
-    body: "Develop practical technology that improves agricultural mechanisation.",
+    body: "Develop practical technology that improves agricultural mechanization.",
   },
   {
     title: "Accountability",
@@ -85,8 +85,8 @@ const MILESTONES = [
   },
   {
     date: "March 2026",
-    title: "Inclusive mechanisation strategy",
-    body: "TracTrac launches its Inclusive Agricultural Mechanisation Strategy at a convening aligned with International Women’s Day.",
+    title: "Inclusive mechanization strategy",
+    body: "TracTrac launches its Inclusive Agricultural Mechanization Strategy at a convening aligned with International Women’s Day.",
   },
   {
     date: "August 2026",
@@ -98,7 +98,7 @@ const MILESTONES = [
 const BUILT = [
   {
     title: "TracTrac Plus",
-    body: "The app farmers use to request tractors and mechanisation services.",
+    body: "The app farmers use to request tractors and mechanization services.",
     href: "/technology",
   },
   {
@@ -108,7 +108,7 @@ const BUILT = [
   },
   {
     title: "MSP networks",
-    body: "Youth-led Mechanisation Service Providers trained and equipped to deliver services locally.",
+    body: "Youth-led Mechanization Service Providers trained and equipped to deliver services locally.",
     href: "/programmes/issam",
   },
   {
@@ -128,7 +128,7 @@ const BUILT = [
   },
   {
     title: "Programs",
-    body: "Structured initiatives including ISSAM, Young People in Mechanisation and TRAxCelerate.",
+    body: "Structured initiatives including ISSAM, Young People in Mechanization and TRAxCelerate.",
     href: "/programmes",
   },
 ];
@@ -147,10 +147,10 @@ export default function AboutPage() {
           About TracTrac
         </p>
         <h1 className="display1 aboutHero__title" data-reveal data-delay="80">
-          We are building the systems that make mechanisation work.
+          We are building the systems that make mechanization work.
         </h1>
         <p className="aboutHero__lede" data-reveal data-delay="180">
-          TracTrac is a Nigerian agricultural mechanisation company. We connect smallholder farmers
+          TracTrac is a Nigerian agricultural mechanization company. We connect smallholder farmers
           to affordable tractor services by bringing together equipment, technology, private
           investment and the people who deliver the work.
         </p>
@@ -174,7 +174,7 @@ export default function AboutPage() {
             <div data-reveal data-delay="100">
               <p className="prose muted aboutWhy__copy">
                 We work to improve the lives of smallholder farmers by bringing private-sector
-                investment, mechanisation and technology together, so affordable tractor services
+                investment, mechanization and technology together, so affordable tractor services
                 reach more farms across Africa. That means connecting five things:
               </p>
               <div className="aboutWhy__list">
@@ -308,11 +308,11 @@ export default function AboutPage() {
         <div className="aboutVision__shade" aria-hidden="true" />
         <div className="wrap aboutVision__inner">
           <p className="eyebrow">Our vision</p>
-          <p className="aboutVision__statement">Leading a mechanisation revolution in Africa.</p>
+          <p className="aboutVision__statement">Leading a mechanization revolution in Africa.</p>
           <div className="grid2 aboutVision__mission">
             <p className="eyebrow">Our mission</p>
             <p>
-              To improve farmers’ access to mechanisation, create opportunities for investors and
+              To improve farmers’ access to mechanization, create opportunities for investors and
               enterprising young people, increase the number of tractors available and use
               technology to make better use of every machine.
             </p>
@@ -348,7 +348,7 @@ export default function AboutPage() {
             </div>
             <p className="prose muted">
               TracTrac’s team works across technology, field operations, programs, partnerships
-              and mechanisation services, alongside the operators, agents and MSPs who deliver the
+              and mechanization services, alongside the operators, agents and MSPs who deliver the
               work on the ground.
             </p>
           </div>
@@ -365,7 +365,7 @@ export default function AboutPage() {
             </div>
             <p className="prose muted">
               Meet the people bringing together technology, agricultural expertise and partnerships
-              to expand access to mechanisation.
+              to expand access to mechanization.
             </p>
           </div>
           <Leadership />
@@ -381,7 +381,7 @@ export default function AboutPage() {
           {[
             ["img/prog-1.jpg", "An operator ploughing with an orange ISSAM tryctor"],
             ["img/prog-9.jpg", "A woman MSP in the field"],
-            ["img/ypim-1.jpg", "Young people in mechanisation"],
+            ["img/ypim-1.jpg", "Young people in mechanization"],
             ["uploads/IMG-20260824-WA0147.jpg", "A TracTrac team member interviewing an MSP"],
             [
               "uploads/WhatsApp Image 2026-09-03 at 11.09.37 (1).jpeg",
@@ -404,7 +404,7 @@ export default function AboutPage() {
       <section className="aboutCta">
         <div className="wrap">
           <p className="eyebrow" data-reveal>
-            Let’s build the future of mechanisation
+            Let’s build the future of mechanization
           </p>
           <h2 data-reveal data-delay="80">
             Whether you are a farmer, investor, partner, service provider or organisation working

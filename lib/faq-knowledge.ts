@@ -44,7 +44,7 @@ export function getFaqKnowledgeBase(): string {
 ${SITE.name}: ${SITE.description}
 ${BRAND.blurb}
 
-TracTrac is a Nigerian agricultural mechanisation company. We connect smallholder farmers to affordable tractor and equipment services by bringing together machinery, technology, private investment and the people who deliver the work.
+TracTrac is a Nigerian agricultural mechanization company. We connect smallholder farmers to affordable tractor and equipment services by bringing together machinery, technology, private investment and the people who deliver the work.
 
 ## Contact and links
 - General enquiries: info@tractrac.co

@@ -40,7 +40,7 @@
 .contactDetails__intro {
   max-width: 42ch;
   margin: 22px 0 clamp(30px, 4vw, 48px);
-  font: 400 clamp(15px, 1.2vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.2vw, 18px) / 1.65 var(--font-sans);
   color: var(--grey);
 }
 

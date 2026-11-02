@@ -12,7 +12,7 @@ import "@/styles/issam.css";
 export const metadata: Metadata = {
   title: "ISSAM",
   description:
-    "A strategic partnership between TracTrac Mechanisation Services Limited and the Mastercard Foundation, designed to improve how smallholder farmers in Nigeria access affordable and reliable mechanisation services.",
+    "A strategic partnership between TracTrac Mechanization Services Limited and the Mastercard Foundation, designed to improve how smallholder farmers in Nigeria access affordable and reliable mechanization services.",
   openGraph: { images: [asset("img/prog-1.jpg")] },
 };
 
@@ -30,7 +30,7 @@ const GLANCE: Array<{
   {
     icon: "plant",
     count: 135000,
-    label: "Five-year target: farmers reached with mechanisation services",
+    label: "Five-year target: farmers reached with mechanization services",
     accent: true,
   },
 ];
@@ -38,15 +38,15 @@ const GLANCE: Array<{
 const OBJECTIVES = [
   {
     title: "Create jobs",
-    body: "Empower cooperatives to deliver mechanisation services within their communities.",
+    body: "Empower cooperatives to deliver mechanization services within their communities.",
   },
   {
     title: "Bridge inclusion gaps",
-    body: "Actively involve women, youth and persons with disabilities in mechanisation opportunities.",
+    body: "Actively involve women, youth and persons with disabilities in mechanization opportunities.",
   },
   {
     title: "Strengthen agricultural resilience",
-    body: "Combine technology, affordability and hands-on training to strengthen local mechanisation capacity.",
+    body: "Combine technology, affordability and hands-on training to strengthen local mechanization capacity.",
   },
 ];
 
@@ -122,7 +122,7 @@ const ENABLING = [
     count: 10,
     suffix: "+",
     label:
-      "Key government institutions engaged across agriculture, mechanisation, research, investment and policy",
+      "Key government institutions engaged across agriculture, mechanization, research, investment and policy",
   },
   { count: 2, label: "High-level national policy dialogues convened" },
   {
@@ -156,12 +156,12 @@ export default function IssamPage() {
           ISSAM
         </h1>
         <p className="issamHero__subtitle" data-reveal data-delay="160">
-          Improving Smallholder Farmers&apos; Access to Small-Scale Mechanisation Services
+          Improving Smallholder Farmers&apos; Access to Small-Scale Mechanization Services
         </p>
         <p className="issamHero__copy" data-reveal data-delay="240">
-          A strategic partnership between TracTrac Mechanisation Services Limited and the
+          A strategic partnership between TracTrac Mechanization Services Limited and the
           Mastercard Foundation, designed to improve how smallholder farmers in Nigeria access
-          affordable and reliable mechanisation services.
+          affordable and reliable mechanization services.
         </p>
         <dl className="issamHero__meta" data-reveal data-delay="320">
           <div>
@@ -205,9 +205,9 @@ export default function IssamPage() {
           <div className="issamObjectives__grid">
             <div className="issamObjectives__intro">
               <p className="eyebrow">Five-year objectives</p>
-              <h2>A people-first model for mechanisation.</h2>
+              <h2>A people-first model for mechanization.</h2>
               <p className="prose muted">
-                Youth-led Mechanisation Service Providers, a strong focus on women and persons with
+                Youth-led Mechanization Service Providers, a strong focus on women and persons with
                 disabilities, technical skills, small-scale equipment and cooperative structures.
               </p>
             </div>
@@ -479,7 +479,7 @@ export default function IssamPage() {
               <p className="eyebrow">Policy and investment</p>
               <h2>Shaping the enabling environment.</h2>
               <p className="issamEnabling__copy">
-                Led the development of the NAMP 2026 and the Mechanisation Investment Document in
+                Led the development of the NAMP 2026 and the Mechanization Investment Document in
                 collaboration with the Federal Government
               </p>
               <div className="issamEnabling__box">

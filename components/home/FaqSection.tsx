@@ -154,7 +154,7 @@ export default function FaqSection() {
           <h2 className="homeFaq__title">Got questions?</h2>
           <p className="prose muted">
             Find answers to common questions about TracTrac Plus and how it connects farmers to
-            mechanisation services.
+            mechanization services.
           </p>
         </div>
 

@@ -143,7 +143,7 @@
 }
 
 .homeImpact__title {
-  max-width: 18ch;
+  max-width: 34ch;
   font: 700 clamp(28px, 4vw, 58px) / 1.02 var(--font-sans);
   letter-spacing: -0.028em;
   text-wrap: pretty;
@@ -152,7 +152,7 @@
 .homeImpact__lede {
   margin-top: clamp(20px, 2vw, 28px);
   max-width: 52ch;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.6 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.6 var(--font-sans);
   color: #fff;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
 }
@@ -218,7 +218,7 @@
 
 .homeWhy__copy p {
   margin-bottom: 20px;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
 }
 
 .homeWhy__copy p:last-child {
@@ -289,7 +289,7 @@
 .homeEcoList {
   display: grid;
   margin-bottom: 22px;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.5 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.5 var(--font-sans);
   color: var(--grey);
   list-style: none;
 }
@@ -317,7 +317,7 @@
 }
 
 .homeEcoList__strong {
-  font: 600 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 600 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
 }
 
 .homeEcoMap {
@@ -554,7 +554,7 @@
 
 .homePathway__copy {
   margin-bottom: 26px;
-  font: 400 17px/1.6 var(--font-sans);
+  font: 400 18px/1.6 var(--font-sans);
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -817,7 +817,7 @@
 
 .homeEquipment__cols p {
   max-width: 50ch;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -934,6 +934,40 @@
 .programmePane[data-active="true"] {
   opacity: 1;
   visibility: visible;
+}
+
+.programmeNav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: clamp(24px, 3vw, 44px);
+}
+
+.programmeNav button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font: 500 18px/1 var(--font-sans);
+  transition:
+    background 200ms var(--ease),
+    border-color 200ms var(--ease),
+    color 200ms var(--ease);
+}
+
+.programmeNav button:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.programmeNav button:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
 }
 
 .programmeName {
@@ -1106,7 +1140,7 @@
 }
 
 .homeStories__strong {
-  font: 600 clamp(15px, 1.2vw, 17px) / 1.6 var(--font-sans);
+  font: 600 clamp(15px, 1.2vw, 18px) / 1.6 var(--font-sans);
 }
 
 .homeStories__cardsWrap {

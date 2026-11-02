@@ -31,7 +31,7 @@ export const ECOSYSTEM_ROLES = [
   {
     number: "02",
     title: "Farmers",
-    body: "Need mechanisation services and request the service.",
+    body: "Need mechanization services and request the service.",
   },
   {
     number: "03",
@@ -40,13 +40,13 @@ export const ECOSYSTEM_ROLES = [
   },
   {
     number: "04",
-    title: "Mechanisation Service Providers",
+    title: "Mechanization Service Providers",
     body: "Take the job and deliver it on the ground.",
   },
 ];
 
 export const ENABLING_ENVIRONMENT = [
-  { title: "Cooperatives", body: "Organise local mechanisation businesses." },
+  { title: "Cooperatives", body: "Organise local mechanization businesses." },
   { title: "Finance & Investors", body: "Put capital behind machinery." },
   { title: "Government & Regulators", body: "Shape the operating environment." },
   { title: "Development Partners", body: "Support effective models to grow." },
@@ -140,7 +140,7 @@ export const STORY_CARDS = [
     excerpt: "Keana LGA — on fuel, repairs, idle weeks and the jobs that never get paid.",
     image: asset("uploads/Existing MSP Interview Keana LGA.jpg"),
     position: "50% 40%",
-    alt: "A mechanisation service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
+    alt: "A mechanization service provider in a TracTrac shirt talking with a researcher at the roadside in Keana LGA",
     href: "/stories/service-providers",
   },
   {
@@ -179,7 +179,7 @@ export const HOME_INSIGHTS = [
   {
     category: "Program updates",
     title:
-      "Operators’ Training and Community Demo Events Strengthen Mechanisation Ecosystems Across Nasarawa — ISSAM Project",
+      "Operators’ Training and Community Demo Events Strengthen Mechanization Ecosystems Across Nasarawa — ISSAM Project",
     excerpt:
       "Over 28,000 farmers were reached in April and May as the ISSAM project drives operator training and community demo events with year 1 MSPs across Nasarawa state.",
     image: asset("uploads/Copy of DSC08699.jpg"),
@@ -190,19 +190,19 @@ export const HOME_INSIGHTS = [
   {
     category: "Sector perspective",
     title:
-      "Nigeria’s Mechanisation Shift: What It Means for Farmers and the Future of Farming",
+      "Nigeria’s Mechanization Shift: What It Means for Farmers and the Future of Farming",
     excerpt:
-      "There is a growing understanding that agricultural mechanisation in Nigeria cannot succeed as a government-only effort.",
+      "There is a growing understanding that agricultural mechanization in Nigeria cannot succeed as a government-only effort.",
     image: asset("uploads/DSC02329.jpg"),
     position: "50% 45%",
-    alt: "TracTrac and government stakeholders at a national mechanisation event",
+    alt: "TracTrac and government stakeholders at a national mechanization event",
     href: "https://tractrac.co/blog/nigerias-mechanization-shift-what-it-means-for-farmers-and-the-future-of-farming",
   },
   {
     category: "Practical guidance",
     title: "Top 5 Tractors for Farming in Nigeria and Their Prices",
     excerpt:
-      "Buying a tractor in Nigeria is more than choosing a popular brand. We sat with our expert on farm mechanisation to discuss the best options, prices and things to consider.",
+      "Buying a tractor in Nigeria is more than choosing a popular brand. We sat with our expert on farm mechanization to discuss the best options, prices and things to consider.",
     image: asset("uploads/Copy of DSC07691.jpg"),
     position: "50% 45%",
     alt: "A TracTrac tryctor at work on farmland in Nasarawa State",
@@ -257,18 +257,18 @@ export const PARTNER_LOGOS = [
 export const SHOWCASES = [
   {
     name: "ISSAM",
-    title: "Building local businesses around mechanisation.",
+    title: "Building local businesses around mechanization.",
     subtitle:
-      "Improving Smallholder Farmers' Access to Small Scale Agricultural Mechanisation Services",
+      "Improving Smallholder Farmers' Access to Small Scale Agricultural Mechanization Services Leveraging Technology (ISSAM)",
     paragraphs: [
       "Through ISSAM, TracTrac and Mastercard Foundation are supporting young people to build businesses that bring agricultural machinery closer to farming communities.",
-      "Youth led cooperatives receive machinery alongside technical training and business support, enabling them to provide mechanisation services while building sustainable livelihoods.",
+      "Youth led cooperatives receive machinery alongside technical training and business support, enabling them to provide mechanization services while building sustainable livelihoods.",
     ],
     flow: [
       "Machinery",
       "Skills",
       "Youth led cooperatives",
-      "Mechanisation businesses",
+      "Mechanization businesses",
       "Farmers served",
     ],
     slides: [
@@ -295,10 +295,10 @@ export const SHOWCASES = [
   {
     name: "YPiM",
     title: "Agriculture needs people who know how to make machines work.",
-    subtitle: "Young People in Mechanisation",
+    subtitle: "Young People in Mechanization",
     paragraphs: [
-      "Young People in Mechanisation creates pathways for young Nigerians to learn practical skills, meet mentors and explore careers and businesses within agricultural mechanisation.",
-      "It is about enabling young people to see mechanisation as somewhere they can build a career, a business and a future.",
+      "Young People in Mechanization creates pathways for young Nigerians to learn practical skills, meet mentors and explore careers and businesses within agricultural mechanization.",
+      "It is about enabling young people to see mechanization as somewhere they can build a career, a business and a future.",
     ],
     flow: [],
     slides: [

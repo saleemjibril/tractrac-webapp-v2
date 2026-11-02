@@ -9,7 +9,7 @@ import "@/styles/solutions.css";
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "One network, four ways in: TracTrac for farmers, equipment owners, booking agents and mechanisation service providers.",
+    "One network, four ways in: TracTrac for farmers, equipment owners, booking agents and mechanization service providers.",
   openGraph: { images: [asset("uploads/DSC07701.jpg")] },
 };
 

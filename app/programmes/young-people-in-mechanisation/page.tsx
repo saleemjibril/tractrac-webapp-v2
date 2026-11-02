@@ -9,9 +9,9 @@ import "@/styles/programmes.css";
 import "@/styles/ypim.css";
 
 export const metadata: Metadata = {
-  title: "Young People in Mechanisation",
+  title: "Young People in Mechanization",
   description:
-    "Nigeria's first youth-focused mechanisation movement, a flagship initiative powered by TracTrac.",
+    "Nigeria's first youth-focused mechanization movement, a flagship initiative powered by TracTrac.",
   openGraph: { images: [asset("img/ypim-1.jpg")] },
 };
 
@@ -27,7 +27,7 @@ const PILOT_STATS = [
 ];
 
 const OFFERS = [
-  { label: "Mechanisation", accent: false },
+  { label: "Mechanization", accent: false },
   { label: "Entrepreneurship", accent: true },
   { label: "Innovation", accent: false },
   { label: "Leadership", accent: true },
@@ -35,7 +35,7 @@ const OFFERS = [
 ];
 
 const VISION = [
-  "Mechanisation service providers",
+  "Mechanization service providers",
   "Entrepreneurs",
   "Innovators",
   "Providers of sector intelligence",
@@ -59,10 +59,10 @@ export default function YoungPeoplePage() {
           ← Programs
         </Link>
         <h1 className="display2 programmeHero__title" data-reveal data-delay="80">
-          Young People in Mechanisation
+          Young People in Mechanization
         </h1>
         <p className="programmeHero__lede" data-reveal data-delay="180">
-          Nigeria&apos;s first youth-focused mechanisation movement, a flagship initiative powered
+          Nigeria&apos;s first youth-focused mechanization movement, a flagship initiative powered
           by TracTrac.
         </p>
         <div className="programmeHero__cta" data-reveal data-delay="260">
@@ -85,8 +85,8 @@ export default function YoungPeoplePage() {
               <h2 className="h2">A shortage of technical skills and low youth participation.</h2>
             </div>
             <p className="prose muted">
-              YPiM was created to address the mechanisation sector&apos;s shortage of skilled people
-              and to raise a new generation of mechanisation service providers and industry leaders.
+              YPiM was created to address the mechanization sector&apos;s shortage of skilled people
+              and to raise a new generation of mechanization service providers and industry leaders.
             </p>
           </div>
         </div>
@@ -147,8 +147,8 @@ export default function YoungPeoplePage() {
 
       <section className="ypimGallery">
         {[
-          ["img/ypim-4.jpg", "Participants holding signs reading Young, Skilled and Mechanising Nigeria and I am a Youth in Mechanization"],
-          ["img/ypim-5.jpg", "Three young people in a TracTrac photo frame holding mechanisation signs"],
+          ["img/ypim-4.jpg", "Participants holding signs reading Young, Skilled and Mechanizing Nigeria and I am a Youth in Mechanization"],
+          ["img/ypim-5.jpg", "Three young people in a TracTrac photo frame holding mechanization signs"],
           ["img/ypim-6.jpg", "Members of YPiM present at the Ratification of the NAMP 2026 at Abuja"],
           ["img/ypim-3.jpg", "A group of young people in TracTrac shirts in front of an FMAFS and TracTrac banner"],
         ].map(([src, alt], index) => (
@@ -168,7 +168,7 @@ export default function YoungPeoplePage() {
               </h2>
               <p className="ypimVision__copy">
                 A nationwide, youth-led movement that increases young people&apos;s participation,
-                leadership and access to opportunities in Nigeria&apos;s mechanisation ecosystem.
+                leadership and access to opportunities in Nigeria&apos;s mechanization ecosystem.
               </p>
             </div>
             <ol>
@@ -196,7 +196,7 @@ export default function YoungPeoplePage() {
         <div className="ypimCta__bg">
           <Photo
             src={asset("img/ypim-4.jpg")}
-            alt="Participants holding signs at a youth mechanisation event"
+            alt="Participants holding signs at a youth mechanization event"
             sizes="100vw"
           />
         </div>
@@ -204,7 +204,7 @@ export default function YoungPeoplePage() {
         <div className="wrap ypimCta__inner">
           <div className="ypimCta__grid">
             <div>
-              <h2 data-reveal>Join Nigeria&apos;s youth mechanisation movement.</h2>
+              <h2 data-reveal>Join Nigeria&apos;s youth mechanization movement.</h2>
               <div className="ypimCta__actions" data-reveal data-delay="100">
                 <a
                   className="btn btn--ypim btn--lg"

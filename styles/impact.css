@@ -131,7 +131,7 @@
 .impactPanel__intro > p:last-child {
   max-width: 52ch;
   margin-top: clamp(20px, 2vw, 28px);
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.6 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.6 var(--font-sans);
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -261,7 +261,7 @@
 
 .impactPeople__lede {
   max-width: 44ch;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.76);
 }
 
@@ -508,7 +508,7 @@
 
 .impactSystems__lede {
   max-width: 46ch;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.76);
 }
 

@@ -34,7 +34,7 @@ export default function TalentPoolPage() {
             <h2>There is more work to do.</h2>
             <p>
               Are you passionate about making a difference and contributing your skills to
-              meaningful work in agricultural mechanisation? TracTrac welcomes talented
+              meaningful work in agricultural mechanization? TracTrac welcomes talented
               professionals from diverse fields to join our network.
             </p>
             <p>
@@ -44,7 +44,7 @@ export default function TalentPoolPage() {
             </p>
             <p>
               Apply today and take the first step toward being part of a dynamic team shaping the
-              future of mechanisation in Nigeria and across Africa.
+              future of mechanization in Nigeria and across Africa.
             </p>
           </div>
 

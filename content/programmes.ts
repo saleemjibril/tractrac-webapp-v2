@@ -23,19 +23,19 @@ export const PROGRAMMES: ProgrammeCard[] = [
     slug: "issam",
     name: "ISSAM",
     shortName: "ISSAM",
-    category: "Mechanisation access",
+    category: "Mechanization access",
     description:
-      "Improving how smallholder farmers in Nigeria access affordable and reliable mechanisation services, in partnership with the Mastercard Foundation.",
+      "Improving how smallholder farmers in Nigeria access affordable and reliable mechanization services, in partnership with the Mastercard Foundation.",
     image: asset("img/prog-1.jpg"),
     alt: "An operator ploughing with an orange ISSAM tryctor",
   },
   {
     slug: "young-people-in-mechanisation",
-    name: "Young People in Mechanisation",
-    shortName: "Young People in Mechanisation",
+    name: "Young People in Mechanization",
+    shortName: "Young People in Mechanization",
     category: "Youth and careers",
     description:
-      "Nigeria's first youth-focused mechanisation movement, equipping 18 to 35 year-olds with practical skills, mentorship and opportunities.",
+      "Nigeria's first youth-focused mechanization movement, equipping 18 to 35 year-olds with practical skills, mentorship and opportunities.",
     image: asset("img/ypim-1.jpg"),
     alt: "Young people in orange and green shirts cheering with Youth in Mechanization signs",
   },
@@ -164,9 +164,9 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
   traxcellerate: {
     slug: "traxcellerate",
     eyebrow: "TRAxCelerate",
-    title: "Building the Human Infrastructure for Nigeria’s Mechanisation Revolution",
+    title: "Building the Human Infrastructure for Nigeria’s Mechanization Revolution",
     subtitle:
-      "The TRAxCelerate program is TracTrac’s flagship initiative to train, certify, and deploy 2,000 mechanisation service providers, operators, agents, and mechanics across Nigeria.",
+      "The TRAxCelerate program is TracTrac’s flagship initiative to train, certify, and deploy 2,000 mechanization service providers, operators, agents, and mechanics across Nigeria.",
     heroImage: asset("img/prog-7.jpg"),
     heroAlt: "Trainees in orange TracTrac shirts working on tablets in a training hall",
     cta: { label: "Join us to build the workforce", href: "#contact" },
@@ -206,9 +206,9 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
       {
         kind: "statPanel",
         eyebrow: "Impact",
-        title: "TracTracMSL is Building the Workforce Powering Mechanisation",
+        title: "TracTracMSL is Building the Workforce Powering Mechanization",
         intro:
-          "The TRAxCelerate program builds skilled service providers to drive mechanisation, create jobs, and strengthen MSMEs across Nigeria.",
+          "The TRAxCelerate program builds skilled service providers to drive mechanization, create jobs, and strengthen MSMEs across Nigeria.",
         big: {
           count: 2000,
           value: "2,000",
@@ -216,7 +216,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
           note: "Train and certify 2,000 service providers.",
         },
         items: [
-          { title: "Service Efficiency", body: "Improve mechanisation reach and performance." },
+          { title: "Service Efficiency", body: "Improve mechanization reach and performance." },
           { title: "Ecosystem Growth", body: "Strengthen local systems and MSME value chains." },
           {
             title: "Youth Empowerment",
@@ -230,7 +230,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
   tracinvest: {
     slug: "tracinvest",
     eyebrow: "TRACINVEST",
-    title: "Accelerating Mechanisation Investment in Nigeria",
+    title: "Accelerating Mechanization Investment in Nigeria",
     subtitle:
       "A Gateway for Private and Institutional Investors into Nigeria’s Tractors-for-Development Revolution",
     heroImage: asset("uploads/WhatsApp Image 2026-09-03 at 11.09.38 (6).jpeg"),
@@ -306,9 +306,9 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
   h2o: {
     slug: "h2o",
     eyebrow: "Half-Way to Ownership",
-    title: "Empowering Youth and Women for Sustainable Mechanisation Ownership",
+    title: "Empowering Youth and Women for Sustainable Mechanization Ownership",
     subtitle:
-      "Across Nigeria, young people and women are ready to join the mechanisation sector, but limited access to finance holds them back.",
+      "Across Nigeria, young people and women are ready to join the mechanization sector, but limited access to finance holds them back.",
     heroImage: asset("img/prog-9.jpg"),
     heroAlt: "A woman MSP in a white cap driving an orange tryctor",
     cta: { label: "Join us to build the workforce", href: "#contact" },
@@ -318,7 +318,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
         eyebrow: "Project Objectives",
         title: "Empowering People, Expanding Access",
         intro:
-          "This initiative empowers youth and women, expands mechanisation access, and promotes inclusive ownership.",
+          "This initiative empowers youth and women, expands mechanization access, and promotes inclusive ownership.",
         background: "cream",
         columns: 3,
         cardSize: "roomy",
@@ -327,17 +327,17 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
           {
             icon: "people",
             title: "Youth & Women Empowerment",
-            body: "Support young people and women to become mechanisation service providers (MSPs).",
+            body: "Support young people and women to become mechanization service providers (MSPs).",
           },
           {
             icon: "tractor",
             title: "Access Farm Machinery",
-            body: "Expand affordable mechanisation services for smallholder farmers.",
+            body: "Expand affordable mechanization services for smallholder farmers.",
           },
           {
             icon: "home",
             title: "Inclusive Ownership",
-            body: "Build shared ownership pathways within the mechanisation ecosystem.",
+            body: "Build shared ownership pathways within the mechanization ecosystem.",
           },
           {
             icon: "briefcase",
@@ -351,14 +351,14 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
         eyebrow: "Key Benefits",
         title: "Key Advantages for Stakeholders",
         intro:
-          "Each stakeholder benefits through targeted opportunities empowering youth, improving access, and driving measurable results across the mechanisation ecosystem.",
+          "Each stakeholder benefits through targeted opportunities empowering youth, improving access, and driving measurable results across the mechanization ecosystem.",
         background: "white",
         items: [
           {
             term: "Youth & Women",
             body: "Access to participant ownership opportunity, training, and mentorship.",
           },
-          { term: "Farmers", body: "Affordable, timely and reliable mechanisation services." },
+          { term: "Farmers", body: "Affordable, timely and reliable mechanization services." },
           {
             term: "Government",
             body: "Increased tractor density, local job creation, and poverty reduction.",
@@ -377,7 +377,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
     eyebrow: "Rise7",
     title: "Empowering Seven to Scale",
     subtitle:
-      "Rise7 is TracTrac’s cooperative financing model that enables groups of seven farmers or entrepreneurs to jointly acquire tractors through affordable loan options, promoting shared ownership and inclusive access to mechanisation.",
+      "Rise7 is TracTrac’s cooperative financing model that enables groups of seven farmers or entrepreneurs to jointly acquire tractors through affordable loan options, promoting shared ownership and inclusive access to mechanization.",
     heroImage: asset("img/prog-5.jpg"),
     heroAlt: "An MSP driving a tryctor across an open field",
     cta: { label: "Join us to build the workforce", href: "#contact" },
@@ -385,7 +385,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
       {
         kind: "statPair",
         eyebrow: "The model",
-        title: "Shared ownership and inclusive access to mechanisation.",
+        title: "Shared ownership and inclusive access to mechanization.",
         background: "white",
         stats: [
           {
@@ -404,7 +404,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
         eyebrow: "Project Objectives",
         title: "Empowering Cooperatives for Inclusive Growth",
         intro:
-          "Rise7 enables inclusive mechanisation finance and equitable participation through cooperatives.",
+          "Rise7 enables inclusive mechanization finance and equitable participation through cooperatives.",
         background: "white",
         introSpacing: "compact",
         items: [
@@ -417,7 +417,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
             body: "Support financial institutions with cross-guarantees and structured repayment systems.",
           },
           {
-            title: "Expanded Mechanisation Coverage",
+            title: "Expanded Mechanization Coverage",
             body: "Increase tractor availability and service reach nationwide.",
           },
           {
@@ -435,7 +435,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
         eyebrow: "Impact",
         title: "Measuring Progress and Real Results",
         intro:
-          "Rise7 tracks measurable outcomes that show how the program strengthens mechanisation, boosts productivity, and drives economic growth across rural communities.",
+          "Rise7 tracks measurable outcomes that show how the program strengthens mechanization, boosts productivity, and drives economic growth across rural communities.",
         background: "cream",
         columns: 4,
         cardSize: "roomy",

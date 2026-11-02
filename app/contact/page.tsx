@@ -17,7 +17,7 @@ export default function ContactPage() {
           <h1>Let&rsquo;s Talk</h1>
           <p className="contactHero__lede">
             TracTrac is open to partnerships with organisations that share our vision of a more
-            mechanised and sustainable Nigeria.
+            mechanized and sustainable Nigeria.
           </p>
         </div>
       </section>

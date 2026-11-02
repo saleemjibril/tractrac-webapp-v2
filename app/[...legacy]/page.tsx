@@ -12,7 +12,7 @@ const LEGACY: Record<string, string> = {
   "TracTrac Programs.dc.html": "/programmes",
   "TracTrac Technology.dc.html": "/technology",
   "Programme - ISSAM.dc.html": "/programmes/issam",
-  "Programme - Young People in Mechanisation.dc.html":
+  "Programme - Young People in Mechanization.dc.html":
     "/programmes/young-people-in-mechanisation",
   "Programme - TRAxCelerate.dc.html": "/programmes/traxcellerate",
   "Programme - TRACINVEST.dc.html": "/programmes/tracinvest",

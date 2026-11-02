@@ -33,53 +33,62 @@ export default function TechnologyPage() {
         <div className="wrap techHero__inner">
           <div className="techHero__top">
             <div>
-              <Image
-                className="techHero__phones"
-                src={asset("uploads/hero-phones-final.png")}
-                alt="Two phones showing TracTrac Plus: the machinery filter and the Hire a Tractor screen with nearby machines"
-                width={1164}
-                height={1351}
-                priority
-              />
+              <div className="techHero__visual">
+                <Image
+                  className="techHero__phones"
+                  src={asset("uploads/hero-phones-final.png")}
+                  alt="Two phones showing TracTrac Plus: the machinery filter and the Hire a Tractor screen with nearby machines"
+                  width={1164}
+                  height={1351}
+                  priority
+                />
+                <div className="techHero__app">
+                  <p className="techHero__appTitle">Get the app</p>
+                  <div className="techHero__badges">
+                    <a
+                      className="techHero__badge"
+                      href={BRAND.googlePlayUrl}
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Get TracTrac Plus on Google Play"
+                    >
+                      <Image
+                        src={BRAND.googlePlayWhite}
+                        alt="Get it on Google Play"
+                        width={983}
+                        height={291}
+                        unoptimized
+                      />
+                    </a>
+                    <a
+                      className="techHero__badge"
+                      href={BRAND.appStoreUrl}
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="Download TracTrac Plus on the App Store"
+                    >
+                      <Image
+                        src={BRAND.appStoreWhite}
+                        alt="Download on the App Store"
+                        width={983}
+                        height={291}
+                        unoptimized
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div className="techHero__text">
                 {/* <p className="eyebrow">TracTrac Plus</p> */}
-                <h1>TracTrac Plus - Technology that moves the work.</h1>
+                <h1>
+                  TracTrac Plus - Technology
+                  <br />
+                  that moves the work.
+                </h1>
                 <p>
                   TracTrac connects farmers, machines and the people who keep the work moving, from
                   finding equipment to getting the job done.
                 </p>
-                <div className="techHero__badges">
-                  <a
-                    className="techHero__badge"
-                    href={BRAND.googlePlayUrl}
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Get TracTrac Plus on Google Play"
-                  >
-                    <Image
-                      src={BRAND.googlePlayWhite}
-                      alt="Get it on Google Play"
-                      width={983}
-                      height={291}
-                      unoptimized
-                    />
-                  </a>
-                  <a
-                    className="techHero__badge"
-                    href={BRAND.appStoreUrl}
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Download TracTrac Plus on the App Store"
-                  >
-                    <Image
-                      src={BRAND.appStoreWhite}
-                      alt="Download on the App Store"
-                      width={983}
-                      height={291}
-                      unoptimized
-                    />
-                  </a>
-                </div>
               </div>
             </div>
             <div className="techHero__num">

@@ -8,7 +8,7 @@ import "@/styles/careers.css";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Build technology and partnerships that put mechanisation in reach of smallholder farmers across Nigeria and Sub-Saharan Africa.",
+    "Build technology and partnerships that put mechanization in reach of smallholder farmers across Nigeria and Sub-Saharan Africa.",
   openGraph: { images: [asset("uploads/DSC02329.jpg")] },
 };
 
@@ -18,7 +18,7 @@ const WHY_JOIN = [
     items: [
       {
         strong: "Be part of food security solutions:",
-        text: "contribute to transforming smallholder farming across Africa through technology and mechanisation.",
+        text: "contribute to transforming smallholder farming across Africa through technology and mechanization.",
       },
       {
         strong: "Inclusive innovation:",
@@ -73,7 +73,7 @@ export default function CareersPage() {
           Join the Humans of TracTrac
         </h1>
         <p className="careersHero__lede" data-reveal data-delay="180">
-          Build technology and partnerships that put mechanisation in reach of smallholder farmers
+          Build technology and partnerships that put mechanization in reach of smallholder farmers
           across Nigeria and Sub-Saharan Africa.
         </p>
         <div className="careersHero__cta" data-reveal data-delay="260">
@@ -90,7 +90,7 @@ export default function CareersPage() {
             <div data-reveal>
               <h2>Job Listings</h2>
               <p className="careersRoles__lede">
-                Explore current openings and find a role where your skills advance mechanisation
+                Explore current openings and find a role where your skills advance mechanization
                 for smallholder farmers.
               </p>
               <div className="careersRoleList">
@@ -150,7 +150,7 @@ export default function CareersPage() {
                 All of us at TracTrac are on the same mission.
               </h2>
               <p className="careersMission__quote">
-                To improve farmers’ access to mechanisation, create opportunities for investors and
+                To improve farmers’ access to mechanization, create opportunities for investors and
                 enterprising young people, increase the number of tractors available and use
                 technology to make better use of every machine.
               </p>
@@ -214,13 +214,13 @@ export default function CareersPage() {
           <div className="careersLife__head" data-reveal>
             <span className="careersLife__pill">Culture</span>
             <h2>Life at TracTrac</h2>
-            <p>Field days, workshops, and the people powering mechanisation across Africa.</p>
+            <p>Field days, workshops, and the people powering mechanization across Africa.</p>
           </div>
           <div className="careersLife__top">
             <div className="media media--rounded careersLife__big" data-reveal="img">
               <Photo
                 src={asset("uploads/WhatsApp Image 2026-09-24 at 14.35.20.jpeg")}
-                alt="TracTrac team members celebrating with placards at a youth in mechanisation event"
+                alt="TracTrac team members celebrating with placards at a youth in mechanization event"
                 sizes="(max-width: 880px) 90vw, 50vw"
                 style={{ objectPosition: "50% 45%" }}
               />
@@ -237,7 +237,7 @@ export default function CareersPage() {
               <div className="media media--rounded" data-reveal="img" data-delay="180">
                 <Photo
                   src={asset("uploads/WhatsApp Image 2026-09-24 at 14.36.33.jpeg")}
-                  alt="TracTrac team and participants holding mechanisation placards"
+                  alt="TracTrac team and participants holding mechanization placards"
                   sizes="25vw"
                   style={{ objectPosition: "50% 40%" }}
                 />
@@ -248,7 +248,7 @@ export default function CareersPage() {
             {[
               [
                 "uploads/WhatsApp Image 2026-09-24 at 14.35.40.jpeg",
-                "TracTrac team members standing together at a youth in mechanisation event",
+                "TracTrac team members standing together at a youth in mechanization event",
                 "50% 70%",
               ],
               [
@@ -263,7 +263,7 @@ export default function CareersPage() {
               ],
               [
                 "uploads/WhatsApp Image 2026-09-24 at 14.37.22.jpeg",
-                "Participants in TracTrac shirts at a national mechanisation policy workshop",
+                "Participants in TracTrac shirts at a national mechanization policy workshop",
                 "55% 55%",
               ],
             ].map(([src, alt, position], index) => (

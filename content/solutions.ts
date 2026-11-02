@@ -27,7 +27,7 @@ export const SOLUTIONS: SolutionPath[] = [
     label: "For Farmers",
     title: "Get the machinery your farm needs.",
     lede:
-      "Find mechanisation services around you without having to buy and maintain expensive equipment yourself.",
+      "Find mechanization services around you without having to buy and maintain expensive equipment yourself.",
     steps: [
       "Tell us what you need done, from ploughing and harrowing to planting, spraying and harvesting.",
       "A booking agent confirms the size and location of your plot so the price is clear before work starts.",
@@ -72,12 +72,12 @@ export const SOLUTIONS: SolutionPath[] = [
   {
     id: "msp",
     number: "04",
-    label: "For Mechanisation Service Providers",
+    label: "For Mechanization Service Providers",
     title: "Build a business around the work farmers need done.",
     lede:
-      "Develop your skills, reach more farmers and grow a business providing mechanisation services.",
+      "Develop your skills, reach more farmers and grow a business providing mechanization services.",
     steps: [
-      "Train in operation, maintenance and running a mechanisation business through TracTrac programs.",
+      "Train in operation, maintenance and running a mechanization business through TracTrac programs.",
       "Receive bookings from agents and deliver services on the ground with owned or leased equipment.",
       "Use your job history to reach more farmers and access finance for more equipment.",
     ],

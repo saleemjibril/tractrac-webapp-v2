@@ -101,7 +101,7 @@
 .ypimOffers__copy {
   max-width: 60ch;
   margin-top: 28px;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: var(--grey);
 }
 
@@ -145,7 +145,7 @@
 .ypimVision__copy {
   max-width: 46ch;
   margin-top: 22px;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.76);
 }
 

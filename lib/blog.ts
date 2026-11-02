@@ -47,8 +47,8 @@ type BlogDetailResponse = {
 /** Blog titles and excerpts occasionally use US spelling; the site uses British. */
 function britishSpelling(value: string) {
   return value
-    .replace(/Mechanization/g, "Mechanisation")
-    .replace(/mechanization/g, "mechanisation");
+    .replace(/Mechanization/g, "Mechanization")
+    .replace(/mechanization/g, "mechanization");
 }
 
 /** Fetch the published blog feed. Returns an empty list if the API is down. */

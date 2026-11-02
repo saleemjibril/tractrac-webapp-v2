@@ -13,7 +13,7 @@ import "@/styles/partners.css";
 export const metadata: Metadata = {
   title: "Partners",
   description:
-    "TracTrac works with organisations across agriculture, finance, government and development to make mechanisation more accessible and sustainable.",
+    "TracTrac works with organisations across agriculture, finance, government and development to make mechanization more accessible and sustainable.",
   openGraph: { images: [asset("uploads/DSC02281.jpg")] },
 };
 
@@ -27,14 +27,14 @@ const PARTNER_TYPES = [
   {
     number: "02",
     title: "Government & public institutions",
-    body: "Policy, systems and programs that support agricultural mechanisation.",
+    body: "Policy, systems and programs that support agricultural mechanization.",
     names:
       "Federal Ministry of Agriculture and Food Security · National Centre for Agricultural Mechanization",
   },
   {
     number: "03",
     title: "Farmer & community organisations",
-    body: "Local networks that connect mechanisation to real farmer demand.",
+    body: "Local networks that connect mechanization to real farmer demand.",
     names: "Women in Mechanized Agriculture (WIMA)",
   },
   {
@@ -51,7 +51,7 @@ const WAYS_TO_PARTNER = [
     number: "01",
     kicker: "Work With Us",
     title: "Reach farmers through a working service network.",
-    body: "Equipment companies, agricultural organisations and service providers partner with TracTrac to reach farmers through our network of mechanisation service providers, booking agents and the TracTrac platform.",
+    body: "Equipment companies, agricultural organisations and service providers partner with TracTrac to reach farmers through our network of mechanization service providers, booking agents and the TracTrac platform.",
     points: ["Equipment supply and distribution", "Operator training and skills", "Service and maintenance networks"],
     cta: { label: "Start a conversation", href: "#contact" },
   },
@@ -59,8 +59,8 @@ const WAYS_TO_PARTNER = [
     id: "finance",
     number: "02",
     kicker: "Finance and Investment",
-    title: "Capital for the businesses behind mechanisation.",
-    body: "Mechanisation services need capital: equipment finance for service providers, working capital for operations and long-term investment in the platform. We work with financial institutions and investors to put that capital to work.",
+    title: "Capital for the businesses behind mechanization.",
+    body: "Mechanization services need capital: equipment finance for service providers, working capital for operations and long-term investment in the platform. We work with financial institutions and investors to put that capital to work.",
     points: ["Equipment finance for service providers", "Investment in TracTrac", "Blended finance programs"],
     cta: { label: "Talk to our team", href: "#contact" },
   },
@@ -69,7 +69,7 @@ const WAYS_TO_PARTNER = [
     number: "03",
     kicker: "Development Partners",
     title: "Programs that extend access and inclusion.",
-    body: "Foundations, donors and multilateral organisations work with TracTrac to design and deliver programs such as ISSAM, delivered with Mastercard Foundation, that bring mechanisation to young people, women and smallholder farmers.",
+    body: "Foundations, donors and multilateral organisations work with TracTrac to design and deliver programs such as ISSAM, delivered with Mastercard Foundation, that bring mechanization to young people, women and smallholder farmers.",
     points: ["Program design and delivery", "Youth and women inclusion", "Monitoring and impact reporting"],
     cta: { label: "See our programs", href: "/programmes" },
   },
@@ -79,10 +79,10 @@ const STORIES = [
   {
     number: "01",
     kicker: "ISSAM × Mastercard Foundation",
-    title: "Building youth-led mechanisation services.",
+    title: "Building youth-led mechanization services.",
     paragraphs: [
-      "ISSAM is a strategic partnership between TracTrac Mechanisation Services Limited and the Mastercard Foundation.",
-      "The partnership supports TracTrac’s ISSAM program to improve access to small-scale mechanisation for smallholder farmers while building the capacity of youth-led Mechanisation Service Providers.",
+      "ISSAM is a strategic partnership between TracTrac Mechanization Services Limited and the Mastercard Foundation.",
+      "The partnership supports TracTrac’s ISSAM program to improve access to small-scale mechanization for smallholder farmers while building the capacity of youth-led Mechanization Service Providers.",
     ],
     image: "img/prog-3.jpg",
     alt: "Trainees in ISSAM coveralls and helmets during practical equipment training",
@@ -116,12 +116,12 @@ const STORIES = [
   {
     number: "03",
     kicker: "Government & policy",
-    title: "Contributing to national mechanisation policy.",
+    title: "Contributing to national mechanization policy.",
     paragraphs: [
-      "Through ISSAM, TracTrac engaged public institutions across agriculture, mechanisation, research, investment and policy implementation.",
+      "Through ISSAM, TracTrac engaged public institutions across agriculture, mechanization, research, investment and policy implementation.",
     ],
     image: "uploads/DSC04179.jpg",
-    alt: "A speaker addressing delegates at a national mechanisation policy event",
+    alt: "A speaker addressing delegates at a national mechanization policy event",
     details: [
       ["Who", "10+ key government institutions"],
       ["Discussed", "2 high-level national policy dialogues; 8 investment promotion engagements"],
@@ -131,7 +131,7 @@ const STORIES = [
       ],
       [
         "TracTrac’s role",
-        "Led the development of the NAMP 2026 and the Mechanisation Investment Document in collaboration with the Federal Government",
+        "Led the development of the NAMP 2026 and the Mechanization Investment Document in collaboration with the Federal Government",
       ],
     ],
     link: null,
@@ -151,7 +151,7 @@ export default function PartnersPage() {
     <main id="main" className="pageMain">
       <Hero
         image={asset("uploads/DSC02281.jpg")}
-        imageAlt="TracTrac and Mastercard Foundation program team at a mechanisation service provider onboarding event"
+        imageAlt="TracTrac and Mastercard Foundation program team at a mechanization service provider onboarding event"
         priority
         size="tall"
         className="partnersHero"
@@ -164,7 +164,7 @@ export default function PartnersPage() {
         </h1>
         <p className="partnersHero__lede" data-reveal data-delay="180">
           TracTrac works with organisations across agriculture, finance, government and development
-          to make mechanisation more accessible and sustainable.
+          to make mechanization more accessible and sustainable.
         </p>
       </Hero>
 
@@ -186,7 +186,7 @@ export default function PartnersPage() {
               <p className="prose muted partnersWhy__para" data-reveal data-delay="80">
                 TracTrac works with government, financial institutions, development partners,
                 investors, equipment companies and agricultural organisations to strengthen the
-                system around mechanisation.
+                system around mechanization.
               </p>
             </div>
           </div>
@@ -261,7 +261,7 @@ export default function PartnersPage() {
       <section className="partnersLogos">
         <div className="wrap">
           <p className="partnersLogos__title">
-            Mechanising Africa requires bold collaborations.
+            Mechanizing Africa requires bold collaborations.
           </p>
           <div className="partnersLogos__grid">
             {PARTNER_LOGOS.map((logo, index) => (
@@ -362,8 +362,8 @@ export default function PartnersPage() {
             {[
               [
                 "https://api.tractrac.co/media/images/654949b2-9925-4f5b-8f32-95e9bec92a3d.jpg",
-                "Officials holding copies of the National Agricultural Mechanisation Policy 2026 at its launch",
-                "National Agricultural Mechanisation Policy 2026 launch",
+                "Officials holding copies of the National Agricultural Mechanization Policy 2026 at its launch",
+                "National Agricultural Mechanization Policy 2026 launch",
               ],
               [
                 "img/prog-2.jpg",
@@ -403,7 +403,7 @@ export default function PartnersPage() {
                 Work with TracTrac
               </p>
               <h2 data-reveal data-delay="80">
-                Mechanisation needs more than machines.
+                Mechanization needs more than machines.
               </h2>
               <p className="partnersCta__lede" data-reveal data-delay="140">
                 It needs organisations willing to build the system around them.

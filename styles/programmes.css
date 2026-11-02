@@ -16,7 +16,7 @@
 .programmesHero__lede {
   max-width: 620px;
   margin-top: clamp(24px, 3vw, 36px);
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.84);
 }
 
@@ -411,7 +411,7 @@
 
 .programmeStatPanel > div:last-child p {
   max-width: 36ch;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.72);
 }
 

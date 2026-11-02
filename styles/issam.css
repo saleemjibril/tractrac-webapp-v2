@@ -24,7 +24,7 @@
 .issamHero__copy {
   max-width: 600px;
   margin-top: 18px;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -621,7 +621,7 @@
 .issamEnabling__copy {
   max-width: 44ch;
   margin-top: 24px;
-  font: 400 clamp(15px, 1.25vw, 17px) / 1.65 var(--font-sans);
+  font: 400 clamp(15px, 1.25vw, 18px) / 1.65 var(--font-sans);
   color: rgba(255, 255, 255, 0.78);
 }
 

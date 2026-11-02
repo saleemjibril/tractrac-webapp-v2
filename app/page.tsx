@@ -28,7 +28,7 @@ import "@/styles/home.css";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "TracTrac — Making mechanisation work for African farmers.",
+    absolute: "TracTrac — Making mechanization work for African farmers.",
   },
   description:
     "TracTrac connects farmers to tractors and other equipment when they need them, while giving equipment owners, agents and service providers the tools to keep those machines working.",
@@ -74,10 +74,10 @@ export default async function HomePage() {
         <div className="wrap homeHero__inner">
           <div className="homeHero__text">
             <p className="eyebrow" data-reveal data-delay="0">
-              Making mechanisation easier to access
+              Making mechanization easier to access
             </p>
             <h1 className="homeHero__title" data-reveal data-delay="90">
-              Making mechanisation work for African farmers.
+              Making mechanization work for African farmers.
             </h1>
             <p className="homeHero__lede" data-reveal data-delay="180">
               TracTrac connects farmers to tractors and other equipment when they need them, while
@@ -110,10 +110,12 @@ export default async function HomePage() {
             <div className="homeImpact__intro" data-reveal>
               <p className="eyebrow">The work so far</p>
               <h2 className="homeImpact__title">
-                Our work is already transforming mechanisation across Africa
+                Our work is already transforming
+                <br />
+                mechanization across Africa
               </h2>
               <p className="homeImpact__lede">
-                Better access to mechanisation can change how quickly work gets done, how many
+                Better access to mechanization can change how quickly work gets done, how many
                 farmers a machine can serve and how many people can build livelihoods around the
                 sector.
               </p>
@@ -148,7 +150,7 @@ export default async function HomePage() {
                 How TracTrac works
               </p>
               <h2 className="display3" data-reveal data-delay="80">
-                It takes more than a tractor to make mechanisation work.
+                It takes more than a tractor to make mechanization work.
               </h2>
             </div>
             <div data-reveal data-delay="160">
@@ -246,7 +248,7 @@ export default async function HomePage() {
               <p className="homePathway__kicker">Farmers</p>
               <h3 className="homePathway__heading">Get the machinery your farm needs.</h3>
               <p className="homePathway__copy">
-                Find mechanisation services around you without having to buy and maintain expensive
+                Find mechanization services around you without having to buy and maintain expensive
                 equipment yourself.
               </p>
               <Link className="btn btn--primary btn--whiteHover" href="/technology#download">
@@ -293,12 +295,12 @@ export default async function HomePage() {
               </Link>
             </div>
             <div>
-              <p className="homePathways__label">Mechanisation Service Providers</p>
+              <p className="homePathways__label">Mechanization Service Providers</p>
               <h3 className="homePathways__subtitle">
                 Build a business around the work farmers need done.
               </h3>
               <p className="prose muted homePathways__subCopy">
-                Develop your skills, reach more farmers and grow a business providing mechanisation
+                Develop your skills, reach more farmers and grow a business providing mechanization
                 services.
               </p>
               <Link className="linkUnderline" href="/solutions#msp">
@@ -343,9 +345,9 @@ export default async function HomePage() {
         <div className="wrap homeProgrammes__intro">
           <div className="grid2 homeProgrammes__grid">
             <div>
-              <p className="eyebrow">The people behind mechanisation</p>
+              <p className="eyebrow">The people behind mechanization</p>
               <h2 className="h2 homeProgrammes__title">
-                Mechanisation needs skilled people too.
+                Mechanization needs skilled people too.
               </h2>
             </div>
             <div>
@@ -355,7 +357,7 @@ export default async function HomePage() {
               </p>
               <p className="prose muted homeProgrammes__para">
                 TracTrac invests in practical training and opportunities for young people, women
-                and mechanisation service providers so more communities have the people needed to
+                and mechanization service providers so more communities have the people needed to
                 keep machinery working.
               </p>
               <Link className="linkUnderline" href="/programmes">
@@ -385,7 +387,7 @@ export default async function HomePage() {
             <div>
               <p className="eyebrow">Blog</p>
               <h2 className="h2 homeInsights__title">
-                From the field and the wider mechanisation sector
+                From the field and the wider mechanization sector
               </h2>
             </div>
             <p className="prose muted">
@@ -461,7 +463,7 @@ export default async function HomePage() {
           </h2>
           <p className="homeFinal__lede">
             Whether you need machinery, own equipment, work with farmers or want to invest in
-            agricultural mechanisation, there is a place for you in the TracTrac network.
+            agricultural mechanization, there is a place for you in the TracTrac network.
           </p>
           <Link className="btn btn--primary btn--whiteHover homeFinal__button" href="/technology#download">
             Access Farm Machinery

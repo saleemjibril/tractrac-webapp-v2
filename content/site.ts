@@ -22,7 +22,7 @@ export const NAV: NavItem[] = [
       { label: "For Farmers", href: "/solutions#farmers" },
       { label: "For Equipment Owners", href: "/solutions#owners" },
       { label: "For Booking Agents", href: "/solutions#agents" },
-      { label: "For Mechanisation Service Providers", href: "/solutions#msp" },
+      { label: "For Mechanization Service Providers", href: "/solutions#msp" },
     ],
   },
   {
@@ -42,12 +42,12 @@ export const NAV: NavItem[] = [
       {
         label: "ISSAM",
         href: "/programmes/issam",
-        description: "Smallholder access to small-scale mechanisation",
+        description: "Smallholder access to small-scale mechanization",
       },
       {
-        label: "Young People in Mechanisation",
+        label: "Young People in Mechanization",
         href: "/programmes/young-people-in-mechanisation",
-        description: "Skills and careers in mechanisation",
+        description: "Skills and careers in mechanization",
       },
       {
         label: "TRAxCelerate",
@@ -103,7 +103,7 @@ export const BRAND = {
   googlePlayUrl: "https://play.google.com/store/apps/details?id=com.tractrac.plus",
   appStoreUrl: "https://apps.apple.com/ng/app/tractrac-plus/id6754968082",
   blurb:
-    "Making mechanisation easier to access for farmers, equipment owners, agents and service providers.",
+    "Making mechanization easier to access for farmers, equipment owners, agents and service providers.",
 };
 
 export type FooterColumn = {
@@ -122,12 +122,12 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     ],
   },
   {
-    title: "Get Mechanisation",
+    title: "Get Mechanization",
     links: [
       { label: "For Farmers", href: "/solutions#farmers" },
       { label: "For Equipment Owners", href: "/solutions#owners" },
       { label: "For Booking Agents", href: "/solutions#agents" },
-      { label: "For Mechanisation Service Providers", href: "/solutions#msp" },
+      { label: "For Mechanization Service Providers", href: "/solutions#msp" },
     ],
   },
   {
@@ -143,7 +143,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       { label: "All programs", href: "/programmes" },
       { label: "ISSAM", href: "/programmes/issam" },
       {
-        label: "Young People in Mechanisation",
+        label: "Young People in Mechanization",
         href: "/programmes/young-people-in-mechanisation",
       },
       { label: "TRAxCelerate", href: "/programmes/traxcellerate" },

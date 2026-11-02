@@ -8,7 +8,7 @@ import "@/styles/insights.css";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Research, guides and practical resources from TracTrac's work making agricultural mechanisation more accessible.",
+    "Research, guides and practical resources from TracTrac's work making agricultural mechanization more accessible.",
   openGraph: {
     images: [
       "https://api.tractrac.co/media/images/f56cc36b-27b4-42d4-879c-92fbc77430d0.jpg",
@@ -33,7 +33,7 @@ export default function ResourcesPage() {
           Research, guides and practical resources.
         </h1>
         <p className="insightsHero__lede" data-reveal data-delay="180">
-          Publications and practical material from the work of making agricultural mechanisation
+          Publications and practical material from the work of making agricultural mechanization
           more accessible.
         </p>
       </Hero>
