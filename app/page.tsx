@@ -250,7 +250,7 @@ export default async function HomePage() {
                 equipment yourself.
               </p>
               <Link className="btn btn--primary btn--whiteHover" href="/technology#download">
-                Find Mechanisation
+                Access Farm Machinery
               </Link>
             </div>
           </article>
@@ -464,7 +464,7 @@ export default async function HomePage() {
             agricultural mechanisation, there is a place for you in the TracTrac network.
           </p>
           <Link className="btn btn--primary btn--whiteHover homeFinal__button" href="/technology#download">
-            Find Mechanisation
+            Access Farm Machinery
           </Link>
           <div className="homeFinal__links">
             <Link href="/technology#download">Enlist Your Equipment</Link>

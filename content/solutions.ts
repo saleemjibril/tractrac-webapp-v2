@@ -35,7 +35,7 @@ export const SOLUTIONS: SolutionPath[] = [
     ],
     image: asset("uploads/Copy of DSC08691.jpg"),
     alt: "An operator working farmland with a TracTrac tractor and disc plough",
-    cta: { label: "Find Mechanisation", href: "/technology#download" },
+    cta: { label: "Access Farm Machinery", href: "/technology#download" },
   },
   {
     id: "owners",

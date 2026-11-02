@@ -418,7 +418,7 @@ export default function AboutPage() {
               Explore Our Programs
             </Link>
             <Link className="btn btn--outline" href="/technology#download">
-              Find Mechanisation
+              Access Farm Machinery
             </Link>
           </div>
         </div>

@@ -331,7 +331,7 @@ export const STANDARD_PROGRAMMES: Record<string, StandardProgramme> = {
           },
           {
             icon: "tractor",
-            title: "Find Mechanisation",
+            title: "Access Farm Machinery",
             body: "Expand affordable mechanisation services for smallholder farmers.",
           },
           {

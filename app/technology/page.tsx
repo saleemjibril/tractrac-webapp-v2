@@ -226,7 +226,7 @@ export default function TechnologyPage() {
           <h2>Technology should make access easier.</h2>
           <div className="techFinal__actions">
             <SectionLink className="btn btn--primary btn--lg" href="#download">
-              Find Mechanisation
+              Access Farm Machinery
             </SectionLink>
             <SectionLink
               className="btn btn--outlineLight btn--outlineFaint btn--lg"
