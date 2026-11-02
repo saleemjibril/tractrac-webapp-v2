@@ -122,7 +122,6 @@ export default function JobSequence() {
               {JOB_STEPS.map((step, index) => (
                 <div data-job-row={index} key={step.label}>
                   <div className="techJob__rowLabel">
-                    <span>{step.number}</span>
                     <span>{step.label}</span>
                   </div>
                   <div className="techJob__barTrack">
@@ -143,20 +142,6 @@ export default function JobSequence() {
           </div>
 
           <div className="techJob__right">
-            <div className="techJob__numRow">
-              <div className="techJob__numWindow">
-                {JOB_STEPS.map((step, index) => (
-                  <span
-                    data-job-num={index}
-                    key={step.label}
-                    style={{ transform: `translateY(${index * 100}%)` }}
-                  >
-                    {step.number}
-                  </span>
-                ))}
-              </div>
-              <span className="techJob__of">/ 05</span>
-            </div>
             <div className="techJob__captions">
               {JOB_STEPS.map((step, index) => (
                 <div data-job-cap={index} key={step.label}>

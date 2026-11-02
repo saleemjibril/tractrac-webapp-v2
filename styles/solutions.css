@@ -98,16 +98,10 @@
 
 .solutionPath__steps li {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
   padding: 16px 0;
   border-top: 1px solid var(--line);
-}
-
-.solutionPath__steps span {
-  font: 700 12px/1.45 var(--font-sans);
-  letter-spacing: 0.08em;
-  color: var(--orange);
 }
 
 .solutionPath__steps p {

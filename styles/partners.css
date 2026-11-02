@@ -52,17 +52,11 @@
 
 .partnersType {
   display: grid;
-  grid-template-columns: minmax(48px, 120px) minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: clamp(16px, 3vw, 56px);
   align-items: start;
   padding: clamp(28px, 3vw, 44px) 0;
   border-top: 1px solid var(--line);
-}
-
-.partnersType > span {
-  font: 700 clamp(28px, 3vw, 44px) / 1 var(--font-sans);
-  letter-spacing: -0.03em;
-  color: var(--orange);
 }
 
 .partnersType h3 {

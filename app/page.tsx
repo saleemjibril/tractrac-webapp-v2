@@ -75,9 +75,6 @@ export default async function HomePage() {
         </svg>
         <div className="wrap homeHero__inner">
           <div className="homeHero__text">
-            <p className="eyebrow" data-reveal data-delay="0">
-              Making mechanization easier to access
-            </p>
             <h1 className="homeHero__title" data-reveal data-delay="90">
               Making mechanization work for African farmers.
             </h1>
@@ -197,7 +194,6 @@ export default async function HomePage() {
                 data-reveal
                 data-delay={index * 150}
               >
-                <p className="homeEcoRole__num">{role.number}</p>
                 <h3>{role.title}</h3>
                 <p className="homeEcoRole__body">{role.body}</p>
                 {index < ECOSYSTEM_ROLES.length - 1 ? (

@@ -207,7 +207,6 @@ export default function PartnersPage() {
                 data-delay={index * 80}
               >
                 <p className="partnersWay__kicker">
-                  <span>{way.number}</span>
                   {way.kicker}
                 </p>
                 <h3>{way.title}</h3>
@@ -246,7 +245,6 @@ export default function PartnersPage() {
                 data-reveal
                 data-delay={index * 80}
               >
-                <span>{type.number}</span>
                 <div>
                   <h3>{type.title}</h3>
                   <p className="prose muted">{type.body}</p>
@@ -421,7 +419,6 @@ function StoryCopy({ story }: { story: (typeof STORIES)[number] }) {
   return (
     <div className="partnersStory__copy">
       <p className="partnersStory__kicker">
-        <span>{story.number}</span>
         <span>{story.kicker}</span>
       </p>
       <h3>{story.title}</h3>

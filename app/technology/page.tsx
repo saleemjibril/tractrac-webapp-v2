@@ -118,7 +118,6 @@ export default function TechnologyPage() {
               {PLUS_STEPS.map((step) => (
                 <figure key={step.number}>
                   <div className="techPlus__figureHead">
-                    <span>{step.number}</span>
                     <p>{step.title}</p>
                   </div>
                   <p className="techPlus__copy">{step.body}</p>

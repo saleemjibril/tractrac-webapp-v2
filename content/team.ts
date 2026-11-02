@@ -128,18 +128,6 @@ export const TEAM: TeamMember[] = [
     ],
   },
   {
-    id: "ojoma-okwute",
-    name: "Ojoma Okwute",
-    title: "Head of Operations",
-    dept: "Operations",
-    photo: "",
-    leadership: true,
-    bio: [
-      "Ojoma Okwute leads operational strategy and execution across TracTrac programs.",
-      "She ensures efficiency, compliance, and successful delivery of mechanization services across operational regions.",
-    ],
-  },
-  {
     id: "jemimah-jennifer-justus",
     name: "Jemimah Jennifer Justus",
     title:
@@ -400,21 +388,12 @@ export const TEAM: TeamMember[] = [
     name: "Saleem Jibril",
     title: "Fullstack Developer",
     dept: "IT and Designs",
-    photo: "",
+    photo: "https://api.tractrac.co/media/images/3c5a356c-378d-456c-a0e8-e623fed54b4d.jpeg",
     leadership: false,
     bio: [
       "Saleem Jibril is a software engineer who specializes in building high-performance, scalable web applications across the fintech, blockchain, sustainability and agriculture sectors.",
       "He is part of the team responsible for building the technology solutions at TracTrac.",
     ],
-  },
-  {
-    id: "emmanuel-olorunshola",
-    name: "Emmanuel Olorunshola",
-    title: "Mobile App Developer",
-    dept: "IT and Designs",
-    photo: "",
-    leadership: false,
-    bio: [],
   },
 ];
 

@@ -249,7 +249,6 @@ export default function AboutPage() {
                   data-reveal
                   data-delay={index * 70}
                 >
-                  <span className="aboutBuilt__num">{String(index + 1).padStart(2, "0")}</span>
                   <span>
                     <strong>{item.title}</strong>
                     <small>{item.body}</small>
@@ -288,7 +287,6 @@ export default function AboutPage() {
           <div className="aboutPrinciples__list">
             {PRINCIPLES.map((principle) => (
               <div className="aboutPrinciple" key={principle.number}>
-                <span>{principle.number}</span>
                 <h3>{principle.title}</h3>
                 <p className="prose muted">{principle.body}</p>
               </div>

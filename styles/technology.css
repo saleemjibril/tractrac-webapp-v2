@@ -230,12 +230,6 @@
   margin-bottom: 10px;
 }
 
-.techJob__rowLabel span:first-child {
-  font: 700 12px/1 var(--font-sans);
-  letter-spacing: 0.12em;
-  color: var(--orange);
-}
-
 .techJob__rowLabel span:last-child {
   font: 700 clamp(16px, 1.4vw, 21px) / 1 var(--font-sans);
   letter-spacing: 0.02em;
@@ -433,12 +427,6 @@
   gap: 12px;
   padding-top: clamp(12px, 1.4vw, 18px);
   border-top: 1px solid var(--line);
-}
-
-.techPlus__figureHead span {
-  font: 600 11px/1 var(--font-sans);
-  letter-spacing: 0.14em;
-  color: var(--orange);
 }
 
 .techPlus__figureHead p {
@@ -682,12 +670,6 @@
   align-items: baseline;
   gap: 10px;
   margin-bottom: 6px;
-}
-
-.techAgent__row figcaption > p:nth-child(2) span:first-child {
-  font: 700 12px/1 var(--font-sans);
-  letter-spacing: 0.12em;
-  color: var(--orange);
 }
 
 .techAgent__row figcaption > p:nth-child(2) span:last-child {

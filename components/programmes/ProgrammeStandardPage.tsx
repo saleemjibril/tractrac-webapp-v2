@@ -84,7 +84,6 @@ function Section({ section }: { section: ProgrammeSection }) {
           <div className="programmeRows">
             {section.items.map((item, index) => (
               <div key={item.title} data-reveal data-delay={index * 60}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <h3>{item.title}</h3>
                 <p className="prose muted">{item.body}</p>
               </div>

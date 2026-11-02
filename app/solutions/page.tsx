@@ -58,9 +58,8 @@ export default function SolutionsPage() {
                 <h2 className="h2">{path.title}</h2>
                 <p className="solutionPath__lede">{path.lede}</p>
                 <ol className="solutionPath__steps">
-                  {path.steps.map((step, stepIndex) => (
+                  {path.steps.map((step) => (
                     <li key={step}>
-                      <span>{String(stepIndex + 1).padStart(2, "0")}</span>
                       <p>{step}</p>
                     </li>
                   ))}

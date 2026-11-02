@@ -16,8 +16,6 @@ function Portrait({ person }: { person: TeamMember }) {
 export default function Leadership() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
   const [ceo, ...leaders] = LEADERSHIP;
-  const total = String(LEADERSHIP.length).padStart(2, "0");
-  const selectedIndex = selected ? LEADERSHIP.findIndex((person) => person.id === selected.id) : -1;
 
   if (!ceo) return null;
 
@@ -42,7 +40,6 @@ export default function Leadership() {
                 <circle cx="128" cy="404" r="3" />
               </g>
             </svg>
-            <span>01 / {total}</span>
           </div>
           <div className="aboutCeo__portrait">
             <Portrait person={ceo} />
@@ -67,7 +64,7 @@ export default function Leadership() {
       </div>
 
       <ul className="aboutLeaders">
-        {leaders.map((person, index) => {
+        {leaders.map((person) => {
           const rest = person.bio.slice(1);
           return (
             <li key={person.id}>
@@ -75,9 +72,7 @@ export default function Leadership() {
                 <div className="aboutLeader__portrait">
                   <Portrait person={person} />
                 </div>
-                <div className="aboutLeader__meta">
-                  <span>{String(index + 2).padStart(2, "0")}</span>
-                </div>
+                <div className="aboutLeader__meta" />
                 <h4>{person.name}</h4>
                 <p className="aboutLeader__title">{person.title}</p>
                 <p className="aboutLeader__lead">{person.bio[0]}</p>
@@ -99,12 +94,7 @@ export default function Leadership() {
         })}
       </ul>
 
-      <PersonDialog
-        person={selected}
-        index={selectedIndex}
-        total={LEADERSHIP.length}
-        onClose={() => setSelected(null)}
-      />
+      <PersonDialog person={selected} onClose={() => setSelected(null)} />
     </div>
   );
 }

@@ -174,7 +174,6 @@ export default function YoungPeoplePage() {
             <ol>
               {VISION.map((item, index) => (
                 <li key={item} data-reveal data-delay={index * 80}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <span>{item}</span>
                 </li>
               ))}

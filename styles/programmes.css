@@ -296,16 +296,11 @@
 
 .programmeRows > div {
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.3fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
   gap: clamp(16px, 3vw, 48px);
   align-items: baseline;
   padding: clamp(22px, 2.6vw, 36px) 0;
   border-top: 1px solid var(--line);
-}
-
-.programmeRows > div > span {
-  font: 700 14px/1 var(--font-sans);
-  color: var(--orange);
 }
 
 .programmeRows h3 {

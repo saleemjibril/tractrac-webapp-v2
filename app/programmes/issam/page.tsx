@@ -212,9 +212,8 @@ export default function IssamPage() {
               </p>
             </div>
             <div>
-              {OBJECTIVES.map((objective, index) => (
+              {OBJECTIVES.map((objective) => (
                 <div className="issamObjective" key={objective.title} data-reveal>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
                   <div>
                     <h3>{objective.title}</h3>
                     <p className="prose muted">{objective.body}</p>
@@ -251,9 +250,6 @@ export default function IssamPage() {
                 {JOURNEY.slice(start, start + 4).map((step, index) => (
                   <li key={step.title} data-reveal data-delay={(start + index) * 80 + 100}>
                     <span className="issamJourney__dot" aria-hidden="true" />
-                    <p className="issamJourney__num">
-                      {String(start + index + 1).padStart(2, "0")}
-                    </p>
                     <h3>{step.title}</h3>
                     <p className="issamJourney__body">{step.body}</p>
                   </li>

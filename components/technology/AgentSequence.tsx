@@ -256,7 +256,6 @@ export default function AgentSequence() {
                     <div data-ag-bar />
                   </div>
                   <p>
-                    <span>{item.number}</span>
                     <span>{item.title}</span>
                   </p>
                   <p>{item.body}</p>
