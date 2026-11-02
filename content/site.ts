@@ -92,12 +92,13 @@ export const NAV: NavItem[] = [
 
 export const CTAS = {
   secondary: { label: "Partner With Us", href: "/partners#contact" },
-  primary: { label: "Find Mechanisation", href: "/technology#download" },
+  primary: { label: "Access Farm Machinery", href: "/technology#download" },
 };
 
 export const BRAND = {
   logo: asset("uploads/tractrac logo png 4.png"),
-  googlePlay: asset("uploads/google-play-badge-logo_svgrepo.com.png"),
+  googlePlay: "/badges/google-play-badge-white.svg",
+  appStore: "/badges/app-store-badge-white.svg",
   googlePlayUrl: "https://play.google.com/store/apps/details?id=com.tractrac.plus",
   appStoreUrl: "https://apps.apple.com/ng/app/tractrac-plus/id6754968082",
   blurb:

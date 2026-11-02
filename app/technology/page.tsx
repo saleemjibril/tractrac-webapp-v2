@@ -161,7 +161,13 @@ export default function TechnologyPage() {
                 rel="noopener"
                 aria-label="Get TracTrac Plus on Google Play"
               >
-                <Image src={BRAND.googlePlay} alt="Get it on Google Play" width={155} height={46} />
+                <Image
+                  src={BRAND.googlePlay}
+                  alt="Get it on Google Play"
+                  width={983}
+                  height={291}
+                  unoptimized
+                />
               </a>
               <a
                 className="techDownload__badge"
@@ -170,10 +176,13 @@ export default function TechnologyPage() {
                 rel="noopener"
                 aria-label="Download TracTrac Plus on the App Store"
               >
-                <span className="techDownload__appStore">
-                  <span>Download on the</span>
-                  <strong>App Store</strong>
-                </span>
+                <Image
+                  src={BRAND.appStore}
+                  alt="Download on the App Store"
+                  width={983}
+                  height={291}
+                  unoptimized
+                />
               </a>
             </div>
             <p className="techDownload__note">Free to download. Available on iOS and Android.</p>

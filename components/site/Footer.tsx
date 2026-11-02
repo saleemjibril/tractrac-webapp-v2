@@ -22,7 +22,13 @@ export default function Footer() {
               rel="noopener"
               aria-label="Get TracTrac Plus on Google Play"
             >
-              <Image src={BRAND.googlePlay} alt="Get it on Google Play" width={155} height={46} />
+              <Image
+                src={BRAND.googlePlay}
+                alt="Get it on Google Play"
+                width={983}
+                height={291}
+                unoptimized
+              />
             </a>
             <a
               className="siteFooter__badge"
@@ -31,10 +37,13 @@ export default function Footer() {
               rel="noopener"
               aria-label="Download TracTrac Plus on the App Store"
             >
-              <span className="siteFooter__appStore">
-                <span>Download on the</span>
-                <strong>App Store</strong>
-              </span>
+              <Image
+                src={BRAND.appStore}
+                alt="Download on the App Store"
+                width={983}
+                height={291}
+                unoptimized
+              />
             </a>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import EquipmentRail from "@/components/home/EquipmentRail";
 import FaqSection from "@/components/home/FaqSection";
@@ -24,8 +23,6 @@ import {
   HERO_POSTER,
   HOME_INSIGHTS,
   HOME_STATS,
-  PARTNER_LOGOS,
-  STORY_CARDS,
 } from "@/content/home";
 import "@/styles/home.css";
 
@@ -89,7 +86,7 @@ export default async function HomePage() {
             </p>
             <div className="homeHero__ctas" data-reveal data-delay="270">
               <Link className="btn btn--primary btn--lg btn--whiteHover" href="/technology#download">
-                Access Farm Machinery
+                Enlist farm machineries
               </Link>
               <Link className="btn btn--outlineLight btn--lg" href="/technology#download">
                 Become a booking agent
@@ -382,77 +379,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section id="stories" className="homeStories">
-        <div className="wrap homeStories__intro">
-          <div className="grid2 homeStories__grid">
-            <div>
-              <p className="eyebrow">Stories from the field</p>
-              <h2 className="h2 homeStories__title">
-                What changes when access gets easier?
-              </h2>
-            </div>
-            <p className="prose muted">
-              The clearest way to understand mechanisation is through the people using it &mdash;
-              the farmers, operators and communities putting better access to work.
-            </p>
-          </div>
-        </div>
-
-        <div className="wrap homeStories__feature">
-          <div className="grid2 homeStories__featureGrid">
-            <div className="media media--rounded ratio-16-10" data-reveal="img">
-              <Photo
-                src={asset("uploads/IMG-20260824-WA0025 (1).jpg")}
-                alt="A TracTrac field researcher interviewing an elderly farmer seated beside his maize plot"
-                sizes="(max-width: 880px) 90vw, 45vw"
-                style={{ objectPosition: "50% 35%" }}
-              />
-            </div>
-            <div data-reveal data-delay="100">
-              <p className="eyebrow">Featured story</p>
-              <h3 className="homeStories__featureTitle">
-                Before we build anything, we sit down and ask.
-              </h3>
-              <p className="prose muted">
-                Across Nasarawa State, our field teams spend their days with farmers, operators and
-                service providers &mdash; asking how they get machinery today, what it costs them
-                and what goes wrong.
-              </p>
-              <p className="homeStories__strong">
-                Every feature in TracTrac starts in a conversation like this one.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="wrap homeStories__cardsWrap">
-          <div className="homeStoryGrid">
-            {STORY_CARDS.map((story) => (
-              <Link className="homeStoryCard" href={story.href} key={story.title}>
-                <div className="media homeStoryCard__media">
-                  <Photo
-                    src={story.image}
-                    alt={story.alt}
-                    sizes="(max-width: 880px) 90vw, 25vw"
-                    style={{ objectPosition: story.position }}
-                  />
-                </div>
-                <div className="homeStoryCard__body">
-                  <p className="homeStoryCard__category">{story.category}</p>
-                  <h3 className="homeStoryCard__title">{story.title}</h3>
-                  <p className="homeStoryCard__excerpt">{story.excerpt}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="homeStories__cta">
-            <Link className="btn btn--outline" href="/stories">
-              View All Stories
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section id="insights" className="homeInsights">
         <div className="wrap homeInsights__inner">
           <div className="grid2 homeInsights__head">
@@ -498,87 +424,6 @@ export default async function HomePage() {
             <Link className="btn btn--outline" href="/blog">
               View all blog posts
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="partnership" className="homePartnership">
-        <div className="wrap homePartnership__inner">
-          <div className="grid2 homePartnership__grid">
-            <div>
-              <p className="eyebrow">Partnership</p>
-              <h2 className="h2 homePartnership__title">
-                Scaling access takes more than equipment.
-              </h2>
-              <p className="prose muted">
-                It takes finance, skills, service networks, policy and long term investment.
-              </p>
-              <p className="prose muted homePartnership__para">
-                TracTrac works with government, financial institutions, development partners,
-                investors, equipment companies and agricultural organisations to strengthen the
-                system around mechanisation.
-              </p>
-              <p className="homePartnership__quote">
-                From field delivery to national conversations, the goal is the same: make
-                mechanisation work for more people.
-              </p>
-              <div className="homePartnership__ctas">
-                <Link className="btn btn--primary btn--inkHover" href="/partners#contact">
-                  Partner With TracTrac
-                </Link>
-                <Link className="btn btn--outline" href="/partners#finance">
-                  Explore Investment Opportunities
-                </Link>
-              </div>
-            </div>
-            <div>
-              <div className="media media--rounded homePartnership__media">
-                <Photo
-                  src={asset("uploads/DSC02281.jpg")}
-                  alt="TracTrac and Mastercard Foundation program team at a mechanisation service provider onboarding event"
-                  sizes="(max-width: 880px) 90vw, 45vw"
-                />
-              </div>
-              <p className="prose muted homePartnership__partners">
-                Government and regulators. Commercial banks. Development finance institutions.
-                Investors. Development partners. Equipment manufacturers. Agricultural
-                organisations.
-              </p>
-              <div className="homePartnership__beyond">
-                <p className="eyebrow">Beyond service delivery</p>
-                <h3 className="homePartnership__beyondTitle">
-                  Better access also depends on better systems.
-                </h3>
-                <p className="prose muted">
-                  TracTrac brings stakeholders together, contributes to industry and policy
-                  conversations and turns ideas into practical action.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="wrap homePartnership__logosWrap">
-          <p className="homePartnership__logosTitle">
-            Working with organisations that want mechanisation to work.
-          </p>
-          <div className="homePartnerLogos">
-            {PARTNER_LOGOS.map((logo) => (
-              <div className="homePartnerLogo" key={logo.name}>
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  style={{
-                    maxHeight: logo.maxHeight,
-                    width: "auto",
-                    height: "auto",
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>
