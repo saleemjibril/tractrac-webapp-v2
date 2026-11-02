@@ -43,7 +43,7 @@ export const TEAM: TeamMember[] = [
     title: "Deputy Team Lead, Growth and Partnerships",
     dept: "Partnerships and Communications",
     linkedin: "",
-    photo: "",
+    photo: "https://api.tractrac.co/media/images/94cc7209-5d70-4447-a94e-dd4911f05cb0.jpeg",
     leadership: true,
     bio: [
       "Alero Otis is a development professional whose experience brings together strategic partnerships, research, programme delivery, communications and policy advocacy. Her work centres on connecting people, institutions and ideas to create practical opportunities for communities and businesses.",
