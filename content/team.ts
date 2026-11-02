@@ -155,8 +155,9 @@ export const TEAM: TeamMember[] = [
     photo: "https://api.tractrac.co/media/images/052d5cb8-dae3-4cc9-a285-c532d379fd9a.jpeg",
     leadership: true,
     bio: [
-      "Jemimah Jennifer Justus manages investment and assets at TracTrac, overseeing the organisation’s equipment portfolio and the financing arrangements that put tractors and implements in the hands of mechanisation service providers.",
-      "She works with financial partners and program teams to structure asset ownership models, track asset performance, and ensure that investment in mechanisation delivers lasting value for service providers and the farmers they serve.",
+      "Jemimah Jennifer Justus is a development expert with over 8 years of experience in the agricultural development space and has worked across a great number of projects with various donors. As the Investment and Asset Management, Gender, Diversity and Social Inclusion (GEDSI) Lead at TracTrac, she drives initiatives that strengthen access to finance, cooperative enterprise development, asset management and inclusive participation in agricultural mechanisation.",
+      "She works at the intersection of investment, enterprise development and social inclusion, supporting mechanisms that enable Mechanisation Service Providers (MSPs) and cooperatives to build sustainable businesses, access productive assets and deliver mechanisation services. She also leads efforts to integrate gender equality, disability inclusion, diversity and safeguarding into programme design and implementation, ensuring that women, young people and persons with disabilities have equitable opportunities to participate in and benefit from the agricultural mechanisation ecosystem.",
+      "Through her work, Jemimah contributes to strengthening inclusive market systems, expanding economic opportunities and building sustainable pathways for agricultural enterprise development.",
     ],
   },
   {

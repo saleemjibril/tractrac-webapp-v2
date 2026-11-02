@@ -146,51 +146,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section id="why" className="homeWhy">
-        <div className="wrap homeWhy__intro">
-          <div className="grid2 homeWhy__grid">
-            <div>
-              <p className="eyebrow" data-reveal>
-                Why this matters
-              </p>
-              <h2 className="display3" data-reveal data-delay="80">
-                Farmers need the work done. They do not always need to own the machine.
-              </h2>
-            </div>
-            <div className="homeWhy__copy" data-reveal data-delay="160">
-              <p>
-                Buying a tractor or labour-saving devices (threshers, knapsack sprayers, fertiliser
-                applicators) is out of reach for many farmers.
-              </p>
-              <p>
-                Even when machinery is available, it may be too far away, unavailable when the farm
-                is ready, or difficult to find.
-              </p>
-              <p>
-                At the same time, equipment owners need steady demand to keep their machines
-                productive.
-              </p>
-              <p className="homeWhy__strong">
-                TracTrac connects farmers to the machines that can do the work.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="homeWhy__band">
-          <div className="homeWhy__bandMedia" data-reveal="img">
-            <Photo
-              src={asset("uploads/WhatsApp Image 2026-10-15 at 13.10.08.jpeg")}
-              alt="An ISSAM operator in TracTrac overalls demonstrating a motorised thresher"
-              sizes="100vw"
-            />
-          </div>
-          <div className="homeWhy__bandShade" aria-hidden="true" />
-          <div className="wrap homeWhy__bandText">
-            <p>We connect farmers to machines, and we connect machines to work.</p>
-          </div>
-        </div>
-      </section>
-
       <section id="ecosystem" className="homeEcosystem">
         <div className="wrap homeEcosystem__intro">
           <div className="grid2 homeEcosystem__grid">
@@ -283,13 +238,6 @@ export default async function HomePage() {
       </section>
 
       <section id="pathways" className="homePathways">
-        <div className="homePathways__band">
-          <div className="wrap homePathways__bandInner">
-            <p className="eyebrow eyebrow--light">Start with what you need</p>
-            <h2 className="homePathways__title">What brings you to TracTrac?</h2>
-          </div>
-        </div>
-
         <div className="homePathways__cards">
           <article className="homePathway">
             <div className="homePathway__media">
