@@ -42,8 +42,8 @@ export default function TechnologyPage() {
                 priority
               />
               <div className="techHero__text">
-                <p className="eyebrow">TracTrac Plus</p>
-                <h1>Technology that moves the work.</h1>
+                {/* <p className="eyebrow">TracTrac Plus</p> */}
+                <h1>TracTrac Plus - Technology that moves the work.</h1>
                 <p>
                   TracTrac connects farmers, machines and the people who keep the work moving, from
                   finding equipment to getting the job done.
