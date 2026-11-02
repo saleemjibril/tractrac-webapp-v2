@@ -82,6 +82,33 @@
   color: #fff;
 }
 
+.techHero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: min(clamp(18px, 2vw, 28px), calc(3svh / var(--site-scale, 1)));
+}
+
+.techHero__badge {
+  display: inline-flex;
+  border-radius: 8px;
+  transition: opacity 200ms var(--ease);
+}
+
+.techHero__badge:hover {
+  opacity: 0.82;
+}
+
+.techHero__badge:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.techHero__badge img {
+  height: clamp(40px, 3.4vw, 48px);
+  width: auto;
+}
+
 .techHero__num {
   display: flex;
   flex-direction: column;
@@ -830,6 +857,29 @@
 .techDownload__badge img {
   height: 64px;
   width: auto;
+}
+
+.techDownload__appStore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 210px;
+  height: 64px;
+  padding: 0 20px;
+  border-radius: 11px;
+  background: var(--ink);
+  color: #fff;
+}
+
+.techDownload__appStore span {
+  font: 400 11px/1.3 var(--font-sans);
+  letter-spacing: 0.04em;
+  opacity: 0.72;
+}
+
+.techDownload__appStore strong {
+  font: 600 21px/1.15 var(--font-sans);
+  letter-spacing: -0.01em;
 }
 
 .techDownload__note {

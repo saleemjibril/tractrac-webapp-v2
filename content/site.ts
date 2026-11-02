@@ -97,8 +97,9 @@ export const CTAS = {
 
 export const BRAND = {
   logo: asset("uploads/tractrac logo png 4.png"),
-  googlePlay: "/badges/google-play-badge-white.svg",
-  appStore: "/badges/app-store-badge-white.svg",
+  googlePlay: asset("uploads/google-play-badge-logo_svgrepo.com.png"),
+  googlePlayWhite: "/badges/google-play-badge-white.svg",
+  appStoreWhite: "/badges/app-store-badge-white.svg",
   googlePlayUrl: "https://play.google.com/store/apps/details?id=com.tractrac.plus",
   appStoreUrl: "https://apps.apple.com/ng/app/tractrac-plus/id6754968082",
   blurb:

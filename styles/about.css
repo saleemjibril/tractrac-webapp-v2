@@ -405,7 +405,7 @@
 .peopleSlider__slide {
   position: relative;
   flex: 0 0 100%;
-  height: clamp(300px, 38vw, 560px);
+  height: clamp(320px, 41vw, 600px);
   margin: 0;
   overflow: hidden;
 }
@@ -954,7 +954,7 @@
 
 @media (max-width: 600px) {
   .peopleSlider__slide {
-    height: clamp(260px, 72vw, 420px);
+    height: clamp(280px, 76vw, 450px);
   }
 
   .peopleSlider__bar {

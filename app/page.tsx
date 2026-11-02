@@ -110,7 +110,7 @@ export default async function HomePage() {
             <div className="homeImpact__intro" data-reveal>
               <p className="eyebrow">The work so far</p>
               <h2 className="homeImpact__title">
-                More farmers served. More machines working. More opportunities created.
+                Our work is already transforming mechanisation across Africa
               </h2>
               <p className="homeImpact__lede">
                 Better access to mechanisation can change how quickly work gets done, how many

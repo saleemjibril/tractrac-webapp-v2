@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function TechnologyPage() {
   return (
     <main id="main" className="pageMain">
-      <section className="techHero">
+      <section id="download" className="techHero">
         <div className="techHero__bg">
           <Photo
             src={asset("uploads/DSC07156.jpg")}
@@ -48,6 +48,38 @@ export default function TechnologyPage() {
                   TracTrac connects farmers, machines and the people who keep the work moving, from
                   finding equipment to getting the job done.
                 </p>
+                <div className="techHero__badges">
+                  <a
+                    className="techHero__badge"
+                    href={BRAND.googlePlayUrl}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Get TracTrac Plus on Google Play"
+                  >
+                    <Image
+                      src={BRAND.googlePlayWhite}
+                      alt="Get it on Google Play"
+                      width={983}
+                      height={291}
+                      unoptimized
+                    />
+                  </a>
+                  <a
+                    className="techHero__badge"
+                    href={BRAND.appStoreUrl}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Download TracTrac Plus on the App Store"
+                  >
+                    <Image
+                      src={BRAND.appStoreWhite}
+                      alt="Download on the App Store"
+                      width={983}
+                      height={291}
+                      unoptimized
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="techHero__num">
@@ -142,7 +174,7 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <section id="download" className="techDownload" aria-labelledby="download-title">
+      <section className="techDownload" aria-labelledby="download-title">
         <div className="wrap techDownload__inner">
           <div>
             <p className="eyebrow">Get TracTrac Plus</p>
@@ -161,13 +193,7 @@ export default function TechnologyPage() {
                 rel="noopener"
                 aria-label="Get TracTrac Plus on Google Play"
               >
-                <Image
-                  src={BRAND.googlePlay}
-                  alt="Get it on Google Play"
-                  width={983}
-                  height={291}
-                  unoptimized
-                />
+                <Image src={BRAND.googlePlay} alt="Get it on Google Play" width={155} height={46} />
               </a>
               <a
                 className="techDownload__badge"
@@ -176,13 +202,10 @@ export default function TechnologyPage() {
                 rel="noopener"
                 aria-label="Download TracTrac Plus on the App Store"
               >
-                <Image
-                  src={BRAND.appStore}
-                  alt="Download on the App Store"
-                  width={983}
-                  height={291}
-                  unoptimized
-                />
+                <span className="techDownload__appStore">
+                  <span>Download on the</span>
+                  <strong>App Store</strong>
+                </span>
               </a>
             </div>
             <p className="techDownload__note">Free to download. Available on iOS and Android.</p>
