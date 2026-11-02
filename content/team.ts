@@ -17,9 +17,11 @@ export const TEAM: TeamMember[] = [
     photo: "https://api.tractrac.co/media/images/b0ed053e-bbd1-4606-bd7f-88cfb6b909d0.jpg",
     leadership: true,
     bio: [
-      "Godson Ohuruogu is an agribusiness and private sector development expert with over 17 years of experience in value chain development, SME growth, rural transformation, and climate-smart agriculture.",
-      "He holds an MBA from the University of Leeds (UK) and a BSc in Industrial and Production Engineering from the University of Ibadan (Nigeria).",
-      "At TracTrac, he leads the strategic vision to accelerate mechanization access and build scalable agricultural systems that empower smallholder farmers.",
+      "Godson Ohuruogu is a seasoned expert in agribusiness, SME development, youth entrepreneurship, innovation, climate-smart agriculture (CSA), market systems, and private sector development. With over 17 years of experience, he has spearheaded initiatives in community development, private sector engagement, value chain analysis, rural development, agro-processing, grantmaking, and venture capital investments.",
+      "As the CEO of TracTrac Mechanization Services Limited, Godson leads efforts to revolutionize agricultural mechanization in Nigeria by leveraging technology and innovative financing solutions to empower smallholder farmers. Prior to his role at TracTrac, he served as Managing Partner at Ikore International Development Limited, where he drove private sector engagement and innovation in agri-tech to foster inclusive market growth and resilient communities.",
+      "Godson also played pivotal roles in high-impact projects, including the $140M USAID West Africa Trade and Investment Hub (WATIH), where he managed public-private sector engagement and value chain competitiveness, and the FCDO’s PROPCOM-MaKarfi, where he championed interventions in agricultural inputs, mechanization, ICT4Ag, and climate-smart portfolios. His portfolio extends to initiatives such as the PIND-Chevron market linkages for SMEs in the Niger Delta and Nigeria’s Federal Government/World Bank YOUWIN program, overseeing 212 SMEs with a grant portfolio of 900M Naira.",
+      "A strategic thinker and tech-savvy leader, Godson is adept at designing and managing complex development interventions, ensuring measurable impact.",
+      "He holds an MBA from the University of Leeds, United Kingdom, and a BSc in Industrial and Production Engineering from the University of Ibadan, Nigeria.",
     ],
   },
   {
@@ -51,14 +53,14 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: "samuel-olanikepun",
-    name: "Samuel Olanikepun",
-    title: "MERL Team Lead",
+    name: "Samuel Olanipekun Adebayo",
+    title: "Head of Monitoring, Evaluation, Research and Learning (MERL)",
     dept: "MERL",
     photo: "https://api.tractrac.co/media/images/b8b136e0-100b-4358-9dc9-fb66ebec99be.jpg",
     leadership: true,
     bio: [
-      "Samuel leads Monitoring, Evaluation, Research, and Learning (MERL) at TracTrac, ensuring that programs deliver measurable impact and continuous improvement.",
-      "He oversees data-driven program evaluation and impact measurement across TracTrac initiatives.",
+      "Samuel Adebayo is a MERL professional with over 10 years of experience designing and strengthening evidence, learning and performance management systems for complex development programmes in Nigeria. At TracTrac, he leads the MERL function, driving data quality, monitoring, research, learning and evidence use to support programme performance and decision-making.",
+      "His experience spans agriculture and mechanization, education, health, nutrition, WASH, reproductive health, food assistance and governance, with experience supporting programmes funded by the Mastercard Foundation, USAID, World Bank and UNFPA. Samuel combines expertise in research, data systems, monitoring and evaluation, and adaptive learning to help organisations turn data into actionable evidence and demonstrate meaningful impact.",
     ],
   },
   {
@@ -156,21 +158,12 @@ export const TEAM: TeamMember[] = [
     name: "Chika Nelson",
     title: "Policy Lead",
     dept: "Policy and Business Development",
-    photo: "",
+    photo: "https://api.tractrac.co/media/images/1adaeb89-4839-441f-8c7b-d5b552b6be28.jpeg",
     leadership: true,
     bio: [
       "Chika Nelson is the Head of Policy at TracTrac, leading the organisation’s policy engagement, advocacy and stakeholder work across agricultural mechanization.",
       "She works with government, development partners and industry stakeholders to shape policy that expands access to mechanization for smallholder farmers and supports the growth of mechanization service providers.",
     ],
-  },
-  {
-    id: "monday-orji",
-    name: "Monday Ojih",
-    title: "Regional Business Development Officer, North West",
-    dept: "Policy and Business Development",
-    photo: "",
-    leadership: false,
-    bio: [],
   },
   {
     id: "adedolapo-olupona",
@@ -402,6 +395,27 @@ export const TEAM: TeamMember[] = [
       "Her work focuses on building strategic partnerships, expanding access to agricultural mechanization services, and engaging young people and smallholder farmers in agricultural development. She is passionate about youth empowerment, agricultural innovation, and creating sustainable opportunities that improve livelihoods and support inclusive economic growth in rural communities.",
     ],
   },
+  {
+    id: "saleem-jibril",
+    name: "Saleem Jibril",
+    title: "Fullstack Developer",
+    dept: "IT and Designs",
+    photo: "",
+    leadership: false,
+    bio: [
+      "Saleem Jibril is a software engineer who specializes in building high-performance, scalable web applications across the fintech, blockchain, sustainability and agriculture sectors.",
+      "He is part of the team responsible for building the technology solutions at TracTrac.",
+    ],
+  },
+  {
+    id: "emmanuel-olorunshola",
+    name: "Emmanuel Olorunshola",
+    title: "Mobile App Developer",
+    dept: "IT and Designs",
+    photo: "",
+    leadership: false,
+    bio: [],
+  },
 ];
 
 export const TEAM_DEPARTMENTS = [
@@ -414,8 +428,8 @@ export const TEAM_DEPARTMENTS = [
   "Communications",
   "MERL",
   "Finance",
-  "Programs",
   "Operations",
+  "Programs",
 ];
 
 export const LEADERSHIP = TEAM.filter((person) => person.leadership);
