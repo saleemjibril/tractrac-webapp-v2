@@ -40,14 +40,17 @@ export const TEAM: TeamMember[] = [
   {
     id: "alero-otis",
     name: "Alero Otis",
-    title: "Head of Projects & Partnerships",
+    title: "Deputy Team Lead, Growth and Partnerships",
     dept: "Partnerships and Communications",
     linkedin: "",
     photo: "",
     leadership: true,
     bio: [
-      "Alero Otis is a development and research specialist with extensive experience in program implementation, policy advocacy, and strategic partnerships.",
-      "At TracTrac, she leads the design and execution of large-scale initiatives that strengthen agricultural systems, expand mechanisation access, and empower smallholder farmers across Nigeria.",
+      "Alero Otis is a development professional whose experience brings together strategic partnerships, research, programme delivery, communications and policy advocacy. Her work centres on connecting people, institutions and ideas to create practical opportunities for communities and businesses.",
+      "As Deputy Team Lead, Growth and Partnerships at TracTrac Mechanisation Services Limited, Alero leads partnership development and works across teams to advance the organisation’s growth and impact. Her responsibilities span government and partner engagement, strategic planning, programme coordination, funder reporting and organisational development. Through the Mastercard Foundation-supported ISSAM programme, she contributes to expanding smallholder farmers’ access to mechanisation services and creating opportunities for young people, particularly women and persons with disabilities.",
+      "Alero’s career spans media, corporate social responsibility, sustainability and humanitarian initiatives, with projects covering education, technology, food security and community development. Before her current role, she worked with A’Lime Media Limited, where she led projects and supported interventions for organisations including IHS Nigeria, the Telecommunications and Technology Sustainability Working Group, MTN Foundation and the Lagos State Technical and Vocational Education Board.",
+      "She also led the implementation of the Access Bank Community Grant Scheme facilitated by ACT Foundation, and worked on initiatives for the HRM Abisogun II Foundation and the Renaissance Development Forum. Her research experience includes providing in-depth support to Ipsos Nigeria on assignments for clients including Ferrero and Nudge.",
+      "Alero brings research, communication and relationship-building skills to complex development challenges. She holds a bachelor’s degree from Delta State University, Abraka, where she majored in French, with minors in German and Latin.",
     ],
   },
   {
@@ -65,11 +68,11 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: "adanna-atounwu",
-    name: "Adanna Atounwu",
+    name: "Adanna Atuonwu",
     title: "Communications Lead",
     dept: "Partnerships and Communications",
     linkedin: "",
-    photo: "https://api.tractrac.co/media/images/5933a8c3-8a16-468c-aa4a-378e4eac593c.jpg",
+    photo: "https://api.tractrac.co/media/images/3b9fbaa2-3936-4345-a62e-01bc30b5d7d8.jpeg",
     leadership: true,
     bio: [
       "Adanna leads TracTrac’s communications strategy, shaping how the organisation tells its story, amplifies its impact, and engages stakeholders across the agricultural ecosystem.",

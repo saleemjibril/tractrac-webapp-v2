@@ -7,8 +7,8 @@ import { personAlt, type TeamMember } from "@/content/team";
 
 type PersonDialogProps = {
   person: TeamMember | null;
-  index: number;
-  total: number;
+  index?: number;
+  total?: number;
   onClose: () => void;
 };
 
@@ -30,7 +30,7 @@ export default function PersonDialog({ person, index, total, onClose }: PersonDi
     return () => dialog.removeEventListener("close", handleClose);
   }, [onClose]);
 
-  const count = String(total).padStart(2, "0");
+  const showCounter = index !== undefined && total !== undefined;
 
   return (
     <dialog
@@ -43,10 +43,12 @@ export default function PersonDialog({ person, index, total, onClose }: PersonDi
     >
       {person ? (
         <div className="teamDialog__inner">
-          <div className="teamDialog__bar">
-            <span>
-              {String(index + 1).padStart(2, "0")} / {count}
-            </span>
+          <div className={`teamDialog__bar${showCounter ? "" : " teamDialog__bar--plain"}`}>
+            {showCounter ? (
+              <span>
+                {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+              </span>
+            ) : null}
             <button type="button" aria-label="Close profile" onClick={onClose}>
               ×
             </button>

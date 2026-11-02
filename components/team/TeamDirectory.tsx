@@ -15,7 +15,6 @@ import {
 export default function TeamDirectory() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
 
-  const selectedIndex = selected ? TEAM.findIndex((person) => person.id === selected.id) : -1;
   const groups = TEAM_DEPARTMENTS.map((dept) => ({
     dept,
     people: TEAM.filter((person) => person.dept === dept),
@@ -90,12 +89,7 @@ export default function TeamDirectory() {
         ))}
       </div>
 
-      <PersonDialog
-        person={selected}
-        index={selectedIndex}
-        total={TEAM.length}
-        onClose={() => setSelected(null)}
-      />
+      <PersonDialog person={selected} onClose={() => setSelected(null)} />
     </>
   );
 }
