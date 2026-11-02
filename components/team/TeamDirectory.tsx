@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import PersonDialog from "@/components/team/PersonDialog";
 import Photo from "@/components/ui/Photo";
 import PortraitPlaceholder from "@/components/ui/PortraitPlaceholder";
 import {
@@ -13,24 +14,7 @@ import {
 
 export default function TeamDirectory() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
 
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-    if (selected && !dialog.open) dialog.showModal();
-    if (!selected && dialog.open) dialog.close();
-  }, [selected]);
-
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-    const onClose = () => setSelected(null);
-    dialog.addEventListener("close", onClose);
-    return () => dialog.removeEventListener("close", onClose);
-  }, []);
-
-  const count = String(TEAM.length).padStart(2, "0");
   const selectedIndex = selected ? TEAM.findIndex((person) => person.id === selected.id) : -1;
   const groups = TEAM_DEPARTMENTS.map((dept) => ({
     dept,
@@ -106,58 +90,12 @@ export default function TeamDirectory() {
         ))}
       </div>
 
-      <dialog
-        ref={dialogRef}
-        className="teamDialog"
-        aria-labelledby="dlg-name"
-        onClick={(event) => {
-          if (event.target === event.currentTarget) setSelected(null);
-        }}
-      >
-        {selected ? (
-          <div className="teamDialog__inner">
-            <div className="teamDialog__bar">
-              <span>
-                {String(selectedIndex + 1).padStart(2, "0")} / {count}
-              </span>
-              <button
-                type="button"
-                aria-label="Close profile"
-                onClick={() => setSelected(null)}
-              >
-                ×
-              </button>
-            </div>
-            <div className="teamDialog__body">
-              <div className="teamDialog__portrait">
-                {selected.photo ? (
-                  <Photo src={selected.photo} alt={personAlt(selected)} sizes="300px" />
-                ) : (
-                  <PortraitPlaceholder person={selected} />
-                )}
-              </div>
-              {selected.title ? <p className="teamDialog__role">{selected.title}</p> : null}
-              <h2 id="dlg-name">{selected.name}</h2>
-              <div className="teamDialog__bio">
-                {selected.bio.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              {selected.linkedin ? (
-                <a
-                  className="teamDialog__linkedin"
-                  href={selected.linkedin}
-                  target="_blank"
-                  rel="noopener"
-                  aria-label={`${selected.name} on LinkedIn (opens in a new tab)`}
-                >
-                  <span aria-hidden="true">in</span>LinkedIn
-                </a>
-              ) : null}
-            </div>
-          </div>
-        ) : null}
-      </dialog>
+      <PersonDialog
+        person={selected}
+        index={selectedIndex}
+        total={TEAM.length}
+        onClose={() => setSelected(null)}
+      />
     </>
   );
 }

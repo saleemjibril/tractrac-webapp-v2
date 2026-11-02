@@ -8,6 +8,7 @@ import Photo from "@/components/ui/Photo";
 import { ABOUT_PEOPLE } from "@/content/about-people";
 import { asset } from "@/lib/asset";
 import "@/styles/about.css";
+import "@/styles/profile-dialog.css";
 
 export const metadata: Metadata = {
   title: "About Us",

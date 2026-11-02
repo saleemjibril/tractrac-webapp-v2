@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import PersonDialog from "@/components/team/PersonDialog";
 import Photo from "@/components/ui/Photo";
 import PortraitPlaceholder from "@/components/ui/PortraitPlaceholder";
 import { LEADERSHIP, personAlt, type TeamMember } from "@/content/team";
@@ -13,15 +14,12 @@ function Portrait({ person }: { person: TeamMember }) {
 }
 
 export default function Leadership() {
-  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [selected, setSelected] = useState<TeamMember | null>(null);
   const [ceo, ...leaders] = LEADERSHIP;
   const total = String(LEADERSHIP.length).padStart(2, "0");
+  const selectedIndex = selected ? LEADERSHIP.findIndex((person) => person.id === selected.id) : -1;
 
   if (!ceo) return null;
-
-  const toggle = (id: string) => {
-    setOpen((current) => ({ ...current, [id]: !current[id] }));
-  };
 
   return (
     <div>
@@ -81,7 +79,6 @@ export default function Leadership() {
 
       <ul className="aboutLeaders">
         {leaders.map((person, index) => {
-          const isOpen = Boolean(open[person.id]);
           const rest = person.bio.slice(1);
           return (
             <li key={person.id}>
@@ -105,25 +102,16 @@ export default function Leadership() {
                 <h4>{person.name}</h4>
                 <p className="aboutLeader__title">{person.title}</p>
                 <p className="aboutLeader__lead">{person.bio[0]}</p>
-                {isOpen ? (
-                  <div className="aboutLeader__rest" id={`bio-${person.id}`}>
-                    {rest.map((paragraph) => (
-                      <p className="prose muted" key={paragraph}>
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                ) : null}
                 {rest.length ? (
                   <button
                     type="button"
                     className="aboutLeader__more"
-                    aria-expanded={isOpen}
-                    aria-controls={`bio-${person.id}`}
-                    onClick={() => toggle(person.id)}
+                    aria-haspopup="dialog"
+                    aria-label={`Read the full bio of ${person.name}`}
+                    onClick={() => setSelected(person)}
                   >
-                    {isOpen ? "Show less" : "Read full bio"}
-                    <span aria-hidden="true">{isOpen ? "−" : "+"}</span>
+                    Read full bio
+                    <span aria-hidden="true">+</span>
                   </button>
                 ) : null}
               </article>
@@ -131,6 +119,13 @@ export default function Leadership() {
           );
         })}
       </ul>
+
+      <PersonDialog
+        person={selected}
+        index={selectedIndex}
+        total={LEADERSHIP.length}
+        onClose={() => setSelected(null)}
+      />
     </div>
   );
 }

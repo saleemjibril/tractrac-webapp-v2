@@ -4,6 +4,7 @@ import TeamDirectory from "@/components/team/TeamDirectory";
 import Hero from "@/components/ui/Hero";
 import { asset } from "@/lib/asset";
 import "@/styles/team.css";
+import "@/styles/profile-dialog.css";
 
 export const metadata: Metadata = {
   title: "Team",
