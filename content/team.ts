@@ -115,10 +115,22 @@ export const TEAM: TeamMember[] = [
     ],
   },
   {
+    id: "ojoma-okwute",
+    name: "Ojoma Okwute",
+    title: "Head of Operations",
+    dept: "Finance and Operations",
+    photo: "https://api.tractrac.co/media/images/17ab7449-490f-4858-bf91-d9da1e4bdaa8.jpg",
+    leadership: true,
+    bio: [
+      "Ojoma Okwute leads operational strategy and execution across TracTrac programs.",
+      "She ensures efficiency, compliance, and successful delivery of mechanization services across operational regions.",
+    ],
+  },
+  {
     id: "ekene-chukwunyebendu-nnolum",
     name: "Ekene Chukwunyebendu-Nnolum",
     title: "Finance Manager",
-    dept: "Finance",
+    dept: "Finance and Operations",
     photo: "https://api.tractrac.co/media/images/8ee37f84-ed45-48c6-9a1e-849695b9e33d.png",
     leadership: true,
     bio: [
@@ -212,7 +224,7 @@ export const TEAM: TeamMember[] = [
   {
     id: "bridget-augustine",
     name: "Bridget Augustine",
-    title: "",
+    title: "IT Support and Asset Tracking Manager",
     dept: "IT and Designs",
     photo: "https://api.tractrac.co/media/images/93df5c98-28df-4e0c-8988-4c063a8a0e45.jpg",
     leadership: false,
@@ -229,18 +241,21 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: "godsfavour-nyoyoko",
-    name: "Godsfavour Nyoyoko",
-    title: "",
-    dept: "Operations",
-    photo: "https://api.tractrac.co/media/images/9eb8761f-108c-4c82-b37b-8bfaa425cad1.jpg",
+    name: "Godsfavour Mfonobong Nyoyoko",
+    title: "Strategy and Procurement Manager",
+    dept: "Finance and Operations",
+    photo: "https://api.tractrac.co/media/images/c656f99d-ee71-490e-8a85-207349fa1a88.jpeg",
     leadership: false,
-    bio: [],
+    bio: [
+      "Godsfavour Mfonobong Nyoyoko is the Strategy and Procurement Manager at TracTrac MSL, where she leads the company’s procurement strategy and oversees sourcing, supplier relationships and cost management for the equipment, parts and services that keep TracTrac and its agricultural mechanization services running. As Technical Assistant to the CEO, she advises leadership on key operational decisions.",
+      "By securing value for money, reliable supply, and dependable supplier partnerships, she helps strengthen TracTrac’s long-term sustainability, so the company can keep delivering affordable mechanization services to farmers for years to come.",
+    ],
   },
   {
     id: "grace-john",
     name: "Grace Wata John",
     title: "Finance Officer",
-    dept: "Finance",
+    dept: "Finance and Operations",
     photo: "https://api.tractrac.co/media/images/75322280-feb1-4d66-92a2-9e1287924034.jpg",
     leadership: false,
     bio: [
@@ -306,7 +321,7 @@ export const TEAM: TeamMember[] = [
     id: "peter-agbo",
     name: "Peter Agbo",
     title: "",
-    dept: "Operations",
+    dept: "Finance and Operations",
     photo: "https://api.tractrac.co/media/images/f6d027d7-faf3-4e86-8ca2-d62ed3b56e4e.jpg",
     leadership: false,
     bio: [],
@@ -395,6 +410,15 @@ export const TEAM: TeamMember[] = [
       "He is part of the team responsible for building the technology solutions at TracTrac.",
     ],
   },
+  {
+    id: "emmanuel-olorunshola",
+    name: "Emmanuel Olorunshola",
+    title: "Mobile App Developer",
+    dept: "IT and Designs",
+    photo: "https://api.tractrac.co/media/images/1dbfec34-d106-4bcb-838b-64d4786e1774.jpg",
+    leadership: false,
+    bio: [],
+  },
 ];
 
 export const TEAM_DEPARTMENTS = [
@@ -406,8 +430,7 @@ export const TEAM_DEPARTMENTS = [
   "IT and Designs",
   "Communications",
   "MERL",
-  "Finance",
-  "Operations",
+  "Finance and Operations",
   "Programs",
 ];
 
