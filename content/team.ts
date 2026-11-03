@@ -32,8 +32,7 @@ export const TEAM: TeamMember[] = [
     photo: "https://api.tractrac.co/media/images/53bf9786-dc8d-4005-a1a7-3a4147972c45.jpg",
     leadership: true,
     bio: [
-      "Stephen Aguebor is a seasoned development and humanitarian specialist with over 12 years of experience designing and managing high-impact projects in agricultural livelihoods, financial inclusion, climate-smart agriculture, and market systems development.",
-      "At TracTrac, he supports the implementation of the ISSAM Project, empowering youth- and women-led mechanization businesses across Nigeria.",
+      "Stephen Aguebor is an agricultural development and agribusiness professional with over 15 years of experience in development and humanitarian programming, complemented by private-sector experience. As Technical Advisor for the Improving Smallholder Farmers’ Access to Small-Scale Agricultural Mechanization Services (ISSAM) Project, Stephen provides strategic and technical guidance across project units in Nasarawa and Kaduna States. His work focuses on strengthening mechanization service delivery models, developing sustainable and commercially viable Mechanization Service Provider (MSP) cooperatives, promoting inclusive market systems, and improving smallholder farmers’ access to agricultural mechanization services. He is passionate about building sustainable agribusiness systems that create economic opportunities for young people, women and smallholder farmers.",
     ],
   },
   {
@@ -119,7 +118,7 @@ export const TEAM: TeamMember[] = [
     name: "Ojoma Okwute",
     title: "Head of Operations",
     dept: "Finance and Operations",
-    photo: "https://api.tractrac.co/media/images/17ab7449-490f-4858-bf91-d9da1e4bdaa8.jpg",
+    photo: "https://api.tractrac.co/media/images/62a06ff8-943e-4e47-bc46-a90f3b3dca2f.jpeg",
     leadership: true,
     bio: [
       "Ojoma Okwute leads operational strategy and execution across TracTrac programs.",
@@ -266,7 +265,7 @@ export const TEAM: TeamMember[] = [
   {
     id: "israel-ayeni",
     name: "Israel Ayeni",
-    title: "",
+    title: "Programs Associate",
     dept: "Programs",
     photo: "https://api.tractrac.co/media/images/bf80a01a-73ae-40ab-b080-d7ec5769ef87.jpg",
     leadership: false,
@@ -284,12 +283,12 @@ export const TEAM: TeamMember[] = [
   {
     id: "larai-tumba-sini",
     name: "Larai Tumba Sini",
-    title: "Programs Associate/Relationship Officer",
+    title: "Programs Associate",
     dept: "Programs",
     photo: "https://api.tractrac.co/media/images/0b6d6adb-cc35-414b-8f1c-50a69872d092.jpg",
     leadership: false,
     bio: [
-      "Larai Tumba Sini is a Programs Associate/Relationship Officer at TracTrac MSL, contributing to initiatives that expand access to agricultural mechanization services. She works closely with Mechanization Service Providers (MSPs), rural entrepreneurs, and other stakeholders to strengthen partnerships, support field operations, and drive effective program implementation.",
+      "Larai Tumba Sini is a Programs Associate at TracTrac MSL, contributing to initiatives that expand access to agricultural mechanization services. She works closely with Mechanization Service Providers (MSPs), rural entrepreneurs, and other stakeholders to strengthen partnerships, support field operations, and drive effective program implementation.",
       "With a background in Agricultural Economics and Extension, she brings an understanding of rural livelihoods and agricultural development to her work. She is passionate about youth empowerment, building strong stakeholder relationships, and promoting sustainable opportunities that enable rural communities to thrive.",
     ],
   },
@@ -308,12 +307,12 @@ export const TEAM: TeamMember[] = [
   {
     id: "martha-peter",
     name: "Martha Peter Aladi",
-    title: "Project Associate and Relationship Officer",
+    title: "Project Associate",
     dept: "Programs",
     photo: "https://api.tractrac.co/media/images/e5715d6c-9c1c-4e72-9a88-7c96ece22f63.jpg",
     leadership: false,
     bio: [
-      "Martha Peter Aladi is a Project Associate and Relationship Officer at TracTrac MSL, dedicated to driving rural economic growth and sustainable agricultural development. Working directly with Mechanization Service Providers across diverse rural communities, she focuses on business development, capacity building, and strengthening agricultural cooperatives.",
+      "Martha Peter Aladi is a Project Associate at TracTrac MSL, dedicated to driving rural economic growth and sustainable agricultural development. Working directly with Mechanization Service Providers across diverse rural communities, she focuses on business development, capacity building, and strengthening agricultural cooperatives.",
       "Through structured coaching, field governance, and strategic mentorship, she empowers local farmers, women, and youth to build resilient, market-ready, and sustainable cooperative enterprises.",
     ],
   },
@@ -341,24 +340,24 @@ export const TEAM: TeamMember[] = [
   {
     id: "thankgod-onugwu",
     name: "ThankGod Izuchukwu Onugwu",
-    title: "Program Associate/Relationship Officer",
+    title: "Program Associate",
     dept: "Programs",
     photo: "https://api.tractrac.co/media/images/216086e7-5095-413e-85cc-3bdfa46346d6.jpg",
     leadership: false,
     bio: [
-      "ThankGod Izuchukwu Onugwu is a Program Associate/Relationship Officer at TracTrac MSL. He works closely with Mechanization Service Provider (MSP) cooperatives to strengthen their operations, build stakeholder relationships, and improve access to agricultural mechanization services for smallholder farmers.",
+      "ThankGod Izuchukwu Onugwu is a Program Associate at TracTrac MSL. He works closely with Mechanization Service Provider (MSP) cooperatives to strengthen their operations, build stakeholder relationships, and improve access to agricultural mechanization services for smallholder farmers.",
       "His work focuses on supporting program delivery and helping cooperatives grow into more effective and sustainable service providers.",
     ],
   },
   {
     id: "yahaya-emmanuel",
     name: "Yahaya Emmanuel Ojonugwa",
-    title: "Program Associate and Relationship Officer",
+    title: "Program Associate",
     dept: "Programs",
     photo: "https://api.tractrac.co/media/images/30b436e9-2f68-4fa2-ba58-83e6d48869d4.jpg",
     leadership: false,
     bio: [
-      "Yahaya Emmanuel Ojonugwa is a Program Associate and Relationship Officer at TracTrac MSL, where he works with Mechanization Service Provider (MSP) cooperatives to improve their operations and expand access to agricultural mechanization services for smallholder farmers.",
+      "Yahaya Emmanuel Ojonugwa is a Program Associate at TracTrac MSL, where he works with Mechanization Service Provider (MSP) cooperatives to improve their operations and expand access to agricultural mechanization services for smallholder farmers.",
       "He supports program implementation, strengthens partnerships, and helps cooperatives develop into more efficient, reliable, and sustainable service providers. His work reflects his passion for agriculture, rural development, and improving farmers’ access to the services they need to grow.",
     ],
   },
