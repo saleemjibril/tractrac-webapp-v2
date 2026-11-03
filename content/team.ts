@@ -40,7 +40,7 @@ export const TEAM: TeamMember[] = [
     name: "Alero Otis",
     title: "Head of Projects and Partnerships",
     dept: "Partnerships",
-    photo: "/staff/alero-otis.jpg",
+    photo: "https://api.tractrac.co/media/images/3f15265c-a646-48a7-bbdb-9f3cb7c1ad2b.jpeg",
     leadership: true,
     bio: [
       "Alero Otis is a development professional whose experience brings together strategic partnerships, research, programme delivery, communications and policy advocacy. Her work centres on connecting people, institutions and ideas to create practical opportunities for communities and businesses.",
@@ -106,7 +106,7 @@ export const TEAM: TeamMember[] = [
     name: "Mercy Balogun",
     title: "Product Manager",
     dept: "IT and Designs",
-    photo: "https://api.tractrac.co/media/images/35f08b9d-0794-4a9d-909e-60d47904b767.jpg",
+    photo: "https://api.tractrac.co/media/images/84c6bc78-fd3c-4bc8-8483-098da3132bed.jpeg",
     leadership: true,
     bio: [
       "Mercy Balogun is a product and design professional with over eight years of experience in product design, digital experiences, and technology-driven solutions across agriculture, fintech, SaaS, and other sectors.",
@@ -118,7 +118,7 @@ export const TEAM: TeamMember[] = [
     name: "Ojoma Okwute",
     title: "Head of Operations",
     dept: "Finance and Operations",
-    photo: "https://api.tractrac.co/media/images/62a06ff8-943e-4e47-bc46-a90f3b3dca2f.jpeg",
+    photo: "https://api.tractrac.co/media/images/aa35c47b-3358-4347-96aa-8f2b80279764.jpeg",
     leadership: true,
     bio: [
       "Ojoma Okwute leads operational strategy and execution across TracTrac programs.",
@@ -154,7 +154,7 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: "chika-nelson",
-    name: "Chika Nelson",
+    name: "Chika Nelson-Cole",
     title: "Policy Lead",
     dept: "Policy and Business Development",
     photo: "https://api.tractrac.co/media/images/1adaeb89-4839-441f-8c7b-d5b552b6be28.jpeg",
@@ -187,13 +187,25 @@ export const TEAM: TeamMember[] = [
   {
     id: "isaiah-ogede",
     name: "Isaiah Ogede",
-    title: "Documentary Photographer, Cinematographer and Visual Storyteller",
+    title: "Media and Comms Officer",
     dept: "Communications",
     photo: "https://api.tractrac.co/media/images/0f4cca2b-243b-4c6f-b1b0-988dbaa01bc3.jpg",
     leadership: false,
     bio: [
       "Isaiah Ogede is a documentary photographer, cinematographer, visual storyteller, and clinical psychologist.",
       "His work spans documentary filmmaking, photography, and creative direction, with a focus on telling compelling stories that capture authentic human experiences, communicate ideas, and create meaningful connections.",
+    ],
+  },
+  {
+    id: "godwin-okokoro",
+    name: "Godwin Okokoro",
+    title: "MERL Officer",
+    dept: "MERL",
+    photo: "https://api.tractrac.co/media/images/15b84ea4-52d2-4746-ba13-570979922a51.jpg",
+    leadership: false,
+    bio: [
+      "Godwin Okokoro is a Monitoring, Evaluation, Research and Learning (MERL) professional with over five years of experience in development programs, data systems, and project management. He specialises in digital data collection, performance monitoring, data analysis, dashboards, knowledge management, and SharePoint administration.",
+      "He holds a Master’s degree in Information Management from Ahmadu Bello University and combines his MERL expertise with a strong background in IT support and systems administration to strengthen data-driven decision-making and program delivery.",
     ],
   },
   {
@@ -227,16 +239,23 @@ export const TEAM: TeamMember[] = [
     dept: "IT and Designs",
     photo: "https://api.tractrac.co/media/images/93df5c98-28df-4e0c-8988-4c063a8a0e45.jpg",
     leadership: false,
-    bio: [],
+    bio: [
+      "Bridget Augustine is an IT Support and Asset Tracking Manager with experience in IT infrastructure management, technical support, and asset tracking operations. She oversees the organisation’s IT support functions, ensuring the effective setup, configuration, maintenance, and management of computer systems, software, hardware, and other IT resources.",
+      "Her responsibilities also extend to asset tracking management, where she coordinates tracker installation and configuration, monitors tracker connectivity and performance, manages geofencing, monitors asset utilisation and idle time, and ensures effective tracking and visibility of deployed assets through tracking platforms and regular performance reports.",
+      "With a strong understanding of IT systems and tracking technologies, Bridget helps improve operational efficiency, strengthen technology infrastructure, and ensure effective management and monitoring of the organisation’s digital and physical assets.",
+    ],
   },
   {
     id: "chidinma-ekwonu",
     name: "Chidinma Ekwonu",
-    title: "",
+    title: "Partnership Associate",
     dept: "Partnerships",
     photo: "https://api.tractrac.co/media/images/b00b805d-df8d-4a76-adbe-8ac9cddd42a1.jpg",
     leadership: false,
-    bio: [],
+    bio: [
+      "Chidinma is a Partnerships Associate at TracTrac, where she supports the development and strengthening of strategic relationships with universities, development organisations, agricultural stakeholders, and other key partners. Her work involves partnership development, stakeholder engagement, institutional outreach, identifying collaboration opportunities, and coordinating initiatives that advance the organisation’s objectives.",
+      "With a background in software engineering, digital communications, and project coordination, she brings a multidisciplinary perspective to her work. She is passionate about building meaningful relationships, fostering collaboration, and contributing to initiatives that promote innovation and sustainable development, particularly within the agricultural sector.",
+    ],
   },
   {
     id: "godsfavour-nyoyoko",
@@ -293,6 +312,18 @@ export const TEAM: TeamMember[] = [
     ],
   },
   {
+    id: "samson-ugbegbor",
+    name: "Samson Ugbebor",
+    title: "Loan Recovery Manager",
+    dept: "Investment, Asset Management and GEDSI",
+    photo: "https://api.tractrac.co/media/images/4eec5df9-dddd-4a98-a985-69f0959963a0.jpg",
+    leadership: false,
+    bio: [
+      "Samson Ugbebor serves in a dual capacity within the Investment and Asset Management team as Loan Recovery Manager. He actively manages cooperative financial portfolios and monitors revenue-expense streams to achieve 100% loan repayment compliance.",
+      "His role bridges financial sustainability and operational continuity by enforcing optimal equipment maintenance standards and leading the insurance claim process for damaged assets.",
+    ],
+  },
+  {
     id: "magdalene-osagie",
     name: "Magdalene Osagie Omohze",
     title: "Gender, Disability and Social Inclusion (GEDSI) Associate",
@@ -326,18 +357,6 @@ export const TEAM: TeamMember[] = [
     bio: [],
   },
   {
-    id: "samson-ugbegbor",
-    name: "Samson Ugbebor",
-    title: "Loan Recovery Manager",
-    dept: "Investment, Asset Management and GEDSI",
-    photo: "https://api.tractrac.co/media/images/4eec5df9-dddd-4a98-a985-69f0959963a0.jpg",
-    leadership: false,
-    bio: [
-      "Samson Ugbebor serves in a dual capacity within the Investment and Asset Management team as Loan Recovery Manager. He actively manages cooperative financial portfolios and monitors revenue-expense streams to achieve 100% loan repayment compliance.",
-      "His role bridges financial sustainability and operational continuity by enforcing optimal equipment maintenance standards and leading the insurance claim process for damaged assets.",
-    ],
-  },
-  {
     id: "thankgod-onugwu",
     name: "ThankGod Izuchukwu Onugwu",
     title: "Program Associate",
@@ -359,18 +378,6 @@ export const TEAM: TeamMember[] = [
     bio: [
       "Yahaya Emmanuel Ojonugwa is a Program Associate at TracTrac MSL, where he works with Mechanization Service Provider (MSP) cooperatives to improve their operations and expand access to agricultural mechanization services for smallholder farmers.",
       "He supports program implementation, strengthens partnerships, and helps cooperatives develop into more efficient, reliable, and sustainable service providers. His work reflects his passion for agriculture, rural development, and improving farmers’ access to the services they need to grow.",
-    ],
-  },
-  {
-    id: "godwin-okokoro",
-    name: "Godwin Okokoro",
-    title: "MERL Associate",
-    dept: "MERL",
-    photo: "https://api.tractrac.co/media/images/15b84ea4-52d2-4746-ba13-570979922a51.jpg",
-    leadership: false,
-    bio: [
-      "Godwin Okokoro is a Monitoring, Evaluation, Research and Learning (MERL) professional with over five years of experience in development programs, data systems, and project management. He specialises in digital data collection, performance monitoring, data analysis, dashboards, knowledge management, and SharePoint administration.",
-      "He holds a Master’s degree in Information Management from Ahmadu Bello University and combines his MERL expertise with a strong background in IT support and systems administration to strengthen data-driven decision-making and program delivery.",
     ],
   },
   {

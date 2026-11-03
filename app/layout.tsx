@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Instrument_Sans } from "next/font/google";
 import Footer from "@/components/site/Footer";
+import GoogleAnalytics from "@/components/site/GoogleAnalytics";
 import Header from "@/components/site/Header";
 import MotionProvider from "@/components/site/MotionProvider";
 import ScrollTop from "@/components/site/ScrollTop";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <ScrollTop />
         <MotionProvider />
+        <GoogleAnalytics />
       </body>
     </html>
   );
