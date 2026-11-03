@@ -85,6 +85,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           autoComplete="name"
+          maxLength={200}
           value={values.name}
           onChange={(event) => update("name", event.target.value)}
           aria-invalid={Boolean(errors.name)}
@@ -120,6 +121,7 @@ export default function ContactForm() {
         <textarea
           name="message"
           rows={6}
+          maxLength={5000}
           value={values.message}
           onChange={(event) => update("message", event.target.value)}
           aria-invalid={Boolean(errors.message)}
